@@ -1,0 +1,65 @@
+img.logo__image.logo__image--small {
+    display: block;
+    filter: brightness(1.3);
+    opacity: .3;
+    width: 120px;
+    padding-bottom: 30px;
+    &:hover {
+        filter: unset !important;
+        -webkit-filter: unset !important;
+}
+}
+
+
+
+
+/* #Checkout / Mimic Shopify's native styles
+================================================== */
+.total-line-table {
+    width: 100%;
+}
+
+.subtotal {
+    border-left: none;
+    padding-left: 0;
+    td:first-child, th:first-child.total-line__name {
+      padding-left: 0;
+      text-align: left;
+    }
+    td {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 5px 0 !important;
+        border-right: none !important;
+      }
+  }
+  
+  .order-summary__section {
+    padding-top: var(--space-unit);
+    padding-bottom:20px;
+    border-bottom: 1px solid #e4e6e8;
+    &:after {
+        content: "";
+        display: block;
+        bottom: -2px;
+        position: absolute;
+        width: 100%;
+        border-top: 1px solid #fff;
+    }
+}
+
+
+/* #Checkout / Product List
+================================================== */
+.cart_page_image img {
+@include filter-alabaster();
+}
+
+
+.cart-items {
+    @include lg {
+        padding-right: 120px;
+    }
+}

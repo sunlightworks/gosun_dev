@@ -1,0 +1,176 @@
+@import '//node_modules/codyhouse-framework/main/assets/css/base';
+
+/* -------------------------------- 
+
+File#: _2_image-comparison-slider
+Title: Image Comparison Slider
+Descr: A draggable image slider used to compare two versions of the same image
+Usage: codyhouse.co/license
+
+-------------------------------- */
+/*
+.compare-slider {
+    position: relative;
+  
+    img {
+      display: block;
+      width: 100%;
+      pointer-events: none;
+    }
+  }
+  
+  .compare-slider__inner {
+    position: relative;
+  }
+  
+  .compare-slider__img {
+    position: relative;
+    user-select: none;
+    overflow: hidden;
+  }
+  
+  .compare-slider__caption {
+    position: absolute;
+    bottom: 0;
+    font-size: var(--text-sm);
+    padding: var(--space-sm);
+    background-color: alpha(var(--color-black), 0.75);
+    color: var(--color-white);
+    @include fontSmooth;
+    backdrop-filter: blur(10px);
+    transition: opacity .3s, visibility .3s, transform .3s;
+  }
+  
+  .compare-slider__img--original .compare-slider__caption {
+    right: 0;
+  }
+  
+  .compare-slider__img--modified .compare-slider__caption {
+    left: 0;
+  }
+  
+  .compare-slider__handle {
+    display: none; // hide if JS is disabled
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    color: var(--color-contrast-higher);
+    background-color: var(--color-bg);
+    box-shadow: var(--shadow-sm);
+    cursor: grab;
+    will-change: left;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%) translateX(-50%) scale(0);
+    margin-left: -1px;
+  }
+  
+  .compare-slider--is-dragging .compare-slider__handle {
+    cursor: grabbing;
+    box-shadow: var(--shadow-sm), 0 0 0 4px alpha(var(--color-contrast-higher), 0.5);
+  }
+  
+  .compare-slider__input-handle { // input element never visible - used for keyboard accessibility
+    display: none; // hide if JS is disabled
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+  }
+  
+  .compare-slider__input-handle:focus + .compare-slider__handle { // change handle style when input is in focus
+    color: var(--color-primary);
+    box-shadow: var(--shadow-sm), 0 0 0 4px alpha(var(--color-contrast-higher), 0.5);
+  }
+  
+  .js {
+    .compare-slider__img--modified {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%; // will be changed using JS
+      transform: translateZ(0);
+      border-right: 2px solid var(--color-bg);
+      will-change: width;
+    
+      img {
+        height: 100%;
+        width: auto;
+        max-width: none;
+      }
+    }
+  
+    .compare-slider--in-viewport .compare-slider__img--modified { // reveal modified img version when slider enters the viewport
+      width: 50%;
+      animation: compare-slider-bounce-in .7s;
+    }
+  
+    .compare-slider__caption {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    .compare-slider--in-viewport .compare-slider__caption { // reveal captions when slider enters the viewport
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    .compare-slider--in-viewport .compare-slider__caption--is-hidden { // when changing the .compare-slider__modified width -> hide caption if no space is available
+      opacity: 0;
+      visibility: hidden;
+    }
+  
+    .compare-slider__img--original .compare-slider__caption--is-hidden {
+      transform: translateX(30px);
+    }
+    
+    .compare-slider__img--modified .compare-slider__caption--is-hidden {
+      transform: translateX(-30px);
+    }
+  
+    .compare-slider__handle {
+      display: block; // flex fallback
+      display: flex;
+      opacity: 0;
+    }
+  
+    .compare-slider--in-viewport .compare-slider__handle { // reveal handle when slider enters the viewport
+      transition: transform .3s .7s, opacity 0s .7s;
+      transform: translateY(-50%) translateX(-50%) scale(1);
+      opacity: 1;
+    }
+  
+    .compare-slider__input-handle {
+      display: block;
+    }
+  
+    // remove animation if reduced motion is on
+    .compare-slider--reduced-motion .compare-slider__img--modified {
+      animation: none;
+    }
+  
+    .compare-slider--reduced-motion .compare-slider__handle,
+    .compare-slider--reduced-motion .compare-slider__caption {
+      transition: none;
+    }
+  }
+  
+  @keyframes compare-slider-bounce-in {
+    0% {
+      width: 0%;
+    }
+  
+    60% {
+      width: 55%;
+    }
+  
+    100% {
+      width: 50%;
+    }
+  }
+*/

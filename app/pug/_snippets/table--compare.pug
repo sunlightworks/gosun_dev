@@ -1,0 +1,16 @@
+include /pug/_help/_mixins
+
+
+.width-1-1.product-grid-padding-desktop
+    .overflow-container
+        table.table.table-striped.four-up
+            tbody
+                +table-compare--head('', 'name')
+                +table-compare--row('Weight', 'weight_lbs')
+                +table-compare--row('Dimensions', 'dimensions')
+                +table-compare--row('Cook time', 'cook_time_minutes')
+                +table-compare--row('Meals per load', 'meals_per_load')
+                +table-compare--row('Max Temperature', 'max_temp')
+                +table-compare--row('Capacity', 'capacity')
+                +table-compare--row('Works under clouds', 'works_under_clouds')
+                +table-compare--row('Works at night', 'works_at_night')

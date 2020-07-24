@@ -1,0 +1,312 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the hero
+// -----------------------------------------------------------------------------
+@import "//app/scss/bundle";
+
+
+// -----------------------------------------------------------------------------
+// Mobile Styles
+// -----------------------------------------------------------------------------
+
+
+
+/* SUNTHING */
+
+.sunthing {
+  position: absolute !important;
+  width: 151.32px !important;
+  height: auto;
+  left: 304px !important;
+  top: 6px !important;
+  min-height: 0 !important;
+  height: 100.32px !important;
+}
+
+
+
+/* Collection Hero
+================================================== */
+
+
+.collection_banner {
+   margin-top: 0 !important;
+   position: relative !important;
+   height: auto;
+   @include animateSlow();
+  
+  img {
+    min-height: 177px;
+    height: 100%;
+    @include animateSlow();
+    @include filter-dim();
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+  }
+  &:hover {
+    img {
+    @include animateSlow();
+    transform: scale(1.06) translatex(1px) translatey(-1px)!important;
+    filter: none !important;
+  }
+  input {
+    @include form-shadow();
+  }
+  }
+}
+
+/* Product page - Intro Hero
+================================================== */
+.intro_banner { 
+  margin-top: 0 !important;
+  
+
+  @include md() {
+    height: 28vw;
+  }
+
+  img {
+    object-fit: cover;
+    @include filter-dim();
+    min-height: 177px;
+    height: 100%;
+  }
+}
+
+.intro_description {
+  @include flexBox(column, center, flex-start);
+  @include size(100%, 100%); 
+    padding: 20px 40px;
+    margin: 0px;
+    padding-left: 6%;
+    padding-right: 10%;
+    @include lg(){
+      max-width: calc(.5 * 1250px);
+      @include size(60%, 100%); 
+    }
+}
+
+
+
+
+
+
+
+.banner img {
+  position: relative;
+}
+
+/* Tri Banner
+================================================== */
+
+
+.tri_banner {
+  margin-top: 0 !important;
+  position: relative !important;
+  @include animateSlow();
+  @include md() {
+    height: 540px;
+  }
+  @include xl() {
+  }
+  img {
+  min-height: 177px;
+  height: 100% !important;
+    @include animateSlow();
+    @include filter-dim();
+  object-fit: cover !important;
+  &:hover {
+    img {
+        @include animateSlow();
+    transform: scale(1.06) translatex(1px) translatey(-1px)!important;
+    filter: none !important;
+    -webkit-filter: none !important;
+}
+  input {
+    @include form-shadow();
+  }
+  }
+}
+}
+
+
+/* Mobile Styles
+================================================== */
+@include md-max() {
+  .tri_banner {
+    height: auto;
+    img {
+      height: calc(100vh - 466px) !important;
+    }
+  }
+    .banner_description {
+      margin-bottom: 0 !important;
+    }
+}
+
+/*
+   .banner_description { 
+    @include flexBox(column, center, flex-start);
+    @include size(auto,100%); 
+    position: relative;
+    padding: 20px 40px;
+    padding: 50px 40px 40px;
+    margin: 0px;
+    text-align: left;
+    h1 {
+      width: 100% !important;
+      font-size: 36px;
+      line-height: 40px;
+      }
+      h2, p, h4 {
+      font-size: 20px;
+      line-height: normal !important;
+      font-weight: 500 !important;
+      }
+      @include xl {
+        padding: 20px 40px;
+        h1 {
+        font-size: 2.5vw !important;
+        line-height: normal;
+        }
+        h2, p, h4 {
+        font-size: 1.15vw !important;
+        }
+      }
+     }
+  
+    
+     .banner_description h1 {
+      padding-bottom: 15px;
+      }
+      
+   */
+
+
+
+
+/* Split Banner
+================================================== */
+
+
+/* Container */
+   .split-banner {
+    height: auto;
+  
+     }
+     @include lg() {
+       .split-banner {
+        position: relative;
+       }
+     }
+  
+   /* Text */
+   .split-banner-content #bc-sf-filter-collection-title {
+   color: $white;
+   }
+
+@include md-max() {
+    .split-banner {
+
+    &--button {
+     width: 100%;
+     }
+     &--action  {
+     width: 100%;
+     }
+  }
+}
+
+/* Desktop
+================================================== */
+   @include md() {
+    div.section.collection_description {
+      padding: 40px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+    .collection_banner {
+      height: 280px !important;
+      margin-bottom: 25px;
+      }
+    .split-banner {
+      position: absolute !important;
+      top: 0 !important;
+      bottom: 0 !important;
+      }
+  }
+
+
+
+.feature-container {
+  height: 100%;
+  background: $palette-grape-900;
+  @include flexBox(row, center, center);
+  margin-right: 30px;
+  color: white !important;
+  text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+/* #Home - Banner
+================================================== */
+
+  .hero-3 {
+     display: flex;
+     }
+     .hero-3 > img {
+     width: 37.25vw;
+     height: 100%;
+     flex-grow: 0;
+     }
+     .hero-3--center {
+     background-color: $palette-olive-200;
+     @include flexBox(row, flex-start, center)
+     }
+
+     .hero-3--center-inner {
+     padding: 30px;
+     }
+     .hero-3--headline {
+     font-size: 2.5vw;
+     line-height: normal !important;
+     padding-bottom: var(--space-unit);
+     color: $color-text-dark;
+     }
+     .hero-3--text p {
+      font-weight: 500;
+      font-size: 1.15vw;
+      padding-bottom: .95vw;
+      margin-top: -10px;
+      color: $color-text-dark;
+     }
+     .hero-3--button {
+     color: $color-text-dark;
+     background-color: $palette-olive-200;
+     border: 2px solid $color-text-dark;
+     @include rounded();
+     display: inline-block;
+     padding: 10px;
+     text-transform: uppercase;
+     font-weight: 700 !important;
+     }
+    .hero-3--headline {
+     line-height: normal;
+     font-weight: 700;
+     letter-spacing: -.05em;
+    }
+
+
+ 
+.banner {
+  h1 {
+    margin-left: 0;
+  }
+}

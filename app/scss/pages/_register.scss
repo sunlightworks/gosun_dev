@@ -1,0 +1,12 @@
+.register {
+    background-image: url('https://cdn.shopify.com/s/files/1/0789/1333/files/Shine_Fishing-01--mobile_0e4beba9-e7c4-4db6-851a-c2a57730a8cb.jpg?v=1583520629');
+    background-size: cover;
+    background-position: top;
+    height: 210px;
+    z-index: 99;
+    @include md() {
+        background-image: url('https://cdn.shopify.com/s/files/1/0789/1333/files/Shine-Fishing_02.jpg?v=1583520907');
+        background-position: center bottom;
+        height: 100vh;
+    }
+}

@@ -1,0 +1,169 @@
+
+
+/* -------------------------------- 
+
+File#: _3_testimonial-slideshow
+Title: Testimonial Slideshow
+Descr: A Slideshow to display a gallery of testimonials
+
+-------------------------------- */
+
+:root {
+    --testimonial-slideshow-profile-img-size: 48px;
+    --slideshow-card-height: 400px;
+    @include md() {
+      --testimonial-slideshow-profile-img-size: 64px;
+      --slideshow-card-height: 300px;
+    }
+  }
+  
+  .testimonial-slideshow {
+    --slideshow-height: 320px; // update slideshow height - inherited from Slideshow component
+  
+    @include md() {
+      --slideshow-height: 500px;
+    }
+  }
+  
+  .testimonial-slideshow__profile-img {
+    width: var(--testimonial-slideshow-profile-img-size);
+    height: var(--testimonial-slideshow-profile-img-size);
+    overflow: hidden;
+  
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  
+ 
+
+#stamped-reviews-widget[data-widget-type="carousel"] {
+    @include flexBox(column, null, center);
+
+    .stamped-carousel-title {
+        font-size: var(--text-xl) !important;
+        font-weight: 900 !important;
+        font-family: cp !important;
+        text-align: center !important;
+    }
+
+    .stamped-carousel-buttons {
+        width: 100% !important;
+        display: flex;
+        justify-content: space-between;
+    }
+    .stamped-carousel-subtitle {
+        display: none;
+    }
+
+    .stamped-carousel-scroll #stamped-carousel-scroll-wrapper {
+
+        .block {
+            font-family: cp;
+            background: var(--color-white);
+            box-shadow: var(--shadow-sm);
+            margin-right: var(--space-sm);
+            padding: var(--space-md);
+            height: var(--slideshow-card-height);
+            overflow:hidden;
+            text-overflow: ellipsis;
+            content: "";
+            position:relative;
+            @include md() {
+            width: 50% !important;
+            padding: var(--space-lg);
+            }
+            &:before {
+                content:'';
+                width:100%;
+                height:100%;    
+                position:absolute;
+                left:0;
+                top:0;
+                background:linear-gradient(transparent 280px, var(--color-white));
+                @include md(){
+                    background:linear-gradient(transparent 170px, var(--color-white));
+                }
+            }
+        }
+        
+        .stamped-reviews-title a {
+            font-size: var(--text-md), 1.2em ;
+        }
+        .stamped-reviews-message {
+            margin-left: 0 !important;
+            font-size: var(--text-md), 1.2em;
+        }
+        .stamped-reviews-message-block {
+            font-family: cp;
+            font-size: var(--text-md);
+            line-height: var(--text-md);
+            font-style: normal;
+            color: var(--color-contrast-medium);
+        }
+        .stamped-reviews-author {
+            margin-left: 0 !important;
+            font-size: var(--text-md), 1.2em;
+            color: var(--color-contrast-high);
+        }
+        .stamped-reviews-date {
+            font-size: var(--text-sm);
+        }
+        .stamped-reviews-image {
+            display: none;
+        }
+    }
+}
+
+
+// Next/Previous arrows
+.stamped-carousel-button-left, stamped-carousel-button-right {
+    display: block;
+    background-color: alpha(var(--color-black), 0.75); // IE fallback
+    height: var(--slideshow-btn-height);
+    width: var(--slideshow-btn-width);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: background .2s, transform 0.2s;
+  
+    &:hover {
+      background-color: alpha(var(--color-contrast-higher), 0.85);
+  
+      &:before {
+        color: var(--color-bg);
+      }
+    }
+  
+    .slideshow:not(.slideshow--is-animating) &:active { // active effect
+      transform: translateY(2px);
+    }
+  
+    .icon {
+      display: block;
+      width: var(--slideshow-btn-icon-size);
+      height: var(--slideshow-btn-icon-size);
+      margin: 0 auto;
+      transition: color .2s;
+      color: var(--color-white); // IE fallback
+    }
+  
+    @supports (grid-area: auto) {
+      background-color: transparent; // button color
+    
+      .icon {
+        color: var(--color-contrast-higher); // icon color
+      }
+    }
+  }
+
+
+
+// Star rating
+.fa-star, .fa-star-o, .fa-star-half-o, .stamped-fa-star, .stamped-fa-star-o, .stamped-fa-star-half-o {
+    color: var(--color-contrast-high) !important;
+    &:before {
+    font-size: var(--text-md);
+    }
+}
+

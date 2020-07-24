@@ -1,0 +1,73 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Icons
+// -----------------------------------------------------------------------------
+@import "//app/scss/bundle";
+
+.icon {
+    float: left;
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    position: relative;
+    font-size: 16px !important;
+    &--lg {
+      font-size: 36px !important;  
+    }
+  }
+
+
+
+  /* Won't work unless 'Material Icons Outlined' class is applied */
+/*
+  [class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .15em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bag:before { content: "\e901"; }
+.icon-cart:before { content: "\e8cc"; }
+.icon-check:before { content: "\e903"; }
+.icon-cross:before { content: "\e904"; }
+.icon-up-arrow:before { content: "\e917"; }
+.icon-down-arrow:before { content: "\e905"; }
+.icon-left-arrow:before { content: "\e90b"; }
+.icon-right-arrow:before { content: "\e912"; margin-right: 0; }
+.icon-plus:before { content: "\e911"; }
+.icon-minus:before { content: "\e90e"; }
+.icon-menu:before { content: "\e90d"; }
+.icon-email:before { content: "\e906"; }
+.icon-pinterest:before { content: "\e907"; }
+.icon-rss:before { content: "\e909"; }
+.icon-houzz:before { content: "\e90a"; }
+.icon-snapchat:before { content: "\e90c"; }
+.icon-phone:before { content: "\e90f"; }
+.icon-instagram:before { content: "\e910"; }
+.icon-vimeo:before { content: "\e913"; }
+.icon-search:before { content: "\e914"; }
+.icon-zoom:before { content: "\e900"; }
+.icon-youtube:before { content: "\e915"; }
+.icon-lock:before { content: "\e916"; }
+.icon-user:before { content: "\e918"; }
+.icon-facebook:before { content: "\ea90"; }
+.icon-twitter:before { content: "\ea96"; }
+.icon-tumblr:before { content: "\eab9"; }
+.icon-linkedin:before { content: "\eaca"; }
+.icon-twitter-share:before { content: "\ea96"; }
+.icon-facebook-share:before { content: "\ea90"; }
+.icon-pinterest-share:before { content: "\e907"; }
+.icon-mail-share:before { content: "\e906"; }
+*/

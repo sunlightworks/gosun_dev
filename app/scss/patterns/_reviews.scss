@@ -1,0 +1,449 @@
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Reviews
+// -----------------------------------------------------------------------------
+@import "//app/scss/bundle";
+
+
+
+
+
+
+
+  // -----------------------------------------------------------------------------
+  // Reviews - Write a Review
+  // -----------------------------------------------------------------------------
+  /* #Stamped.io
+  ================================================== */
+
+  
+  [data-widget-type="minimal"] .stamped-review .stamped-review-content {
+      margin: 0 !important;
+      width: calc(100% - 40px);
+      @include md() {
+          margin: 0 0 0 0px !important;
+      }
+  }
+  
+  
+  .stamped-form-label {
+      text-transform: none !important;
+      font-family: 'cp' !important;
+    }
+    
+  .stamped-form-custom-question > label {
+      text-transform: none;
+      font-size: var(--text-sm);
+    }
+    
+    .new-review-form .stamped-form-custom-option-scale label div {
+      color: $palette-tint-400;
+    }
+    
+    .stamped-form-review-recommend-label {
+      font-weight: 700;
+    }
+    
+    
+  
+  
+  
+  .stamped-form-input {
+    max-width: 700px;
+  }
+  
+  .stamped-container input {
+    max-width: 700px;
+  }
+  
+  .new-review-form {
+    @include lg() {
+    max-width: 50%;
+    }
+  }
+  
+  .stamped-form-custom-question > label span {
+    font-weight: 400;
+    font-family: 'cp';
+    clear: both;
+  }
+  
+  .stamped-form-custom-question > label {
+      font-family: 'cp'
+   }
+  
+  /*
+  .new-review-form .stamped-form-custom-question {
+    display: flex;
+  }
+  
+  .stamped-form-custom-question label {
+    width: 20%;
+  }
+  
+  .new-review-form .stamped-form-custom-option-scale label {
+    width: calc(100% / 5);
+  }
+  
+  .new-review-form .stamped-form-custom-option-scale {
+    width: 100%;
+  }
+  
+  .new-review-form .stamped-form-custom-option-scale label:nth-child(2) {
+  }
+  
+  */
+  
+  
+
+
+  
+    /* #Reviews - Buttons
+  ================================================== */
+  /* #Buttons - Upload photo */
+    .stamped-file-uploader-btn {
+      border: 2px solid $color-text-dark;
+      padding: 12px 10px !important;
+      @include rounded();
+      margin-top: 10px !important;
+    }
+    .stamped-container[data-widget-show-upload="true"] .stamped-file-uploader {
+      margin-top: 10px !important;
+    }
+    
+ /* #Buttons - Write review, Ask question */
+    div[data-widget-style*="standard"] .stamped-summary span.stamped-summary-actions {
+      @include flexBox(row, null, null);
+      .stamped-summary-actions-newreview.button {
+        margin-bottom: 5px !important;
+      }
+    }
+
+      /* Button icon */
+  .stamped-summary-actions-newquestion::before, .stamped-summary-actions-newreview::before, .stamped-summary-actions-mobile-filter i::before, .stamped-summary-actions-clear::before {
+    color: #888 !important;
+  }
+  
+  
+  // -----------------------------------------------------------------------------
+  // Reviews - Show Reviews
+  // -----------------------------------------------------------------------------
+  
+
+  
+    /* #Reviews - Overview
+  ================================================== */
+  .stamped-review-body {
+    @include flexBox(column, null, null)
+   }
+
+
+  
+  .stamped-review-options:not(:empty) {
+    display: none;
+  }
+
+  .stamped-review-product a {
+    display: none;
+  }
+
+
+.stamped-filter-selects {
+  display: none !important;
+}
+  .spr-container {
+  display: none !important;
+}
+
+
+
+  
+  /* #Reviews - Caption
+  ================================================== */
+  .stamped-review-content-body {
+      word-wrap: break-word !important;
+      @include md() {
+          width: 70% !important;
+      }
+    }
+  
+    .stamped-review-body {
+      word-wrap: break-word !important;
+      @include md() {
+          width: 70% !important;
+      }
+    }
+    
+  /* #Reviews - Attributes
+  ================================================== */
+  /* Average attributes */
+  div.stamped-review-options:nth-child(5) {
+      display: none;
+     }
+  /* Default attributes */
+  .stamped-review-options {
+      clear: both !important;
+      width: 100% !important;
+      margin: 0 0 10px 0 !important;
+      @include md() {
+          float: right !important;
+          width: 29.75% !important;
+      }
+  }
+  
+  /* Slider */
+  .stamped-reviews span.stamped-review-option-scale span {
+      margin-bottom: 5px !important;
+      background: $grape-1 !important;
+      border: none !important;
+      width: calc(100% / 5);
+      box-shadow: inset 1px 0 0 $alabaster, inset -1px 0 0 rgba(255,255,255,0) !important;
+      @include md() {
+          margin-bottom: 0 !important;
+          margin-top: 0;
+      }
+  }
+  
+  /* Slider- Empty */
+  .stamped-reviews span.stamped-review-option-scale[data-value="1"] span:nth-last-child(n+5), .stamped-reviews span.stamped-review-option-scale[data-value="2"] span:nth-last-child(n+4), .stamped-reviews span.stamped-review-option-scale[data-value="3"] span:nth-last-child(n+3), .stamped-reviews span.stamped-review-option-scale[data-value="4"] span:nth-last-child(n+2), .stamped-reviews span.stamped-review-option-scale[data-value="5"] span {
+      background: $grape-2 !important;
+  }
+  
+  /* Slider- First and last */
+  .stamped-review-option-scale span {
+      background: $grape-3;
+      &:nth-of-type(1) {
+          border-radius: 4px 0 0 4px;
+          }
+      &:nth-of-type(5) {
+          border-radius: 0 4px 4px 0;
+      }
+  }
+    
+    /* #Reviews - Images
+  ================================================== */
+  .stamped-review-image {
+      clear: both;
+      padding-top: 40px !important;
+    }
+    
+  
+    /* #Reviews - Footer
+  ================================================== */
+    .stamped-review-footer {
+      margin-top: 100px;
+      float: left !important;
+      width: 70% !important;
+      word-wrap: break-word !important;
+    }
+    
+  li[data-value="location"], li[data-value="age"], li[data-value="gender"] {
+    display: none !important;
+    @include md() {
+        display: flex !important;
+    }
+  }
+  
+  .stamped-reviews .stamped-review-options ul {
+      flex-direction: column !important;
+      li {
+          margin-bottom: 10px !important;
+      }
+  }
+  
+  
+    /* #Reviews - Verified
+  ================================================== */
+  .stamped-verified-badge {
+      padding: .2rem 1rem .3rem;
+      border-radius: 2rem;
+      background: rgb(228, 248, 240);
+    }
+    
+    .stamped-review-header .stamped-verified-badge, .stamped-review-header .verified, .stamped-review-header .verified .fa-check-circle-o, .stamped-review-header .verified .stamped-fa-check-circle-o, .stamped-review-header .verified-badge, .stamped-review-header .verified-badge .fa-check-circle-o, .stamped-review-header .verified-badge .stamped-fa-check-circle-o {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+     /* #Reviews - Reply
+  ================================================== */
+  .stamped-review-reply {
+    margin: 30px 0 0 0 !important;
+    background: $palette-neutral-200 !important;
+    padding: 20px !important;
+  }
+
+  
+  
+  
+    /* #Reviews - Helpful
+  ================================================== */
+  .stamped-rating-holder {
+  a {
+      padding: 5px 10px;
+      border-radius: 4px;
+  }
+  
+  .stamped-thumbs-up {
+      &:hover, &:active, &:focus {
+      background: $palette-success-10;
+      .stamped-fa.stamped-fa-thumbs-up {
+          color: $palette-success-50;
+        }
+    }
+  }
+    
+    .stamped-thumbs-down {
+        &:hover, &:active, &:focus {
+          background: $palette-alert-10;
+          .stamped-fa.stamped-fa-thumbs-down {
+              color: $palette-alert-50;
+            }
+        }
+    }
+      
+  }
+  
+  
+
+  
+  
+  
+  
+  
+  
+  /* #Shopify
+  ================================================== */
+  
+  .spr-icon {
+      color: $grape-2 !important;
+  }
+  
+  .spr-header-title {
+     letter-spacing: -0.01em !important;
+     font-weight: 700;
+     font-size: 24px;
+  }
+  
+  
+  .spr-review:hover .spr-review-reportreview {
+     opacity: 1;
+  }
+  .spr-review-reportreview {
+     opacity: 0;
+     text-decoration: underline;
+     color: $color-text-sub;
+  }
+  
+  /* #Review - [Paragraph] */
+  .spr-review-content-body {
+     max-width: $width-sm;
+  }
+  
+  
+  /* #Review - [Label] */
+  .spr-form-label {
+   font-size: 16px  !important;
+   font-weight: 700 !important;
+   text-transform: none !important;
+  }
+  
+  /* #Review - [margins] */
+  .spr-form-contact-name, .spr-form-contact-email, .spr-form-contact-location, .spr-form-review-rating, .spr-form-review-title, .spr-form-review-body {
+   margin: 0 0 25px 0;
+  }
+  
+  /* #Review - [Title] */
+  .spr-form-title {
+   font: 400 21px 'cp' !important;
+   margin-bottom: 25px;
+  }
+  
+  /* #Review - [Container] */
+  .spr-container {
+   border: none;
+  }
+  
+  
+    
+
+
+
+.stamped-review-reply-body {
+  max-width: 720px;
+}
+
+
+.stamped-reply-q {
+  font-weight: 700;
+}
+
+/*
+.stamped-reply-q::after {
+  /* content: ""; */
+  /* content: "Q"; */
+  /* content: "Qu"; */
+  /* content: "Que"; */
+  /* content: "Ques"; */
+  /* content: "Quest"; */
+  /* content: "Quest["; */
+  /* content: "Quest[n"; */
+  /* content: "Questi"; */
+  /* content: "Questio"; 
+  content: "Question";
+  opacity: 1 !important;
+  position: absolute;
+  left: 64px;
+}
+
+.stamped-reply-q {
+  display: block;
+  position: relative;
+  text-indent: -100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.stamped-reply-a {
+  font-weight: 700;
+  margin-left: -20px;
+  position: absolute;
+  opacity: 0;
+  display: block;
+  position: relative;
+  text-indent: -100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.stamped-reply-a::after {
+  content: "Answer";
+  opacity: 1 !important;
+  position: absolute;
+  left: 73px;
+}
+
+.stamped-reply-a {
+  /* opacity: 0; 
+}
+*/
+
+
+
+
+
+
+
+/* Inline #27 | https://gosun.co/products/chill */
+
+.summary-overview {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.stamped-summary-text-1 {
+  font-size: 72px !important;
+  line-height: px !important;
+  margin-bottom: 25px;
+}

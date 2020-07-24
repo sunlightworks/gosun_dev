@@ -1,0 +1,67 @@
+
+mixin ol-string(value, separator=",")
+  ol&attributes(attributes)
+    each elem in value.split(separator)
+      li #{elem}
+
+
+//-
+    Top-Level Description
+mixin description(content)
+    .overviewSection-contentDescription(data-v-68d52f4e='')
+        span.overviewSection-contentText(data-v-68d52f4e='')
+            span.overviewSection-contentText(data-v-68d52f4e='')
+            span= content
+            br  
+
+mixin ul-string(value, separator=",")
+    ul&attributes(attributes)
+        each elem in value.split(separator)
+            li #{elem}     
+
+
+mixin uses(activity1, activity2, activity3, activity4) 
+    b= "Uses: "
+    a(href='https://www.gosun.co/collections/shop-all?_=pf&pf_t_activity=' + activity1 title='Shop GoSun Products | ')= activity1
+    | , 
+    a(href='https://www.gosun.co/collections/shop-all?_=pf&pf_t_activity=' + activity2 title='Shop GoSun Products | ')= activity2
+    | , 
+    a(href='https://www.gosun.co/collections/shop-all?_=pf&pf_t_activity=' + activity3 title='Shop GoSun Products | ')= activity3
+    | , and 
+    a(href='https://www.gosun.co/collections/shop-all?_=pf&pf_t_activity=' + activity4 title='Shop GoSun Products | ')= activity4
+
+//-
+    End Top-Level Description
+
+//- START: Tabs 
+mixin tabs(type, url)
+    h5.overviewSection-contentDescription
+        span.overviewSection-contentText(data-v-68d52f4e='')= type
+
+    if type === "Videos"
+        table.one-up(width='100%')
+            tbody
+                tr
+                    td.video-responsive
+                        iframe(src= "'" + url + "'" allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' width='560' height='315' frameborder='0')
+    else if type === "Features"
+        table.two-up.features(width='100%')
+            tbody
+                tr
+                    td
+                        ol
+                            li Cap for Boiling Mode
+                            li Insulated Lid
+                            li Cooking Tray
+                            li Cooking Pans
+                            li Reflectors
+                            li Vacuum Tube
+                            li Clamshell Case
+                            li Gearloop
+                            li Universal Action Mount
+                            li Bracket with Kickstand
+                            li Zipper
+                    td(style='width: 8.90707%;')
+                        img(src='//cdn2.shopify.com/s/files/1/0789/1333/files/Features-3_large.png?v=1563327291' alt='')
+//- END: Tabs
+

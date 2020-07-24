@@ -1,0 +1,57 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the fixed add to cart nav.
+// -----------------------------------------------------------------------------
+
+
+
+/* #Sticky Bar - Base Styles
+================================================== */
+
+.followMeBar.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 0;
+  }
+  
+  .followMeBar.fixed.absolute {
+    position: absolute;
+  }
+
+  /* #Sticky Bar - Custom Styles
+================================================== */
+
+/* Round 1 */
+  .followMeBar.fixed .purchase-details__quantity.product-quantity-box {
+    display: none !important;
+}
+
+
+.followMeBar.fixed {
+    @include shadow-nav();
+    background: $white;
+    height: 60px;
+    left: 0;
+    z-index: 1;
+}
+
+/* Round 2 */
+.followMeBar.fixed {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+}
+
+.followMeBar.fixed .btn-container{
+    width: calc(43.75% - 20px);
+    max-width: 496px;
+
+}
+
+.followMeBar.fixed button.shopify-payment-button__more-options {
+    display: none;
+}
+
+
+

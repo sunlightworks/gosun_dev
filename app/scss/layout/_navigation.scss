@@ -1,0 +1,654 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to navigation
+// -----------------------------------------------------------------------------
+@import "//app/scss/bundle";
+
+
+.menu.right {
+  display: flex;
+}
+
+// -----------------------------------------------------------------------------
+// Mobile
+// -----------------------------------------------------------------------------
+  #header span.menu_title {
+    display: none !important;
+  }
+
+  /* #Menu [Open] - Link color
+  ================================================== */
+  a.parent-link--true, .icon-down-arrow:before, a#customer_login_link, #mobile_menu li a   {
+    color: $color-text-dark !important;
+  }
+
+
+  /* #Menu [Open] - Hide images
+  ================================================== */
+  .mobile-mega-menu_block img {
+      display: none !important;
+  }
+
+  /* #Menu [Open] - List style
+  ================================================== */
+  #mobile_menu ul {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  li.mobile-mega-menu_block, #mobile_menu li {
+    background: $white;
+    margin-bottom: 2px;
+  }
+
+  .mobile-mega-menu.hidden, #mobile_menu li {
+    padding-left: 0 !important;
+  }
+
+
+  /* Sub-menu border */
+  li.mobile-mega-menu_block a, #mobile_menu li a {
+    border-top: 1px solid $palette-shade-50;
+  }
+
+
+  /* #Menu [Open] - Container
+  ================================================== */
+  /* Menu Titles */
+  li.nav-title {
+    font-size: 12px !important;
+    color: var(--color-contrast-medium) !important;
+    background: transparent !important;
+    text-transform: uppercase !important;
+    padding: 0 !important;
+    margin-left: -15px !important;
+  }
+
+
+  /* Sale */
+.link-sale {
+  padding-left: 20px;
+  color: $wood-1 !important;
+  a, i {
+    color: $wood-1 !important;
+  }
+  p {
+    margin-top: 0 !important;
+  }
+  .icon {
+    padding-top: 0px;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Top / Container
+// -----------------------------------------------------------------------------
+
+  div.is-absolute {
+    position: relative !important;
+  }
+
+  /* Promo Banner
+  ================================================== */
+    /* Remove white space above hero [home] */
+    .index.promo_banner-show #pagecontent {
+      padding-bottom: 0px !important;
+    }
+
+    .index-sections .under-menu:nth-child(1) {
+      margin-top: 0px !important;
+    }
+
+
+  /* Secondary
+  ================================================== */
+    .top_bar {
+      padding: 0 25px;
+      @include md-max() {
+        width: 100% !important;
+        height: var(--mega-nav-height) !important;
+        padding: 0 10px;
+        @include shadow-nav();
+        z-index: 1;
+      }
+    }
+
+
+  /* Main
+  ================================================== */
+    .main_nav {
+      background-color: $grape-3 !important;
+      height: var(--mega-nav-height);
+      width: 100%; 
+    }
+
+    .main_nav_wrapper {
+      background-color: $grape-3 !important;
+      @include shadow-nav();
+      @include flexBox(row, center, null);
+      @include centerMargin();
+      @include size(100%);
+      z-index: 999999;
+    }
+
+    .nav {
+      height: var(--mega-nav-height);
+      width: 100% !important;
+      @include flexBox(row, space-between, null);
+      ul.menu {
+        padding-top: 6px !important;
+      }
+    }
+
+    .dropdown_link--vertical, .dropdown_link, .top_link, .sublink {
+      &:hover {
+        opacity: .7 !important;
+      }
+    }
+
+    .vertical-menu li {
+      padding-right: var(--space-unit) !important;
+    }
+
+    /* Main / Search
+    ================================================== */
+
+      .search__results {
+        @include shadow-menu();
+        margin-top: 7px;
+      }
+
+      .search_form input {
+        border-radius: 22px;
+        background: $palette-grape-700;
+        border: none !important;
+        &:active, &:focus {
+        border-radius: 22px;
+        background: $palette-grape-700;
+        border: none !important;
+      }
+    }
+
+    /* Hide placeholder text on click */
+    .search_form input:focus::placeholder {
+      color: transparent;
+    }
+      .menu li.search_container {
+        width: 280px !important;
+        margin-left: 40px;
+      }
+
+    /* Main / Links 
+    ================================================== */
+      /* Make full height */
+        .menu a, .menu a:visited, .menu a:active, #header span.menu_title, .menu a span, select.currencies, .mini_cart span {
+          height: 100%;
+        }
+
+        .vertical-menu li {
+          height: 100%;
+        }
+
+    /* Main / Logo
+    ================================================== */
+      div.logo {
+        margin-right: var(--space-md);
+        max-width: 125px;
+        &:hover {
+          opacity: .7;
+          @include animateFast();
+        }
+      }
+
+  /* #Menu [Closed] - Logo size
+  ================================================== */
+    a.mobile_logo img {
+      height: 26px !important;
+    }
+
+
+
+    
+
+// -----------------------------------------------------------------------------
+// Top / Menu / Dropdown
+// -----------------------------------------------------------------------------
+  .vertical-menu_submenu,
+  .dropdown_content,
+  div.dropdown.menu, .cart_content {
+    background: $white !important;
+    @include rounded();
+    @include shadow-menu();
+  }
+
+  .vertical-menu_submenu {
+    li a, a{
+      color: $color-text-accent !important;
+      &:hover, &:active, &:focus {
+        background: $palette-shade-50;
+        @include rounded();
+        color: $color-text-dark !important;
+      }
+    }
+  }
+  .mobile-mega-menu p {
+    color: $color-text-accent;
+  }
+
+  .menu a.top_link:hover,
+  .menu a.dropdown_link:hover,
+  .menu a.active_link {
+    border-bottom: none;
+  }
+
+  /* Container- width */
+  .dropdown {
+    @include md-max() {
+      width: 100% !important;
+      height: calc(100% - var(--header-height));
+      overflow: hidden;
+    }
+    overflow-x: hidden;
+    width: 1180px !important;
+    position: absolute;
+    left: 0;
+    margin: auto;
+    @include md() {
+      right: 0;
+    }
+  }
+
+  .vertical-menu_submenu, .dropdown_content, div.dropdown.menu {
+    border-radius: 0 0 4px 4px;
+    margin-top: 0px;
+  }
+  .menu .vertical-menu_submenu {
+    margin-top: 0px;
+  }
+
+  // Indent child list
+
+  #mobile_menu {
+    margin: 10px 0;
+  }
+
+  #header a.parent-link--true {
+    padding-left: var(--space-unit);
+  }
+
+  .mobile-mega-menu_block a {
+    padding-left: 30px;
+  }
+
+  @include md-max() {
+    .dropdown_container:before {
+      content: "";
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,.8);
+      position: absolute;
+    }
+  }
+
+
+
+// -----------------------------------------------------------------------------
+// Top / Menu / Mega-menu
+// -----------------------------------------------------------------------------
+
+
+  .dropdown_column {
+    @include padding(10px, 20px, 0, 20px);
+    padding: 0 30px !important;
+    img {
+      filter: saturate(0) !important;
+      -webkit-filter: saturate(0) !important;
+    }
+    &:hover {
+      a p {
+        color: $color-text-dark !important;
+      }
+      img {
+        filter: saturate(1) brightness(0.97) !important;
+        -webkit-filter: saturate(1) brightness(0.97) !important;
+      }
+    }
+  }
+
+
+  .mega-menu__image-caption-link { 
+    img {
+    @include sizeMax(200px, 200px);
+    }
+    a {
+      height: auto;
+      width: 220px !important;
+      &:hover {
+        a p {
+          color: $color-text-dark !important;
+        }
+        img {
+          filter: saturate(1) brightness(0.97) !important;
+          -webkit-filter: saturate(1) brightness(0.97) !important;
+        }
+      }
+    }
+  }
+  
+
+
+// -----------------------------------------------------------------------------
+// Top / Promo Banner
+// -----------------------------------------------------------------------------
+
+  /* Keep Promo open */
+  .promo_banner-close {
+    display: none !important;
+  }
+
+  .promo_banner {
+    height: var(--promo-banner-height) !important;
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include md-max(){
+     
+    }
+  }
+  /* Hide extra text on mobile */
+  #header > div:nth-child(1) > div:nth-child(1) > p:nth-child(2) {
+    display: none;
+  }
+
+
+
+  
+// -----------------------------------------------------------------------------
+// Sidebar
+// -----------------------------------------------------------------------------
+
+
+
+
+// -----------------------------------------------------------------------------
+// Main Nav [Update]
+// -----------------------------------------------------------------------------
+
+
+  /* #Main Nav - [Base]
+  ================================================== */
+  .mega-menu { 
+    a {
+    color: $color-text-accent !important;
+    font-weight: 500 !important;
+  }
+  .dropdown_title a {
+    text-transform: uppercase !important;
+    color: $color-text-accent;
+    cursor: default !important;
+    @include base-BodyUppercase();
+    margin: 0 0 3px;
+    &:hover {
+      cursor: default !important;
+    }
+  }
+  .image-element__wrap {
+    width: 120px;
+  }
+  }
+
+  .dropdown_content {
+    a, p {
+      
+    }
+  }
+
+  /* #Main Nav - [2-column links]
+  ================================================== */
+
+  .mega-menu-2, .mega-menu-3, .mega-menu-4 {
+    .dropdown {
+      max-width: 460px !important;
+      @include md {
+        margin-right: 41% !important;
+      }
+      @include xl {
+        margin-right: 51% !important;
+      }
+    }
+    .dropdown_column {
+      padding: 20px 0 !important;
+      background: transparent; 
+      box-shadow: none !important;
+      &:nth-of-type(2) {
+        border-left: 2px solid #f2f6fa;
+      }
+      ul.dropdown_title {
+        border-bottom: none !important; 
+        padding-bottom: 0 !important; 
+      }
+    }
+
+   
+    ul {
+      padding: 0;
+    }
+    ul, li, a, .dropdown_column__menu {
+      width: 100%;
+    }
+    ul li {
+      padding: 0  !important;
+    }
+    ul:not(.dropdown_title) li {
+      &:hover {
+        @include nav-hover;
+      }
+    }
+    a {
+      padding: 5px 35px !important;
+    }
+  }
+
+  /* Gallery column */
+  .dropdown_container.mega-menu .dropdown_column {
+    @include flexBox(null, center, center)
+  }
+  
+  /* Gallery column */
+  .mega-menu-1 {
+    .dropdown_column {
+      border-left: 2px solid #f2f6fa;
+      max-width: calc(1180px/5) !important;
+      &:hover {
+        @include nav-hover;
+      }
+    }
+    p {
+      margin-top: 0 !important;
+    }
+    img {
+      margin-bottom: 0;
+    }
+  }
+
+
+
+
+// -----------------------------------------------------------------------------
+// Mobile Nav [Update]
+// -----------------------------------------------------------------------------
+
+
+  /* #Mobile Nav - [Base]
+  ================================================== */
+
+  /* Fixed header */
+  header {
+    position: fixed !important;
+    width: 100vw !important;
+    display: block;
+    z-index: 999 !important;
+    @include md() {
+      margin-top: -140px;
+    }
+  }
+
+  .container.main.content, .index-sections,  .collection-template-section  {
+    @include md() {
+      margin-top: 140px;
+    }
+  }
+
+  .index-sections, .customers-login {
+    @include md-max() {
+      margin-top: 60px;
+    }
+  }
+
+  .mobile_nav-fixed--true #pagecontent, .mobile_nav-fixed--false #pagecontent {
+    padding-bottom: 40px !important;
+  }
+
+
+
+
+
+  /* Pages / Support */
+  .shogun-tab-box {
+    color: $color-text-dark !important;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    margin-left: -4px;
+    padding: 21px 12px;
+    @include sm() {
+      padding: 21px 18px;
+    }
+  }
+
+  
+  /* Active */
+  .shogun-tabs > li.shogun-tab-active > .shogun-tab-box {
+    background-color: $grape-1 !important;
+    .shogun-tab-title {
+      color: $grape-3 !important;
+      caret-color: transparent;
+    }
+    &:hover {
+      background-color: $grape-1 !important;
+      .shogun-tab-title {
+        color: $grape-3 !important;
+        caret-color: transparent;
+      }
+    }
+  }
+
+
+// -----------------------------------------------------------------------------
+// Product
+// -----------------------------------------------------------------------------
+
+
+/* #SubNav Bar - Base Styles 
+================================================== */
+.subnav {
+  @include md-max() {
+    @include flexBox(null, null, null);
+    top: 60px !important;
+  }
+  @include shadow-nav();
+  background-color: $white;
+  z-index: 99;
+  height: 65px;
+  overflow: hidden;
+  position: fixed;
+  width: 100vw !important;
+  /* Product nav - over cart */
+  &:before {
+    z-index: 99 !important;
+  }
+  .purchase-details__buttons {
+    margin-top: 0;
+  }
+  button {
+    height: 100%;
+    width: var(--space-lg);
+    }
+  &__link {
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    margin: 0;
+    padding: 21px 12px;
+    @include md-max() {
+      white-space: break-spaces;
+      padding: 0;
+      max-width: 160px;
+    }
+  }
+}
+
+.subnav__link:not(.base-BodyTitle) , .shogun-tab-box {
+  &:hover {
+    background: $alabaster;
+    color: $color-text-dark;
+  }
+}
+
+  /* #Sticky - Custom buy button
+  ================================================== */
+/* Product nav - position below main nav */
+.subnav {
+  
+}
+
+/* Hide custom buy button  */
+.sticky-fade {
+    display: none !important;
+}
+
+
+/* #Sticky - Make subnav stick
+================================================== */
+#stickThis.stick {
+  margin-top: 0;
+  position: fixed;
+  top: 100px !important;
+  z-index: 99;
+  @include md-max() {
+    top: 60px !important;
+  }
+}
+
+#stick-here {
+  top: 40px;
+  position: absolute;
+}
+
+/* #Sticky - Buy buttons
+================================================== */
+.sticky-buy {
+  position: fixed;
+  width: 400px !important;
+  top: 112px;
+  z-index: 100;
+  @include md-max() {
+    width: 150px !important;
+    top: 70px;
+    right: var(--space-unit);
+  }
+  .shopify-payment-button__more-options {
+    display: none;
+  }
+}
+
+/* #Search - Snize
+================================================== */
+body .snize-ac-results.snize-ac-results-mobile {
+  margin-top: var(--header-height ) !important;
+ }
+ 
+
+
+

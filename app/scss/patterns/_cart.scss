@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Cart
+// -----------------------------------------------------------------------------
+@import "//app/scss/bundle";
+
+
+/* #Cart - Container [desktop]
+================================================== */
+.cart_container .cart_content {
+    height: calc(100vh - 80px);
+    max-height: 100vh !important;
+    font-size: var(--text-sm);
+}
+
+.cart_bottom {
+  width: 100%;
+  max-width: 379px;
+}
+
+
+/* #Cart - Message
+================================================== */
+.cart_info {
+  @include md-max() {
+
+    }
+    padding: 40px 0 10px;
+    margin-bottom: 0px;
+  }
+
+.cart_text {
+    display: none;
+}
+
+
+/* #Cart - Typography
+================================================== */
+
+  /* Individual Product - Title */
+.item_title {
+font-size: 16px;
+font-weight: bold;
+}
+
+
+  /* Individual Product - Price */
+  .price .money {
+    font-weight: 400;
+  }
+
+
+
+  /* Checkout button */
+  .add_to_cart.action_button {
+    font-weight: 700;
+  }
+
+  
+
+  
+
+  
+
+  

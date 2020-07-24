@@ -1,0 +1,118 @@
+
+
+/* -------------------------------- 
+
+File#: _1_choice-images
+Title: Choice Images
+Descr: Selectable images that behave like radio/checkbox buttons
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+:root {
+    // custom input
+    --choice-img-input-size: 100px; // custom input background size
+    --choice-img-input-icon-size: 26px; // icon size
+  }
+
+  .compareprice {
+      display: none;
+  }
+
+  .launchtip_add_to_cart, .action a {
+      background: var(--color-contrast-lower);
+      margin-bottom: 0 !important;
+      width: 65px;
+  }
+
+  .action a {
+  display: flex;
+  right: 0;
+  position: absolute;
+  top: 10px;
+  }
+
+  .btn-default.openbox, .add-to-cart__text {
+    font-weight: 400 !important;
+    font-size: 16px !important;
+  }
+
+  .LaunchTipAddToCartForm {
+    /*
+    border-radius: 50%;
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+    */
+    
+  }
+
+  
+  .choice-img, .productbox {
+    position: relative;
+    overflow: hidden;
+   
+    transition: .3s;
+    border-radius:var(--radius-md) !important;
+    
+    margin-bottom: var(--space-sm);
+    &:hover {
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+    }
+  
+    &:active {
+      
+    }
+    img {
+        @include filter-alabaster();
+    }
+    .title {
+        font-weight: 500;
+    }
+  }
+  
+  .choice-img[aria-checked="true"] {
+    transition: transform .3s;
+    box-shadow: var(--shadow-sm), 0 0 0 2px var(--color-primary);
+  }
+  
+  // custom input
+  .choice-img__input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(1px, -1px);
+    background-color: var(--color-primary);
+    width: var(--choice-img-input-size);
+    height: var(--choice-img-input-size);
+    clip-path: polygon(15% 0%, 100% 0%, 100% 85%);
+    pointer-events: none;
+    opacity: 0;
+  
+    .icon {
+      position: absolute;
+      top: calc(var(--choice-img-input-size)/4 - var(--choice-img-input-icon-size)/2);
+      right: calc(var(--choice-img-input-size)/4 - var(--choice-img-input-icon-size)/2);
+      font-size: var(--choice-img-input-icon-size);
+      color: var(--color-white); // icon color
+  
+      > * {
+        transition: stroke-dashoffset .3s;
+        stroke-dasharray: 18;
+        stroke-dashoffset: 18;
+      }
+    }
+  }
+  
+  .choice-img[aria-checked="true"] {
+    .choice-img__input {
+      opacity: 1;
+  
+      .icon > * {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+  
+  

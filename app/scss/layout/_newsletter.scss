@@ -1,0 +1,40 @@
+.newsletter_section {
+    h2 {
+        @include heading("h4");
+    }
+}
+
+
+.newsletter {
+    .input-row {
+        flex-direction: row !important;
+      }
+    .button.-hollow.-shade.split-banner--button {
+        float: right;
+        width: 55px !important;
+        @include md()  {
+            margin: 0 0 0 2%;
+        }
+  
+    }
+    input.contact_email {
+        width: 85%;
+        @include md-max()  {
+            width: 80% !important; 
+        }
+    }
+}
+
+input.contact_email {
+    height: 56px !important;
+    border-radius: 28px !important;
+    -webkit-border-radius: 28px !important;
+    -moz-border-radius: 28px !important;
+    -ms-border-radius: 28px !important;
+    -o-border-radius: 28px !important;
+}
+  
+
+.newsletter .button {
+    width: auto !important;
+  }

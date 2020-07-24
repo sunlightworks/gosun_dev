@@ -1,0 +1,139 @@
+
+
+/* -------------------------------- 
+
+File#: _2_cart
+Title: Cart
+Descr: Cart template
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+:root {
+    --cart-product-image-size: 96px; // preview image size
+  
+    @include md() {
+      --cart-product-image-size: 128px;
+    }
+  }
+  
+  .cart {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .cart__product {
+    border-bottom: 1px solid var(--color-contrast-lower);
+  
+    &:first-child {
+      border-top: 1px solid var(--color-contrast-lower);
+    }
+  }
+  
+  .cart__product-img {
+    width: var(--cart-product-image-size);
+    flex-shrink: 0;
+  
+    a, img {
+      display: block;
+      width: 100%;
+    }
+  
+    a {
+      overflow: hidden;
+      transition: opacity .2s;
+    }
+  
+    a:hover {
+      opacity: 0.85;
+    }
+  }
+  
+  .cart__product-info { // cell containing product info (e.g., product name, metadata, quantity...)
+    flex-grow: 1;
+    display: grid;
+    grid-gap: var(--space-xs); // gap between (product title + metadata) and (qty + price)
+  }
+  
+  .cart__product-tot { // qty select + price
+    display: grid;
+    grid-gap: var(--space-xs); // gap between select and price
+  }
+  
+  .cart__select { // custom select
+    font-size: var(--text-sm);
+    width: 6em;
+  }
+  
+  .cart__remove-btn {
+    @include reset;
+    font-size: var(--text-sm);
+    color: var(--color-primary);
+    cursor: pointer;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  
+    &:focus {
+      outline: 2px solid alpha(var(--color-primary), 0.2);
+      outline-offset: 2px;
+    }
+  }
+
+  .cart__gift {
+    @include size(100%, 100%)
+  }
+  
+  .cart__gift-message {
+    width: 100%;
+    margin-top: var(--space-xxs);
+    margin-bottom: var(--space-sm);
+    display: none;
+  }
+  
+  .cart__gift .radio:checked ~ .cart__gift-message {
+    display: block;
+  }
+  
+  @include xs(){
+    .cart__product-info {
+      grid-template-columns: 1fr auto; // separate (title + metadata) and (qty + price)
+      grid-gap: var(--space-md);
+      justify-content: space-between;
+      align-items: start;
+    }
+  
+    .cart__product-tot {
+      text-align: right;
+    }
+  
+    .cart__select {
+      margin-left: auto;
+    }
+  }
+  
+  @include sm() {
+    .cart__product, .cart__product-info {
+      align-items: center;
+    }
+  
+    .cart__product-tot {
+      grid-template-columns: auto minmax(6em, auto); // separate qty and price - 6em is price min width
+      grid-gap: var(--space-sm);
+    }
+  
+    .cart__select {
+      align-self: start;
+    }
+  }
+  
+  @include md() {
+    .cart__subtotal {
+      position: sticky;
+      top: var(--space-md);
+      background-color: var(--color-contrast-lower);
+      border-radius: var(--radius-md);
+      padding: var(--space-sm);
+    }
+  }

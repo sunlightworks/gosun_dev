@@ -1,0 +1,21 @@
+/* Card - Body
+================================================== */     
+
+.card {
+    background: $white;
+    @include rounded();
+    &--body {
+        @include shadow-nav();
+    }
+    &--md {
+        @include sizeMax(280px, 320px);
+    }
+    &--lg {
+        @include sizeMax(460px);
+    }
+}
+
+
+
+
+

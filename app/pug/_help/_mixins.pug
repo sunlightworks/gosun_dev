@@ -1,0 +1,54 @@
+include /pug/_help/_products
+
+mixin book(name, price)
+  li #{name} for #{price} €
+
+
+
+
+
+
+mixin table(columns)
+    table(class= columns + '-up.table-format')
+        tbody
+
+mixin table-wd(type, name, weight, dimensions)
+    if type ==="head"
+        tr
+            th= 'Product name'
+            th= 'Weight'
+            th= 'Dimensions'
+    else if type==="product"
+        tr
+            td= name
+            td= weight + 'lbs'
+            td= dimensions
+
+
+
+
+mixin table-compare
+    .width-1-1.product-grid-padding-desktop
+        .overflow-container
+            table.table.table-striped.four-up
+                tbody
+
+mixin table-compare--row(name, string)
+    tr
+        th=  name
+        p= '{% for product in product_specs %}'
+            th=  '{{ product.' + string + ' }}'
+        p= '{% endfor %}'
+
+mixin table-compare--head(name, string)
+    tr.table-head
+        th=  name
+        p= '{% for product in product_specs %}'
+            th=  '{{ product.' + string + ' }}'
+        p= '{% endfor %}'
+
+mixin table-compare--head2(image, string)
+    tr
+        th=  '{{ product.' + string + ' }}'
+    tr
+        th=  '{{ product.' + image + ' }}'

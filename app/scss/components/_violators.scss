@@ -1,0 +1,143 @@
+
+// -----------------------------------------------------------------------------
+// Pills
+// -----------------------------------------------------------------------------
+
+/* #Products - Stock
+================================================== */
+.pill {
+  /*
+  background: $palette-neutral-300;
+  color: $palette-neutral-900;
+  display: table;
+  width: auto;
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin-bottom: var(--space-unit);*/ 
+  height: 100%;
+  @include flexBox(null, null, center !important);
+  
+
+}
+
+
+// -----------------------------------------------------------------------------
+// Thumbnail Banner (Pre-order, Sale, etc.)
+// -----------------------------------------------------------------------------
+
+
+
+.new_banner_product, .preorder_banner_product {
+  display: none !important;
+}
+
+
+
+.banner_holder {
+  width: auto !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  display: inline-block !important;
+  position: relative !important;
+  }
+  
+  .article-violator--top {
+    right: 0 !important;
+    top: 15px !important;
+    @include lg() {
+      top: -2px !important;
+    }
+  }
+
+  .thumbnail_banner, .sale_banner_product {
+    height: var(--space-lg) !important;
+    width: auto !important;
+    line-height: var(--space-unit) !important;
+    padding: 0 12px !important;
+    @include flexBox(null, center, center)
+  }
+  
+/* Collection Violators
+================================================== */
+  .violator{
+    border-color: transparent !important;
+    max-width: 92% !important;
+    height: 24px !important;
+    @include md() {
+      max-width: 70% !important;
+    }
+  &--discount {
+    border-radius: 30px !important;
+    
+    margin-left: var(--space-sm);
+  }
+    &--attribute {
+      border-radius: 4px 0 !important;
+      border-color: transparent !important;
+      max-width: 92% !important;
+      @include md() {
+        max-width: 70% !important;
+      }
+    }
+    &--free-item {
+      border-radius: 4px 0 !important;
+      border-color: transparent !important;
+      max-width: 92% !important;
+      @include md() {
+        max-width: 70% !important;
+      }
+    }
+
+  }
+
+
+
+  .product-list .thumbnail .thumbnail_banner {
+    position: static;
+    }
+
+
+
+/* Hide default banners */
+  .preorder_banner, .preorder_banner_product, .new_banner {
+    display: none;
+  }
+
+  
+  
+/* Pre-order Delivery 
+================================================== */
+
+  .product_section .description.bottom {
+    position: relative;
+   }
+
+  .delivery-date {
+     flex: 1 0 50%;
+     margin-right: 6px;
+     max-width: calc(50% - 6px);
+     height: 100%;
+     justify-content: center;
+     align-items: center;
+     display: inline-flex !important;
+     @include hollow($color-discount);
+     top: -34px;
+     }
+
+     @include md-max {
+      .delivery-date {
+      margin-top: 10px;
+      width: 100% !important;
+      max-width: 100% !important;
+      position: static;
+      }
+  }
+     
+/* Hide product type*/
+     .product_links {
+      display: none;
+    }
+
+
+
+

@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to animation
+// -----------------------------------------------------------------------------
+@import "//app/scss/bundle";
+
+
+
+@mixin animate($duration) {
+  @if $duration == fast {
+    transition: all 0.2s ease;
+  } @else if $duration == slow {
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+}
+}
+
+
+
+@mixin animateFast() {
+  transition: all 0.1s ease-out;
+}
+
+@mixin animateMd() {
+  transition: all 0.2s ease-out;
+}
+
+@mixin animateSlow() {
+  transition: all 0.5s ease-in-out;
+}
+@mixin cubicFast() {
+transition: all 300ms cubic-bezier(.215,.61,.355,1); 
+}
+
+
+
+
+@-webkit-keyframes slideInRight {
+    from {
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .slideInRight {
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+  }
+  

@@ -1,0 +1,169 @@
+// -----------------------------------------------------------------------------
+// This file contains all Tabs
+// -----------------------------------------------------------------------------
+@import "//app/scss/bundle";
+
+/* #Container - Default
+================================================== */
+
+#tabs {
+   @include shadow-nav;
+   }
+
+.ui-accordion, .ui-tabs {
+  td {
+    width: 50% !important;
+  }
+}
+
+#tabs > div, #tabs-app-accordion > div {
+  background: $white !important;
+  iframe {
+    max-width: 100%;
+}
+}
+
+
+// -----------------------------------------------------------------------------
+// Labels
+// -----------------------------------------------------------------------------
+
+/* #Label - Default
+================================================== */
+   .ui-state-default.ui-corner-top {
+   padding: 10px 0 !important;
+   background: $white !important;
+   border-bottom: 2px solid $color-border-light !important;
+   a {
+    color: $color-text-accent;
+    font-weight: 600 !important;
+   }
+   }
+
+   /* #Label - Hover
+================================================== */
+.ui-state-default.ui-corner-top.ui-state-hover, .ui-accordion-header.ui-state-hover {
+  a {
+   color: $grape-3 !important;
+  }
+  }
+
+/* #Label - Active
+================================================== */   
+  .ui-tabs-active.ui-state-active, .ui-accordion-header.ui-state-active {
+   border-bottom-color: $grape-3 !important;
+   a {
+    color: $grape-3 !important;
+   }
+  }
+
+/* Remove Vanilla border */
+  #tabs > ul > li a, .custom-product-description-tabs > ul > li a, #tabs-app-accordion > h3.ui-state-active a {
+   border-bottom-width: 0px !important;
+  }
+
+
+// -----------------------------------------------------------------------------
+// Content
+// -----------------------------------------------------------------------------
+
+/* #Table- Cells
+================================================== */  
+td {
+  padding: 10px 20px 40px 10px !important;
+  border-right: 1px dashed $color-border-mid !important;
+}
+
+
+ /* #Table- Global
+================================================== */ 
+.table-format {
+ 
+}
+
+.table-format {
+  background: $white;
+  }
+
+ /* #Table- First column
+================================================== */  
+.compare td:nth-child(1) {
+     font-weight: bold !important;
+  }
+
+    /* #Table- Second column (active)
+================================================== */  
+.compare td:nth-child(2) {
+  color: $white;
+  font-weight: bold !important;
+  background:$grape-3;
+  border-bottom: none !important;
+  }
+
+  /* #Table- First row
+================================================== */  
+.table-format tr:first-child td {
+   font-weight: 600 !important;
+   color: $color-text-dark !important;
+   font-size: 16px;
+   line-height: 60px !important;
+   background: $white !important;
+   border-bottom: 2px solid $color-border-light !important;
+   padding-top: 0 !important;
+   padding-bottom: 0 !important;
+   }
+   
+
+/* #Table - Alternating rows
+================================================== */  
+   .table-format tr:nth-child(2n+1) {
+   background: #f2f2f2;
+   }
+
+
+
+
+// -----------------------------------------------------------------------------
+// Features
+// -----------------------------------------------------------------------------
+
+
+
+/* #Features - Number count
+================================================== */  
+    .features li::marker {
+     color: $color-text-accent;
+     }
+
+/* #Features - List items
+================================================== */   
+    .features li {
+     font-weight: 600;
+     margin-bottom: 6px !important;
+     line-height: 32px;
+     }
+
+  /* #Features - Center content
+================================================== */  
+    .features ol, img {
+     margin-left: auto;
+     margin-right: auto;
+     }
+
+
+     
+
+// -----------------------------------------------------------------------------
+// Mobile
+// -----------------------------------------------------------------------------
+
+     .ui-accordion-header {
+       padding: 10px 0 !important;
+       background: $white !important;
+       border-bottom: 2px solid $color-border-light !important;
+       }
+  
+      #tabs-app-accordion {
+        @include shadow-nav();
+       @include rounded();
+      }

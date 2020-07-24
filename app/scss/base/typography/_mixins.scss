@@ -1,0 +1,263 @@
+
+
+// -----------------------------------------------------------------------------
+// Fonts
+// -----------------------------------------------------------------------------
+
+@mixin fontsize($size: 24, $base: $body-md) {
+    font-size: $size + px;
+    font-size: ($size / $base) * 1rem;
+  }
+  // prettier-ignore
+  @mixin font($color: false, $weight: false,  $lh: false) {
+      @if $color { color: $color; }
+      @if $weight { font-weight: $weight; }
+      @if $lh { line-height: $lh; }
+    }
+  
+  // prettier-ignore
+  @mixin font($color: false, $weight: false,  $lh: false) {
+    @if $color {
+      color: $color;
+    }
+    @if $weight {
+      font-weight: $weight;
+    }
+    @if $lh {
+      line-height: $lh;
+    }
+  }
+  
+  @function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  
+  @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+  
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+      & {
+        font-size: $min-font-size;
+        @media screen and (min-width: $min-vw) {
+          font-size: calc(
+            #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+              ((80vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+          );
+        }
+        @media screen and (min-width: $max-vw) {
+          font-size: $max-font-size;
+        }
+      }
+    }
+  }
+  
+  
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+
+/* #Typography- Size
+================================================== */
+@mixin text-sm() {
+    font-size: $body-xs !important;
+  }
+  
+  /* #Typography - Color
+  ================================================== */
+  @mixin textColor($color) {
+    @if $color == light {
+      color: $color-text-dark;
+    } @else if $color == dark {
+      color: $color-text-dark;
+    }
+  }
+  @mixin textStyle($color, $decoration: null) {
+    @include textColor($color);
+    @if $decoration == ul {
+      text-decoration: underline !important;
+    }
+  }
+
+  @mixin sub-text() {
+    font-size: 0.8em;
+    color: $sub-text-color;
+  }
+  
+  // -----------------------------------------------------------------------------
+  // Global
+  // -----------------------------------------------------------------------------
+  
+  .semibold {
+    font-weight: 500;
+  }
+  
+  .body-text--large h4 {
+    font-weight: normal;
+  }
+  
+  // -----------------------------------------------------------------------------
+  // Body Text
+  // -----------------------------------------------------------------------------
+  @mixin body-text($size) {
+    letter-spacing: -0.03em;
+    @if $size == "small"{
+      // font-size: var(--text-xs);
+    }
+    @else if $size == "normal" {
+     // font-size: var(--text-sm);
+    }
+    @else if $size == "medium"{
+     //  font-size: var(--text-md) !important;
+    }
+    @else if $size == "large"{
+     //  font-size: var(--text-sm)
+      
+    }  
+  }
+
+  .body-text {
+    &--normal {
+      @include body-text('normal');
+    }
+    &--md {
+      @include body-text('medium');
+    }
+    &--lg {
+      @include body-text('large');
+    }
+  }
+  
+  
+  .body-text--large p {
+    @include body-text('normal');
+    @include md() {
+      @include body-text('medium');
+    }
+  }
+  
+  
+  @mixin body-text--caption() {
+    text-transform: uppercase;
+  }
+  
+  .body-text--caption {
+    @include body-text--caption();
+    }
+    
+  
+  
+  // -----------------------------------------------------------------------------
+  // Captions
+  // -----------------------------------------------------------------------------
+  @mixin caption($size) {
+      font-weight: 500;
+     
+    @if $size == "small"{
+      text-transform: uppercase;
+      letter-spacing: .025em !important;
+      font-size: $body-xs;
+    }
+    @else if $size == "normal" {
+      font-size: $body-sm;
+    }
+    @else if $size == "medium"{
+      font-size: $body-md;
+      line-height: 1.5;
+      @include md() {
+        font-size: 20px;
+      }
+    }
+    @else if $size == "large"{
+      font-size: 24px !important;
+    line-height: 30px !important;
+    }  
+  }
+  
+
+  @mixin base-BodyUppercase() {
+    @include caption(small)
+  }
+  
+  
+  // -----------------------------------------------------------------------------
+  // Headings
+  // -----------------------------------------------------------------------------
+  @mixin heading($size) {
+    letter-spacing: -0.03em !important;
+  
+    @if $size == "h3"{
+      font-weight: 900 !important;
+      font-size: 30px;
+      line-height: 1;
+      @include md() {
+        font-size: 38px;
+      }
+    }
+    @else if $size == "h4"{
+      font-size: 24px;
+      line-height: 1.18;
+      @include md() {
+        font-size: 30px;
+      }
+    }
+    @else if $size == "h5"{
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 700;
+      @include md() {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+    @else if $size == "h6"{
+      font-size: 18px !important;
+      line-height: 22px;
+      font-weight: 400;
+      @include md() {
+        font-size: 20px !important;
+        line-height: 24px;
+      }
+    }
+  }
+  
+  
+  @mixin heading-h3() {
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -0.03em;
+  }
+  
+  
+
+  
+  
+
+// -----------------------------------------------------------------------------
+// Links
+// -----------------------------------------------------------------------------
+
+@mixin links($type) {
+  @if $type == "button" {
+    white-space: nowrap;
+    display: inline-block;
+    height: 56px !important;
+    line-height: 40px !important;
+    font-size: 20px;
+    font-weight: 600 !important;
+    letter-spacing: -0.03em !important;
+  }
+  @if $type == "hyperlink" {
+
+}
+}
+
+.button, .btn, button, .banners a {
+  @include links('button');
+}
+  
+

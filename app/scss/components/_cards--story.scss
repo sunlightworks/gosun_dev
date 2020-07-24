@@ -1,0 +1,108 @@
+
+
+/* -------------------------------- 
+
+File#: _1_article-preview
+Title: Article Preview
+Descr: Blog post excerpt, containing a link to the article page
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.story__img {
+    display: block;
+    transition: opacity .2s;
+    margin-bottom: var(--space-xs);
+  
+    &:hover {
+      opacity: 0.85;
+    }
+  
+    img {
+      display: block;
+      width: 100%;
+      border-radius: var(--radius-md);
+    }
+  }
+  
+  .story__category {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-contrast-higher);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    background-color: alpha(var(--color-primary), 0.2);
+    padding: var(--space-xxxs) var(--space-xxs);
+    border-radius: var(--radius-md);
+    transition: background-color .2s;
+  
+    &:hover {
+      text-decoration: underline;
+      background-color: alpha(var(--color-primary), 0.3);
+    }
+  }
+  
+  .story__title {
+    a {
+      color: var(--color-contrast-higher);
+      text-decoration: none;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .story__author {
+    --author-img-size: 100%;
+    display: grid;
+    grid-template-columns: var(--author-img-size) 1fr;
+    align-items: center;
+    grid-gap: var(--space-xs);
+  
+    img {
+      display: block;
+      width: var(--author-img-size);
+      height: var(--author-img-size);
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  
+  .story__author-name {
+    margin-bottom: var(--space-xxxxs);
+    
+    a {
+      text-decoration: none;
+      color: var(--color-contrast-higher);
+  
+      &:hover {
+        text-decoration:  underline;
+      }
+    }
+  }
+  
+  .story__meta {
+    font-size: var(--text-sm);
+    color: var(--color-contrast-medium);
+  }
+  
+  // --featured
+
+    .story--featured {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      grid-gap: var(--space-md);
+      align-items: center;
+  
+      .story__img {
+        margin: 0;
+      }
+  
+      .story__title {
+        font-size: var(--text-xxl);
+      }
+    }
+  
+  
+  

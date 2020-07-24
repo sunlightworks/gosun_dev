@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Home page
+// -----------------------------------------------------------------------------
+/*
+.homepage-video, .testimonial-block, .banner {
+    img {
+        filter: brightness(0.6) contrast(0.75) saturate(1.15) !important;
+        -webkit-filter: brightness(0.6) contrast(0.75) saturate(1.15) !important;
+}
+}
+*/
+.homepage-video, .testimonial-block, .banner {
+    img {
+        filter: brightness(1) contrast(0.75) saturate(1.15) !important;
+        -webkit-filter: brightness(1) contrast(0.75) saturate(1.15) !important;
+}
+}
+
+
+
+
+
+
+
+.banner img {
+    object-fit: cover;
+}
+
+
+section.homepage-video, .testimonial-block, #banner-1560450172476, #shopify-section-1560450172476 {
+    max-height: 90vh;
+    img {
+        max-height: 90vh;
+    }
+}
+
+
+.darken-bg {
+    background: transparent !important;
+}
+
+@include sm-max() {
+#shopify-section-1562617501809 {
+
+.banner img {
+    height: calc(100vh - 40px) !important;
+    object-fit: cover;
+    object-position: 55% 50%;
+}
+.caption {
+position: absolute ;
+top: 20%;
+}
+.caption-content {
+    text-align: center;
+    p, h1 {
+        color: $white !important;
+    }
+    h1 {
+        margin: 15px 0;
+    }
+}
+
+a.highlight-true, a.highlight-true:hover {
+margin-top: 40px;
+width: 100% !important;
+}
+}
+}
+

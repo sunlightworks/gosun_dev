@@ -1,0 +1,164 @@
+
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Media Queries
+// -----------------------------------------------------------------------------
+
+    // Tiny devices
+    @mixin xs {
+        @media (min-width: #{$screen-xs-min}) {
+        @content;
+        }
+    } 
+    
+    // Small devices
+    @mixin sm {
+        @media (min-width: #{$screen-sm-min}) {
+        @content;
+        }
+    } 
+    
+    // Small devices (max)
+    @mixin sm-max {
+        @media (max-width: #{465px}) {
+        @content;
+        }
+    } 
+    
+    
+    // Medium devices
+    @mixin md {
+        @media (min-width: #{$screen-md-min}) {
+        @content;
+        }
+    } 
+    
+    // Medium devices (max)
+    @mixin md-max {
+        @media (max-width: #{$screen-md-min}) {
+        @content;
+        }
+    } 
+    
+    // Large devices
+    @mixin lg {
+        @media (min-width: #{$screen-lg-min}) {
+        @content;
+        }
+    } 
+    
+    // Large devices (max)
+    @mixin lg-max {
+        @media (max-width: #{$screen-lg-min}) {
+        @content;
+        }
+    } 
+    
+    
+    // Extra large devices
+    @mixin xl {
+        @media (min-width: #{$screen-xl-min}) {
+        @content;
+        }
+    } 
+    
+    
+    
+    
+
+
+// -----------------------------------------------------------------------------
+// Layout
+// -----------------------------------------------------------------------------
+
+  /* #Layout - Size 
+  ================================================== */
+
+@mixin no-wrap() {
+    white-space: -moz-nowrap; /* Firefox */
+    white-space: -o-nowrap; /* Opera */
+    white-space: nowrap; /* Chrome */
+  }
+  
+  /* #Layout - Size 
+  ================================================== */
+  @mixin size($width: null, $height: null) {
+    width: $width;
+    height: $height;
+  }
+  @mixin sizeMax($width: null, $height: null) {
+    max-width: $width;
+    max-height: $height;
+  }
+  @mixin sizeMin($width: null, $height: null) {
+    min-width: $width;
+    min-height: $height;
+  }
+  
+  /* #Layout - Display
+  ================================================== */
+  @mixin flexBox($direction, $justify, $align) {
+    display: flex !important;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }
+  
+  @mixin flexSelf($align) {
+    align-self: $align;
+  }
+  
+  /* #Layout - Position
+  ================================================== */
+  @mixin absolute($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+  }
+  
+  /* #Layout - Margin 
+  ================================================== */
+  @mixin centerMargin() {
+    margin: 0 auto;
+  }
+  @mixin marginAll($margin) {
+    margin: $margin;
+  }
+  @mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+  }
+  
+  /* #Layout - Padding 
+  ================================================== */
+  @mixin paddingAll($padding) {
+    padding: $padding;
+  }
+  @mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+  }
+  
+  
+  
+  
+  
+  /* #Layout - Table
+  ================================================== */
+  @mixin table-head() {
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+  }

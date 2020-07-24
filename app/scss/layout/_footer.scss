@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+@import "//app/scss/bundle";
+
+.footer {
+    background: $palette-shade-800;
+    margin-bottom: -30px;
+}
+
+.footer a {
+    text-decoration: none !important;
+    &:hover {
+        opacity: .72 !important;
+    }
+}
+
+.footer p {
+    font-size: var(--text-sm);
+    line-height: 1em !important;
+    margin-top: 0;
+}
+
+
+
+
+
+.footer {
+    background: $palette-grape-700;
+    border-top: none !important;
+    a {
+        font-size: 16px;
+        color: $grape-1 !important;
+    }
+    @include md-max() { 
+        .footer-menu-wrap h6 {
+            border-top:1px solid $grape-2;
+       }
+    }
+}
+  
+
+.credits {
+    color: $palette-grape-200;
+}
+
+.footer_credits {
+    border-top: 1px solid $grape-2;
+    margin-top: 70px;
+    margin-bottom: -30px;
+    a {
+        font-size: var(--text-sm);
+        color: $palette-grape-200 !important;
+    }
+}
+
+
+.payment_methods, .footer-logo {
+    display: none !important;
+}
+  

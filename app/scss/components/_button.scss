@@ -1,0 +1,192 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the btn component.
+// -----------------------------------------------------------------------------
+@import "//app/scss/bundle";
+
+
+
+
+// -----------------------------------------------------------------------------
+// Basic Buttons
+// -----------------------------------------------------------------------------
+a.highlight-true, a.highlight-true:hover {
+background-color: $white !important;
+border-color: transparent !important;
+color: $color-text-dark !important;
+}
+
+// -----------------------------------------------------------------------------
+// Help - Button
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// Preorder - Chill // ----------------------------------------------------------------------
+
+
+.btn-custom {
+  background: $color-primary;
+  @include rounded();
+  @include shadow-nav();
+  padding: 10px 50px;
+  margin-bottom: 10px;
+  color: $white !important;
+  &:hover {
+    background: $color-primary-hover;
+    @include animateMd();
+  }
+}
+
+.btn-xl {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  background: $color-primary;
+  @include rounded();
+  @include shadow-menu();
+  padding: 15px 50px;
+  color: $white !important;
+  width: 100%;
+  z-index:19;
+  margin-top: 30px;
+  @include md-max() {
+    margin-top: 10px;
+  }
+   &:hover {
+    background: $color-primary-hover;
+    @include animateMd();
+     padding: 20px 50px;
+  }
+}
+
+
+@mixin btn-hero {
+    height: 50px;
+    background: rgba(0,0,0,.35);
+    &:hover {
+        background: rgba(0,0,0,.5); 
+    }
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// My Own
+// -----------------------------------------------------------------------------
+@mixin btn($background, $color) {
+  @include rounded();
+  border: 3px solid rgba(255,255,255,0) !important; // You'll want to customize this
+  color: $color !important;
+  background: $background !important;
+  &:hover, &:focus, &:active {
+    color: $background !important;
+    background: $color !important;
+    border-color: $background !important;
+  }
+  &.-hollow {
+    background: none !important;
+    color: $background !important;
+    border: 3px solid $background !important; // The thickness should correspond with the thickness set above
+    &:hover, &:focus, &:active {
+      color: $color !important;
+      background: $background !important;
+    }
+  }
+}
+// End Mixin
+
+// Using the mixin
+.button, .btn {
+  transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+  padding: 0 14px !important;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  @include rounded();
+  &.-primary {
+    @include btn($palette-pumpkin-500, var(--color-white));
+  }
+  &.-light {
+    @include btn($white, var(--color-contrast-higher));
+  }
+  &.-dark {
+    @include btn(var(--color-contrast-higher), var(--color-white));
+  }
+  &.-disabled{
+    color: $white !important;
+    background: $color-text-sub !important;
+    border-color: $color-text-sub !important;
+    cursor: default !important;
+  }
+  &.-shine {
+    @include btn($palette-wood-500, var(--color-white));
+  }
+}
+
+
+.btn-group {
+  float: left;
+  a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+  &.-a {
+    background: $palette-cherry-500;
+  }
+}
+
+
+#stamped-button-submit, .stamped-summary-actions-newreview, .stamped-summary-actions-newquestion  {
+  @include btn($color-text-dark, $alabaster)
+}
+
+
+/* #Buttons - Submit */
+#stamped-button-submit, .stamped-summary-actions-newreview, .stamped-summary-actions-newquestion  {
+  transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+  white-space: nowrap;
+  display: inline-block;
+  height: 40px !important;
+  padding: 0 14px !important;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08) !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  letter-spacing: .025em !important;
+}
+#stamped-button-submit {
+  line-height: 40px !important;
+}
+
+
+
+/* #Button - Kickstarter
+================================================== */
+.-kickstarter, .-indiegogo {
+  border: none !important;
+  img {
+    height: 44px;
+  }
+}
+.-indiegogo {
+  background: $palette-indiegogo-primary !important;
+  &:hover {
+    background: $palette-indiegogo-dark !important;
+  }
+}
+
+a.-light {
+  @include btn($alabaster, $palette-tundra-500);
+}
+
+
+/* #Button - Flits / Social login
+================================================== */
+.flits-btn span {
+  color: $white !important;
+}

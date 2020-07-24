@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+@import './base';
+
+@import './tools/functions';
+// global
+@import "base/partials";
+@import "abstracts/partials";
+
+// Tools
+@import './tools/mixins';
+
+
+// Core
+@import './core/colors';
+@import './core/forms';
+@import './core/helpers';
+@import './core/layout';
+@import './core/media';
+@import './core/responsive-tables';
+@import './core/rte';
+@import './core/typography';
+
+
+// others
+@import "components/partials";
+
+@import "patterns/partials";
+
+@import "layout/partials";
+
+@import "pages/partials";
+
+@import "vendors/partials";
+
+@import "themes/default";
+

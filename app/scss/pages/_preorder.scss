@@ -1,0 +1,73 @@
+/* https://www.indiegogo.com/projects/gosun-chill-a-solar-cooler-that-goes-off-grid/payments/new#/checkout */
+
+$screen-md-min: 768px;
+@mixin md-max {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+} 
+
+.preorder-container {
+  @include flexBox(column, null, center);
+  width: 100%;
+  margin-top: -40px;
+  @include md-max {
+  }
+}
+.preorder-hero {
+  z-index: 20;
+  width: 100vw !important;
+  height: 70vh;
+  max-height: 70vw;
+  background: url("https://www.dropbox.com/s/i8ocl7acn9y8c1n/DisplayHero_V09.jpg?raw=1");
+  background-size: cover;
+  background-position: left;
+  @include flexBox(column, flex-start, flex-end);
+  margin-bottom: 50px;
+  @include md-max() {
+    background-position: center;
+  }
+}
+
+.preorder-hero-text-container {
+  z-index: 21;
+  text-align: center;
+  min-height: 30vh;
+  width: 100vw !important;
+  @include flexBox(column, center, center);
+  background: $white;
+
+  h1 {
+    font-size: 65px;
+    line-height: 77px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  p {
+    margin-bottom: var(--space-unit);
+    margin-top: 0px;
+    font-size: 24px;
+  }
+
+  @include md-max {
+    padding-top: 40px;
+    p {
+      font-size: 21px;
+    }
+  }
+}
+
+
+
+.preorder-preview {
+  background: $white;
+  width: 100%;
+  max-width: 695px;
+  padding: 0;
+  img {
+    width: 100%;
+  }
+  @include md-max {
+    width: 80vw !important;
+  }
+}

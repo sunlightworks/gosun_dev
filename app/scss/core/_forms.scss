@@ -1,0 +1,128 @@
+form {
+  margin: 0;
+}
+
+a,
+area,
+button,
+[role='button'],
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+input,
+textarea,
+select {
+  font-size: 1.6rem;
+  max-width: 100%;
+  border: 1px solid $color-border;
+  border-radius: 0;
+
+  &[disabled] {
+    border-color: $color-disabled-border;
+    background-color: $color-disabled;
+    cursor: default;
+  }
+}
+
+button,
+input[type='submit'],
+label[for] {
+  cursor: pointer;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+// Force option color (affects IE only)
+option {
+  background-color: $color-body;
+  color: $color-body-text;
+}
+
+.input-error {
+  border-color: $color-error;
+  background-color: $color-error-bg;
+  color: $color-body-text;
+}
+
+
+
+
+// --------------------------------
+
+// (START) Global Editor code https://codyhouse.co/ds/globals/forms
+
+// --------------------------------
+
+:root{
+  --form-control-padding-x: var(--space-sm);
+  --form-control-padding-y: var(--space-xs);
+  --form-control-radius: 0.25em;
+}
+
+.form-control {
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-contrast-low);
+  transition: all 0.3s ease;
+
+  &::-webkit-input-placeholder {
+    color: var(--color-contrast-medium);
+  }
+
+  &::-moz-placeholder {
+    color: var(--color-contrast-medium);
+  }
+
+  &:-ms-input-placeholder {
+    color: var(--color-contrast-medium);
+  }
+
+  &:-moz-placeholder {
+    color: var(--color-contrast-medium);
+  }
+
+  &:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0px 0px 0px 3px alpha(var(--color-primary), 0.2);
+    outline: none;
+  }
+}
+
+.form-control[disabled], .form-control[readonly] {
+  cursor: not-allowed;
+}
+
+.form-control[aria-invalid="true"] {
+  border-color: var(--color-error);
+
+  &:focus {
+    box-shadow: 0px 0px 0px 3px alpha(var(--color-error), 0.2);
+  }
+}
+
+.form-legend {
+  color: var(--color-contrast-higher);
+  font-size: var(--text-md);
+  line-height: 1.2;
+  margin-bottom: var(--space-xxs);
+}
+
+.form-label {
+  font-size: var(--text-sm);
+}
+
+// --------------------------------
+
+// (END) Global Editor Code
+
+// --------------------------------

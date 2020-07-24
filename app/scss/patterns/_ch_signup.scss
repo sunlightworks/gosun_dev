@@ -1,0 +1,10 @@
+.cd-signin-modal {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  .cd-signin-modal.cd-signin-modal--is-visible {
+    visibility: visible;
+    opacity: 1;
+  }
