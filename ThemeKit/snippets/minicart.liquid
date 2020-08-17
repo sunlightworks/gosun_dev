@@ -42,7 +42,7 @@
               </a>
               {% endif %}  
 
-            <summary>
+            <div>
               <h2 class="text-base"><a href="{{ item.url }}" class="color-inherit">{{ item.product.title }} 
                 {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %} <!-- variant title -->
                 <span class="font-normal color-contrast-medium">&nbsp;| 
@@ -53,17 +53,14 @@
                 {% endunless %}
               </a></h2>
               <p class="text-sm color-contrast-medium margin-top-xxxs">{{ item.product.type }}</p>
-
               <div class="margin-top-xxxxs">
-
                 <div class="left product-quantity-box">
                   <span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>
                   <input type="number" min="1" size="2" class="quantity" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" data-line-id="{{ forloop.index }}" />
                   <span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>
                 </div>
-
               </div>
-            </summary>
+            </div>
 
             <div class="flex flex-column align-end justify-between height-100%">
               <i class="dr-cart__remove-btn icon--sm material-icons-outlined color-contrast-low">delete</i>
@@ -76,22 +73,35 @@
             </div>
 
           </li>
-
         {% endfor %}
       </ol>
     </form>
+      <summary class="padding-y-sm border-top border-contrast-lower flex-shrink-0">
+        <p class="flex justify-between js-cart_subtotal"><span>{{ 'layout.general.subtotal' | t }}</span> <span>{{ cart.total_price | money }}</span></p>
+        <p class="flex justify-between"><span>Shipping</span> <span>Free</span></p>
+      </summary>
     </div>
 
 
     <footer class="padding-x-md padding-y-sm border-top border-contrast-lower flex-shrink-0">
-      <p class="flex justify-between js-cart_subtotal"><span>{{ 'layout.general.subtotal' | t }}</span> <span>{{ cart.total_price | money }}</span></p>
-      <p class="flex justify-between"><span>Shipping</span> <span>Free</span></p>
-      {% if settings.go_to_checkout %}
-        <button type="submit" class="add_to_cart action_button btn btn--primary btn--md width-100% margin-y-xs" id="checkout">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.checkout' | t }}</button>
-      {% else %}
-        <button type="submit" class="add_to_cart action_button btn btn--primary btn--md width-100% margin-y-xs" id="go_to_cart">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.go_to_cart' | t }} </button>
+      <p class="flex justify-between js-cart_subtotal text-lg font-medium"><span>Your total</span> <span>{{ cart.total_price | money }}</span></p>
+
+      {% if settings.display_savings and total_saving > 0 %}
+        <div class="alert alert--success alert--is-visible js-alert margin-y-xs" role="alert">
+          <div class="flex items-center">
+            <i class="icon--sm material-icons-outlined margin-right-xxs">monetization_on</i>
+            <span class="money"></span>You save&nbsp;{{ total_saving | money }}</span>
+          </div>
+        </div>
       {% endif %}
-      <p class="affirm-as-low-as inline-block width-100% margin-y-xs" data-page-type="cart" data-amount="{{cart.total_price}}" data-affirm-type="text" data-learnmore-show="true"></p>
+      
+
+      {% if settings.go_to_checkout %}
+        <button type="submit" class="add_to_cart action_button btn btn--primary btn--md width-100% margin-y-sm" id="checkout">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.checkout' | t }}</button>
+      {% else %}
+        <button type="submit" class="add_to_cart action_button btn btn--primary btn--md width-100% margin-y-sm" id="go_to_cart">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.go_to_cart' | t }} </button>
+      {% endif %}
+      <p class="affirm-as-low-as inline-block width-100% margin-y-xs text-center" data-page-type="cart" data-amount="{{cart.total_price}}" data-affirm-type="text" data-learnmore-show="true"></p>
     </footer>
   </div>
 </div>

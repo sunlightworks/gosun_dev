@@ -1,0 +1,57 @@
+/* -------------------------------- 
+
+File#: _1_alert
+Title: Alert
+Descr: Feedback message
+
+-------------------------------- */
+
+.alert {
+  padding: var(--space-xs) var(--space-sm);
+  background-color: alpha(var(--color-primary), 0.2);
+  border-radius: var(--radius-md);
+  color: var(--color-contrast-higher);
+  font-weight: 500;
+  // hide element
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
+.alert__link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.alert__close-btn {
+  display: inline-block; // flex fallback
+  flex-shrink: 0;
+  margin-left: var(--space-sm);
+
+  .icon {
+    display: block;
+  }
+}
+
+// themes
+.alert--success {
+  background-color: alpha(var(--color-success), 0.2);
+  color: var(--color-success-darker);
+}
+
+.alert--error {
+  background-color: alpha(var(--color-error), 0.2);
+  color: var(--color-error-darker);
+}
+
+.alert--warning {
+  background-color: alpha(var(--color-warning), 0.2);
+  color: var(--color-warning-darker);
+}
+
+// toggle visibility
+.alert--is-visible {
+  position: static;
+  clip: auto;
+  clip-path: none;
+}

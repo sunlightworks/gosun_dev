@@ -1,6 +1,9 @@
 :root {
   // font family
-  --font-primary: 'cp', Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  --font-primary: "cp", Frutiger, "Frutiger Linotype", Univers, Calibri,
+    "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed",
+    "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue",
+    Helvetica, Arial, sans-serif !important;
   // body font size
   --text-base-size: 1rem;
   // type scale
@@ -22,7 +25,7 @@
   --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
   --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
 
-   // letter-spacing
+  // letter-spacing
   --letter-spacing-tight: -0.03em;
 
   // line-height
@@ -33,14 +36,16 @@
   --font-primary-capital-letter: 1;
 }
 
-
 body {
   font-size: var(--text-base-size, 1em);
   font-family: var(--font-primary, sans-serif);
   color: var(--color-contrast-high, hsl(240, 4%, 20%));
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--color-contrast-higher, hsl(240, 8%, 12%));
   line-height: var(--heading-line-height, 1.2);
   letter-spacing: var(--letter-spacing-tight);
@@ -55,20 +60,31 @@ h1, h2, h3, h4 {
   font-size: var(--text-xxxl, 2.488em);
 }
 
-h1, .text-xxxl {
+h1,
+.text-xxxl {
   font-size: var(--text-xxl, 2.074em);
-  @include lhCrop(var(--heading-line-height), var(--font-secondary-capital-letter) );
+  @include lhCrop(
+    var(--heading-line-height),
+    var(--font-secondary-capital-letter)
+  );
 }
 
-h2, .text-xxl {
+h2,
+.text-xxl {
   font-size: var(--text-xl, 1.728em);
 }
 
-h3, .text-lg {
+.text-xl {
+  font-size: var(--text-xl, 1.728em);
+}
+
+h3,
+.text-lg {
   font-size: var(--text-lg, 1.44em);
 }
 
-h4, .text-md {
+h4,
+.text-md {
   font-size: var(--text-md, 1.2em);
 }
 
@@ -76,7 +92,8 @@ h4, .text-md {
   font-size: 1em;
 }
 
-small, .text-sm {
+small,
+.text-sm {
   font-size: var(--text-sm, 0.833em);
 }
 
@@ -89,11 +106,12 @@ a {
   text-decoration: none;
 }
 
-a, a:visited {
-  color: var(--color-contrast-higher)
+a,
+a:visited {
+  color: var(--color-contrast-higher);
 }
 a:hover {
-  color: var(--color-contrast-high)
+  color: var(--color-contrast-high);
 }
 
 .link {
@@ -115,28 +133,53 @@ u {
 
 .text-component {
   div {
-    font-size: calc((100%)* 1.2);
-    line-height: calc(var(--body-line-height) * var(--line-height-multiplier, 1));
+    font-size: calc((100%) * 1.2);
+    line-height: calc(
+      var(--body-line-height) * var(--line-height-multiplier, 1)
+    );
     margin-bottom: var(--space-md);
   }
-  h1, h2, h3, h4 {
-    line-height: calc(var(--heading-line-height) * var(--line-height-multiplier, 1));
-    margin-bottom: calc(var(--space-unit) * 0.25 * var(--text-vspace-multiplier, 1));
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: calc(
+      var(--heading-line-height) * var(--line-height-multiplier, 1)
+    );
+    margin-bottom: calc(
+      var(--space-unit) * 0.25 * var(--text-vspace-multiplier, 1)
+    );
   }
 
-  h2, h3, h4 {
-    margin-top: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
+  h2,
+  h3,
+  h4 {
+    margin-top: calc(
+      var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1)
+    );
   }
 
-  p, blockquote, ul li, ol li {
-    line-height: calc(var(--body-line-height) * var(--line-height-multiplier, 1));
-  }
-  
-  ul, ol, p, blockquote, .text-component__block {
-    margin-bottom: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
+  p,
+  blockquote,
+  ul li,
+  ol li {
+    line-height: calc(
+      var(--body-line-height) * var(--line-height-multiplier, 1)
+    );
   }
 
-  ul, ol {
+  ul,
+  ol,
+  p,
+  blockquote,
+  .text-component__block {
+    margin-bottom: calc(
+      var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1)
+    );
+  }
+
+  ul,
+  ol {
     list-style-position: inside;
   }
 
@@ -157,14 +200,16 @@ u {
     text-align: center;
     margin-top: calc(var(--space-unit) * 0.5);
   }
-  
+
   em {
     font-style: italic;
   }
 
   hr {
     margin-top: calc(var(--space-unit) * 2 * var(--text-vspace-multiplier, 1));
-    margin-bottom: calc(var(--space-unit) * 2 * var(--text-vspace-multiplier, 1));
+    margin-bottom: calc(
+      var(--space-unit) * 2 * var(--text-vspace-multiplier, 1)
+    );
     margin-left: auto;
     margin-right: auto;
   }
@@ -185,7 +230,7 @@ u {
 }
 
 @include breakpoint(sm) {
-  .text-component__block--left, 
+  .text-component__block--left,
   .text-component__block--right {
     width: 45%;
 
@@ -196,12 +241,16 @@ u {
 
   .text-component__block--left {
     float: left;
-    margin-right: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
+    margin-right: calc(
+      var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1)
+    );
   }
 
   .text-component__block--right {
     float: right;
-    margin-left: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
+    margin-left: calc(
+      var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1)
+    );
   }
 }
 
@@ -219,7 +268,8 @@ u {
     margin-left: calc(-5.25 * var(--space-unit));
   }
 
-  .text-component__block--left, .text-component__block--right {
+  .text-component__block--left,
+  .text-component__block--right {
     width: 50%;
   }
 
