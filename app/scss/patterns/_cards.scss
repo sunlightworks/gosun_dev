@@ -203,7 +203,7 @@ a.collection-info__caption {
 /* #Article - Card [Clickable]
   ================================================== */
 
-.article-tile {
+.article-tile > * {
   &:hover {
     .article-media {
       clip-path: inset(0 0 0 0 round 4px 4px 0 0);
@@ -245,7 +245,7 @@ a.collection-info__caption {
   }
 }
 
-.article-tile > *,
+.article-tile,
 .article-a {
   position: relative;
   @include flexBox(column, flex-start, null);

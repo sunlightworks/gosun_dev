@@ -243,3 +243,128 @@ input, textarea {
     font-weight: 900;
   }
 }
+
+
+
+
+
+/* Theme [white]
+08-15-2020 by Bailey Latimer
+==============*/
+
+
+/* styles.scss.css | https://cdn.shopify.com/s/files/1/0789/1333/t/98/assets/styles.scss.css?v=385692906696372156 */
+
+.feature_image .main_nav a, .feature_image .main_nav a span {
+  /* color: #ffffff; */
+}
+
+.menu a, .menu a:visited, .menu a:active, #header span.menu_title, .menu a span, select.currencies, .mini_cart span {
+  /* color: #ffffff; */
+}
+
+.header a, .header a:visited, .header a span, .header select.currencies {
+  /* color: #ffffff; */
+}
+
+div.logo.text-align--center img {
+  /* filter: invert(1) brightness\(; */
+  filter: invert(1);
+}
+
+.top_bar {
+  /* background-color: #7a363b; */
+  /* background-color: var\(--color-w; */
+  /* background-color: var\(--color-; */
+  /* background-color: var\(--color-bg; */
+  /* background-color: var\(--color-b; */
+  /* background-color: var\(--color-contrast-high; */
+  /* background-color: var\(--color-cr; */
+  /* background-color: var\(--color-c; */
+  background-color: var(--color-contrast-high;;
+  background: var(--wood-1);
+}
+
+.feature_image .search_form input, .feature_image .search_form input:active, .feature_image .search_form input:focus {
+  /* color: #ffffff; */
+  color: var(--color-contrast-medium);
+}
+
+.feature_image .search_form input, .feature_image .search_form input:active, .feature_image .search_form input:focus {
+  /* color: #ffffff; */
+  color: var(--color-contrast-medium);
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="search"], input[type="url"], input[type="tel"], input[type="number"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="range"], input[type="color"], select, textarea {
+  /* color: #5f6a7d; */
+  color: var(--color-contrast-medium);
+}
+
+.feature_image .search_form input::placeholder {
+  /* color: #ffffff; */
+  color: var(--color-contrast-high);
+}
+
+.top_bar li a:hover, .top_bar li a[href]:hover, .top_bar li a[href]:hover span, .top_bar li a:active, .top_bar li a:hover span, .top_bar a:active span, .top_bar .currencies:hover, .feature_image .header .top_bar .menu a:hover, .feature_image .header .top_bar .menu a:hover span {
+  /* color: #ffffff; */
+  color: var(--color-contrast-medium);
+}
+
+.top_bar a, .top_bar a:visited, .top_bar a:active, .top_bar a span, .top_bar select.currencies, a.mini_cart, a.mini_cart span, .feature_image .header .top_bar .menu a, .feature_image .header .top_bar .menu a span, .cart_container .mini_cart:hover {
+  /* color: #ffffff; */
+  color: var(--color-contrast-high);
+}
+
+.feature_image .header .menu a[href]:hover, .menu a.active, .menu a.active span, .feature_image .header .menu a.active, .header_bar a.active, .feature_image .header .menu a:focus {
+  /* color: #ffffff; */
+  color: var(--color-contrast-medium);
+}
+
+.feature_image .header .menu a, .feature_image .header .menu a:visited, .feature_image .header .menu a span {
+  /* color: #ffffff; */
+}
+
+.menu li a[href]:hover, .menu li a:focus, .menu a[href]:hover span {
+  /* color: #ffffff; */
+  color: var(--color-contrast-medium);
+}
+
+/* main.css | https://cdn.shopify.com/s/files/1/0789/1333/t/98/assets/main.css?v=489597443255175249 */
+
+.main_nav_wrapper {
+  /* background-color: #873B40 !important; */
+  background-color: var(--color-bg);
+}
+
+.main_nav {
+  /* background-color: #873B40 !important; */
+}
+
+.link-sale a, .link-sale i {
+  /* color: #F0EDEA !important; */
+}
+
+.search_form input {
+  /* background: #7a363b; */
+  background: var(--wood-1);
+}
+
+.icon {
+  /* fill: currentColor; */
+  fill: var(--color-contrast-medium);
+}
+
+.info-item--top-bar .icon {
+  /* color: var(--color-white); */
+}
+
+.pattern-map {
+  /* background-image: url("https://cdn.shopify.com/s/files/1/0789/1333/files/cartography.png?12110") !important; */
+  /* background-blend-mode: multiply !important; */
+}
+
+/* Inline #22 | https://gosun.co/collections/all */
+
+.promo_banner {
+  background: var(--wood-2);
+}

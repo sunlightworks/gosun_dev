@@ -1270,7 +1270,7 @@ button.shopify-payment-button__button.shopify-payment-button__button--unbranded 
   --zindex-header: 2;
   --zindex-popover: 5;
   --zindex-fixed-element: 10;
-  --zindex-overlay: 15; }
+  --zindex-overlay: 9999; }
 
 :root {
   --display: block; }
@@ -2096,7 +2096,7 @@ html:not(.js) .no-js\:is-hidden {
   color: hsla(var(--color-contrast-low-h), var(--color-contrast-low-s), var(--color-contrast-low-l), var(--color-o, 1)); }
 
 .color-contrast-medium {
-  color: hsla(var(--color-contrast-medium-h), var(--color-contrast-medium-s), var(--color-contrast-medium-l), var(--color-o, 1)); }
+  color: hsla(var(--color-contrast-medium-h), var(--color-contrast-medium-s), var(--color-contrast-medium-l), var(--color-o, 1)) !important; }
 
 .color-contrast-high {
   color: hsla(var(--color-contrast-high-h), var(--color-contrast-high-s), var(--color-contrast-high-l), var(--color-o, 1)); }
@@ -9560,6 +9560,59 @@ Descr: A list of content sections (panels), accessible one at a time using contr
 .js .tabs__control[aria-selected="true"] {
   color: var(--color-contrast-high);
   text-decoration: underline; }
+
+/* -------------------------------- 
+
+File#: _2_cart-drawer
+Title: Cart Drawer
+Descr: A cart template in a drawer panel
+
+-------------------------------- */
+.dr-cart__product {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  grid-gap: var(--space-xs);
+  align-items: start;
+  padding: var(--space-sm) 0; }
+  .dr-cart__product:not(:last-child) {
+    border-bottom: 1px solid var(--color-contrast-lower); }
+
+.dr-cart__img {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: 0.2s; }
+  .dr-cart__img img {
+    display: block; }
+  .dr-cart__img:hover {
+    opacity: 0.85;
+    box-shadow: var(--shadow-sm); }
+
+.dr-cart__select {
+  --select-icon-size: 0.85em;
+  --select-icon-right-margin: var(--space-xxs);
+  font-size: 0.875em;
+  width: 3.6em; }
+  .dr-cart__select .select__input {
+    padding: var(--space-xxxxs) var(--space-xxxs); }
+
+.dr-cart__remove-btn {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  line-height: inherit;
+  appearance: none;
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  cursor: pointer; }
+  .dr-cart__remove-btn:hover {
+    text-decoration: underline; }
+  .dr-cart__remove-btn:focus {
+    outline: 2px solid hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2);
+    outline-offset: 2px; }
 
 /* -------------------------------- 
 

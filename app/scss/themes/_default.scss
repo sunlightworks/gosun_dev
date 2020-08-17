@@ -44,24 +44,15 @@
 .grape-0 {
     @include theme($grape-3, $grape-1, $grape-4, $grape-2)
 }
-.olive-0 {
-  @include theme($palette-olive-700, $palette-olive-50, $palette-olive-900, $palette-olive-300)
-}
 .ocean-0 {
-    @include theme($palette-ocean-500, $palette-ocean-50, $palette-ocean-900, $palette-ocean-300)
+    @include theme($ocean-3, $ocean-1, $ocean-4, $ocean-2)
 }
 .tundra-0 {
-    @include theme($palette-tundra-500, $palette-tundra-50, $palette-tundra-900, $palette-tundra-300)
+    @include theme($tundra-3, $tundra-1, $tundra-4, $tundra-2)
 }
 .jungle-0 {
   @include theme($jungle-3, $jungle-1, $jungle-4, $jungle-2)
 }
 .pumpkin-0 {
-  @include theme($palette-pumpkin-500, $palette-pumpkin-50, $palette-pumpkin-900, $palette-pumpkin-300)
-}
-.mint-0 {
-  @include theme($palette-mint-500, $palette-mint-50, $palette-mint-900, $palette-mint-300)
-}
-.honey-0 {
-  @include theme($palette-honey-500, $palette-honey-50, $palette-honey-900, $palette-honey-300)
+  @include theme($pumpkin-3, $pumpkin-1, $pumpkin-4, $pumpkin-2)
 }

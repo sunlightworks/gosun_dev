@@ -5,14 +5,13 @@
 
  /* Button spacing */
  .purchase-details {
-  margin-bottom: 40px;
+  margin-bottom: var(--space-md);;
 }
 
 
 .product--overview {
-    @include xl() {
+    @include md() {
         max-width: 400px;
-        margin-left: 90px;
     }
 }
 
@@ -29,6 +28,7 @@
   }
 
 
-  a.button, .button, button, input[type="submit"], input[type="reset"], input[type="button"], .action_button, a.action_button, input.action_button[type="submit"], input.action_button[type="button"], input.action_button[type="button"], button.shopify-payment-button__button.shopify-payment-button__button--unbranded {
-    width: 100%;
+
+  #launchtip_upsell_wrapper {
+    margin: 0 !important; // Remove upsell spacing
   }

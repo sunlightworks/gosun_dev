@@ -111,11 +111,7 @@
       }
      }
 
-   
-  .text-center {
-    text-align: center;
-    width: 100%;
-  }
+
 
   .tl {
     text-align: left !important;
@@ -237,10 +233,17 @@
     font-size: var(--text-base-size);
     color: $color-text-dark;
     }
+    li.sublink a:not(.parent-link--true) {
+      font-weight: 400 !important;
+      color: var(--color-contrast-medium) !important;
+  }
   }
   ul:not(.menu .center) .sublink a:not(.parent-link--true) {
       font-weight: 400 !important;
+      color: var(--color-contrast-medium) !important;
   }
+
+
 
   /* Menu – Default
   ================================================== */
@@ -302,12 +305,7 @@
 
 
 
-    /* Breadcrumbs
-  ================================================== */
-    .breadcrumb-active {
-      font-weight: 700 !important;
-      text-decoration: underline;
-    }
+
 
 
 // -----------------------------------------------------------------------------
@@ -328,12 +326,11 @@
   /* Title – Small
   ================================================== */
     h1.product_name {
-      font-size: 34px !important;
       margin-bottom: 0 !important;
     }
     
     h2.product_type {
-      font-size: 20px;
+      font-size: var(--text-md);
       font-weight: 400;
       margin-top: 0 !important;
     }

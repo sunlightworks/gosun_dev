@@ -13,7 +13,6 @@ Descr: Container of information used as teaser for further content exploration
     position: relative;
     z-index: 1;
     text-decoration: none;
-    color: inherit;
     background-color: var(--color-white);
     background-repeat: no-repeat;
     background-size: contain;
@@ -33,10 +32,29 @@ Descr: Container of information used as teaser for further content exploration
         background-position: -20% 35px;
         height: 300px;
     }
+ 
     &:hover {
       box-shadow: var(--shadow-md);
       background-position: 130px -40px;
       scale: 1.03;
+      h2, p {
+      color: var(--color-white) !important;
+      }
+      &:nth-child(1) {
+        background-color: var(--grape-3) !important;
+      }
+      &:nth-child(2) {
+        background-color: var(--ocean-3) !important;
+      }
+      &:nth-child(3) {
+        background-color: var(--tundra-3) !important;
+      }
+      &:nth-child(4) {
+        background-color: var(--wood-3) !important;
+      }
+      &:nth-child(5) {
+        background-color: var(--ocean-3) !important;
+      }
       @include lg() {
         background-position: -15% 25px;
       }

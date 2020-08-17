@@ -48,12 +48,7 @@
     height: 100vh;
   }
 
-/* Product page / Breadcrumbs */
-    .content {
-        @include md-max {
-        margin-top: 60px;
-        }
-    }
+
 
 
 
@@ -490,20 +485,6 @@
         bottom: 10px;
     }
 
-// -----------------------------------------------------------------------------
-// Size
-// -----------------------------------------------------------------------------
-
-    /* Full width - Child div
-    ================================================== */
-        .width-100 {
-            margin-left: calc(-50vw + 50%);
-            width: 100vw;
-            /*
-            margin-right: calc(-100vw / 2 + 1200px / 2);
-            margin-left: calc(-100vw / 2 + 1200px / 2);
-            */
-        }
 
 
 // -----------------------------------------------------------------------------
@@ -568,11 +549,6 @@
 // -----------------------------------------------------------------------------
 
 
-  /* Cards - Product Small */
-    .product .grid {
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
-    }
 
     .grid-h {
         display: grid;
@@ -636,7 +612,9 @@
   
 
 .product-card--md {
-    @include sizeMax(280px)
+    @include md() {
+        @include sizeMax(280px)
+    }
 }
 
 
@@ -702,10 +680,7 @@
 // Sections / Content
 // -----------------------------------------------------------------------------
 
-// Home Content block
-.featured-content-section {
-padding-top: var(--space-lg);
-}
+
 
 .featured_text {
     max-width: var(--max-width-lg);

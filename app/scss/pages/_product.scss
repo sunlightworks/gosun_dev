@@ -21,18 +21,6 @@
     }
 
 
-
-/* Images
-================================================== */
-
-.product_gallery_nav.product_gallery_nav--bottom-slider .gallery-cell img, .product_gallery img {
-  @include filter-alabaster();
-}
-
-.gallery-cell.is-selected.is-nav-selected {
-    @include filter-dim()
-}
-
 /* #Features
 ================================================== */
 .prod-desc {

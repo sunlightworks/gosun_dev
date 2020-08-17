@@ -25,19 +25,72 @@ Descr: A Slideshow to display a gallery of testimonials
     }
   }
   
-  .testimonial-slideshow__profile-img {
-    width: var(--testimonial-slideshow-profile-img-size);
-    height: var(--testimonial-slideshow-profile-img-size);
-    overflow: hidden;
-  
-    img {
-      display: block;
-      width: 100%;
-    }
-  }
-  
- 
 
+  
+
+// -----------------------------------------------------------------------------
+// Global Stamped styles
+// -----------------------------------------------------------------------------
+
+.stamped-container {
+  font-family: 'cp' !important;
+}
+
+  .stamped-reviews-title a, .stamped-review-header-title {
+    font-size: var(--text-md), 1.2em ;
+}
+.stamped-reviews-author, .author {
+    margin-left: 0 !important;
+    font-size: var(--text-md), 1.2em;
+    color: var(--color-contrast-high);
+}
+.stamped-reviews-date, .created {
+    font-size: var(--text-sm);
+}
+
+.stamped-reviews-message-block, p.stamped-review-content-body {
+  font-family: 'cp' !important;
+  font-size: var(--text-md) !important;
+  line-height: var(--text-md) !important;
+  font-style: normal !important;
+  color: var(--color-contrast-medium) !important;
+}
+.stamped-reviews-author, .author {
+  margin-left: 0 !important;
+  font-size: var(--text-md), 1.2em;
+  color: var(--color-contrast-high);
+}
+.stamped-reviews-date, .created {
+  font-size: var(--text-sm);
+}
+
+.stamped-summary-recommend-percent, .stamped-review-header .stamped-verified-badge, .stamped-review-header .verified, .stamped-review-header .verified .fa-check-circle-o, .stamped-review-header .verified .stamped-fa-check-circle-o, .stamped-review-header .verified-badge, .stamped-review-header .verified-badge .fa-check-circle-o, .stamped-review-header .verified-badge .stamped-fa-check-circle-o, .stamped-verified-badge {
+  color: var(--color-contrast-medium) !important;
+}
+.stamped-reviews .stamped-review-avatar {
+  background: $wood-2 !important;
+  text-shadow: none !important;
+  .stamped-review-avatar-content {
+    color: $wood-4 !important;
+  }
+}
+.stamped-review[data-verified="buyer"] .stamped-review-avatar::before, .stamped-review-recommend[data-is-recommend="true"]::before {
+  color: $wood-4 !important;
+}
+
+// -----------------------------------------------------------------------------
+// End Global Stamped styles
+// -----------------------------------------------------------------------------
+
+.testimonial-slideshow__profile-img {
+  width: var(--testimonial-slideshow-profile-img-size);
+  height: var(--testimonial-slideshow-profile-img-size);
+  overflow: hidden;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
 #stamped-reviews-widget[data-widget-type="carousel"] {
     @include flexBox(column, null, center);
 
@@ -58,7 +111,6 @@ Descr: A Slideshow to display a gallery of testimonials
     }
 
     .stamped-carousel-scroll #stamped-carousel-scroll-wrapper {
-
         .block {
             font-family: cp;
             background: var(--color-white);
@@ -88,33 +140,19 @@ Descr: A Slideshow to display a gallery of testimonials
             }
         }
         
-        .stamped-reviews-title a {
-            font-size: var(--text-md), 1.2em ;
-        }
+
         .stamped-reviews-message {
             margin-left: 0 !important;
             font-size: var(--text-md), 1.2em;
         }
-        .stamped-reviews-message-block {
-            font-family: cp;
-            font-size: var(--text-md);
-            line-height: var(--text-md);
-            font-style: normal;
-            color: var(--color-contrast-medium);
-        }
-        .stamped-reviews-author {
-            margin-left: 0 !important;
-            font-size: var(--text-md), 1.2em;
-            color: var(--color-contrast-high);
-        }
-        .stamped-reviews-date {
-            font-size: var(--text-sm);
-        }
+
         .stamped-reviews-image {
             display: none;
         }
     }
 }
+
+
 
 
 // Next/Previous arrows

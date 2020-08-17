@@ -1,0 +1,32 @@
+
+
+/* -------------------------------- 
+
+File#: _1_feature
+Title: Feature
+Descr: Content group containing text + media (img, video, iframe, inline SVG)
+
+-------------------------------- */
+
+
+
+@include md-max() {
+    .feature-text, .feature-content {
+        text-align: center;
+    }
+    .feature-btn-group {
+        justify-content: center;
+    }
+    .feature-image{
+        max-height: 33vh;
+    }
+    .feature-grid{
+        flex-direction: column-reverse;
+    }
+}
+
+@include md() {
+    .feature-image{
+        max-height: 600px;
+    }
+}

@@ -1,0 +1,142 @@
+<section class="loop-tabs padding-y-lg js-loop-tabs mobile--false reveal-fx ">
+    <div class="container">
+      <div class="grid gap-md flex-row-reverse@md">
+        <div class="loop-tabs__content col-6@md flex flex-column flex-column-reverse@md justify-center@md text-center text-left@md">
+          <ul class="loop-tabs__controls js-loop-tabs__controls margin-bottom-lg margin-bottom-0@lg flex flex-center flex-wrap flex-column@md items-start@md">
+            <li>
+              <a href="#timingTab1Panel1" class="loop-tabs__control loop-tabs__control--selected text-md font-medium padding-md">{{ title_1 }}</a>
+            </li>
+  
+            <li>
+              <a href="#timingTab1Panel2" class="loop-tabs__control text-md font-medium padding-md">{{ title_2 }}</a>
+            </li>
+  
+            <li>
+              <a href="#timingTab1Panel3" class="loop-tabs__control text-md font-medium padding-md">{{ title_3 }}</a>
+            </li>
+          </ul>
+    
+          <div class="loop-tabs__panels js-loop-tabs__panels margin-bottom-md">
+            <section id="timingTab1Panel1" class="loop-tabs__panel js-loop-tabs__panel text-component padding-md loop-tabs__panel--selected">
+              <h3>{{ title_1 }}</h3>
+              {{ description_1 }}
+            </section>
+    
+            <section id="timingTab1Panel2" class="loop-tabs__panel js-loop-tabs__panel padding-md text-component">
+              <h3>{{ title_2 }}</h3>
+              {{ description_2 }}
+            </section>
+    
+            <section id="timingTab1Panel3" class="loop-tabs__panel js-loop-tabs__panel padding-md text-component">
+              <h3>{{ title_3 }}</h3>
+              {{ description_3 }}
+            </section>
+          </div>
+        </div>
+    
+        <div class="loop-tabs__media col-6@md" aria-hidden="true">
+          <ul class="loop-tabs__assets js-loop-tabs__assets">
+            <li class="loop-tabs__asset loop-tabs__asset--selected">
+              {% if video_1 != blank %}
+                  <video class="shadow-md radius-md" src="{{ video_1 }}" loop muted playsInline></video>
+              {% endif %}
+              {% if image_1 != blank %}
+                  <img src="{{ image_1 }}" alt="{{ title_1 }}">
+              {% endif %}
+            </li>
+    
+            <li class="loop-tabs__asset">
+              {% if video_2 != blank %}
+                  <video class="shadow-md radius-md" src="{{ video_2 }}" loop muted playsInline></video>
+              {% endif %}
+              {% if image_2 != blank %}
+                  <img src="{{ image_2 }}" alt="{{ title_2 }}">
+              {% endif %}
+            </li>
+    
+            <li class="loop-tabs__asset">
+              {% if video_3 != blank %}
+                  <video class="shadow-md radius-md" src="{{ video_3 }}" loop muted playsInline></video>
+              {% endif %}
+              {% if image_3 != blank %}
+                  <img src="{{ image_3 }}" alt="{{ title_3 }}">
+              {% endif %}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+<section class="slideshow-pm js-slideshow-pm mobile--true reveal-fx " data-swipe="on" data-pm-nav="on">
+    <p class="sr-only">Slideshow Items</p>
+    
+    <div class="slideshow-pm__content">
+      <ul class="slideshow-pm__list js-slideshow-pm__list">
+        <li class="slideshow-pm__item slideshow-pm__item--selected js-slideshow-pm__item">
+          <div class="container max-width-sm flex flex-column">
+            {% if video_1 != blank %}
+                <video class="shadow-md radius-md" src="{{ video_1 }}" loop muted playsInline></video>
+            {% endif %}
+            {% if image_1 != blank %}
+                <img src="{{ image_1 }}" alt="{{ title_1 }}">
+            {% endif %}
+            <div class="text-component margin-top-md">
+              <h3> {{ title_1 }} </h3>
+              {{ description_1 }}
+            </div>
+          </div>
+        </li>
+  
+        <li class="slideshow-pm__item js-slideshow-pm__item">
+            <div class="container max-width-sm flex flex-column">
+                {% if video_2 != blank %}
+                    <video class="shadow-md radius-md" src="{{ video_2 }}" loop muted playsInline></video>
+                {% endif %}
+                {% if image_2 != blank %}
+                    <img src="{{ image_2 }}" alt="{{ title_2 }}">
+                {% endif %}
+                <div class="text-component margin-top-md">
+                  <h3> {{ title_2 }} </h3>
+                  {{ description_2 }}
+                </div>
+            </div>
+        </li>
+  
+        <li class="slideshow-pm__item js-slideshow-pm__item">
+            <div class="container max-width-sm flex flex-column">
+                {% if video_3 != blank %}
+                    <video class="shadow-md radius-md" src="{{ video_3 }}" loop muted playsInline></video>
+                {% endif %}
+                {% if image_3 != blank %}
+                    <img src="{{ image_3 }}" alt="{{ title_3 }}">
+                {% endif %}
+                <div class="text-component margin-top-md">
+                  <h3> {{ title_3 }} </h3>
+                  {{ description_3 }}
+                </div>
+            </div>
+        </li>
+  
+      <ul>
+        <li class="slideshow-pm__control js-slideshow-pm__control">
+          <button class="reset js-tab-focus">
+            <svg class="icon" viewBox="0 0 32 32"><title>Show previous slide</title><path d="M20.768,31.395L10.186,16.581c-0.248-0.348-0.248-0.814,0-1.162L20.768,0.605l1.627,1.162L12.229,16 l10.166,14.232L20.768,31.395z"></path></svg>
+          </button>
+        </li>
+  
+        <li class="slideshow-pm__control js-slideshow-pm__control">
+          <button class="reset js-tab-focus">
+            <svg class="icon" viewBox="0 0 32 32"><title>Show next slide</title><path d="M11.232,31.395l-1.627-1.162L19.771,16L9.605,1.768l1.627-1.162l10.582,14.813 c0.248,0.348,0.248,0.814,0,1.162L11.232,31.395z"></path></svg>
+          </button>
+        </li>
+      </ul>
+
+    </div>
+</section>
+  
+  
+  

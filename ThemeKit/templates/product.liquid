@@ -1,0 +1,64 @@
+<progress aria-hidden="true" class="reset reading-progressbar reading-progressbar--is-hidden js-reading-progressbar" max="100" value="0">
+  <div class="reading-progressbar__fallback js-reading-progressbar__fallback"></div>
+</progress>
+
+{% comment %}START / Page {% endcomment %}
+<span class="js-reading-content">
+
+{{product.metafields.shogun.above}}
+
+{% include 'shogun-products', content: product %}
+
+{% comment %}
+  The contents of the product.liquid template can be found in /sections/product-template.liquid
+{% endcomment %}
+
+{% section 'product-template' %}
+
+<!-- Klaviyo Product Favorite -->  
+<script text="text/javascript">
+  var _learnq = _learnq || [];
+  var item = {
+    Name: {{ product.title|json }},
+    ProductID: {{ product.id|json }},
+    Categories: {{ product.collections|map:'title'|json }},
+    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+    URL: "{{ shop.secure_url }}{{ product.url }}",
+    Brand: {{ product.vendor|json }},
+    Price: {{ product.price|money|json }},
+    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+  }; 
+  _learnq.push(['track', 'Viewed Product', item]);
+  _learnq.push(['trackViewedItem', {
+    Title: item.Name,
+    ItemId: item.ProductID,
+    Categories: item.Categories,
+    ImageUrl: item.ImageURL,
+    Url: item.URL,
+    Metadata: {
+      Brand: item.Brand,
+      Price: item.Price,
+      CompareAtPrice: item.CompareAtPrice
+    }
+  }]);
+</script>
+<!-- END Klaviyo Product Favorite -->  
+
+{{product.metafields.shogun.below}}
+{% comment %}START / Static {% endcomment %}
+{% if product.metafields.custom_fields["product_list__title"] != blank %}
+  <section class="width-100 section--page">
+    <figure class="container" id="{{ product.metafields.custom_fields["product_list__title"] }}">{% include 'include-products' %}</figure>
+    {% else %}
+    <figure class="container" id="related"></figure>   
+  </section>
+{% endif %}
+
+</span>
+
+<section id="reviews" class="section--page">
+  <h2 class="center">Reviews</h2>
+<!--Start Stamped.io Auto Installation--><div id="stamped-main-widget" class="stamped-main-widget" data-widget-style="standard" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}" data-product-sku="{{product.handle}}">{{ product.metafields.stamped.reviews }}</div><!--End Stamped.io Auto Installation-->
+</section>
+
+{% comment %}END / Static{% endcomment %}

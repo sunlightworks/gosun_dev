@@ -52,17 +52,17 @@
 @supports(--css: variables) {
   [data-theme="dark-1"] {
     // main
-    @include defineColorHSL(--color-primary-darker, 191, 55%, 33%);
-    @include defineColorHSL(--color-primary-dark, 191, 55%, 39%);
-    @include defineColorHSL(--color-primary, 191, 50%, 44%);
-    @include defineColorHSL(--color-primary-light, 191, 48%, 49%);
-    @include defineColorHSL(--color-primary-lighter, 191, 45%, 58%);
-
-    @include defineColorHSL(--color-accent-darker, 351, 69%, 38%);
-    @include defineColorHSL(--color-accent-dark, 351, 69%, 45%);
-    @include defineColorHSL(--color-accent, 351, 69%, 53%);
-    @include defineColorHSL(--color-accent-light, 351, 69%, 61%);
-    @include defineColorHSL(--color-accent-lighter, 351, 69%, 69%);
+    @include defineColorHSL(--color-primary-darker, 346, 45%, 18%);
+    @include defineColorHSL(--color-primary-dark, 346, 45%, 28%);
+    @include defineColorHSL(--color-primary, 356, 39%, 38%);
+    @include defineColorHSL(--color-primary-light, 346, 45%, 48%);
+    @include defineColorHSL(--color-primary-lighter, 346, 45%, 58%);
+  
+    @include defineColorHSL(--color-accent-darker, 19, 69%, 26%);
+    @include defineColorHSL(--color-accent-dark, 19, 69%, 36%);
+    @include defineColorHSL(--color-accent, 19, 69%, 46%);
+    @include defineColorHSL(--color-accent-light, 19, 69%, 56%);
+    @include defineColorHSL(--color-accent-lighter, 19, 69%, 66%);
 
     @include defineColorHSL(--color-black, 210, 60%, 8%);
     @include defineColorHSL(--color-white, 0, 0%, 100%);

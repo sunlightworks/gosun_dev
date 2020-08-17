@@ -18,7 +18,7 @@
   /* #Menu [Open] - Link color
   ================================================== */
   a.parent-link--true, .icon-down-arrow:before, a#customer_login_link, #mobile_menu li a   {
-    color: $color-text-dark !important;
+    color: $color-text-dark;
   }
 
 
@@ -160,11 +160,11 @@
 
       .search_form input {
         border-radius: 22px;
-        background: $palette-grape-700;
+        background:$grape-4;
         border: none !important;
         &:active, &:focus {
         border-radius: 22px;
-        background: $palette-grape-700;
+        background:$grape-4;
         border: none !important;
       }
     }
@@ -231,8 +231,8 @@
       }
     }
   }
-  .mobile-mega-menu p {
-    color: $color-text-accent;
+  .mobile-mega-menu p, .sublink a {
+    color: var(--color-contrast-medium);
   }
 
   .menu a.top_link:hover,
@@ -276,9 +276,13 @@
     padding-left: var(--space-unit);
   }
 
-  .mobile-mega-menu_block a {
+@include md-max() {
+.mobile-mega-menu_block, .sublink {
+    a {
     padding-left: 30px;
+    }
   }
+}
 
   @include md-max() {
     .dropdown_container:before {
@@ -405,7 +409,7 @@
   }
 
   /* #Main Nav - [2-column links]
-  ================================================== */
+  ================================================== 
 
   .mega-menu-2, .mega-menu-3, .mega-menu-4 {
     .dropdown {
@@ -449,17 +453,17 @@
       padding: 5px 35px !important;
     }
   }
-
+*/
   /* Gallery column */
   .dropdown_container.mega-menu .dropdown_column {
     @include flexBox(null, center, center)
   }
   
   /* Gallery column */
-  .mega-menu-1 {
+  .mega-menu {
     .dropdown_column {
       border-left: 2px solid #f2f6fa;
-      max-width: calc(1180px/5) !important;
+      //max-width: calc(1180px/5) !important;
       &:hover {
         @include nav-hover;
       }
@@ -490,24 +494,38 @@
     display: block;
     z-index: 999 !important;
     @include md() {
-      margin-top: -140px;
+      margin-top: calc(var(--header-height) * -1);
     }
   }
 
-  .container.main.content, .index-sections,  .collection-template-section  {
-    @include md() {
-      margin-top: 140px;
-    }
+ .collection-template-section,  .index-sections  {
+    margin-top: var(--header-height);
   }
 
-  .index-sections, .customers-login {
+  #shopify-section-product-template .content {
     @include md-max() {
-      margin-top: 60px;
+    margin-top: 0; // remove whitespace above thumbnail on mobile
     }
   }
+
+  .container.main.content {
+    min-height: 50vh;  // no whitespace below footer
+    @include md() {
+      padding-top: var(--space-xl);
+      margin-top: var(--header-height);
+    }
+  }
+
+
+ .customers-login, .content {
+    @include md-max() {
+      margin-top: var(--header-height);
+    }
+  }
+
 
   .mobile_nav-fixed--true #pagecontent, .mobile_nav-fixed--false #pagecontent {
-    padding-bottom: 40px !important;
+    padding-bottom: 0px !important;
   }
 
 

@@ -5,11 +5,20 @@
 File#: _1_sticky-hero
 Title: Sticky Hero
 Descr: A sticky hero section that reveals its content on scroll
-Usage: codyhouse.co/license
+
 
 -------------------------------- */
 
-.sticky-hero {}
+.sticky-hero {
+  position: relative;
+}
+
+.gradient-overlay {
+  background: rgba(0, 0, 0, 0) linear-gradient($alabaster, rgba(255, 255, 255, 0) 167px, rgba(255, 255, 255, 0) 93%, $alabaster) repeat scroll 0% 0%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 
 .sticky-hero__media { // img or video
   position: relative; // fallback

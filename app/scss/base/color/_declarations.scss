@@ -3,8 +3,6 @@
 // -----------------------------------------------------------------------------
 @import "//app/scss/bundle";
 
-
-
 // -----------------------------------------------------------------------------
 // Feedback
 // -----------------------------------------------------------------------------
@@ -14,294 +12,357 @@
 }
 
 .alert {
-  color: $palette-alert-50
+  color: $palette-alert-50;
 }
 
 // -----------------------------------------------------------------------------
 // Config Declarations
 // -----------------------------------------------------------------------------
 
-  /* #Config - Primary
+/* #Config - Borders
   ================================================== */
-  $color-primary: $palette-cherry-500;
-  $color-primary-hover: $palette-cherry-200;
-  
+$color-border-light: $palette-shade-100;
+$color-border-mid: $palette-shade-300;
 
-  /* #Config - Borders
+/* #Config - Typography
   ================================================== */
-  $color-border-light: $palette-shade-100;
-  $color-border-mid:$palette-shade-300;
+// Dark Variables //
+$color-text-dark: $palette-neutral-900;
+$color-text-body: $palette-neutral-900;
+$color-text-accent: $palette-neutral-700;
+$color-text-sub: $palette-neutral-600;
+// Light Variables //
+$color-text-light: $white;
 
-  /* #Config - Typography
+$color-link-hover: $blueberry;
+
+/* #Config - Violator
   ================================================== */
-  // Dark Variables //
-  $color-text-dark: $palette-neutral-900;
-  $color-text-body: $palette-neutral-900;
-  $color-text-accent: $palette-neutral-700;
-  $color-text-sub: $palette-neutral-600;
-  // Light Variables //
-  $color-text-light: $white;
-
-  $color-link-hover: $blueberry;
-
-  /* #Config - Violator
-  ================================================== */
-  $color-attribute: $palette-tundra-50;
-  $color-discount: $palette-success-10;
-
+$color-attribute: var(--color-contrast-high);
+$color-discount: var(--color-success-light);
 
 // -----------------------------------------------------------------------------
 // Class Declarations
 // -----------------------------------------------------------------------------
 
-  /* #Classes - Banners
-  ================================================== */
-    .grape {
-      background-color: $grape-3 !important;
-    }
-    .tundra {
-      background-color: $palette-tundra-500 !important;
-    }
-    .pumpkin{
-      background-color: $palette-pumpkin-500 !important;
-    }
-    .jungle {
-      background-color: $jungle-3 !important;
-    }
-    .honey {
-      background-color: $palette-honey-500 !important;
-    }
-    .mint {
-      background-color: $palette-mint-500 !important;
-    }
-    .olive {
-      background-color: $palette-olive-700 !important;
-    }
-    .olive-200 {
-      background-color: $palette-olive-200 !important;
-    }
-    .wood {
-      background-color: $wood-3 !important;
-    }
-    .wood-300 {
-      background-color: $wood-2 !important;
-    }
-    .ocean {
-      background-color: $ocean-3 !important;
-    }
-    .cherry-900 {
-      background-color: $palette-cherry-900 !important;
-    }
-
-    .aqua {
-      &--1 {
-        background-color: $aqua-1 !important;
-      }
-      &--2 {
-        background-color: $aqua-2 !important;
-      }
-      &--3 {
-        background-color: $aqua-3 !important;
-      }
-      &--4 {
-        background-color: $aqua-4 !important;
-      }
-    }
-
-
-
-  /* #Classes - Typography
-  ================================================== */
-    .clr-sub {
-      p {
-        color: $color-text-sub !important;
-      }
-    }
-
-
-    .text-dark {
-      color: $palette-neutral-900;
-      h1, h2, h3, h4, h5, h6, li, li a, a {
-      color: $palette-neutral-900 !important;
-      }
-      p {
-        color: var(--color-contrast-medium-h) !important;
-      }
-    }
-
-
-    .text-light {
-      color: $palette-neutral-50 !important;
-      h1, h2, h3, h4, h5, h6, li, li a, a {
-      color: $palette-neutral-50 !important;
-      }
-      p {
-        color: $palette-neutral-200 !important;
-      }
-      &--sub {
-        color: $palette-neutral-200 !important;
-      }
-    }
-
-    .link--highlight {
-      color: $grape-3 !important;
-    }
-
-    .base-BodyUppercase {
-      color: $color-text-sub !important;
-    }
-
-  /* #Classes - Patterns
+/* #Classes - Banners
   ================================================== */
 
-    @mixin pattern-map() {
-    background-image: url("https://cdn.shopify.com/s/files/1/0789/1333/files/cartography.png?12110") !important;
-    background-blend-mode: multiply !important;
-    }
+.grape {
+  background-color: $grape-3 !important;
+  &--1 {
+    background-color: $grape-1 !important;
+  }
+  &--2 {
+    background-color: $grape-2 !important;
+  }
+  &--3 {
+    background-color: $grape-3 !important;
+  }
+  &--4 {
+    background-color: $grape-4 !important;
+  }
+}
 
-    @mixin pattern-light() {
-      background-image: url("https://cdn.shopify.com/s/files/1/0789/1333/files/Transparent_Light_min.png?v=1592582698") !important;
-      background-blend-mode: multiply !important;
-      }
+.tundra {
+  background-color: $tundra-3 !important;
+  &--1 {
+    background-color: $tundra-1 !important;
+  }
+  &--2 {
+    background-color: $tundra-2 !important;
+  }
+  &--3 {
+    background-color: $tundra-3 !important;
+  }
+  &--4 {
+    background-color: $tundra-4 !important;
+  }
+}
 
+.pumpkin {
+  background-color: $pumpkin-3 !important;
+  &--1 {
+    background-color: $pumpkin-1 !important;
+  }
+  &--2 {
+    background-color: $pumpkin-2 !important;
+  }
+  &--3 {
+    background-color: $pumpkin-3 !important;
+  }
+  &--4 {
+    background-color: $pumpkin-4 !important;
+  }
+}
 
-    .pattern-map {
-      @include pattern-map();
-    }
+.jungle {
+  background-color: $jungle-3 !important;
+  &--1 {
+    background-color: $jungle-1 !important;
+  }
+  &--2 {
+    background-color: $jungle-2 !important;
+  }
+  &--3 {
+    background-color: $jungle-3 !important;
+  }
+  &--4 {
+    background-color: $jungle-4 !important;
+  }
+}
 
-    .pattern-light {
-      @include pattern-light();
-    }
+.ocean {
+  background-color: $ocean-3 !important;
+  &--1 {
+    background-color: $ocean-1 !important;
+  }
+  &--2 {
+    background-color: $ocean-2 !important;
+  }
+  &--3 {
+    background-color: $ocean-3 !important;
+  }
+  &--4 {
+    background-color: $ocean-4 !important;
+  }
+}
 
+.wood {
+  background-color: $wood-3 !important;
+  &--1 {
+    background-color: $wood-1 !important;
+  }
+  &--2 {
+    background-color: $wood-2 !important;
+  }
+  &--3 {
+    background-color: $wood-3 !important;
+  }
+  &--4 {
+    background-color: $wood-4 !important;
+  }
+}
 
-    .stripe--dark {
-      background-color: $wood-1;
-    }
+.aqua {
+  background-color: $aqua-3 !important;
+  &--1 {
+    background-color: $aqua-1 !important;
+  }
+  &--2 {
+    background-color: $aqua-2 !important;
+  }
+  &--3 {
+    background-color: $aqua-3 !important;
+  }
+  &--4 {
+    background-color: $aqua-4 !important;
+  }
+}
+
+.mint {
+  background-color: $palette-mint-500 !important; // remove this
+}
+
+.wood-300 {
+  background-color: $wood-2 !important; // remove this
+}
+
+/* #Classes - Typography
+  ================================================== */
+.clr-sub {
+  p {
+    color: $color-text-sub !important;
+  }
+}
+
+.text-dark {
+  color: $palette-neutral-900;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  li a,
+  a {
+    color: $palette-neutral-900 !important;
+  }
+  p {
+    color: var(--color-contrast-medium-h) !important;
+  }
+}
+
+.text-light {
+  color: $palette-neutral-50 !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  li a,
+  a {
+    color: $palette-neutral-50 !important;
+  }
+  p {
+    color: $palette-neutral-200 !important;
+  }
+  &--sub {
+    color: $palette-neutral-200 !important;
+  }
+}
+
+.link--highlight {
+  color: $grape-3 !important;
+}
+
+.base-BodyUppercase {
+  color: $color-text-sub !important;
+}
+
+/* #Classes - Patterns
+  ================================================== */
+
+@mixin pattern-map() {
+  background-image: url("https://cdn.shopify.com/s/files/1/0789/1333/files/cartography.png?12110") !important;
+  background-blend-mode: multiply !important;
+}
+
+@mixin pattern-light() {
+  background-image: url("https://cdn.shopify.com/s/files/1/0789/1333/files/Transparent_Light_min.png?v=1592582698") !important;
+  background-blend-mode: multiply !important;
+}
+
+.pattern-map {
+  @include pattern-map();
+}
+
+.pattern-light {
+  @include pattern-light();
+}
+
+.stripe--dark {
+  background-color: $wood-1 !important;
+}
 
 // -----------------------------------------------------------------------------
 // Buttons
 // -----------------------------------------------------------------------------
 
-  @mixin fill($color) {
-    background-color: $color;
-    border: 2px solid $color;
-    color: $white;
-  }
+@mixin fill($color) {
+  background-color: $color;
+  border: 2px solid $color;
+  color: $white;
+}
 
-  @mixin hollow($color) {
-    background-color: transparent;
-    border: 2px solid $color;
-    color: $color;
-  }
+@mixin hollow($color) {
+  background-color: transparent;
+  border: 2px solid $color;
+  color: $color;
+}
 
 // -----------------------------------------------------------------------------
 // Navigation
 // -----------------------------------------------------------------------------
 
-  /* Tabs
+/* Tabs
   ================================================== */
-  .tab {
-    &--shine {
-      background-color: $wood-3;
-    }
+.tab {
+  &--shine {
+    background-color: $wood-3;
   }
+}
 
-  /* Top / Search
+/* Top / Search
   ================================================== */
 
-    .search__results .title {  
-        color: $color-text-dark !important;
-    }
+.search__results .title {
+  color: $color-text-dark !important;
+}
 
-    .menu a span.item-pricing,
-    span.item-pricing,
-    .item-pricing span {
-        color: $color-text-sub !important;
-    }
+.menu a span.item-pricing,
+span.item-pricing,
+.item-pricing span {
+  color: $color-text-sub !important;
+}
 
-    .dropdown .header_search_form .search__results .item-result a:hover .title, .main_nav .search__results .item-result a:hover .title {
-        color: $color-text-dark !important;
-    }
+.dropdown .header_search_form .search__results .item-result a:hover .title,
+.main_nav .search__results .item-result a:hover .title {
+  color: $color-text-dark !important;
+}
 
-    .item-result.result--product,
-    .dropdown .header_search_form .search__results .item-result a, 
-    .main_nav .search__results .item-result a  {
-        &:hover {
-        background-color: $egg;
-        }
-    }
-
-  /* Breadcrumbs
-  ================================================== */
-    .breadcrumb, .breadcrumb-collection {
-      a, a span {
-        color: $color-text-sub !important;
-      }
-    }
-
-
-  /* Navigation / Product
-  ================================================== */
-  .subnav__menu {
-    a {
-      color: $color-text-sub !important;
-    }
+.item-result.result--product,
+.dropdown .header_search_form .search__results .item-result a,
+.main_nav .search__results .item-result a {
+  &:hover {
+    background-color: $egg;
   }
+}
+
+/* Navigation / Product
+  ================================================== */
+.subnav__menu {
+  a {
+    color: $color-text-sub !important;
+  }
+}
 
 // -----------------------------------------------------------------------------
 // #Violators
 // -----------------------------------------------------------------------------
-  .violator {
-    &--discount {
-      @include fill(var(--color-success-lighter));
-      color: var(--color-success-darker);
-    }
-    &--attribute {
-      @include fill($color-attribute);
-      color: $palette-tundra-500;
-    }
-    &--free-item {
-      @include fill($palette-tundra-500);
-      color: $palette-tundra-50;
-    }
+.violator {
+  &--discount {
+    background: var(--color-success-lighter);
+    color: var(--color-success-darker);
   }
+  &--attribute {
+    background: var(--color-contrast-high);
+    color: var(--color-contrast-lower);
+  }
+  &--free-item {
+    background: var(--color-contrast-high);
+    color: var(--color-contrast-lower);
+  }
+}
 
 // -----------------------------------------------------------------------------
 // Cards
 // -----------------------------------------------------------------------------
 
-
-
 // -----------------------------------------------------------------------------
 // Product Page
 // -----------------------------------------------------------------------------
 
-  /* Title
+/* Title
   ================================================== */
-    h2.product_type {
-      color: $color-text-sub;
-    }
+h2.product_type {
+  color: $color-text-sub;
+}
 
-  /* Validation
+/* Validation
   ================================================== */
-    /* Free shipping */
-    .info-item--product a {
-      color: var(--color-contrast-high) !important;
-    }
+/* Free shipping */
+.info-item--product a {
+  color: var(--color-contrast-high) !important;
+}
 
+.price .money {
+  color: var(--color-contrast-high) !important;
+}
 
-    .price .money {
-      color: var(--color-contrast-high) !important;
-     }
-     
-     .modal_price .money, .thumbnail .was_price span.money, .was_price span.money {
-      color: $color-text-accent;
-    }
-    /* New price */
-    .sale span.money {
-      color: var(--color-success-darker) !important;
-    }
+.modal_price .money,
+.thumbnail .was_price span.money,
+.was_price span.money {
+  color: $color-text-accent;
+}
+/* New price */
+.sale span.money {
+  color: var(--color-success-darker) !important;
+}
 
-    .sold_out {
-      color: var(--color-error-darker)
-    }
+.sold_out {
+  color: var(--color-error-darker);
+}

@@ -1,0 +1,36 @@
+
+
+/* -------------------------------- 
+
+File#: _1_stacking-cards
+Title: Stacking Cards
+Descr: Cards stack effect on vertical scrolling
+
+-------------------------------- */
+
+.stack-cards {
+    --stack-cards-gap: var(--space-sm); // cards gap on scrolling
+  }
+  
+  .stack-cards__item {
+    position: relative; // fallback for browsers not supporting sticky position
+    position: sticky;
+    top: var(--space-md); // cards top position when they get fixed
+    transform-origin: center top;
+    @include md() {
+    height: 0;
+    padding-bottom: 50%; // 18:9 aspect ratio
+    }
+    > * {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: var(--space-xl);
+      @include md() {
+        position: absolute;
+      }
+    }
+  }
+  
+  

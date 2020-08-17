@@ -1,3 +1,56 @@
+:root {
+  /* Grape
+================================================== */
+--grape-1:#F0EBEB;
+--grape-2:#CB9B9E;
+--grape-3:#873B40;
+--grape-4:#7a363b;
+
+/* Wood
+================================================== */
+--wood-1:#F0EDEA;
+--wood-2:#D3BDAB;
+--wood-3:#BA8D65;
+--wood-4:#756151;
+
+  /* Pumpkin
+================================================== */
+--pumpkin-1:#F1ECEB;
+--pumpkin-2:#EDD2C6;
+--pumpkin-3:#C75724;
+--pumpkin-4:#783014;
+
+
+/* Tundra
+================================================== */
+--tundra-1:#E7ECED;
+--tundra-2:#A9C8D9;
+--tundra-3:#205E71;
+--tundra-4:#133843;
+
+
+/* Jungle
+================================================== */
+--jungle-1:#EDF0EA;
+--jungle-2:#B6BFAA;
+--jungle-3:#69715E;
+--jungle-4:#313F37;
+
+  /* Ocean
+================================================== */
+--ocean-1:#E8F3FF;
+--ocean-2:#ADCFF1;
+--ocean-3:#5D82A6;
+--ocean-4:#0B4D6B;
+
+/* Aqua
+================================================== */
+--aqua-1:#E1F4F5;
+--aqua-2:#81D3D6;
+--aqua-3:#03A7AC;
+--aqua-4:#006666;
+}
+
 
 // -----------------------------------------------------------------------------
 // Feedback
@@ -73,13 +126,14 @@
   $palette-neutral-700: #616161;
   $palette-neutral-800: #424242;
   $palette-neutral-900: #212121;
+  
 
       /* Grape
   ================================================== */
   $grape-1:#F0EBEB;
   $grape-2:#CB9B9E;
   $grape-3:#873B40;
-  $grape-4:#63202C;
+  $grape-4:#7a363b;
 
     /* Wood
   ================================================== */
@@ -87,6 +141,22 @@
   $wood-2:#D3BDAB;
   $wood-3:#BA8D65;
   $wood-4:#756151;
+
+      /* Pumpkin
+  ================================================== */
+  $pumpkin-1:#F1ECEB;
+  $pumpkin-2:#EDD2C6;
+  $pumpkin-3:#C75724;
+  $pumpkin-4:#783014;
+
+
+    /* Tundra
+  ================================================== */
+  $tundra-1:#E7ECED;
+  $tundra-2:#A9C8D9;
+  $tundra-3:#205E71;
+  $tundra-4:#133843;
+
 
     /* Jungle
   ================================================== */
@@ -176,172 +246,6 @@
   $palette-orange-A400: nth($palette-orange, 13);
   $palette-orange-A700: nth($palette-orange, 14);
 
-/* GoSun / Wood
-================================================== */
-  $palette-wood:
-  rgb(255, 249, 243)
-  rgb(255, 239, 225)
-  rgb(255, 228, 205)
-  rgb(255, 217, 184)
-  rgb(255, 209, 169)
-  #C38756
-  rgb(255, 195, 146)
-  rgb(255, 188, 136)
-  rgb(255, 181, 126)
-  rgb(255, 169, 108)
-  rgb(255, 255, 255)
-  rgb(255, 255, 255)
-  rgb(255, 255, 255)
-  rgb(255, 249, 245)
-  ;
-  $palette-wood-50: nth($palette-wood, 1);
-  $palette-wood-100: nth($palette-wood, 2);
-  $palette-wood-200: nth($palette-wood, 3);
-  $palette-wood-300: nth($palette-wood, 4);
-  $palette-wood-400: nth($palette-wood, 5);
-  $palette-wood-500: nth($palette-wood, 6);
-  $palette-wood-600: nth($palette-wood, 7);
-  $palette-wood-700: nth($palette-wood, 8);
-  $palette-wood-800: nth($palette-wood, 9);
-  $palette-wood-900: nth($palette-wood, 10);
-  $palette-wood-A100: nth($palette-wood, 11);
-  $palette-wood-A200: nth($palette-wood, 12);
-  $palette-wood-A400: nth($palette-wood, 13);
-  $palette-wood-A700: nth($palette-wood, 14);
-
-/* GoSun / Olive
-================================================== */
-  $palette-olive:
-  rgb(244, 240, 234)
-  rgb(228, 217, 203)
-  rgb(210, 192, 169)
-  rgb(192, 166, 134)
-  rgb(179, 147, 108)
-  rgb(165, 128, 82)
-  rgb(157, 120, 75)
-  rgb(147, 109, 65)
-  rgb(138, 99, 56)
-  rgb(121, 80, 40)
-  rgb(255, 220, 189)
-  rgb(255, 193, 138)
-  rgb(255, 167, 87)
-  rgb(255, 153, 61)
-  ;
-  $palette-olive-50: nth($palette-olive, 1);
-  $palette-olive-100: nth($palette-olive, 2);
-  $palette-olive-200: nth($palette-olive, 3);
-  $palette-olive-300: nth($palette-olive, 4);
-  $palette-olive-400: nth($palette-olive, 5);
-  $palette-olive-500: nth($palette-olive, 6);
-  $palette-olive-600: nth($palette-olive, 7);
-  $palette-olive-700: nth($palette-olive, 8);
-  $palette-olive-800: nth($palette-olive, 9);
-  $palette-olive-900: nth($palette-olive, 10);
-  $palette-olive-A100: nth($palette-olive, 11);
-  $palette-olive-A200: nth($palette-olive, 12);
-  $palette-olive-A400: nth($palette-olive, 13);
-  $palette-olive-A700: nth($palette-olive, 14);
-
-/* GoSun / Grape
-================================================== */
-  $palette-grape:
-  rgb(241, 231, 233)
-  rgb(221, 194, 201)
-  rgb(198, 154, 165)
-  rgb(157, 83, 101)
-  rgb(140, 53, 74)
-  rgb(132, 48, 67)
-  rgb(121, 40, 58)
-  #7A363B
-  rgb(92, 22, 34)
-  rgb(54, 23, 31)
-  rgb(255, 150, 166)
-  rgb(255, 99, 123)
-  rgb(255, 48, 80)
-  rgb(255, 23, 59)
-  ;
-  $palette-grape-50: nth($palette-grape, 1);
-  $palette-grape-100: nth($palette-grape, 2);
-  $palette-grape-200: nth($palette-grape, 3);
-  $palette-grape-300: nth($palette-grape, 4);
-  $palette-grape-400: nth($palette-grape, 5);
-  $palette-grape-500: nth($palette-grape, 6);
-  $palette-grape-600: nth($palette-grape, 7);
-  $palette-grape-700: nth($palette-grape, 8);
-  $palette-grape-800: nth($palette-grape, 9);
-  $palette-grape-900: nth($palette-grape, 10);
-  $palette-grape-A100: nth($palette-grape, 11);
-  $palette-grape-A200: nth($palette-grape, 12);
-  $palette-grape-A400: nth($palette-grape, 13);
-  $palette-grape-A700: nth($palette-grape, 14);
-
-
-/* GoSun / Ocean
-================================================== */
-  $palette-ocean:
-  #E8F3FF
-  rgb(180, 227, 249)
-  #ADCFF1
-  rgb(80, 191, 241)
-  rgb(43, 177, 238)
-  #5D82A6
-  rgb(4, 155, 233)
-  #0B4D6B
-  rgb(3, 136, 226)
-  rgb(1, 119, 221)
-  rgb(255, 255, 255)
-  rgb(209, 231, 255)
-  rgb(158, 205, 255)
-  rgb(133, 192, 255)
-  ;
-  $palette-ocean-50: nth($palette-ocean, 1);
-  $palette-ocean-100: nth($palette-ocean, 2);
-  $palette-ocean-200: nth($palette-ocean, 3);
-  $palette-ocean-300: nth($palette-ocean, 4);
-  $palette-ocean-400: nth($palette-ocean, 5);
-  $palette-ocean-500: nth($palette-ocean, 6);
-  $palette-ocean-600: nth($palette-ocean, 7);
-  $palette-ocean-700: nth($palette-ocean, 8);
-  $palette-ocean-800: nth($palette-ocean, 9);
-  $palette-ocean-900: nth($palette-ocean, 10);
-  $palette-ocean-A100: nth($palette-ocean, 11);
-  $palette-ocean-A200: nth($palette-ocean, 12);
-  $palette-ocean-A400: nth($palette-ocean, 13);
-  $palette-ocean-A700: nth($palette-ocean, 14);
-
-
-/* GoSun / Tundra
-================================================== */
-  $palette-tundra:
-  rgb(228, 236, 238)
-  rgb(188, 207, 212)
-  rgb(144, 175, 184)
-  rgb(99, 142, 156)
-  rgb(65, 118, 134)
-  rgb(32, 94, 113)
-  rgb(28, 86, 105)
-  rgb(24, 76, 94)
-  rgb(19, 66, 84)
-  rgb(11, 49, 66)
-  rgb(122, 209, 255)
-  rgb(71, 191, 255)
-  rgb(20, 173, 255)
-  rgb(0, 163, 250)
-  ;
-  $palette-tundra-50: nth($palette-tundra, 1);
-  $palette-tundra-100: nth($palette-tundra, 2);
-  $palette-tundra-200: nth($palette-tundra, 3);
-  $palette-tundra-300: nth($palette-tundra, 4);
-  $palette-tundra-400: nth($palette-tundra, 5);
-  $palette-tundra-500: nth($palette-tundra, 6);
-  $palette-tundra-600: nth($palette-tundra, 7);
-  $palette-tundra-700: nth($palette-tundra, 8);
-  $palette-tundra-800: nth($palette-tundra, 9);
-  $palette-tundra-900: nth($palette-tundra, 10);
-  $palette-tundra-A100: nth($palette-tundra, 11);
-  $palette-tundra-A200: nth($palette-tundra, 12);
-  $palette-tundra-A400: nth($palette-tundra, 13);
-  $palette-tundra-A700: nth($palette-tundra, 14);
 
 /* GoSun / Pumpkin
 ================================================== */

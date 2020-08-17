@@ -106,7 +106,7 @@
   --component-padding: var(--space-md);
 }
 
-@mixin textUnit($text-unit, $text-scale-ratio: 1.1) { // edit the text unit and the type scale on a component level
+@mixin textUnit($text-unit, $text-scale-ratio: 1.2) { // edit the text unit and the type scale on a component level
   --text-xs: calc((#{$text-unit} / #{$text-scale-ratio}) / #{$text-scale-ratio});
   --text-sm: calc(var(--text-xs) * #{$text-scale-ratio});
   --text-md: calc(var(--text-sm) * #{$text-scale-ratio} * #{$text-scale-ratio});
@@ -116,3 +116,4 @@
   --text-xxxl: calc(var(--text-xxl) * #{$text-scale-ratio});
   font-size: $text-unit;
 }
+

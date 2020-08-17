@@ -1,0 +1,66 @@
+/* -------------------------------- 
+
+File#: _2_cart-drawer
+Title: Cart Drawer
+Descr: A cart template in a drawer panel
+
+-------------------------------- */
+
+.dr-cart {
+}
+
+.dr-cart__product {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  grid-gap: var(--space-xs);
+  align-items: start;
+  padding: var(--space-sm) 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--color-contrast-lower);
+  }
+}
+
+.dr-cart__img {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: 0.2s;
+
+  img {
+    display: block;
+  }
+
+  &:hover {
+    opacity: 0.85;
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+.dr-cart__select {
+  --select-icon-size: 0.85em;
+  --select-icon-right-margin: var(--space-xxs);
+  font-size: 0.875em;
+  width: 3.6em;
+
+  .select__input {
+    padding: var(--space-xxxxs) var(--space-xxxs);
+  }
+}
+
+.dr-cart__remove-btn {
+  @include reset;
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 2px solid alpha(var(--color-primary), 0.2);
+    outline-offset: 2px;
+  }
+}

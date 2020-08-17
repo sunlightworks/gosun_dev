@@ -1,0 +1,32 @@
+
+
+/* -------------------------------- 
+
+File#: _1_hero
+Title: Hero
+Descr: A full-width callout section
+
+-------------------------------- */
+
+.hero {
+    // if bg = img
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  // --overlay-layer
+  .hero--overlay-layer {
+    &::after { // add a layer in between the img/video background and the content
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: alpha(var(--color-bg), 0.65);
+      z-index: 1;
+    }
+  }
+  
+  

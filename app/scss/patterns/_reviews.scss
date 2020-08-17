@@ -6,18 +6,22 @@
 
 
 
-
-
-
-
   // -----------------------------------------------------------------------------
   // Reviews - Write a Review
   // -----------------------------------------------------------------------------
   /* #Stamped.io
   ================================================== */
 
+
   
+
+  .stamped-review-variant {
+    opacity: 0;
+    margin-top: -10px;
+  }
+
   [data-widget-type="minimal"] .stamped-review .stamped-review-content {
+      font-family: 'cp' !important;
       margin: 0 !important;
       width: calc(100% - 40px);
       @include md() {
@@ -71,28 +75,7 @@
   .stamped-form-custom-question > label {
       font-family: 'cp'
    }
-  
-  /*
-  .new-review-form .stamped-form-custom-question {
-    display: flex;
-  }
-  
-  .stamped-form-custom-question label {
-    width: 20%;
-  }
-  
-  .new-review-form .stamped-form-custom-option-scale label {
-    width: calc(100% / 5);
-  }
-  
-  .new-review-form .stamped-form-custom-option-scale {
-    width: 100%;
-  }
-  
-  .new-review-form .stamped-form-custom-option-scale label:nth-child(2) {
-  }
-  
-  */
+
   
   
 
@@ -110,9 +93,28 @@
     .stamped-container[data-widget-show-upload="true"] .stamped-file-uploader {
       margin-top: 10px !important;
     }
+
+    .stamped-review-recommend {
+      display: none !important;
+    }
+
+    .stamped-summary-recommend {
+      float: left;
+      font-size: var(--text-sm);
+      width: max-content;
+      position: relative;
+      span.stamped-summary-recommend-percent {
+        font-size: var(--text-xl);
+        background: var(--color-contrast-lower) !important;
+      }
+  }
+
+
     
  /* #Buttons - Write review, Ask question */
-    div[data-widget-style*="standard"] .stamped-summary span.stamped-summary-actions {
+   span.stamped-summary-actions {
+      float: right;
+      position: relative;
       @include flexBox(row, null, null);
       .stamped-summary-actions-newreview.button {
         margin-bottom: 5px !important;
@@ -121,8 +123,9 @@
 
       /* Button icon */
   .stamped-summary-actions-newquestion::before, .stamped-summary-actions-newreview::before, .stamped-summary-actions-mobile-filter i::before, .stamped-summary-actions-clear::before {
-    color: #888 !important;
+    color: var(--color-contrast-medium) !important;
   }
+  
   
   
   // -----------------------------------------------------------------------------
@@ -136,6 +139,8 @@
   .stamped-review-body {
     @include flexBox(column, null, null)
    }
+
+
 
 
   
@@ -224,7 +229,7 @@
   ================================================== */
   .stamped-review-image {
       clear: both;
-      padding-top: 40px !important;
+      padding-top: var(--space-sm);
     }
     
   
@@ -257,20 +262,20 @@
   .stamped-verified-badge {
       padding: .2rem 1rem .3rem;
       border-radius: 2rem;
-      background: rgb(228, 248, 240);
+      background: var(--color-contrast-lower);
     }
     
     .stamped-review-header .stamped-verified-badge, .stamped-review-header .verified, .stamped-review-header .verified .fa-check-circle-o, .stamped-review-header .verified .stamped-fa-check-circle-o, .stamped-review-header .verified-badge, .stamped-review-header .verified-badge .fa-check-circle-o, .stamped-review-header .verified-badge .stamped-fa-check-circle-o {
-      font-size: 12px;
-      font-weight: 700;
+      font-size: var(--text-sm);
+      font-weight: 500;
     }
 
      /* #Reviews - Reply
   ================================================== */
   .stamped-review-reply {
     margin: 30px 0 0 0 !important;
-    background: $palette-neutral-200 !important;
-    padding: 20px !important;
+    background: var(--color-contrast-lower) !important;
+    padding: var(--space-lg) !important;
   }
 
   
@@ -443,7 +448,6 @@
 
 
 .stamped-summary-text-1 {
-  font-size: 72px !important;
-  line-height: px !important;
-  margin-bottom: 25px;
+  font-size: var(--text-xxxxl) !important;
+  margin-bottom: var(--space-xxs);
 }

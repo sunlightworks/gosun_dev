@@ -1,0 +1,39 @@
+
+
+/* -------------------------------- 
+
+File#: _1_feature-v4
+Title: Feature v4
+Descr: Content group containing media element + text that outsets its container at a specific breakpoint
+
+
+-------------------------------- */
+
+.feature-v4 {
+  --feature-text-offset: 65%; // if percentage = higher -> overlapping text takes more space
+  position: relative;
+  z-index: 1;
+  @include md-max() {
+    flex-direction: column-reverse; 
+  }
+}
+
+
+
+  @include md() {
+    .feature-v4__text-offset {
+      width: calc(100% + var(--feature-text-offset));
+    }
+  
+    .feature-v4--invert {
+      .feature-v4__grid > *:last-child {
+        order: -1;
+      }
+  
+      .feature-v4__text-offset {
+        margin-left: calc(var(--feature-text-offset) * -1);
+      }
+    }
+  }
+
+

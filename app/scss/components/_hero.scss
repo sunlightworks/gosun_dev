@@ -75,11 +75,12 @@
 .intro_description {
   @include flexBox(column, center, flex-start);
   @include size(100%, 100%); 
-    padding: 20px 40px;
+    padding: var(--space-md);
     margin: 0px;
-    padding-left: 6%;
-    padding-right: 10%;
+
     @include lg(){
+      padding-left: 6%;
+      padding-right: 10%;
       max-width: calc(.5 * 1250px);
       @include size(60%, 100%); 
     }
@@ -102,9 +103,11 @@
 .tri_banner {
   margin-top: 0 !important;
   position: relative !important;
+
   @include animateSlow();
   @include md() {
-    height: 540px;
+    max-height: 500px;
+    height: 33vw;
   }
   @include xl() {
   }
@@ -142,44 +145,6 @@
       margin-bottom: 0 !important;
     }
 }
-
-/*
-   .banner_description { 
-    @include flexBox(column, center, flex-start);
-    @include size(auto,100%); 
-    position: relative;
-    padding: 20px 40px;
-    padding: 50px 40px 40px;
-    margin: 0px;
-    text-align: left;
-    h1 {
-      width: 100% !important;
-      font-size: 36px;
-      line-height: 40px;
-      }
-      h2, p, h4 {
-      font-size: 20px;
-      line-height: normal !important;
-      font-weight: 500 !important;
-      }
-      @include xl {
-        padding: 20px 40px;
-        h1 {
-        font-size: 2.5vw !important;
-        line-height: normal;
-        }
-        h2, p, h4 {
-        font-size: 1.15vw !important;
-        }
-      }
-     }
-  
-    
-     .banner_description h1 {
-      padding-bottom: 15px;
-      }
-      
-   */
 
 
 
@@ -240,7 +205,7 @@
 
 .feature-container {
   height: 100%;
-  background: $palette-grape-900;
+  background: $grape-4;
   @include flexBox(row, center, center);
   margin-right: 30px;
   color: white !important;
@@ -267,7 +232,6 @@
      flex-grow: 0;
      }
      .hero-3--center {
-     background-color: $palette-olive-200;
      @include flexBox(row, flex-start, center)
      }
 
@@ -289,7 +253,6 @@
      }
      .hero-3--button {
      color: $color-text-dark;
-     background-color: $palette-olive-200;
      border: 2px solid $color-text-dark;
      @include rounded();
      display: inline-block;
