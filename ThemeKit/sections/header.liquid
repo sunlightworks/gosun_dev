@@ -135,7 +135,7 @@
 </header>
 
   <!-- Header / Large Screens -->
-<header class="{% if feature_image %}feature_image{% endif %} {% if section.settings.logo_home != nil %}secondary_logo--true{% endif %}">
+<header id="header" class="{% if feature_image %}feature_image{% endif %} {% if section.settings.logo_home != nil %}secondary_logo--true{% endif %}">
   <div class="header {% if feature_image and settings.header_background == false %}is-absolute {% endif %} header-fixed--{{ section.settings.fixed_header }} {% if settings.header_background %}header-background--solid{% endif %}">
     <!-- Announcement Bar -->
     {% if section.settings.promo_text != blank %}
@@ -188,7 +188,7 @@
           {% endif %}
         </ul>
 
-        {% include 'minicart' %}
+        
 
         <!-- Cart -->
         {% if section.settings.show_cart %}
@@ -488,6 +488,7 @@
         {% include 'sub-menu' with section.settings.main_linklist %}
         {% include 'sub-menu' with section.settings.main_linklist2 %}
       </div>
+      {% include 'minicart' %}
     </div>
   </div>
 </header>

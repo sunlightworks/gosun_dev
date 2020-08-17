@@ -1,18 +1,16 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the Product Forms
 // -----------------------------------------------------------------------------
-@import "//app/scss/bundle";
 
- /* Button spacing */
- .purchase-details {
-  margin-bottom: var(--space-md);;
+/* Button spacing */
+.purchase-details {
+  margin-bottom: var(--space-md);
 }
 
-
 .product--overview {
-    @include md() {
-        max-width: 400px;
-    }
+  @include md() {
+    max-width: 400px;
+  }
 }
 
 /* Button [buy] - Full-width */
@@ -21,14 +19,45 @@
   width: 100%;
   margin-top: 0px !important;
 }
-  
-  .product-quantity-box.purchase-details__quantity {
-    margin-right: 0px;
-    width: 100%;
+
+.product-quantity-box.purchase-details__quantity {
+  margin-right: 0px;
+  width: 100%;
+}
+
+// Quantity
+.product-quantity-box .quantity,
+.product-quantity-box .quantity:focus,
+.product-quantity-box .product-plus,
+.product-quantity-box .product-minus {
+  box-shadow: var(--shadow-sm);
+  transition: 0.2s;
+}
+
+.product-quantity-box {
+  .quantity {
+    background-color: alpha(var(--color-bg), 0.95);
   }
-
-
-
-  #launchtip_upsell_wrapper {
-    margin: 0 !important; // Remove upsell spacing
+  input {
+    border-style: none !important;
   }
+}
+
+.product-plus,
+.product-minus {
+  font-weight: 300;
+  position: relative;
+  cursor: pointer;
+  height: 44px;
+  display: block;
+  width: 44px;
+  text-align: center;
+  float: left;
+  &:hover {
+    background: var(--color-contrast-low);
+  }
+}
+
+#launchtip_upsell_wrapper {
+  margin: 0 !important; // Remove upsell spacing
+}

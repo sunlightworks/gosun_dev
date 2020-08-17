@@ -8,8 +8,16 @@
 {% unless settings.cart_action == 'ajax' and template contains 'cart' %}
 <div class="drawer drawer--modal dr-cart js-drawer js-drawer--modal" id="drawer-cart-id">
   <div class="drawer__content flex flex-column cart_content" role="alertdialog" aria-labelledby="drawer-cart-title">
+
+    <header class="drawer__header">
+      <h1 id="drawer-cart-title" class="text-truncate text-md">Your Cart<span class="font-normal color-contrast-medium">&nbsp;({{ cart.item_count }})</span></h1>
+      <button class="reset drawer__close-btn js-tab-focus js-drawer__close aria-controls="drawer-cart-id"">
+        <i class="icon--sm material-icons-outlined color-contrast-medium">close</i>
+      </button>
+    </header>
+
     <div class="drawer__body padding-x-md padding-y-sm js-drawer__body  position-relative">
-      <h1 class="text-md" id="drawer-cart-title">Your Cart ({{ cart.item_count }})</h1>
+    
       
       <!-- empty content -->
       <div class="js-empty-cart__message {% if cart.item_count > 0 %}hidden{% endif %}">
@@ -28,11 +36,10 @@
         {% endif %}
 
           <li class="dr-cart__product cart_item ">
+            {% if item.image %}
               <a href="{{ item.url }}" class="dr-cart__img">
-              {% if item.image %}
-                  <figure class="cart_image">
-                    <img src="{{ item | img_url: '320x' }}" alt="{{ item.title | escape }}" class="lazyload" />
-                  </figure>
+                <img src="{{ item | img_url: '320x' }}" alt="{{ item.title | escape }}" class="lazyload" />
+              </a>
               {% endif %}  
 
             <summary>
@@ -58,12 +65,14 @@
               </div>
             </summary>
 
-            <div class="text-right">
-              {% if item.price < item.variant.compare_at_price %}
-                <span class="money was_price">{{ item.variant.compare_at_price | money }}</span>
-              {% endif %}
-              <p class="color-contrast-higher money">{{ item.price | money }}</p>
-              <i class="dr-cart__remove-btn icon--sm margin-right-xxs material-icons-outlined color-contrast-low margin-top-xxxs ">delete</i>
+            <div class="flex flex-column align-end justify-between height-100%">
+              <i class="dr-cart__remove-btn icon--sm material-icons-outlined color-contrast-low">delete</i>
+              <summary class="flex flex-column text-right">
+                <span class="color-contrast-higher {% if item.price < item.variant.compare_at_price %}sale{% endif %}">{{ item.price | money }}</span>
+                {% if item.price < item.variant.compare_at_price %}
+                  <span class="money was_price mtn5">{{ item.variant.compare_at_price | money }}</span>
+                {% endif %}
+              </summary>
             </div>
 
           </li>
@@ -73,9 +82,6 @@
     </form>
     </div>
 
-    <button class="reset drawer__close-btn position-fixed js-drawer__close">
-      <svg class="icon" viewBox="0 0 16 16"><title>Close drawer panel</title><g stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line><line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line></g></svg>
-    </button>
 
     <footer class="padding-x-md padding-y-sm border-top border-contrast-lower flex-shrink-0">
       <p class="flex justify-between js-cart_subtotal"><span>{{ 'layout.general.subtotal' | t }}</span> <span>{{ cart.total_price | money }}</span></p>

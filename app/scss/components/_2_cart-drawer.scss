@@ -12,7 +12,7 @@ Descr: A cart template in a drawer panel
 .dr-cart__product {
   display: grid;
   grid-template-columns: 80px 1fr auto;
-  grid-gap: var(--space-xs);
+  grid-gap: var(--space-md);
   align-items: start;
   padding: var(--space-sm) 0;
 
@@ -52,7 +52,7 @@ Descr: A cart template in a drawer panel
 .dr-cart__remove-btn {
   @include reset;
   font-size: var(--text-sm);
-  color: var(--color-primary);
+  color: var(--color-contrast-low);
   cursor: pointer;
 
   &:hover {

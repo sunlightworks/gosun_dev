@@ -43,7 +43,7 @@ Descr: A slide-in panel used to display critical content
   height: 100%;
   top: 0;
   right: 0;
-  background-color: var(--color-bg);
+  background-color: var(--color-white);
   box-shadow: var(--shadow-md);
   transform: translateX(100%);
   transition: transform 0.3s;
@@ -70,8 +70,8 @@ Descr: A slide-in panel used to display critical content
   z-index: var(--zindex-fixed-element);
   top: var(--space-xxs);
   right: var(--space-xxs);
-  width: 2em;
-  height: 2em;
+  width: 2em !important;
+  height: 2em !important;
   display: flex;
   flex-shrink: 0;
   justify-content: center;
@@ -97,7 +97,7 @@ Descr: A slide-in panel used to display critical content
   align-items: center;
   justify-content: space-between;
   flex-shrink: 0;
-  padding: var(--space-xs) var(--component-padding);
+  padding: var(--space-md) var(--component-padding);
   border-bottom: 1px solid var(--color-contrast-lower);
 }
 
