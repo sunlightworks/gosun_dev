@@ -35,7 +35,7 @@
 <!------ START HEADER ------>
 
   <!-- Header / Small Screens -->
-<header id="header" class="mobile_nav-fixed--{{ section.settings.fixed_header }}">
+<header id="header" class="mobile--true mobile_nav-fixed--{{ section.settings.fixed_header }}">
   {% if section.settings.promo_text != blank %}
     <div class="promo_banner wood-300">
       <div class="promo_banner__content">
@@ -79,9 +79,9 @@
       {% if section.settings.search_enabled %}
         <a href="/search" class="info-item icon-search dropdown_link mega-nav__icon-btn" title="{{ 'general.search.placeholder' | t | escape }}" data-dropdown-rel="search"><span class="icon"><em class="material-icons-outlined">search</em></span></a>
       {% endif %}
-
+    <span class="mobile--true">
       {% include 'minicart' %}
-
+    </span>
     </div>
   </div>
   <!-- Search Bar -->
@@ -129,9 +129,10 @@
 </header>
 
   <!-- Header / Large Screens -->
-<header id="header" class="{% if feature_image %}feature_image{% endif %} {% if section.settings.logo_home != nil %}secondary_logo--true{% endif %}">
+<header id="header" class="mobile--false {% if feature_image %}feature_image{% endif %} {% if section.settings.logo_home != nil %}secondary_logo--true{% endif %}">
   <div class="header {% if feature_image and settings.header_background == false %}is-absolute {% endif %} header-fixed--{{ section.settings.fixed_header }} {% if settings.header_background %}header-background--solid{% endif %}">
     <!-- Announcement Bar -->
+  <span class="scroll-past">
     {% if section.settings.promo_text != blank %}
       {% if section.settings.promo_external %}
         <div class="promo_banner wood-300" onclick="window.open('{{ promo_link.url }}', '_blank')">
@@ -216,7 +217,7 @@
         </li>
         </ul>
     </div>
-
+  </span>
     <!-- Menu Bar -->
     <div class="main_nav_wrapper">
       <div class="main_nav clearfix menu-position--{{ section.settings.menu_position }} logo-align--{{ section.settings.logo_position }}  flex align-center max-width-xxxl">
