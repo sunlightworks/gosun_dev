@@ -48,6 +48,7 @@ Descr: A slide-in panel used to display critical content
   transform: translateX(100%);
   transition: transform 0.3s;
   transition-timing-function: var(--ease-in-out);
+  z-index: var(--zindex-overlay);
 
   .drawer--open-left & {
     transform: translateX(-100%);

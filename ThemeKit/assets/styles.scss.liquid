@@ -1781,7 +1781,6 @@ body.is-active {
 }
 
 .feature_image.editor-hover--true {
-  .main_nav,
   .dropdown {
     @include background-opacity({{ settings.header_bg_color }}, {% if settings.transparent_header %}0.9{% else %}1{% endif %});
     clear: both;
@@ -1825,7 +1824,7 @@ body.is-active {
   }
 }
 
-.main_nav,
+
 .dropdown {
   @include background-opacity({{ settings.header_bg_color }}, {% if settings.transparent_header %}0.9{% else %}1{% endif %});
   clear: both;
@@ -1914,8 +1913,7 @@ body.is-active {
 .menu a:active,
 #header span.menu_title,
 .menu a span,
-select.currencies,
-.mini_cart span {
+select.currencies {
   font-family: {{ settings.nav__font.family }}, {{ settings.nav__font.fallback_families }};
   font-weight: {{ settings.nav__font.weight }};
   font-style: {{ settings.nav__font.style }};
@@ -2024,32 +2022,7 @@ select.currencies {
   vertical-align: top;
 }
 
-.top_bar a,
-.top_bar a:visited,
-.top_bar a:active,
-.top_bar a span,
-.top_bar select.currencies,
-a.mini_cart,
-a.mini_cart span,
-.feature_image .header .top_bar .menu a,
-.feature_image .header .top_bar .menu a span,
-.cart_container .mini_cart:hover {
-  color: {{ settings.top_bar_color }};
-  font-size: {{ settings.top_bar_font_size }}px;
-  letter-spacing: {{ settings.top_bar_letter_spacing }}px;
-}
 
-.top_bar li a:hover,
-.top_bar li a[href]:hover,
-.top_bar li a[href]:hover span,
-.top_bar li a:active,
-.top_bar li a:hover span,
-.top_bar a:active span,
-.top_bar .currencies:hover,
-.feature_image .header .top_bar .menu a:hover,
-.feature_image .header .top_bar .menu a:hover span {
-  color: {{ settings.top_bar_color_hover }};
-}
 
 .top_bar li {
   padding-left: 10px;
@@ -2260,11 +2233,6 @@ html.touchevents .cart .cart_container {
   }
 {% endif %}
 
-.cart_container.active_link .mini_cart,
-.cart_container.active_link .mini_cart span {
-  background-color: {{ settings.minicart_bg_color }};
-  color: {{ settings.regular_color }} !important;
-}
 
 .cart_content {
   top: 40px;

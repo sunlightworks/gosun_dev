@@ -1,54 +1,48 @@
 .icon {
-  @include flexBox(null, center, center)
+  @include flexBox(null, center, center);
 }
-
-
-
-
-
 
 @include md {
   .sidebar-wrap > div {
-  @include flexBox(column, flex-start, flex-start);
-}
+    @include flexBox(column, flex-start, flex-start);
+  }
 }
 .cart_info {
-@include flexBox(row, center, center);
+  @include flexBox(row, center, center);
 }
 .info-item {
-@include md-max() {
-display: flex;
-}
-&--banner {
-  @include flexBox(row, center, center);
-  height: 40px;
-}
-&--product {
-  margin-bottom: var(--space-unit);
-}
-&--top-bar {
-  @include flexBox(row, null, center);
-}
+  @include md-max() {
+    display: flex;
+  }
+  &--banner {
+    @include flexBox(row, center, center);
+    height: 40px;
+  }
+  &--product {
+    margin-bottom: var(--space-unit);
+  }
+  &--top-bar {
+    @include flexBox(row, null, center);
+  }
 }
 /* Minicart [desktop] */
-.top_bar [class^="icon-"]::before, .top_bar [class*=" icon-"]::before, .mini_cart {
-font-size: 20px;
+.top_bar [class^="icon-"]::before,
+.top_bar [class*=" icon-"]::before,
+.mini_cart {
+  font-size: 20px;
 }
 .icon-user {
   display: flex !important;
 }
 
-
 /* #Top Bar - Phone number
 ================================================== */
 .info-item--top-bar {
   .icon {
-  bottom: 0px;
-  color: var(--color-white);
+    bottom: 0px;
+    color: var(--color-white);
   }
 }
-   
-
 
 .validator-item {
   @include md-max {
@@ -56,149 +50,136 @@ font-size: 20px;
   }
 }
 
-
-
-
 /* #Top Bar - Mobile
-================================================== */       
+================================================== */
 /* All icons */
-[class^="icon-"]::before, [class*=" icon-"]::before {
-font-weight: 600;
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  font-weight: 600;
 }
 
-#header .top_bar a.icon-bag::before, 
+#header .top_bar a.icon-bag::before,
 #header .top_bar a.icon-cart::before {
   font-size: 24px !important;
 }
-
 
 #header .top_bar .icon-search::before {
   font-size: 22px;
   font-weight: 700;
 }
- 
-
-
-
 
 /* Clickable */
 a.mobile_nav {
-z-index: 9999999 !important;
+  z-index: 9999999 !important;
 }
-
-
 
 // -----------------------------------------------------------------------------
 // Navigation
 // -----------------------------------------------------------------------------
 
-  /* Top / Search
+/* Top / Search
   ================================================== */
-       
 
-      
-  /* #Menu [Closed] - 2-line Hamburger
+/* #Menu [Closed] - 2-line Hamburger
   ================================================== */
-    .mobile_nav div {
-    width: 28px;
-    span:nth-child(1) {
-      visibility: hidden;
-    }
-    span:nth-child(2) {
-      visibility: hidden;
-      height: 2px !important;
-    }
-    span:nth-child(3) {
-      top: 16px;
-      height: 2px !important;
-      background-color: $white !important;
-    }
-    span:nth-child(4) {
-      top: 25px;
-      height: 2px !important;
-      background-color: $white !important;
-    }
-    }
-    /* Open */
-    .mobile_nav div.open {
-      span:nth-child(2) {
-        visibility: visible;
-        top: 17px !important;
-        background-color: $white !important;
-      }
-    }
+.mobile_nav div {
+  width: 28px;
+  span:nth-child(1) {
+    visibility: hidden;
+  }
+  span:nth-child(2) {
+    visibility: hidden;
+    height: 2px !important;
+  }
+  span:nth-child(3) {
+    top: 16px;
+    height: 2px !important;
+    background-color: $white !important;
+  }
+  span:nth-child(4) {
+    top: 25px;
+    height: 2px !important;
+    background-color: $white !important;
+  }
+}
+/* Open */
+.mobile_nav div.open {
+  span:nth-child(2) {
+    visibility: visible;
+    top: 17px !important;
+    background-color: $white !important;
+  }
+}
 
-    .menu {
-      .icon-down-arrow {
-        display: none !important;
-      }
-    }
+.menu {
+  .icon-down-arrow {
+    display: none !important;
+  }
+}
 
-    #mobile_menu li a span.icon-down-arrow {
-      position: absolute !important;
-      top: 11px;
-      transition: 0.0s !important;
-      display: block !important;
-      padding-right: var(--space-lg) !important;
-      &:before {
-        font-weight: 700 !important;
-        color: $color-text-accent !important;
-      }
-    }
+#mobile_menu li a span.icon-down-arrow {
+  position: absolute !important;
+  top: 11px;
+  transition: 0s !important;
+  display: block !important;
+  padding-right: var(--space-lg) !important;
+  &:before {
+    font-weight: 700 !important;
+    color: $color-text-accent !important;
+  }
+}
 
-    .footer-menu-wrap .active span, .footer-menu-wrap span.active, #mobile_menu .active span, #mobile_menu span.active, .sidebar .active span, .sidebar span.active {
-      top: -11px !important;
-      transition: 0.0s !important;
-    }
+.footer-menu-wrap .active span,
+.footer-menu-wrap span.active,
+#mobile_menu .active span,
+#mobile_menu span.active,
+.sidebar .active span,
+.sidebar span.active {
+  top: -11px !important;
+  transition: 0s !important;
+}
 
-
-
-
-    /* #Icon / Cart
+/* #Icon / Cart
     ================================================== */
 
-    .cart_count-bubble {
-      height: 16px !important;
-      min-width: 16px;
-      background: $palette-pumpkin-500;
-      position: absolute;
-      top: 4px;
-      border-radius: 8px;
-      font-size: 12px;
-      line-height: 16px;
-      left: 16px;
-      @include md() {
-      left: 30px;
-      }
-    }
-    
-    .cart_count {
-      line-height: 0 !important;
-      font-weight: 700 !important;
-    }
-    /* Hide native active/hover box effect */
-    .cart_container.active_link .mini_cart, .cart_container.active_link .mini_cart span {
-      background-color: transparent;
-      color: $white !important;
-  }
+.cart_count-bubble {
+  height: 16px !important;
+  min-width: 16px;
+  background: var(--color-secondary);
+  position: absolute;
+  top: 4px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  left: 16px;
+}
 
+.cart_count {
+  line-height: 0 !important;
+  font-weight: 700 !important;
+}
+/* Hide native active/hover box effect */
+.cart_container.active_link .mini_cart,
+.cart_container.active_link .mini_cart span {
+  background-color: transparent;
+  color: $white !important;
+}
 
 // -----------------------------------------------------------------------------
 // Cart
 // -----------------------------------------------------------------------------
-  /* Cart quantity icons - was too large */
-  .icon-plus,
-  .icon-minus {
-    &:before {
-      font-size: var(--text-sm);
-    }
+/* Cart quantity icons - was too large */
+.icon-plus,
+.icon-minus {
+  &:before {
+    font-size: var(--text-sm);
   }
+}
 
-  
 // -----------------------------------------------------------------------------
 // Buttons
 // -----------------------------------------------------------------------------
-    /* Button with Icon */
-    .info-item {
-      @include flexBox(null, null, center)
-    }
+/* Button with Icon */
+.info-item {
+  @include flexBox(null, null, center);
+}

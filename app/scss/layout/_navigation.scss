@@ -109,20 +109,22 @@ div.is-absolute {
     height: var(--mega-nav-height) !important;
     padding: 0 10px;
     @include shadow-nav();
-    z-index: 1;
+  }
+  a {
+    color: var(--color-contrast-low);
+    font-size: var(--text-sm);
   }
 }
 
 /* Main
   ================================================== */
 .main_nav {
-  background-color: $grape-3 !important;
   height: var(--mega-nav-height);
   width: 100%;
 }
 
 .main_nav_wrapper {
-  background-color: $grape-3 !important;
+  background-color: var(--color-primary) !important;
   @include shadow-nav();
   @include flexBox(row, center, null);
   @include centerMargin();

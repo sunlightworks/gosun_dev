@@ -2,8 +2,16 @@
 {% assign cart_total = cart.total_price %}
 {% assign shipping_value_left = shipping_value | minus: cart_total %}
 
+{% if section.settings.show_cart %}
+  <div class="mega-nav__icon-btn">
+    <a href="/cart"  aria-controls="drawer-cart-id" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link mega-nav__icon-btn info-item" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant><span class="icon"><em class="material-icons-outlined">shopping_cart</em></span> 
+      <div class="cart_count-bubble"> 
+        <span class="cart_count">{{ cart.item_count }}</span>
+      </div>
+    </a>
+  </div>
+{% endif %}
 
-<button class="btn btn--primary" aria-controls="drawer-cart-id">Show Cart</button>
 
 {% unless settings.cart_action == 'ajax' and template contains 'cart' %}
 <div class="drawer drawer--modal dr-cart js-drawer js-drawer--modal" id="drawer-cart-id">
@@ -97,7 +105,7 @@
       
 
       {% if settings.go_to_checkout %}
-        <button type="submit" class="add_to_cart action_button btn btn--primary btn--md width-100% margin-y-sm" id="checkout">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.checkout' | t }}</button>
+        <button type="submit" class="add_to_cart action_button btn btn--primary btn--md width-100%" id="checkout">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.checkout' | t }}</button>
       {% else %}
         <button type="submit" class="add_to_cart action_button btn btn--primary btn--md width-100% margin-y-sm" id="go_to_cart">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.go_to_cart' | t }} </button>
       {% endif %}
