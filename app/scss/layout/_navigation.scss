@@ -485,12 +485,12 @@ div.dropdown.menu {
 
 /* Fixed header */
 #header {
-  //position: fixed !important;
+  position: fixed !important;
   width: 100vw !important;
   display: block;
   z-index: 999 !important;
   @include md() {
-    //margin-top: calc(var(--header-height) * -1);
+    margin-top: calc(var(--header-height) * -1);
   }
 }
 
