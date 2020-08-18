@@ -43,14 +43,14 @@
             {% assign total_saving = saving | plus: total_saving %}
         {% endif %}
 
-          <li class="dr-cart__product cart_item ">
+          <li class="dr-cart__product cart_item">
             {% if item.image %}
               <a href="{{ item.url }}" class="dr-cart__img">
                 <img src="{{ item | img_url: '320x' }}" alt="{{ item.title | escape }}" class="lazyload" />
               </a>
               {% endif %}  
 
-            <div>
+            <section>
               <h2 class="text-base"><a href="{{ item.url }}" class="color-inherit">{{ item.product.title }} 
                 {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %} <!-- variant title -->
                 <span class="font-normal color-contrast-medium">&nbsp;| 
@@ -61,14 +61,14 @@
                 {% endunless %}
               </a></h2>
               <p class="text-sm color-contrast-medium margin-top-xxxs">{{ item.product.type }}</p>
-              <div class="margin-top-xxxxs">
-                <div class="left product-quantity-box">
-                  <span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>
-                  <input type="number" min="1" size="2" class="quantity" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" data-line-id="{{ forloop.index }}" />
-                  <span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>
-                </div>
+              
+              <div class="margin-top-xxxxs left product-quantity-box">
+                <span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>
+                <input type="number" min="1" size="2" class="quantity" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" data-line-id="{{ forloop.index }}" />
+                <span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>
               </div>
-            </div>
+            
+            </section>
 
             <div class="flex flex-column align-end justify-between height-100%">
               <i class="dr-cart__remove-btn icon--sm material-icons-outlined color-contrast-low">delete</i>

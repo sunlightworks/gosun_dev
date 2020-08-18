@@ -427,30 +427,27 @@ $(function() {
 
       $.each(cart.items, function(index, item) {
         var line_id = index + 1;
-        cart_items_html += '<li class="cart_item clearfix">' +
-          '<a href="' + item.url +'">';
+        cart_items_html += '<li class="dr-cart__product cart_item">';
         if (item.image) {
-          cart_items_html += '<div class="cart_image">' +
-              '<img src="' + item.image.replace(/(\.[^.]*)$/, "_compact$1").replace('http:', '') + '" alt="' + htmlEncode(item.title) + '" />' +
-            '</div>';
+          cart_items_html += '<a href="' + item.url + '">' +
+            '<div class="dr-cart__img">' +
+            '<img src="' + item.image.replace(/(\.[^.]*)$/, "_compact$1").replace('http:', '') + '" alt="' + htmlEncode(item.title) + '" />' +
+          '</a></div>';
         }
 
-        cart_items_html += '<div class="cart_item__title"><div class="item_title">' + item.title;
+        cart_items_html += '<section><h2 class="text-base"' + 
+          '<a class="color-inherit" href="' + item.url +'">' + item.product.title +
+          '</a></h2>';
+        
 
-        if(item.properties) {
-          $.each(item.properties, function(title, value) {
-            if (value) {
-              cart_items_html += '<div class="line-item">' + title +': ' + value + '</div>';
-            }
-          });
-        }
-        cart_items_html += '</div></a>';
+        cart_items_html += '<p class="text-sm color-contrast-medium margin-top-xxxs">' + item.product_type + '</p>';
 
-        cart_items_html += '<div class="left product-quantity-box">' +
+        cart_items_html += '<div class="margin-top-xxxxs left product-quantity-box">' +
             '<span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>' +
             '<input type="number" min="0" class="quantity" name="updates[]" id="updates_' + item.id + '" value="' + item.quantity +'" data-line-id="' + line_id +'" />' +
             '<span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>' +
           '</div>' +
+          '</section>' +
         '</div>';
 
         cart_items_html += '<strong class="right price">';
