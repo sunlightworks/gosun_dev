@@ -1,238 +1,224 @@
 .product-wrap .image__container img {
-    @include filter-alabaster();
+  @include filter-alabaster();
 }
 .filter-alabaster {
-    @include filter-alabaster();
+  @include filter-alabaster();
 }
 .filter-egg {
-    @include filter-egg();
+  @include filter-egg();
 }
 .filter-top:before {
-    @include filter-top();
+  @include filter-top();
 }
 .filter-bottom:before {
-    @include filter-bottom();
+  @include filter-bottom();
 }
 
 .index-sections {
-.no-filter img {
+  .no-filter img {
     filter: none !important;
     -webkit-filter: none !important;
-}
+  }
 
-
-.gradient-bottom {
-    background: rgba(0, 0, 0, 0) linear-gradient($alabaster, rgba(255, 255, 255, 0) 167px, rgba(255, 255, 255, 0) 93%, $alabaster) repeat scroll 0% 0%;
+  .gradient-bottom {
+    background: rgba(0, 0, 0, 0)
+      linear-gradient(
+        $alabaster,
+        rgba(255, 255, 255, 0) 167px,
+        rgba(255, 255, 255, 0) 93%,
+        $alabaster
+      )
+      repeat scroll 0% 0%;
     height: 100%;
     width: 100%;
     position: absolute;
   }
-
-
-
-
 }
 
 .img {
-    &--stretch img {
-        width: 100%;
-    }
+  &--stretch img {
+    width: 100%;
+  }
 }
 
 #preview-bar-iframe {
-    opacity: .1 !important;
-    visibility: hidden !important;
+  // opacity: .1 !important;
+  // visibility: hidden !important;
 }
-
 
 /* Collection [banners]
 ================================================== */
-.collection_banner  img.transition--blur-up.lazyloaded {
-    @include filter-banner;
+.collection_banner img.transition--blur-up.lazyloaded {
+  @include filter-banner;
 }
-
-
 
 /* Blog - All images
 ================================================== */
 .article_content img {
-     vertical-align: middle;
-     width: 100%;
-     max-height: 330px;
-     filter: brightness(.97);
-     object-fit: cover;
-     }
+  vertical-align: middle;
+  width: 100%;
+  max-height: 330px;
+  filter: brightness(0.97);
+  object-fit: cover;
+}
 
-
-   /* Product Page / Videos
-================================================== */  
-    .video-wrapper {
-        position: relative;
-        margin-top: 25px;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden !important;
-        @include border-radius(large);
-        @include article-shadow();
-        @include animateSlow(); 
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
-        transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        -moz-transform: translate3d(0, 0, 0);
-        &:hover {
-            cursor: pointer;
-            img {
-            @include animateSlow();
-            @include hover-zoom();
-            }
-            .material-icons {
-                opacity: .8;
-            }
-        }
+/* Product Page / Videos
+================================================== */
+.video-wrapper {
+  position: relative;
+  margin-top: 25px;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden !important;
+  @include border-radius(large);
+  @include article-shadow();
+  @include animateSlow();
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  &:hover {
+    cursor: pointer;
+    img {
+      @include animateSlow();
+      @include hover-zoom();
     }
-
-    .video-wrapper img {
-        height:auto;
-        width: 100%;
-        @include animateSlow();
-        @include filter-alabaster();
-        object-fit: cover;
-        z-index: 2;
+    .material-icons {
+      opacity: 0.8;
     }
+  }
+}
 
-    #video-cover {
-        z-index: 2 !important;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-            
-    
-    .video-wrapper iframe {
-        display:none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    
+.video-wrapper img {
+  height: auto;
+  width: 100%;
+  @include animateSlow();
+  @include filter-alabaster();
+  object-fit: cover;
+  z-index: 2;
+}
 
-    .btn-wrap {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        z-index: 666;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border: 0;
-        border-radius: 50%;
-        background-color: transparent;
-        &:hover {
-            transform:translate(-50%, -50%);
-            cursor: pointer;
-        }
-      }
+#video-cover {
+  z-index: 2 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
+.video-wrapper iframe {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
+.btn-wrap {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 666;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  &:hover {
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+}
 
-    .play-btn {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        padding: 18px 20px 18px 28px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 100%;
-        background-color: $grape-3;
-        transition: background-color 200ms ease;
-        &:hover {
-            background-color: darken($grape-3, 10%);
-        }
-        &:focus {
-            outline:0;
-        }
-    }
+.play-btn {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  padding: 18px 20px 18px 28px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: $grape-3;
+  transition: background-color 200ms ease;
+  &:hover {
+    background-color: darken($grape-3, 10%);
+  }
+  &:focus {
+    outline: 0;
+  }
+}
 
-    .play-icon {
-        width: 0px;
-        height: 0px;
-        border-top: 22px solid transparent;
-        border-bottom: 22px solid transparent;
-        border-left: 33px solid $white;
-      }
+.play-icon {
+  width: 0px;
+  height: 0px;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  border-left: 33px solid $white;
+}
 
-      .play-btn-pulse {
-        content: "";
-        position: absolute;
-        z-index: 0;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        display: block;
-        width: 80px;
-        height: 80px;
-        background: $grape-3;
-        border-radius: 50%;
-        animation: pulse-border 1500ms ease-out infinite;
-      }
-          
-      @keyframes pulse-border {
-        0% {
-          transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-          opacity: 1;
-        }
-        100% {
-          transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-          opacity: 0;
-        }
-      }
+.play-btn-pulse {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: $grape-3;
+  border-radius: 50%;
+  animation: pulse-border 1500ms ease-out infinite;
+}
 
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
 
-    .video-wrapper .material-icons {
-        font-size: 90px;
-        @include sm() {
-            font-size: 11vw;
-        }
-    }
+.video-wrapper .material-icons {
+  font-size: 90px;
+  @include sm() {
+    font-size: 11vw;
+  }
+}
 
-
-
-
-    
 /* Responsive iFrames */
 
-.video-responsive{
-    overflow:hidden;
-    padding-bottom:56.25% !important;
-    position:relative;
-    height:0;
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25% !important;
+  position: relative;
+  height: 0;
 }
-.video-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
-
 
 video {
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 }
 
-
-
 .table-img {
-    @include size(80px, 80px);
-    @include filter-alabaster();
-    margin: 0;
+  @include size(80px, 80px);
+  @include filter-alabaster();
+  margin: 0;
 }
