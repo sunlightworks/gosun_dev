@@ -34,8 +34,7 @@
 
 <!------ START HEADER ------>
 
-  <!-- Header / Small Screens -->
-<header id="header" class="mobile--true mobile_nav-fixed--{{ section.settings.fixed_header }}">
+<header id="header">
   {% if section.settings.promo_text != blank %}
     <div class="promo_banner wood-300">
       <div class="promo_banner__content">
@@ -54,116 +53,95 @@
       <div class="promo_banner-close"></div>
     </div>
   {% endif %}
-  <!-- Hamburger Menu -->
-  <div class="top_bar clearfix">
-    <a class="mobile_nav dropdown_link" data-dropdown-rel="menu" data-no-instant="true">
-      <div>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <span class="menu_title">{{ 'layout.general.menu' | t }}</span>
-    </a>
-    <a href="{{ shop.url }}" title="{{ shop.name | escape }}" class="mobile_logo logo">
-      {% if section.settings.logo_mobile != nil %}
-        <img src="{{ section.settings.logo_mobile | img_url: '410x' }}" alt="{{ shop.name | escape }}" class="lazyload" />
-      {% elsif section.settings.logo != nil %}
-        <img src="{{ section.settings.logo | img_url: '410x' }}" alt="{{ shop.name | escape }}" />
-      {% else %}
-        {{ shop.name }}
-      {% endif %}
-    </a>
-    <div class="top_bar--right">
-        <a class="mega-nav__icon-btn info-item" href="tel:+{{ section.settings.phone_number | replace: ' ', '' | replace: '+', '' | replace: '', '' }}"><span class="icon"><em class="material-icons-outlined">call</em></span></a>
-      {% if section.settings.search_enabled %}
-        <a href="/search" class="info-item icon-search dropdown_link mega-nav__icon-btn" title="{{ 'general.search.placeholder' | t | escape }}" data-dropdown-rel="search"><span class="icon"><em class="material-icons-outlined">search</em></span></a>
-      {% endif %}
-      <!-- Cart -->
-      {% if section.settings.show_cart %}
-      <div class="mega-nav__icon-btn">
-        <a href="/cart"  aria-controls="drawer-cart-id" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link mega-nav__icon-btn info-item" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant><span class="icon"><em class="material-icons-outlined">shopping_cart</em></span> 
-          <div class="cart_count-bubble"> 
-            <span class="cart_count">{{ cart.item_count }}</span>
-          </div>
-        </a>
-      </div>
-    {% endif %}
-    </div>
-  </div>
-  <!-- Search Bar -->
-  {% if section.settings.search_enabled %}
-    <div class="dropdown_container center" data-dropdown="search">
-      <div class="dropdown bg">
-        <form action="/search" class="header_search_form">
-          {% if settings.search_option != 'everything' %}
-            <input type="hidden" name="type" value="product" />
-          {% endif %}
-       
-          <span class="icon-search search-submit"><span class="icon"><em class="material-icons-outlined color-contrast-medium">search</em></span></span>
-          <input class="color-contrast-high bg-contrast-low" type="text" name="q" placeholder="{{ 'general.search.placeholder' | t: shop_name: shop.name }}" onfocus="this.placeholder=''" autocapitalize="off" autocomplete="off" autocorrect="on" class="search-terms" />
-        </form>
-      </div>
-    </div>
-  {% endif %}
-<!-- End Search Bar -->
 
-  <!-- Drawer / Small Screens -->
-  <div class="dropdown_container" data-dropdown="menu">
-    <div class="dropdown bg">
-      <div class="menu flex flex-column justify-between" id="mobile_menu">
-      <!-- Main Menu -->
-        <ul class="main-menu mega-nav__sub-items">
-            <span class="height-md block border-bottom border-2"></span>
-            {% include 'mobile-menu' with section.settings.main_linklist %}
-            {% include 'mobile-menu' with section.settings.main_linklist2 %}
-            <span class="height-md block border-bottom border-2"></span>
-            {% include 'mobile-menu' with section.settings.top_bar_menu %}
-        </ul>
-         <!-- Utility Menu -->
-        <section class="utility-nav flex flex-wrap padding-top-lg">
-          {% if section.settings.phone_number != blank %}      
-          <a class="info-item padding-left-md padding-y-xs width-50%" href="tel:+{{ section.settings.phone_number | replace: ' ', '' | replace: '+', '' | replace: '', '' }}"><span class="icon"><em class="material-icons-outlined">call</em></span>{{ section.settings.phone_number }}</a>
-          {% endif %}
-          <a class="info-item padding-left-md padding-y-xs width-50%" href="sms://+15135472426;?&amp;body=Hey%20GoSun%20Team!%20I%20have%20a%20question..."> <span class="icon"><em class="material-icons-outlined">textsms</em></span>+1 513.547.2426</a>
-          <a class="info-item padding-left-md padding-y-xs width-50%" href="mailto:support@gosun.co"><span class="icon"><em class="material-icons-outlined">mail</em></span>support@gosun.co</a>
-          <a class="info-item padding-left-md padding-y-xs width-50%" href="/account"><span class="icon"><em class="material-icons-outlined">account_circle</em></span>Account</a>
-        </section>
-      </div>
-    </div>
-  </div>
-  <!-- End Drawer / Small Screens -->
-</header>
-
-  <!-- Header / Large Screens -->
-<header id="header" class="{% if feature_image %}feature_image{% endif %} {% if section.settings.logo_home != nil %}secondary_logo--true{% endif %}">
-  <div class="header {% if feature_image and settings.header_background == false %}is-absolute {% endif %} header-fixed--{{ section.settings.fixed_header }} {% if settings.header_background %}header-background--solid{% endif %}">
-    <!-- Announcement Bar -->
-
-    {% if section.settings.promo_text != blank %}
-      {% if section.settings.promo_external %}
-        <div class="promo_banner wood-300" onclick="window.open('{{ promo_link.url }}', '_blank')">
-      {% else %}
-        <div class="promo_banner wood-300" onclick="window.open('{{ promo_link.url }}', '_self')">
+  <!-- Header / Small Screens -->
+  <nav class="mobile--true mobile_nav-fixed--{{ section.settings.fixed_header }}">
+   
+    <section class="top_bar flex justify-between align-center clearfix">
+      <!-- Hamburger Menu -->
+      <a class="mobile_nav dropdown_link" data-dropdown-rel="menu" data-no-instant="true">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+      <!-- End Hamburger Menu -->
+      <a href="{{ shop.url }}" title="{{ shop.name | escape }}" class="mobile_logo logo">
+        {% if section.settings.logo_mobile != nil %}
+          <img src="{{ section.settings.logo_mobile | img_url: '100x' }}" alt="{{ shop.name | escape }}" class="lazyload" />
+        {% elsif section.settings.logo != nil %}
+          <img src="{{ section.settings.logo | img_url: '100x' }}" alt="{{ shop.name | escape }}" />
+        {% else %}
+          {{ shop.name }}
+        {% endif %}
+      </a>
+      <div class="menu margin-left-auto">
+          <a class="mega-nav__icon-btn info-item" href="tel:+{{ section.settings.phone_number | replace: ' ', '' | replace: '+', '' | replace: '', '' }}"><span class="icon"><em class="material-icons-outlined">call</em></span></a>
+        {% if section.settings.search_enabled %}
+          <a href="/search" class="info-item icon-search dropdown_link mega-nav__icon-btn" title="{{ 'general.search.placeholder' | t | escape }}" data-dropdown-rel="search"><span class="icon"><em class="material-icons-outlined">search</em></span></a>
+        {% endif %}
+        <!-- Cart -->
+        {% if section.settings.show_cart %}
+        <div class="mega-nav__icon-btn">
+          <a href="/cart"  aria-controls="drawer-cart-id" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link mega-nav__icon-btn info-item" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant><span class="icon"><em class="material-icons-outlined">shopping_cart</em></span> 
+            <div class="cart_count-bubble"> 
+              <span class="cart_count">{{ cart.item_count }}</span>
+            </div>
+          </a>
+        </div>
       {% endif %}
-      <div class="promo_banner__content">
-        <div class="info-item info-item--banner">
-          <span class="icon">
-            <img src="https://cdn.shopify.com/s/files/1/0789/1333/files/united-states-of-america.png?v=1593021893">
-            {% comment %}
-            <i class="material-icons-outlined">{{ section.settings.promo_icon }}</i>
-            {% endcomment %}
-          </span>
-          <p>
-            {{ section.settings.promo_text }}
-          </p>
+      </div>
+    </section>
+    <!-- Search Bar -->
+    {% if section.settings.search_enabled %}
+      <div class="dropdown_container center" data-dropdown="search">
+        <div class="dropdown bg">
+          <form action="/search" class="header_search_form">
+            {% if settings.search_option != 'everything' %}
+              <input type="hidden" name="type" value="product" />
+            {% endif %}
+        
+            <span class="icon-search search-submit"><span class="icon"><em class="material-icons-outlined color-contrast-medium">search</em></span></span>
+            <input class="color-contrast-high bg-contrast-low" type="text" name="q" placeholder="{{ 'general.search.placeholder' | t: shop_name: shop.name }}" onfocus="this.placeholder=''" autocapitalize="off" autocomplete="off" autocorrect="on" class="search-terms" />
+          </form>
         </div>
       </div>
-      <div class="promo_banner-close"></div>
-      </div>
     {% endif %}
+    <!-- End Search Bar -->
+
+    <!-- Drawer / Small Screens -->
+    <div class="dropdown_container" data-dropdown="menu">
+      <div class="dropdown bg">
+        <div class="menu flex flex-column justify-between" id="mobile_menu">
+        <!-- Main Menu -->
+          <ul class="main-menu mega-nav__sub-items">
+              <span class="height-md block border-bottom border-2"></span>
+              {% include 'mobile-menu' with section.settings.main_linklist %}
+              {% include 'mobile-menu' with section.settings.main_linklist2 %}
+              <span class="height-md block border-bottom border-2"></span>
+              {% include 'mobile-menu' with section.settings.top_bar_menu %}
+          </ul>
+          <!-- Utility Menu -->
+          <section class="utility-nav flex flex-wrap padding-top-lg">
+            {% if section.settings.phone_number != blank %}      
+            <a class="info-item padding-left-md padding-y-xs width-50%" href="tel:+{{ section.settings.phone_number | replace: ' ', '' | replace: '+', '' | replace: '', '' }}"><span class="icon"><em class="material-icons-outlined">call</em></span>{{ section.settings.phone_number }}</a>
+            {% endif %}
+            <a class="info-item padding-left-md padding-y-xs width-50%" href="sms://+15135472426;?&amp;body=Hey%20GoSun%20Team!%20I%20have%20a%20question..."> <span class="icon"><em class="material-icons-outlined">textsms</em></span>+1 513.547.2426</a>
+            <a class="info-item padding-left-md padding-y-xs width-50%" href="mailto:support@gosun.co"><span class="icon"><em class="material-icons-outlined">mail</em></span>support@gosun.co</a>
+            <a class="info-item padding-left-md padding-y-xs width-50%" href="/account"><span class="icon"><em class="material-icons-outlined">account_circle</em></span>Account</a>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- End Drawer / Small Screens -->
+  </nav>
+
+   <!-- Header / Large Screens -->
+  <nav class="header {% if feature_image and settings.header_background == false %}is-absolute {% endif %} header-fixed--{{ section.settings.fixed_header }} {% if settings.header_background %}header-background--solid{% endif %}">
     <!-- Utility Bar -->
-    <div class="top_bar flex justify-between width-100%">
+    <section class="top_bar flex justify-between width-100%">
       <ul class="menu left">
         <!-- Phone Number -->
         {% if section.settings.phone_number != blank %}     
@@ -223,21 +201,18 @@
 
         <!-- Cart -->
         {% if section.settings.show_cart %}
-        <div class="mega-nav__icon-btn">
-          <a href="/cart"  aria-controls="drawer-cart-id" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link mega-nav__icon-btn info-item" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant><span class="icon"><em class="material-icons-outlined">shopping_cart</em></span> 
-            <div class="cart_count-bubble"> 
-              <span class="cart_count">{{ cart.item_count }}</span>
-            </div>
-          </a>
-        </div>
-      {% endif %}
+          <div class="mega-nav__icon-btn">
+            <a href="/cart"  aria-controls="drawer-cart-id" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link mega-nav__icon-btn info-item" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant><span class="icon"><em class="material-icons-outlined">shopping_cart</em></span> 
+              <div class="cart_count-bubble"> 
+                <span class="cart_count">{{ cart.item_count }}</span>
+              </div>
+            </a>
+          </div>
+        {% endif %}
       </ul>
-
-      {% include 'minicart-3' %}
-    </div>
-
+    </section>
     <!-- Menu Bar -->
-    <div class="main_nav_wrapper">
+    <section class="main_nav_wrapper">
       <div class="main_nav clearfix menu-position--{{ section.settings.menu_position }} logo-align--{{ section.settings.logo_position }}  flex align-center max-width-xxxl">
         <!-- Logo -->
         {% capture logo %}
@@ -346,8 +321,10 @@
         
       </div>
   
-    </div>
-  </div>
+    </section>
+  </nav>
+
+  {% include 'minicart-3' %}
 </header>
 
 <!------ END HEADER ------>
