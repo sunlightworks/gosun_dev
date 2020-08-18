@@ -19,7 +19,7 @@
 
     <header class="drawer__header">
       <h1 id="drawer-cart-title" class="text-truncate text-md">Your Cart<span class="font-normal color-contrast-medium">&nbsp;(<span class="cart_count">{{ cart.item_count }}</span>)</span></h1>
-      <button class="reset drawer__close-btn js-tab-focus js-drawer__close aria-controls="drawer-cart-id"">
+      <button class="reset drawer__close-btn js-tab-focus js-drawer__close" aria-controls="drawer-cart-id">
         <i class="icon--sm material-icons-outlined color-contrast-medium">close</i>
       </button>
     </header>
@@ -68,7 +68,9 @@
               </section>
 
               <section class="flex flex-column align-end justify-between height-100%">
-                <i class="dr-cart__remove-btn icon--sm material-icons-outlined color-contrast-low">delete</i>
+                <div value="0" class="reset drawer__close-btn dr-cart__remove-btn">
+                  <i class="icon--sm material-icons-outlined color-contrast-low">delete</i>
+                </div>
                 <summary class="flex flex-column text-right">
                   <span class="color-contrast-higher {% if item.price < item.variant.compare_at_price %}sale{% endif %}">{{ item.price | money }}</span>
                   {% if item.price < item.variant.compare_at_price %}
@@ -95,7 +97,7 @@
         <div class="alert alert--success alert--is-visible js-alert margin-y-xs" role="alert">
           <div class="flex items-center">
             <i class="icon--sm material-icons-outlined margin-right-xxs">monetization_on</i>
-            <span class="money"></span>You save&nbsp;{{ total_saving | money }}</span>
+            <span class="money js-cart_savings">You save&nbsp;{{ total_saving | money }}</span>
           </div>
         </div>
       {% endif %}
