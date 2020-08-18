@@ -1540,7 +1540,7 @@ body.is-active {
 
 #header {
   display: none;
-  .top_bar {
+  .top_bar .menu  {
    
     height: 40px;
     @include flexbox();
@@ -1789,10 +1789,14 @@ body.is-active {
   }
 }
 
+
 .top_bar {
   height: 40px;
   background-color: {{ settings.top_bar_bg_color }};
   padding: 0 0 0 10px;
+}
+
+.top_bar .menu {
   .social_icons {
     float: left;
     margin: 0;
@@ -2024,7 +2028,7 @@ select.currencies {
 
 
 
-.top_bar li {
+.top_bar .menu li {
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -2081,11 +2085,6 @@ select.currencies {
   {% endif %}
 }
 
-.top_bar a.mini_cart span {
-  padding-top: 0;
-  padding-bottom: 0;
-  line-height: 40px;
-}
 
 a.tos_icon,
 .cart_content a.tos_icon {

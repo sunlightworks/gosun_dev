@@ -2,15 +2,6 @@
 {% assign cart_total = cart.total_price %}
 {% assign shipping_value_left = shipping_value | minus: cart_total %}
 
-{% if section.settings.show_cart %}
-  <div class="mega-nav__icon-btn">
-    <a href="/cart"  aria-controls="drawer-cart-id" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link mega-nav__icon-btn info-item" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant><span class="icon"><em class="material-icons-outlined">shopping_cart</em></span> 
-      <div class="cart_count-bubble"> 
-        <span class="cart_count">{{ cart.item_count }}</span>
-      </div>
-    </a>
-  </div>
-{% endif %}
 
 
 {% unless settings.cart_action == 'ajax' and template contains 'cart' %}
@@ -62,7 +53,7 @@
                 
                 <div class="margin-top-xxxxs left product-quantity-box">
                   <span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>
-                  <input type="number" min="1" size="2" class="quantity" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" data-line-id="{{ forloop.index }}" />
+                  <input type="number" min="0" size="2" class="quantity" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" data-line-id="{{ forloop.index }}" />
                   <span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>
                 </div>
               </section>

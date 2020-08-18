@@ -79,9 +79,16 @@
       {% if section.settings.search_enabled %}
         <a href="/search" class="info-item icon-search dropdown_link mega-nav__icon-btn" title="{{ 'general.search.placeholder' | t | escape }}" data-dropdown-rel="search"><span class="icon"><em class="material-icons-outlined">search</em></span></a>
       {% endif %}
-    <span class="mobile--true">
-     
-    </span>
+      <!-- Cart -->
+      {% if section.settings.show_cart %}
+      <div class="mega-nav__icon-btn">
+        <a href="/cart"  aria-controls="drawer-cart-id" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link mega-nav__icon-btn info-item" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant><span class="icon"><em class="material-icons-outlined">shopping_cart</em></span> 
+          <div class="cart_count-bubble"> 
+            <span class="cart_count">{{ cart.item_count }}</span>
+          </div>
+        </a>
+      </div>
+    {% endif %}
     </div>
   </div>
   <!-- Search Bar -->
@@ -129,7 +136,7 @@
 </header>
 
   <!-- Header / Large Screens -->
-<header id="header" class="mobile--false {% if feature_image %}feature_image{% endif %} {% if section.settings.logo_home != nil %}secondary_logo--true{% endif %}">
+<header id="header" class="{% if feature_image %}feature_image{% endif %} {% if section.settings.logo_home != nil %}secondary_logo--true{% endif %}">
   <div class="header {% if feature_image and settings.header_background == false %}is-absolute {% endif %} header-fixed--{{ section.settings.fixed_header }} {% if settings.header_background %}header-background--solid{% endif %}">
     <!-- Announcement Bar -->
 
@@ -157,35 +164,33 @@
     {% endif %}
     <!-- Utility Bar -->
     <div class="top_bar flex justify-between width-100%">
-        <ul class="menu left">
-          <!-- Phone Number -->
-          {% if section.settings.phone_number != blank %}     
-            {% if section.settings.phone_position == "left" %}    
-            <li class="info-item info-item--top-bar">
-              <span class="icon">
-                <i class="material-icons-outlined">call</i>
-              </span>
-              <a href="tel:+{{ section.settings.phone_number | replace: ' ', '' | replace: '+', '' | replace: '', '' }}">{{ section.settings.phone_number }}</a>
-            </li>
-            {% endif %}
+      <ul class="menu left">
+        <!-- Phone Number -->
+        {% if section.settings.phone_number != blank %}     
+          {% if section.settings.phone_position == "left" %}    
+          <li class="info-item info-item--top-bar">
+            <span class="icon">
+              <i class="material-icons-outlined">call</i>
+            </span>
+            <a href="tel:+{{ section.settings.phone_number | replace: ' ', '' | replace: '+', '' | replace: '', '' }}">{{ section.settings.phone_number }}</a>
+          </li>
           {% endif %}
-          <!-- End Phone Number -->
-          {% if section.settings.top_bar_menu != blank %}
-            {% for link in linklists[section.settings.top_bar_menu].links %}
-              <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-            {% endfor %}
-          {% endif %}
-        </ul>
-        <!-- Utility Menu -->
-        <ul class="menu right">
+        {% endif %}
+        <!-- End Phone Number -->
+        {% if section.settings.top_bar_menu != blank %}
+          {% for link in linklists[section.settings.top_bar_menu].links %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        {% endif %}
+      </ul>
+      <!-- Utility Menu -->
+      <ul class="menu right">
         <!-- Phone Number -->
         {% if section.settings.phone_number != blank %}     
         {% if section.settings.phone_position == "right" %}    
         <li class="info-item info-item--top-bar">
-        <span class="icon">
-          <i class="material-icons-outlined">call</i>
-        </span>
-        <a href="tel:+{{ section.settings.phone_number | replace: ' ', '' | replace: '+', '' | replace: '', '' }}">{{ section.settings.phone_number }}</a>
+          <span class="icon"><i class="material-icons-outlined">call</i></span>
+          <a href="tel:+{{ section.settings.phone_number | replace: ' ', '' | replace: '+', '' | replace: '', '' }}">{{ section.settings.phone_number }}</a>
         </li>
         {% endif %}
         {% endif %}
@@ -209,13 +214,26 @@
           </a>
         </li>
         {% endif %}
-
+        <!-- Wishlist -->
         <li class="info-item info-item--top-bar pointer" onclick="window.open('/account?p=1#wishlist', '_self')">
-        <span class="icon">
-          <i class="material-icons-outlined">favorite_border</i>
-        </span>
+          <span class="icon">
+            <i class="material-icons-outlined">favorite_border</i>
+          </span>
         </li>
-        </ul>
+
+        <!-- Cart -->
+        {% if section.settings.show_cart %}
+        <div class="mega-nav__icon-btn">
+          <a href="/cart"  aria-controls="drawer-cart-id" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link mega-nav__icon-btn info-item" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant><span class="icon"><em class="material-icons-outlined">shopping_cart</em></span> 
+            <div class="cart_count-bubble"> 
+              <span class="cart_count">{{ cart.item_count }}</span>
+            </div>
+          </a>
+        </div>
+      {% endif %}
+      </ul>
+
+      {% include 'minicart-3' %}
     </div>
 
     <!-- Menu Bar -->
@@ -325,7 +343,7 @@
         {% include 'sub-menu' with section.settings.main_linklist %}
         {% include 'sub-menu' with section.settings.main_linklist2 %}
 
-        {% include 'minicart-3' %}
+        
       </div>
   
     </div>
