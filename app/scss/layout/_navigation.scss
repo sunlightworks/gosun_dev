@@ -65,9 +65,13 @@ li.nav-title {
   margin-left: -15px !important;
 }
 
+.menu li {
+  padding: 0 var(--space-sm); // Spacing between list items
+}
+
 /* Sale */
 .link-sale {
-  padding-left: 20px;
+  padding-left: var(--space-md);
   color: $wood-1 !important;
   a,
   i {

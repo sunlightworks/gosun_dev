@@ -13277,9 +13277,12 @@ li.nav-title {
   padding: 0 !important;
   margin-left: -15px !important; }
 
+.menu li {
+  padding: 0 var(--space-sm); }
+
 /* Sale */
 .link-sale {
-  padding-left: 20px;
+  padding-left: var(--space-md);
   color: #F0EDEA !important; }
   .link-sale a,
   .link-sale i {

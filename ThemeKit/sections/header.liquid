@@ -213,7 +213,7 @@
     </section>
     <!-- Menu Bar -->
     <section class="main_nav_wrapper">
-      <div class="main_nav clearfix menu-position--{{ section.settings.menu_position }} logo-align--{{ section.settings.logo_position }}  flex align-center max-width-xxxl">
+      <div class="main_nav clearfix menu-position--{{ section.settings.menu_position }} logo-align--{{ section.settings.logo_position }} max-width-xxxl">
         <!-- Logo -->
         {% capture logo %}
           <div class="logo text-align--{{ section.settings.logo_alignment }}">
@@ -232,11 +232,8 @@
         {% assign vertical_menu = section.settings.vertical_menu %}
         <!-- Menu / Left -->
         {% capture menu_left %}
-          {% if vertical_menu %}
-            {% include 'vertical-menu' with section.settings.main_linklist %}
-          {% else %}
+
             {% include 'menu' with section.settings.main_linklist %}
-          {% endif %}
 
             <!-- Sale Link -->
             {% if section.settings.sale_text != blank %}
@@ -320,7 +317,6 @@
 
         
       </div>
-  
     </section>
   </nav>
 
