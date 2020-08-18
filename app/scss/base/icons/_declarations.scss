@@ -152,12 +152,13 @@ a.mobile_nav {
   font-size: 12px;
   line-height: 16px;
   left: 16px;
+
+  .cart_count {
+    line-height: 0 !important;
+    font-weight: 700;
+  }
 }
 
-.cart_count {
-  line-height: 0 !important;
-  font-weight: 700 !important;
-}
 /* Hide native active/hover box effect */
 .cart_container.active_link .mini_cart,
 .cart_container.active_link .mini_cart span {

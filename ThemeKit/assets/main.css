@@ -2506,7 +2506,7 @@ html:not(.js) .no-js\:is-hidden {
   min-height: 100vh; }
 
 .position-relative {
-  position: relative; }
+  position: relative !important; }
 
 .position-absolute {
   position: absolute; }
@@ -6395,10 +6395,9 @@ a.mobile_nav {
   font-size: 12px;
   line-height: 16px;
   left: 16px; }
-
-.cart_count {
-  line-height: 0 !important;
-  font-weight: 700 !important; }
+  .cart_count-bubble .cart_count {
+    line-height: 0 !important;
+    font-weight: 700; }
 
 /* Hide native active/hover box effect */
 .cart_container.active_link .mini_cart,

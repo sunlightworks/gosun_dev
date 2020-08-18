@@ -168,8 +168,8 @@
       "savings": "You save",
       "products_tagged": "Products tagged {{ tag }}",
       "items_left_count": {
-        "one": "left",
-        "other": "left"
+        "one": "left in stock",
+        "other": "left in stock"
       }
     },
     "notify_form": {

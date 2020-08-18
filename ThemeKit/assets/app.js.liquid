@@ -395,7 +395,7 @@ $(function() {
 
           $('.warning--quantity').remove();
 
-          var warning = '<p class="warning warning--quantity animated bounceIn">' + updated_quantity + ' ' + items_left_text + '</p>';
+          var warning = '<div class="alert alert--error alert--is-visible js-alert col-12 position-relative" role="alert"><div class="flex items-center"><i class="icon--sm material-icons-outlined margin-right-xxs">error_outline</i><span class="text-sm">' + 'Only ' + updated_quantity + ' ' + items_left_text + '</span></div></div>';
           parent.find("input[data-line-id='" + lineID + "']").parent().after(warning);
           parent.find("input[data-line-id='" + lineID + "']").val(updated_quantity);
         } else if (parent.is('#cart_form')) {
@@ -434,7 +434,7 @@ $(function() {
           '</a>';
         }
 
-        cart_items_html += '<section>';
+        cart_items_html += '<section class="flex flex-column">';
 
         cart_items_html += '<h2 class="text-base"' + 
           '<a class="color-inherit" href="' + item.url +'">' + item.title + '</a>' +

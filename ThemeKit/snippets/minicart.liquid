@@ -18,7 +18,7 @@
   <div class="drawer__content flex flex-column cart_content" role="alertdialog" aria-labelledby="drawer-cart-title">
 
     <header class="drawer__header">
-      <h1 id="drawer-cart-title" class="text-truncate text-md">Your Cart<span class="font-normal color-contrast-medium">&nbsp;({{ cart.item_count }})</span></h1>
+      <h1 id="drawer-cart-title" class="text-truncate text-md">Your Cart<span class="font-normal color-contrast-medium">&nbsp;(<span class="cart_count">{{ cart.item_count }}</span>)</span></h1>
       <button class="reset drawer__close-btn js-tab-focus js-drawer__close aria-controls="drawer-cart-id"">
         <i class="icon--sm material-icons-outlined color-contrast-medium">close</i>
       </button>
@@ -32,54 +32,54 @@
       </div>
 
       <form action="/checkout" method="post" data-money-format="{{ shop.money_format }}" data-shop-currency="{{ shop.currency }}" data-shop-name="{{ shop.name | escape }}" class="js-cart_content__form {% if cart.item_count == 0 %}{% endif %}">
-      <ol class="cart_items js-cart_items margin-top-md">
+        <ol class="cart_items js-cart_items margin-top-md">
 
-        {% assign total_saving = 0 %}
-        {% for item in cart.items %}
-        {% if item.variant.compare_at_price > item.variant.price %}
-            {% assign saving = item.variant.compare_at_price | minus: item.variant.price | times: item.quantity %}
-            {% assign total_saving = saving | plus: total_saving %}
-        {% endif %}
+          {% assign total_saving = 0 %}
+          {% for item in cart.items %}
+          {% if item.variant.compare_at_price > item.variant.price %}
+              {% assign saving = item.variant.compare_at_price | minus: item.variant.price | times: item.quantity %}
+              {% assign total_saving = saving | plus: total_saving %}
+          {% endif %}
 
-          <li class="dr-cart__product cart_item">
-            {% if item.image %}
-              <a href="{{ item.url }}" class="dr-cart__img">
-                <img src="{{ item | img_url: '320x' }}" alt="{{ item.title | escape }}" class="lazyload" />
-              </a>
-              {% endif %}  
+            <li class="dr-cart__product cart_item">
+              {% if item.image %}
+                <a href="{{ item.url }}" class="dr-cart__img">
+                  <img src="{{ item | img_url: '320x' }}" alt="{{ item.title | escape }}" class="lazyload" />
+                </a>
+                {% endif %}  
 
-            <section>
-              <h2 class="text-base"><a href="{{ item.url }}" class="color-inherit">{{ item.product.title }} 
-                {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %} <!-- variant title -->
-                <span class="font-normal color-contrast-medium">&nbsp;| 
-                  {% for option in item.product.options %}
-                    {{ item.variant.options[forloop.index0] }} {% unless forloop.last %}/{% endunless %}
-                  {% endfor %}
-                </span> 
-                {% endunless %}
-              </a></h2>
-              <p class="text-sm color-contrast-medium margin-top-xxxs">{{ item.product.type }}</p>
-              
-              <div class="margin-top-xxxxs left product-quantity-box">
-                <span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>
-                <input type="number" min="1" size="2" class="quantity" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" data-line-id="{{ forloop.index }}" />
-                <span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>
-              </div>
-            </section>
+              <section class="flex flex-column">
+                <h2 class="text-base"><a href="{{ item.url }}" class="color-inherit">{{ item.product.title }} 
+                  {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %} <!-- variant title -->
+                  <span class="font-normal color-contrast-medium">&nbsp;| 
+                    {% for option in item.product.options %}
+                      {{ item.variant.options[forloop.index0] }} {% unless forloop.last %}/{% endunless %}
+                    {% endfor %}
+                  </span> 
+                  {% endunless %}
+                </a></h2>
+                <p class="text-sm color-contrast-medium margin-top-xxxs">{{ item.product.type }}</p>
+                
+                <div class="margin-top-xxxxs left product-quantity-box">
+                  <span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>
+                  <input type="number" min="1" size="2" class="quantity" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" data-line-id="{{ forloop.index }}" />
+                  <span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>
+                </div>
+              </section>
 
-            <section class="flex flex-column align-end justify-between height-100%">
-              <i class="dr-cart__remove-btn icon--sm material-icons-outlined color-contrast-low">delete</i>
-              <summary class="flex flex-column text-right">
-                <span class="color-contrast-higher {% if item.price < item.variant.compare_at_price %}sale{% endif %}">{{ item.price | money }}</span>
-                {% if item.price < item.variant.compare_at_price %}
-                  <span class="money was_price mtn5">{{ item.variant.compare_at_price | money }}</span>
-                {% endif %}
-              </summary>
-            </section>
+              <section class="flex flex-column align-end justify-between height-100%">
+                <i class="dr-cart__remove-btn icon--sm material-icons-outlined color-contrast-low">delete</i>
+                <summary class="flex flex-column text-right">
+                  <span class="color-contrast-higher {% if item.price < item.variant.compare_at_price %}sale{% endif %}">{{ item.price | money }}</span>
+                  {% if item.price < item.variant.compare_at_price %}
+                    <span class="money was_price mtn5">{{ item.variant.compare_at_price | money }}</span>
+                  {% endif %}
+                </summary>
+              </section>
 
-          </li>
-        {% endfor %}
-      </ol>
+            </li>
+          {% endfor %}
+        </ol>
       </form>
       <summary class="padding-y-sm border-top border-contrast-lower flex-shrink-0">
         <p class="flex justify-between js-cart_subtotal"><span>{{ 'layout.general.subtotal' | t }}</span> <span>{{ cart.total_price | money }}</span></p>
