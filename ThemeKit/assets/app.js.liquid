@@ -429,16 +429,16 @@ $(function() {
         var line_id = index + 1;
         cart_items_html += '<li class="dr-cart__product cart_item">';
         if (item.image) {
-          cart_items_html += '<a href="' + item.url + '">' +
-            '<div class="dr-cart__img">' +
+          cart_items_html += '<a class="dr-cart__img" href="' + item.url + '">' +
             '<img src="' + item.image.replace(/(\.[^.]*)$/, "_compact$1").replace('http:', '') + '" alt="' + htmlEncode(item.title) + '" />' +
-          '</a></div>';
+          '</a>';
         }
 
-        cart_items_html += '<section><h2 class="text-base"' + 
-          '<a class="color-inherit" href="' + item.url +'">' + item.product.title +
-          '</a></h2>';
-        
+        cart_items_html += '<section>';
+
+        cart_items_html += '<h2 class="text-base"' + 
+          '<a class="color-inherit" href="' + item.url +'">' + item.title + '</a>' +
+        '</h2>';
 
         cart_items_html += '<p class="text-sm color-contrast-medium margin-top-xxxs">' + item.product_type + '</p>';
 
@@ -446,11 +446,15 @@ $(function() {
             '<span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>' +
             '<input type="number" min="0" class="quantity" name="updates[]" id="updates_' + item.id + '" value="' + item.quantity +'" data-line-id="' + line_id +'" />' +
             '<span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>' +
-          '</div>' +
-          '</section>' +
-        '</div>';
+          '</div>';
 
-        cart_items_html += '<strong class="right price">';
+        cart_items_html += '</section>';
+
+        cart_items_html += '<section class="flex flex-column align-end justify-between height-100%">' +
+          '<i class="dr-cart__remove-btn icon--sm material-icons-outlined color-contrast-low">delete</i>' +
+          '<summary class="flex flex-column text-right">';
+        
+        cart_items_html += '<span class="money color-contrast-higher">' + Shopify.formatMoney(item.price, $('body').data('money-format')) + '</span>'; 
 
         {% if settings.display_savings %}
           $.ajax({
@@ -465,7 +469,7 @@ $(function() {
               });
 
               if(variant[0] && variant[0].compare_at_price > item.price) {
-                cart_items_html += ' <span class="money was_price">' + Shopify.formatMoney(variant[0].compare_at_price, $('body').data('money-format')) + '</span> ';
+                cart_items_html += ' <span class="money was_price mtn5">' + Shopify.formatMoney(variant[0].compare_at_price, $('body').data('money-format')) + '</span>';
                 discounted_price_total += item.price * item.quantity;
                 total_savings += variant[0].compare_at_price * item.quantity;
               }
@@ -473,7 +477,7 @@ $(function() {
           });
         {% endif %}
 
-        cart_items_html += '<span class="money">' + Shopify.formatMoney(item.price, $('body').data('money-format')) + '</span></strong>' + '</div>';
+        cart_items_html += '</summary></section></li>';
 
       });
 
