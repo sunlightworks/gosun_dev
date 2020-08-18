@@ -12,6 +12,7 @@
   </div>
 {% endif %}
 
+
 {% unless settings.cart_action == 'ajax' and template contains 'cart' %}
 <div class="drawer drawer--modal dr-cart js-drawer js-drawer--modal" id="drawer-cart-id">
   <div class="drawer__content flex flex-column cart_content" role="alertdialog" aria-labelledby="drawer-cart-title">
@@ -23,7 +24,7 @@
       </button>
     </header>
     
-    <form action="/cart" method="post" data-money-format="{{ shop.money_format }}" data-shop-currency="{{ shop.currency }}" data-shop-name="{{ shop.name | escape }}" class="js-cart_content__form {% if cart.item_count == 0 %}{% endif %}">
+    <form action="/checkout" method="post" data-money-format="{{ shop.money_format }}" data-shop-currency="{{ shop.currency }}" data-shop-name="{{ shop.name | escape }}" class="js-cart_content__form {% if cart.item_count == 0 %}{% endif %}">
       <div class="drawer__body padding-x-md padding-y-sm js-drawer__body  position-relative">
         <!-- empty content -->
         <div class="js-empty-cart__message {% if cart.item_count > 0 %}hidden{% endif %}">
@@ -84,8 +85,8 @@
           <p class="flex justify-between js-cart_subtotal"><span>{{ 'layout.general.subtotal' | t }}</span> <span>{{ cart.total_price | money }}</span></p>
           <p class="flex justify-between"><span>Shipping</span> <span>Free</span></p>
         </summary>
-
       </div>
+
       <footer class="padding-x-md padding-y-sm border-top border-contrast-lower flex-shrink-0">
         <p class="flex justify-between js-cart_subtotal text-lg font-medium"><span>Your total</span> <span>{{ cart.total_price | money }}</span></p>
 
@@ -101,11 +102,10 @@
         {% if settings.go_to_checkout %}
           <button type="submit" class="ajax-submit add_to_cart action_button btn btn--primary btn--md width-100%" id="checkout">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.checkout' | t }}</button>
         {% else %}
-          <button type="submit" class="ajax-submit add_to_cart action_button btn btn--primary btn--md width-100%" id="go_to_cart">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.go_to_cart' | t }} </button>
+          <button type="submit" class="ajax-submit add_to_cart action_button btn btn--primary btn--md width-100% margin-y-sm" id="go_to_cart">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.go_to_cart' | t }} </button>
         {% endif %}
         <p class="affirm-as-low-as inline-block width-100% margin-y-xs text-center" data-page-type="cart" data-amount="{{cart.total_price}}" data-affirm-type="text" data-learnmore-show="true"></p>
       </footer>
-
     </form>
     
   </div>

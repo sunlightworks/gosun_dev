@@ -453,8 +453,8 @@ $(function() {
         cart_items_html += '</section>';
 
         cart_items_html += '<section class="flex flex-column align-end justify-between height-100%">' +
-          '<button class="reset drawer__close-btn dr-cart__remove-btn">' +
-            '<i class="dr-cart__remove-btn icon--sm material-icons-outlined color-contrast-low">delete</i></button>' +
+          '<div class="reset drawer__close-btn dr-cart__remove-btn">' +
+            '<i class="dr-cart__remove-btn icon--sm material-icons-outlined color-contrast-low">delete</i></div>' +
           '<summary class="flex flex-column text-right">';
         
         cart_items_html += '<span class="money color-contrast-higher">' + Shopify.formatMoney(item.price, $('body').data('money-format')) + '</span>'; 
@@ -484,9 +484,7 @@ $(function() {
 
       });
 
-
       cart_action_html += '<span>{{ 'layout.general.subtotal' | t }}</span><span class="money">' + Shopify.formatMoney(cart.total_price, $('body').data('money-format')) + '</span>';
-    
 
       if(total_savings > 0 ) {
         cart_savings_html = "{{ 'layout.general.savings' | t }} &nbsp;" + Shopify.formatMoney(total_savings - discounted_price_total, $('body').data('money-format'));
@@ -515,9 +513,6 @@ $(function() {
     ajaxUpdateCart($(this).data('line-id'), $(this).val(), $(this).parents('.cart_content'));
   });
 
-  $('body').on("change", ".cart_content input.quantity", function() {
-    ajaxUpdateCart($(this).data('line-id'), $(this).val(), $(this).parents('.cart_content'));
-  });
 
   $(".cart_content .dr-cart__remove-btn").on("click", function() {
     ajaxUpdateCart($(this).data('line-id'), '0', $(this).parents('.cart_content'));
