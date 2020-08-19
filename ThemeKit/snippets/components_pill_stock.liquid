@@ -11,7 +11,7 @@
 {% elsif collection_handles contains 'back-order' %} 
     <div class="pill pill--stock margin-top-sm alert width-1-2">
         <span class="icon"><i class="material-icons color-contrast-medium">error_outline</i></span>
-        <p> Out of stock - Check again soon </p>
+        <p> Out of stock - Check again soon </p> 
     </div> 
 {% elsif variant.inventory_quantity <= settings.inventory_threshold %}
     {% if variant.inventory_quantity >= 1 %}
@@ -22,12 +22,12 @@
       {% else %}
       <div class="pill pill--stock margin-top-sm alert width-1-2">
         <span class="icon"><i class="material-icons color-contrast-medium">error_outline</i></span>
-        <p> Out of stock - Check again soon </p>
+        <p> Out of stock - Check again soon  </p>
     </div> 
     {% endif %}
 {% else %}
-    <div class="pill pill--stock margin-top-sm success width-1-2">
+    <div class="pill pill--stock margin-top-sm color-success width-1-2">
         <span class="icon"><i class="material-icons">check_circle_outline</i></span>
-        <p>	In stock - Available now </p>
+        <p>	Ready to ship | Free shipping & returns </p>
     </div>
 {% endif %}
