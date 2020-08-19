@@ -280,7 +280,7 @@ $color-discount: var(--color-success-light);
   ================================================== */
 
 .search__results .title {
-  color: $color-text-dark !important;
+  color: var(--color-contrast-higher) !important;
 }
 
 .menu a span.item-pricing,
@@ -291,7 +291,7 @@ span.item-pricing,
 
 .dropdown .header_search_form .search__results .item-result a:hover .title,
 .main_nav .search__results .item-result a:hover .title {
-  color: $color-text-dark !important;
+  color: var(--color-contrast-higher) !important;
 }
 
 .item-result.result--product,

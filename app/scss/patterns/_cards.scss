@@ -354,7 +354,7 @@ a.collection-info__caption {
 .cards--partner {
   .article-a {
     &:hover {
-      color: $color-text-dark !important;
+      color: var(--color-contrast-higher) !important;
     }
   }
   .article-media {

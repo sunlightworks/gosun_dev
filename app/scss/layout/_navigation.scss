@@ -519,7 +519,7 @@ div.dropdown.menu {
 
 /* Pages / Support */
 .shogun-tab-box {
-  color: $color-text-dark !important;
+  color: var(--color-contrast-higher) !important;
   text-decoration: none;
   display: inline-block;
   font-weight: 600;
@@ -593,7 +593,7 @@ div.dropdown.menu {
 .shogun-tab-box {
   &:hover {
     background: $alabaster;
-    color: $color-text-dark;
+    color: var(--color-contrast-higher);
   }
 }
 

@@ -3,15 +3,14 @@
 // -----------------------------------------------------------------------------
 @import "//app/scss/bundle";
 
-
-
 // -----------------------------------------------------------------------------
 // Basic Buttons
 // -----------------------------------------------------------------------------
-a.highlight-true, a.highlight-true:hover {
-background-color: $white !important;
-border-color: transparent !important;
-color: $color-text-dark !important;
+a.highlight-true,
+a.highlight-true:hover {
+  background-color: $white !important;
+  border-color: transparent !important;
+  color: var(--color-contrast-higher) !important;
 }
 
 // -----------------------------------------------------------------------------
@@ -21,41 +20,39 @@ color: $color-text-dark !important;
 // -----------------------------------------------------------------------------
 // Preorder - Chill // ----------------------------------------------------------------------
 
-
-
 @mixin btn-hero {
-    height: 50px;
-    background: rgba(0,0,0,.35);
-    &:hover {
-        background: rgba(0,0,0,.5); 
-    }
-    font-size: 16px;
-    font-weight: 700;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.35);
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  font-size: 16px;
+  font-weight: 700;
 }
 
-
-
 /* #Buttons - Submit */
-#stamped-button-submit, .stamped-summary-actions-newreview, .stamped-summary-actions-newquestion  {
-  transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+#stamped-button-submit,
+.stamped-summary-actions-newreview,
+.stamped-summary-actions-newquestion {
+  transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out,
+    color 0.2s ease-in-out;
   white-space: nowrap;
-  
+
   height: 56px !important;
   padding: 0 14px !important;
-  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08) !important;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
   font-size: 15px !important;
   font-weight: 500 !important;
-  letter-spacing: .025em !important;
+  letter-spacing: 0.025em !important;
 }
 #stamped-button-submit {
   line-height: 40px !important;
 }
 
-
-
 /* #Button - Kickstarter
 ================================================== */
-.-kickstarter, .-indiegogo {
+.-kickstarter,
+.-indiegogo {
   border: none !important;
   img {
     height: 44px;
@@ -67,8 +64,6 @@ color: $color-text-dark !important;
     background: $palette-indiegogo-dark !important;
   }
 }
-
-
 
 /* #Button - Flits / Social login
 ================================================== */

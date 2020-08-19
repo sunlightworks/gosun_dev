@@ -3,53 +3,50 @@
 // -----------------------------------------------------------------------------
 @import "//app/scss/bundle";
 
+.modal p.modal_price,
+p.modal_price {
+  margin-bottom: 0px;
+}
 
-
-.modal p.modal_price, p.modal_price {
-    margin-bottom: 0px;
-    }
-
-    .modal_price .money {
-        color: $color-text-dark;
-        font-weight: bold;
-        font-size: 24px;
-    }
+.modal_price .money {
+  color: var(--color-contrast-higher);
+  font-weight: bold;
+  font-size: 24px;
+}
 
 /* Hide percent, declutter */
-    .sale.savings,  .sale_banner_product {
-        display: none !important;
-    }
-
+.sale.savings,
+.sale_banner_product {
+  display: none !important;
+}
 
 /* #Features
 ================================================== */
 .prod-desc {
-    ul {
-      margin-left: -25px;
-      position: relative;
-    }
-    li {
-      list-style: none !important;
-      font-size: 16px;
-      line-height: 28px;
-      position: relative;
-      padding-left: 32px;
-      padding-bottom: 12px;
-      &:before {
-        position: absolute;
-        left: 0;
-        top: 0;
-        font-family: 'Material Icons';
-        content: '\e86c';
-        display: inline-block;
-        font-size: 21px;
-      }
+  ul {
+    margin-left: -25px;
+    position: relative;
+  }
+  li {
+    list-style: none !important;
+    font-size: 16px;
+    line-height: 28px;
+    position: relative;
+    padding-left: 32px;
+    padding-bottom: 12px;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: "Material Icons";
+      content: "\e86c";
+      display: inline-block;
+      font-size: 21px;
     }
   }
- 
-  
-#tabs, .ui-accordion {
-    display: none !important;
 }
 
-
+#tabs,
+.ui-accordion {
+  display: none !important;
+}

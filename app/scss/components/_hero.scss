@@ -3,12 +3,9 @@
 // -----------------------------------------------------------------------------
 @import "//app/scss/bundle";
 
-
 // -----------------------------------------------------------------------------
 // Mobile Styles
 // -----------------------------------------------------------------------------
-
-
 
 /* SUNTHING */
 
@@ -22,18 +19,15 @@
   height: 100.32px !important;
 }
 
-
-
 /* Collection Hero
 ================================================== */
 
-
 .collection_banner {
-   margin-top: 0 !important;
-   position: relative !important;
-   height: auto;
-   @include animateSlow();
-  
+  margin-top: 0 !important;
+  position: relative !important;
+  height: auto;
+  @include animateSlow();
+
   img {
     min-height: 177px;
     height: 100%;
@@ -44,21 +38,20 @@
   }
   &:hover {
     img {
-    @include animateSlow();
-    transform: scale(1.06) translatex(1px) translatey(-1px)!important;
-    filter: none !important;
-  }
-  input {
-    @include form-shadow();
-  }
+      @include animateSlow();
+      transform: scale(1.06) translatex(1px) translatey(-1px) !important;
+      filter: none !important;
+    }
+    input {
+      @include form-shadow();
+    }
   }
 }
 
 /* Product page - Intro Hero
 ================================================== */
-.intro_banner { 
+.intro_banner {
   margin-top: 0 !important;
-  
 
   @include md() {
     height: 28vw;
@@ -74,23 +67,17 @@
 
 .intro_description {
   @include flexBox(column, center, flex-start);
-  @include size(100%, 100%); 
-    padding: var(--space-md);
-    margin: 0px;
+  @include size(100%, 100%);
+  padding: var(--space-md);
+  margin: 0px;
 
-    @include lg(){
-      padding-left: 6%;
-      padding-right: 10%;
-      max-width: calc(.5 * 1250px);
-      @include size(60%, 100%); 
-    }
+  @include lg() {
+    padding-left: 6%;
+    padding-right: 10%;
+    max-width: calc(0.5 * 1250px);
+    @include size(60%, 100%);
+  }
 }
-
-
-
-
-
-
 
 .banner img {
   position: relative;
@@ -98,7 +85,6 @@
 
 /* Tri Banner
 ================================================== */
-
 
 .tri_banner {
   margin-top: 0 !important;
@@ -112,25 +98,24 @@
   @include xl() {
   }
   img {
-  min-height: 177px;
-  height: 100% !important;
+    min-height: 177px;
+    height: 100% !important;
     @include animateSlow();
     @include filter-dim();
-  object-fit: cover !important;
-  &:hover {
-    img {
+    object-fit: cover !important;
+    &:hover {
+      img {
         @include animateSlow();
-    transform: scale(1.06) translatex(1px) translatey(-1px)!important;
-    filter: none !important;
-    -webkit-filter: none !important;
-}
-  input {
-    @include form-shadow();
+        transform: scale(1.06) translatex(1px) translatey(-1px) !important;
+        filter: none !important;
+        -webkit-filter: none !important;
+      }
+      input {
+        @include form-shadow();
+      }
+    }
   }
-  }
 }
-}
-
 
 /* Mobile Styles
 ================================================== */
@@ -141,67 +126,59 @@
       height: calc(100vh - 466px) !important;
     }
   }
-    .banner_description {
-      margin-bottom: 0 !important;
-    }
+  .banner_description {
+    margin-bottom: 0 !important;
+  }
 }
-
-
-
 
 /* Split Banner
 ================================================== */
 
-
 /* Container */
-   .split-banner {
-    height: auto;
-  
-     }
-     @include lg() {
-       .split-banner {
-        position: relative;
-       }
-     }
-  
-   /* Text */
-   .split-banner-content #bc-sf-filter-collection-title {
-   color: $white;
-   }
+.split-banner {
+  height: auto;
+}
+@include lg() {
+  .split-banner {
+    position: relative;
+  }
+}
+
+/* Text */
+.split-banner-content #bc-sf-filter-collection-title {
+  color: $white;
+}
 
 @include md-max() {
-    .split-banner {
-
+  .split-banner {
     &--button {
-     width: 100%;
-     }
-     &--action  {
-     width: 100%;
-     }
+      width: 100%;
+    }
+    &--action {
+      width: 100%;
+    }
   }
 }
 
 /* Desktop
 ================================================== */
-   @include md() {
-    div.section.collection_description {
-      padding: 40px;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-    }
-    .collection_banner {
-      height: 280px !important;
-      margin-bottom: 25px;
-      }
-    .split-banner {
-      position: absolute !important;
-      top: 0 !important;
-      bottom: 0 !important;
-      }
+@include md() {
+  div.section.collection_description {
+    padding: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
   }
-
-
+  .collection_banner {
+    height: 280px !important;
+    margin-bottom: 25px;
+  }
+  .split-banner {
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+  }
+}
 
 .feature-container {
   height: 100%;
@@ -210,64 +187,54 @@
   margin-right: 30px;
   color: white !important;
   text-align: center;
-  }
-
-
-
-
-
-
-
-
+}
 
 /* #Home - Banner
 ================================================== */
 
-  .hero-3 {
-     display: flex;
-     }
-     .hero-3 > img {
-     width: 37.25vw;
-     height: 100%;
-     flex-grow: 0;
-     }
-     .hero-3--center {
-     @include flexBox(row, flex-start, center)
-     }
+.hero-3 {
+  display: flex;
+}
+.hero-3 > img {
+  width: 37.25vw;
+  height: 100%;
+  flex-grow: 0;
+}
+.hero-3--center {
+  @include flexBox(row, flex-start, center);
+}
 
-     .hero-3--center-inner {
-     padding: 30px;
-     }
-     .hero-3--headline {
-     font-size: 2.5vw;
-     line-height: normal !important;
-     padding-bottom: var(--space-unit);
-     color: $color-text-dark;
-     }
-     .hero-3--text p {
-      font-weight: 500;
-      font-size: 1.15vw;
-      padding-bottom: .95vw;
-      margin-top: -10px;
-      color: $color-text-dark;
-     }
-     .hero-3--button {
-     color: $color-text-dark;
-     border: 2px solid $color-text-dark;
-     @include rounded();
-     display: inline-block;
-     padding: 10px;
-     text-transform: uppercase;
-     font-weight: 700 !important;
-     }
-    .hero-3--headline {
-     line-height: normal;
-     font-weight: 700;
-     letter-spacing: -.05em;
-    }
+.hero-3--center-inner {
+  padding: 30px;
+}
+.hero-3--headline {
+  font-size: 2.5vw;
+  line-height: normal !important;
+  padding-bottom: var(--space-unit);
+  color: var(--color-contrast-higher);
+}
+.hero-3--text p {
+  font-weight: 500;
+  font-size: 1.15vw;
+  padding-bottom: 0.95vw;
+  margin-top: -10px;
+  color: var(--color-contrast-higher);
+}
+.hero-3--button {
+  color: var(--color-contrast-higher);
+  border: 2px solid var(--color-contrast-higher);
+  @include rounded();
+  display: inline-block;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 700 !important;
+}
+.hero-3--headline {
+  line-height: normal;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
 
-
- 
 .banner {
   h1 {
     margin-left: 0;

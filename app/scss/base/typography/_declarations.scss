@@ -63,7 +63,7 @@ textarea {
   font-weight: 500;
   margin: 0 0 10px !important;
   line-height: 32px !important;
-  color: $color-text-dark;
+  color: var(--color-contrast-higher);
   transition: color 0.1s;
   -webkit-transition: color 0.1s;
   -moz-transition: color 0.1s;
@@ -230,7 +230,7 @@ h6.article-type {
   .dropdown_content p,
   .mobile-mega-menu p {
     font-size: var(--text-base-size);
-    color: $color-text-dark;
+    color: var(--color-contrast-higher);
   }
   li.sublink a:not(.parent-link--true) {
     font-weight: 400 !important;

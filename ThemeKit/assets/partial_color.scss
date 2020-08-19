@@ -230,7 +230,7 @@ $color-border-mid: $palette-shade-300;
 /* #Config - Typography
 ================================================== */
 // Dark Variables //
-$color-text-dark: $palette-shade-900;
+var(--color-contrast-higher): $palette-shade-900;
 $color-text-body: $palette-shade-700;
 $color-text-accent: $palette-shade-500;
 $color-text-sub: $palette-shade-400;
@@ -276,7 +276,7 @@ $color-discount: $palette-olive-700;
 }
 
 .text-dark {
-  color: $color-text-dark !important;
+  color: var(--color-contrast-higher) !important;
 }
 
 .text-light {
