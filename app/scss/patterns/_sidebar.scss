@@ -3,232 +3,129 @@
 // -----------------------------------------------------------------------------
 @import "//app/scss/bundle";
 
-
-
-
 /* Layout
 ================================================== */
 
 /* Sticky [desktop] */
 @include md {
-    .sidebar.four.columns {
-        position: -webkit-sticky;
-        position: sticky;
-        top: var(--space-xxxl);
-    }
+  .sidebar.four.columns {
+    position: -webkit-sticky;
+    position: sticky;
+    top: var(--space-xxxl);
+  }
 }
 
-.sidebar-menu, #bc-sf-filter-tree {
-    width: 100%;
+.sidebar-menu,
+#bc-sf-filter-tree {
+  width: 100%;
 }
 
 /* Hide selected tags */
 .bc-sf-filter-selection-wrapper {
-    display: none;
+  display: none;
 }
 .bc-sf-filter-selected-items {
-    display: none;
+  display: none;
 }
 
-    /* Hide dropdown arrows */
+/* Hide dropdown arrows */
 
 .bc-sf-filter-option-block .bc-sf-filter-block-title h3 > span::before {
-    display: none !important;
+  display: none !important;
 }
 /* Typography
 ================================================== */
 
 /* Tags */
 .sidebar-menu h3 {
-    font-size: var(--text-md);
+  font-size: var(--text-md);
 }
-
-.bc-sf-filter-option-block .bc-sf-filter-block-content .bc-sf-filter-option-box li a {
-overflow: hidden;
-white-space: nowrap;
-}
-
-.bc-sf-filter-option-block .bc-sf-filter-block-content .bc-sf-filter-option-box li a.selected {
-    border-color: $grape-3 !important;
-    background: $grape-3 !important;
-    }
 
 /* List
 ================================================== */
-/* List - Full width */
-.bc-sf-filter-block-title h3 {
-    width: 100% !important;
-        span {
-        width: 100% !important;
-        display: block !important;
-        &:hover {
-            color: $grape-3!important;
-        }
-    }
-}
 
-    
 .toggle_list {
-    padding: 0;
-    li:nth-child(2) {
-        margin-top: var(--space-sm) !important;
-    }
+  padding: 0;
+  li:nth-child(2) {
+    margin-top: var(--space-sm) !important;
+  }
 }
 
 .toggle_list a {
-    max-width: 100% !important;
-    width: 100% !important;
-    padding: 8px 30px;
-    font-weight: 500;
-    font-size: 15px;
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 8px 30px;
+  font-weight: 500;
+  font-size: 15px;
 }
-
-
 
 /* List - Item spacing */
 .bc-sf-filter-option-block .bc-sf-filter-block-content ul li {
-    margin-bottom: 0;
-    padding: 0;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 /* List - Items [hover] */
 .bc-sf-filter-option-multiple-list li:hover {
-    background: $palette-shade-50 !important;
+  background: $palette-shade-50 !important;
 }
-
-/* List - Checkbox */
-.bc-sf-filter-option-block .bc-sf-filter-block-content ul li input[type="checkbox"]  a > span:first-child {
-    width: 12px;
-    height: 12px;
-    top: 5px;
-}
-
-/* List - Checkbox [active] */
-.bc-sf-filter-option-block .bc-sf-filter-block-content ul li input[type="checkbox"] + a.selected > span:first-child {
-    background-color: $grape-3;
-    &::after, &::before {
-        display: none;
-    }
-}
-
-
-/* Box
-================================================== */
-/* Box [hover] */
-@media screen and (min-width: 768px) {
-    .bc-sf-filter-option-block .bc-sf-filter-block-content .bc-sf-filter-option-box li a {
-        &:hover, :active, :focus {
-            background: $grape-3 !important;
-        }
-    }
-}
-
-
-/* Slider
-================================================== */
-/* Price - Line */
-.bc-sf-filter-block-content .noUi-connect {
-    background: $grape-3 !important;  
-}
-
-
-/* Price - Handle */
-
-.noUi-handle {
-    width: 18px !important;
-    border-radius: 50% !important;
-    &:hover
-    {
-        background: $palette-shade-50;
-    }
-}
-
-/* Price - Labels [Hide] */
-.noUi-value.noUi-value-horizontal.noUi-value-large {
-    display: none;
-}
-
-.noUi-marker.noUi-marker-horizontal.noUi-marker-large {
-    display: none;
-}
-
-/* Price - Currency symbol [Hide] */
-.bc-sf-filter-block-title h3 span span {
-    display: none !important;
-}
-
-
-
-
 
 /* Sidebar - Container
 ================================================== */
 .sidebar-wrap {
-    border: none;
-    @include text-sm();
+  border: none;
+  @include text-sm();
 }
-
-
-
-
-
 
 /* Sidebar - Infobox
 ================================================== */
 
 .sidebar-info {
-    @include text-sm();
-    border-bottom: 1px solid $color-border-light;
+  @include text-sm();
+  border-bottom: 1px solid $color-border-light;
 
-    margin-bottom: var(--space-unit);
-    padding: 0 30px; 
-    @include md() {
-        margin: 20px 0;
-        padding: 30px;
-    }
-    p {
-        margin: 0 0 10px;
-    }
-    a {
-        text-decoration: none !important;
-    }
+  margin-bottom: var(--space-unit);
+  padding: 0 30px;
+  @include md() {
+    margin: 20px 0;
+    padding: 30px;
+  }
+  p {
+    margin: 0 0 10px;
+  }
+  a {
+    text-decoration: none !important;
+  }
 }
 
 /* Sidebar - Content
-================================================== */     
-
+================================================== */
 
 /* Sidebar - Menu
 ================================================== */
 
-
-
 .sidebar-menu ul {
-    
-        border-bottom: 1px solid $color-border-light;
-        padding: 15px 0;
-        margin-bottom: var(--space-unit);
-        font-size: var(--text-sm);
-        list-style: none !important;
-    h3 {
-        padding: 10px 30px 0;
-        font-weight: 700;
-        letter-spacing: -0.12px;
-        line-height: var(--space-unit);
-    }
+  border-bottom: 1px solid $color-border-light;
+  padding: 15px 0;
+  margin-bottom: var(--space-unit);
+  font-size: var(--text-sm);
+  list-style: none !important;
+  h3 {
+    padding: 10px 30px 0;
+    font-weight: 700;
+    letter-spacing: -0.12px;
+    line-height: var(--space-unit);
+  }
 
-    li {
-        margin-bottom: 0;
-        padding: 0;
-        &:hover {
-            background: $palette-shade-50 !important;
-            @include nav-hover();
-        }
+  li {
+    margin-bottom: 0;
+    padding: 0;
+    &:hover {
+      background: $palette-shade-50 !important;
+      @include nav-hover();
     }
+  }
 }
-        
-    
-
 
 /* Sort By - Menu
 ================================================== */
@@ -239,67 +136,46 @@ white-space: nowrap;
 */
 /* Button - Refine by [hide when collapsed] */
 .sidebar-wrap > div {
-    padding: 0px;
+  padding: 0px;
 }
 
 /* Free shipping */
-    .sidebar-info .mobile--true {
-    padding: 0px;
-    font-size: 12px !important;
-    text-align: center;
-    margin-top: -10px;
-    @include flexBox(column, center, center);
-    @include md() {
-        display: none !important;
-    }
-    }
-    
-    
+.sidebar-info .mobile--true {
+  padding: 0px;
+  font-size: 12px !important;
+  text-align: center;
+  margin-top: -10px;
+  @include flexBox(column, center, center);
+  @include md() {
+    display: none !important;
+  }
+}
 
-    #bc-sf-filter-options-wrapper {
-    padding: 30px;
-    width: 100% !important;
-    }
-
-
-
-
-/* Button - Refine by */
-button#bc-sf-filter-tree-mobile-button {
-    background: $white !important;
-    color: $color-text-dark !important;
-    text-transform: capitalize !important;
-    @include shadow-nav();
-    @include rounded();
+#bc-sf-filter-options-wrapper {
+  padding: 30px;
+  width: 100% !important;
 }
 
 /* Sidebar [mobile] - [Remove spacing between button] */
 #bc-sf-filter-tree {
-    margin-top: -20px;
+  margin-top: -20px;
 }
 
 #bc-sf-filter-options-wrapper {
-    padding-top: var(--space-unit);
+  padding-top: var(--space-unit);
 }
-
-
 
 // -----------------------------------------------------------------------------
 // #Blog - Sidebar
 // -----------------------------------------------------------------------------
 .sidebar-search {
-     padding: 30px 20px 10px;
-     }
-  
-    .sidebar-block {
-    border-bottom: 1px solid $color-border-light;
-    }
+  padding: 30px 20px 10px;
+}
 
-    .sidebar_content {
-        padding-left: 0;
-    }
+.sidebar-block {
+  border-bottom: 1px solid $color-border-light;
+}
 
-
-
-
-    
+.sidebar_content {
+  padding-left: 0;
+}

@@ -1,60 +1,47 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
-@import "//app/scss/bundle";
-
 .footer {
-    background: $palette-shade-800;
-    margin-bottom: -30px;
+  margin-bottom: -30px;
 }
 
 .footer a {
-    text-decoration: none !important;
-    &:hover {
-        opacity: .72 !important;
-    }
+  text-decoration: none !important;
+  &:hover {
+    opacity: 0.72 !important;
+  }
 }
 
 .footer p {
-    font-size: var(--text-sm);
-    line-height: 1em !important;
-    margin-top: 0;
+  font-size: var(--text-sm);
+  line-height: 1em !important;
+  margin-top: 0;
 }
-
-
-
-
 
 .footer {
-    background: $grape-3;
-    border-top: none !important;
-    a {
-        font-size: 16px;
-        color: $grape-1 !important;
+  background: var(--bg-promo-bar);
+  border-top: none !important;
+  a {
+    color: var(--color-contrast-low) !important;
+  }
+  @include md-max() {
+    .footer-menu-wrap h6 {
+      border-top: 1px solid var(--color-contrast-medium);
     }
-    @include md-max() { 
-        .footer-menu-wrap h6 {
-            border-top:1px solid $grape-2;
-       }
-    }
+  }
 }
-  
 
 .credits {
-    color: $grape-2;
+  color: var(--color-contrast-medium);
 }
 
 .footer_credits {
-    border-top: 1px solid $grape-2;
-    margin-top: 70px;
-    a {
-        font-size: var(--text-sm);
-        color: $grape-2 !important;
-    }
+  border-top: 1px solid var(--color-contrast-medium);
+  margin-top: 70px;
+  a {
+    font-size: var(--text-sm);
+    color: var(--color-contrast-medium) !important;
+  }
 }
 
-
-.payment_methods, .footer-logo {
-    display: none !important;
+.payment_methods,
+.footer-logo {
+  display: none !important;
 }
-  

@@ -36,7 +36,7 @@
 
 <header id="header">
   {% if section.settings.promo_text != blank %}
-    <div class="promo_banner wood-300">
+    <div class="promo_banner">
       <div class="promo_banner__content">
         <div class="info-item info-item--banner">
           <span class="icon">
@@ -69,13 +69,7 @@
       </a>
       <!-- End Hamburger Menu -->
       <a href="{{ shop.url }}" title="{{ shop.name | escape }}" class="mobile_logo logo">
-        {% if section.settings.logo_mobile != nil %}
-          <img src="{{ section.settings.logo_mobile | img_url: '100x' }}" alt="{{ shop.name | escape }}" class="lazyload" />
-        {% elsif section.settings.logo != nil %}
-          <img src="{{ section.settings.logo | img_url: '100x' }}" alt="{{ shop.name | escape }}" />
-        {% else %}
-          {{ shop.name }}
-        {% endif %}
+        {% include 'svg' with 'logo' %}
       </a>
       <div class="menu margin-left-auto">
           <a class="mega-nav__icon-btn info-item" href="tel:+{{ section.settings.phone_number | replace: ' ', '' | replace: '+', '' | replace: '', '' }}"><span class="icon"><em class="material-icons-outlined">call</em></span></a>
@@ -218,14 +212,7 @@
         {% capture logo %}
           <div class="logo text-align--{{ section.settings.logo_alignment }}">
             <a href="{{ shop.url }}" title="{{ shop.name }}">
-              {% if section.settings.logo_home != nil %}
-                <img src="{{ section.settings.logo_home | img_url: '410x' }}" class="secondary_logo" alt="{{ shop.name | escape }}" />
-              {% endif %}
-              {% if section.settings.logo != nil %}
-                <img src="{{ section.settings.logo | img_url: '410x' }}" class="primary_logo lazyload" alt="{{ shop.name | escape }}" />
-              {% else %}
-                {{ shop.name }}
-              {% endif %}
+              {% include 'svg' with 'logo' %}
             </a>
           </div>
         {% endcapture %}

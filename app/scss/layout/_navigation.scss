@@ -20,7 +20,7 @@ a.parent-link--true,
 .icon-down-arrow:before,
 a#customer_login_link,
 #mobile_menu li a {
-  color: $color-text-dark;
+  color: var(--color-contrast-higher);
 }
 
 /* #Menu [Open] - Hide images
@@ -57,7 +57,7 @@ li.mobile-mega-menu_block a,
   ================================================== */
 /* Menu Titles */
 li.nav-title {
-  font-size: 12px !important;
+  font-size: var(--text-sm) !important;
   color: var(--color-contrast-medium) !important;
   background: transparent !important;
   text-transform: uppercase !important;
@@ -72,10 +72,10 @@ li.nav-title {
 /* Sale */
 .link-sale {
   padding-left: var(--space-md);
-  color: $wood-1 !important;
+  color: var(--color-link);
   a,
   i {
-    color: $wood-1 !important;
+    color: var(--color-link) !important;
   }
   p {
     margin-top: 0 !important;
@@ -107,15 +107,15 @@ div.is-absolute {
 /* Secondary
   ================================================== */
 .top_bar {
-  padding: 0 25px;
+  padding: 0 var(--space-md);
+  background-color: var(--bg-header-accent);
   @include md-max() {
     width: 100% !important;
     height: var(--mega-nav-height) !important;
-    padding: 0 10px;
+    padding: 0 var(--space-sm);
     @include shadow-nav();
   }
   a {
-    color: var(--color-contrast-low);
     font-size: var(--text-sm);
   }
 }
@@ -128,7 +128,7 @@ div.is-absolute {
 }
 
 .main_nav_wrapper {
-  background-color: var(--color-primary) !important;
+  background-color: var(--bg-header) !important;
   @include shadow-nav();
   @include flexBox(row, center, null);
   @include centerMargin();
@@ -168,12 +168,12 @@ div.is-absolute {
 
 .search_form input {
   border-radius: 22px;
-  background: $grape-4;
+  background: var(--bg-header-accent);
   border: none !important;
   &:active,
   &:focus {
     border-radius: 22px;
-    background: $grape-4;
+    background: var(--bg-header-accent);
     border: none !important;
   }
 }
@@ -209,10 +209,6 @@ select.currencies,
 div.logo {
   margin-right: var(--space-md);
   max-width: 125px;
-  &:hover {
-    opacity: 0.7;
-    @include animateFast();
-  }
 }
 
 /* #Menu [Closed] - Logo size
@@ -235,13 +231,12 @@ div.dropdown.menu {
 .vertical-menu_submenu {
   li a,
   a {
-    color: $color-text-accent !important;
+    color: var(--color-contrast-medium) !important;
     &:hover,
     &:active,
     &:focus {
       background: $palette-shade-50;
       @include rounded();
-      color: $color-text-dark !important;
     }
   }
 }
@@ -325,7 +320,7 @@ div.dropdown.menu {
   }
   &:hover {
     a p {
-      color: $color-text-dark !important;
+      color: var(--color-contrast-high) !important;
     }
     img {
       filter: saturate(1) brightness(0.97) !important;
@@ -343,7 +338,7 @@ div.dropdown.menu {
     width: 220px !important;
     &:hover {
       a p {
-        color: $color-text-dark !important;
+        color: var(--color-contrast-high) !important;
       }
       img {
         filter: saturate(1) brightness(0.97) !important;
@@ -364,11 +359,10 @@ div.dropdown.menu {
 
 .promo_banner {
   height: var(--promo-banner-height) !important;
+  background-color: var(--bg-promo-bar);
+  color: var(--color-contrast-lower);
   &:hover {
     cursor: pointer;
-  }
-
-  @include md-max() {
   }
 }
 /* Hide extra text on mobile */
@@ -388,12 +382,12 @@ div.dropdown.menu {
   ================================================== */
 .mega-menu {
   a {
-    color: $color-text-accent !important;
+    color: var(--color-contrast-medium) !important;
     font-weight: 500 !important;
   }
   .dropdown_title a {
     text-transform: uppercase !important;
-    color: $color-text-accent;
+    color: var(--color-contrast-medium);
     cursor: default !important;
     @include base-BodyUppercase();
     margin: 0 0 3px;
@@ -403,12 +397,6 @@ div.dropdown.menu {
   }
   .image-element__wrap {
     width: 120px;
-  }
-}
-
-.dropdown_content {
-  a,
-  p {
   }
 }
 
@@ -466,7 +454,7 @@ div.dropdown.menu {
 /* Gallery column */
 .mega-menu {
   .dropdown_column {
-    border-left: 2px solid #f2f6fa;
+    border-left: 2px solid var(--color-contrast-lower);
     //max-width: calc(1180px/5) !important;
     &:hover {
       @include nav-hover;
@@ -544,15 +532,15 @@ div.dropdown.menu {
 
 /* Active */
 .shogun-tabs > li.shogun-tab-active > .shogun-tab-box {
-  background-color: $grape-1 !important;
+  background-color: var(--color-contrast-lower) !important;
   .shogun-tab-title {
-    color: $grape-3 !important;
+    color: var(--color-contrast-higher) !important;
     caret-color: transparent;
   }
   &:hover {
-    background-color: $grape-1 !important;
+    background-color: var(--color-contrast-lower) !important;
     .shogun-tab-title {
-      color: $grape-3 !important;
+      color: var(--color-contrast-higher) !important;
       caret-color: transparent;
     }
   }

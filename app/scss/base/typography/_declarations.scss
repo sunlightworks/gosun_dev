@@ -279,8 +279,8 @@ ul:not(.menu .center) .sublink a:not(.parent-link--true) {
 .footer .footer-menu-wrap h6 {
   font-weight: 600;
   margin-bottom: 3px;
-  font-size: 20px;
-  line-height: 26px;
+  //rm font-size: 20px;
+  //rm line-height: 26px;
 }
 
 .footer .info-item {
@@ -298,7 +298,7 @@ ul:not(.menu .center) .sublink a:not(.parent-link--true) {
 .footer .info-item--product {
   a,
   p {
-    @include body-text("normal");
+    //rm @include body-text("normal");
   }
 }
 

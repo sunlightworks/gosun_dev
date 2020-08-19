@@ -5,7 +5,7 @@ form {
 a,
 area,
 button,
-[role='button'],
+[role="button"],
 input,
 label,
 select,
@@ -30,7 +30,7 @@ select {
 }
 
 button,
-input[type='submit'],
+input[type="submit"],
 label[for] {
   cursor: pointer;
 }
@@ -50,13 +50,10 @@ option {
 }
 
 .input-error {
-  border-color: $color-error;
-  background-color: $color-error-bg;
-  color: $color-body-text;
+  border-color: var(--color-error-darker);
+  background-color: var(--color-error-lighter);
+  color: var(--color-error-darker);
 }
-
-
-
 
 // --------------------------------
 
@@ -64,7 +61,7 @@ option {
 
 // --------------------------------
 
-:root{
+:root {
   --form-control-padding-x: var(--space-sm);
   --form-control-padding-y: var(--space-xs);
   --form-control-radius: 0.25em;
@@ -98,7 +95,8 @@ option {
   }
 }
 
-.form-control[disabled], .form-control[readonly] {
+.form-control[disabled],
+.form-control[readonly] {
   cursor: not-allowed;
 }
 

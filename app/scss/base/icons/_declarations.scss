@@ -1,3 +1,12 @@
+.svg {
+  fill: var(--color-contrast-high);
+  @include animateFast();
+  &:hover {
+    fill: var(--color-secondary);
+    @include animateFast();
+  }
+}
+
 .icon {
   @include flexBox(null, center, center);
 }
@@ -40,7 +49,7 @@
 .info-item--top-bar {
   .icon {
     bottom: 0px;
-    color: var(--color-white);
+    color: var(--color-contrast-high);
   }
 }
 
@@ -94,12 +103,12 @@ a.mobile_nav {
   span:nth-child(3) {
     top: 16px;
     height: 2px !important;
-    background-color: $white !important;
+    background-color: var(--color-contrast-higher);
   }
   span:nth-child(4) {
     top: 25px;
     height: 2px !important;
-    background-color: $white !important;
+    background-color: var(--color-contrast-higher);
   }
 }
 /* Open */
@@ -107,7 +116,7 @@ a.mobile_nav {
   span:nth-child(2) {
     visibility: visible;
     top: 17px !important;
-    background-color: $white !important;
+    background-color: var(--color-contrast-higher);
   }
 }
 
@@ -125,7 +134,7 @@ a.mobile_nav {
   padding-right: var(--space-lg) !important;
   &:before {
     font-weight: 700 !important;
-    color: $color-text-accent !important;
+    color: var(--color-contrast-medium) !important;
   }
 }
 
@@ -156,8 +165,8 @@ a.mobile_nav {
   .cart_count {
     padding: 0 !important;
     margin: 0 !important;
-    // line-height: 0 !important;
     font-weight: 700;
+    color: var(--color-white) !important; // number color
   }
 }
 
