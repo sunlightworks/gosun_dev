@@ -203,7 +203,7 @@
         {% if section.settings.show_cart %}
           <div class="mega-nav__icon-btn">
             <a href="/cart"  aria-controls="drawer-cart-id" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link mega-nav__icon-btn info-item" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant><span class="icon"><em class="material-icons-outlined">shopping_cart</em></span> 
-              <div class="cart_count-bubble"> 
+              <div class="cart_count-bubble "> 
                 <span class="cart_count">{{ cart.item_count }}</span>
               </div>
             </a>
@@ -213,7 +213,7 @@
     </section>
     <!-- Menu Bar -->
     <section class="main_nav_wrapper">
-      <div class="main_nav clearfix menu-position--{{ section.settings.menu_position }} logo-align--{{ section.settings.logo_position }} max-width-xxxl">
+      <div class="main_nav clearfix menu-position--{{ section.settings.menu_position }}  logo-align--{{ section.settings.logo_position }} max-width-xxxl">
         <!-- Logo -->
         {% capture logo %}
           <div class="logo text-align--{{ section.settings.logo_alignment }}">
@@ -355,7 +355,7 @@
     .nav ul.menu {
       padding-top: {{ section.settings.menu_top_padding }}px;
       padding-bottom: {{ section.settings.menu_top_padding }}px;
-    }
+    } 
 
     .sticky_nav ul.menu, .sticky_nav .mini_cart {
       padding-top: {{ section.settings.menu_top_padding | divided_by: 2 }}px;
