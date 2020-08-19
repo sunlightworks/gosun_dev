@@ -12,8 +12,7 @@ staging:
   store: patricksherwin.myshopify.com
 
 production:
-  password: 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
+  password: ${SHOPIFY_API_PASSWORD}
   theme_id: ${PRODUCTION_THEME_ID}
   store: patricksherwin.myshopify.com
-  timeout: 60s
-  readonly: true
+
