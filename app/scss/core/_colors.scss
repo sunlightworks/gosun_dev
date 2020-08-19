@@ -41,11 +41,11 @@
   @include defineColorHSL(--color-warning-light, 46, 86%, 85%);
   @include defineColorHSL(--color-warning-lighter, 46, 86%, 95%);
 
-  @include defineColorHSL(--color-success-darker, 167, 100%, 4%);
-  @include defineColorHSL(--color-success-dark, 167, 100%, 14%);
-  @include defineColorHSL(--color-success, 167, 100%, 24%);
-  @include defineColorHSL(--color-success-light, 167, 50%, 80%);
-  @include defineColorHSL(--color-success-lighter, 167, 100%, 95%);
+  @include defineColorHSL(--color-success-darker, 157, 39%, 45%);
+  @include defineColorHSL(--color-success-dark, 157, 39%, 51%);
+  @include defineColorHSL(--color-success, 157, 39%, 58%);
+  @include defineColorHSL(--color-success-light, 157, 39%, 66%);
+  @include defineColorHSL(--color-success-lighter, 157, 39%, 92%);
 
   @include defineColorHSL(--color-error-darker, 5, 66%, 28%);
   @include defineColorHSL(--color-error-dark, 5, 66%, 38%);
