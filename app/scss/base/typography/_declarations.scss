@@ -45,7 +45,7 @@ textarea {
 .base-BodyCaption {
   margin-top: -5px !important;
   font-size: var(--text-sm);
-  color: $color-text-accent;
+  color: var(--color-contrast-medium);
 }
 
 .base-BodyBlurb {
@@ -154,11 +154,11 @@ td {
 .blog_meta {
   margin-top: 0 !important;
   span {
-    color: $color-text-accent;
+    color: var(--color-contrast-medium);
 
     @include body-text("normal");
     &:after {
-      color: $color-text-accent;
+      color: var(--color-contrast-medium);
     }
   }
 }

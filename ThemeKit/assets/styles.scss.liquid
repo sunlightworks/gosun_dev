@@ -2009,17 +2009,17 @@ select.currencies {
 
 .menu a.top_link,
 .menu a.dropdown_link {
-  border-bottom: solid 1px transparent;
+  border-bottom: solid 2px transparent;
 }
 
 .menu a.top_link:hover,
 .menu a.dropdown_link:hover,
 .menu a.active_link {
-  border-bottom: solid 1px {{ settings.nav_color_hover }};
+  //rm border-bottom: solid 1px {{ settings.nav_color_hover }};
 }
 
 .feature_image a.top_link:hover {
-  border-bottom: solid 1px {{ settings.nav_color_hover }};
+  //rm border-bottom: solid 1px {{ settings.nav_color_hover }};
 }
 
 .menu a span {
@@ -4506,10 +4506,10 @@ input[type="button"].get-rates.action_button {
 .newsletter_section {
   -webkit-transform:translate3d(0,0,0);
   background-color: {{ settings.newsletter_section_background_color }};
-  color: {{ settings.newsletter_section_color }};
+  color: var(--color-contrast-higher);
 
   h2 {
-    color: {{ settings.newsletter_section_color }};
+    color: var(--color-contrast-higher);
     margin-top: 0;
   }
 }

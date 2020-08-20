@@ -1,12 +1,20 @@
-
 .shogun-accordion-heading {
-    padding-left: 0 !important;
-  }
-
+  padding-left: 0 !important;
+}
 
 .shogun-accordion {
-  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0) !important;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0) !important;
   border-bottom: $border-dotted !important;
 }
 
-  
+/* 5f317b94624e08006b1d23e1.css | https://cdn.getshogun.com/5f317b94624e08006b1d23e1.css */
+
+.shogun-accordion-icon > span {
+  /* color: rgba(33, 33, 33, 1); */
+  color: var(--color-contrast-medium) !important;
+}
+
+.shogun-accordion-title {
+  /* color: rgba(33, 33, 33, 1); */
+  color: var(--color-contrast-high) !important;
+}

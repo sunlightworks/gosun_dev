@@ -88,10 +88,10 @@
           "image": "",
           "display_last_name": false,
           "wide_display": true,
-          "newsletter_title": "Become an insider for special deals.",
+          "newsletter_title": "Take the lead.",
           "display_first_name": false,
           "newsletter_section_text_align": "center",
-          "newsletter_text": ""
+          "newsletter_text": "<p>Subscribe for tips, tricks, recipes, and special deals.<\/p>"
         },
         "type": "newsletter"
       },
@@ -1094,10 +1094,10 @@
           "image": "",
           "display_last_name": false,
           "wide_display": true,
-          "newsletter_title": "Take the Lead",
+          "newsletter_title": "Take the lead.",
           "display_first_name": false,
           "newsletter_section_text_align": "center",
-          "newsletter_text": "<p>Subscribe for tips, tricks, recipes, and special deals<\/p>"
+          "newsletter_text": "<p>Subscribe for tips, tricks, recipes, and special deals.<\/p>"
         },
         "type": "newsletter"
       },

@@ -1,496 +1,364 @@
 :root {
   /* Grape
 ================================================== */
---grape-1:#F0EBEB;
---grape-2:#CB9B9E;
---grape-3:#873B40;
---grape-4:#7a363b;
+  --grape-1: #f0ebeb;
+  --grape-2: #cb9b9e;
+  --grape-3: #873b40;
+  --grape-4: #7a363b;
 
-/* Wood
+  /* Wood
 ================================================== */
---wood-1:#F0EDEA;
---wood-2:#D3BDAB;
---wood-3:#BA8D65;
---wood-4:#756151;
+  --wood-1: #f0edea;
+  --wood-2: #d3bdab;
+  --wood-3: #ba8d65;
+  --wood-4: #756151;
 
   /* Pumpkin
 ================================================== */
---pumpkin-1:#F1ECEB;
---pumpkin-2:#EDD2C6;
---pumpkin-3:#C75724;
---pumpkin-4:#783014;
+  --pumpkin-1: #f1eceb;
+  --pumpkin-2: #edd2c6;
+  --pumpkin-3: #c75724;
+  --pumpkin-4: #783014;
 
-
-/* Tundra
+  /* Tundra
 ================================================== */
---tundra-1:#E7ECED;
---tundra-2:#A9C8D9;
---tundra-3:#205E71;
---tundra-4:#133843;
+  --tundra-1: #e7eced;
+  --tundra-2: #a9c8d9;
+  --tundra-3: #205e71;
+  --tundra-4: #133843;
 
-
-/* Jungle
+  /* Jungle
 ================================================== */
---jungle-1:#EDF0EA;
---jungle-2:#B6BFAA;
---jungle-3:#69715E;
---jungle-4:#313F37;
+  --jungle-1: #edf0ea;
+  --jungle-2: #b6bfaa;
+  --jungle-3: #69715e;
+  --jungle-4: #313f37;
 
   /* Ocean
 ================================================== */
---ocean-1:#E8F3FF;
---ocean-2:#ADCFF1;
---ocean-3:#5D82A6;
---ocean-4:#0B4D6B;
+  --ocean-1: #e8f3ff;
+  --ocean-2: #adcff1;
+  --ocean-3: #5d82a6;
+  --ocean-4: #0b4d6b;
 
-/* Aqua
+  /* Aqua
 ================================================== */
---aqua-1:#E1F4F5;
---aqua-2:#81D3D6;
---aqua-3:#03A7AC;
---aqua-4:#006666;
+  --aqua-1: #e1f4f5;
+  --aqua-2: #81d3d6;
+  --aqua-3: #03a7ac;
+  --aqua-4: #006666;
 }
-
 
 // -----------------------------------------------------------------------------
 // Feedback
 // -----------------------------------------------------------------------------
-  /* Success
+/* Success
   ================================================== */
-  
-  $palette-success-10: #EFFEED;
-  $palette-success-20:#CDF9CB;
-  $palette-success-30:#9FEFB1;
-  $palette-success-40:#58E09B;
-  $palette-success-50:#00C986;
-  $palette-success-60:#00AB75;
-  $palette-success-70:#008B66;
-  $palette-success-80:#006657;
-  $palette-success-90:#004A46;
 
+$palette-success-10: #effeed;
+$palette-success-20: #cdf9cb;
+$palette-success-30: #9fefb1;
+$palette-success-40: #58e09b;
+$palette-success-50: #00c986;
+$palette-success-60: #00ab75;
+$palette-success-70: #008b66;
+$palette-success-80: #006657;
+$palette-success-90: #004a46;
 
-  /* Warning
+/* Warning
   ================================================== */
-  $palette-warning-10: #FEFDE3;
-  $palette-warning-20:#FEF2AE;
-  $palette-warning-30:#FEE481;
-  $palette-warning-40:#FFD069;
-  $palette-warning-50:#F9B658;
-  $palette-warning-60:#E59549;
-  $palette-warning-70:#CF703B;
-  $palette-warning-80:#B24C2C;
-  $palette-warning-90:#992E21;
+$palette-warning-10: #fefde3;
+$palette-warning-20: #fef2ae;
+$palette-warning-30: #fee481;
+$palette-warning-40: #ffd069;
+$palette-warning-50: #f9b658;
+$palette-warning-60: #e59549;
+$palette-warning-70: #cf703b;
+$palette-warning-80: #b24c2c;
+$palette-warning-90: #992e21;
 
-  /* Alert
+/* Alert
   ================================================== */
-  $palette-alert-10: #FFF6EC;
-  $palette-alert-20:#FFE3C6;
-  $palette-alert-30:#FFC59E;
-  $palette-alert-40:#FF9775;
-  $palette-alert-50:#FF6A55;
-  $palette-alert-60:#E74E4A;
-  $palette-alert-70:#C23544;
-  $palette-alert-80:#9A1E3E;
-  $palette-alert-90:#761037;
-  
+$palette-alert-10: #fff6ec;
+$palette-alert-20: #ffe3c6;
+$palette-alert-30: #ffc59e;
+$palette-alert-40: #ff9775;
+$palette-alert-50: #ff6a55;
+$palette-alert-60: #e74e4a;
+$palette-alert-70: #c23544;
+$palette-alert-80: #9a1e3e;
+$palette-alert-90: #761037;
 
 // -----------------------------------------------------------------------------
 // Partners
 // -----------------------------------------------------------------------------
-  /* Kickstarter
+/* Kickstarter
   ================================================== */
 
-  /* Indiegogo
+/* Indiegogo
   ================================================== */
-  $palette-indiegogo-primary: #E51075;
-  $palette-indiegogo-dark: #D50F6D;
-
-
-
-
+$palette-indiegogo-primary: #e51075;
+$palette-indiegogo-dark: #d50f6d;
 
 // -----------------------------------------------------------------------------
 // GoSun
 // -----------------------------------------------------------------------------
 
-  /* GoSun / Neutral
+/* GoSun / Neutral
   ================================================== */
 
-  $palette-neutral-50: #fff;
-  $palette-neutral-100: #f7f7f7;
-  $palette-neutral-200: #eee;
-  $palette-neutral-300: #e0e0e0;
-  $palette-neutral-400: #bdbdbd;
-  $palette-neutral-500: #9e9e9e;
-  $palette-neutral-600: #757575;
-  $palette-neutral-700: #616161;
-  $palette-neutral-800: #424242;
-  $palette-neutral-900: #212121;
-  
+$palette-neutral-50: #fff;
+$palette-neutral-100: #f7f7f7;
+$palette-neutral-200: #eee;
+$palette-neutral-300: #e0e0e0;
+$palette-neutral-400: #bdbdbd;
+$palette-neutral-500: #9e9e9e;
+$palette-neutral-600: #757575;
+$palette-neutral-700: #616161;
+$palette-neutral-800: #424242;
+$palette-neutral-900: var(--color-contrast-higher);
 
-      /* Grape
+/* Grape
   ================================================== */
-  $grape-1:#F0EBEB;
-  $grape-2:#CB9B9E;
-  $grape-3:#873B40;
-  $grape-4:#7a363b;
+$grape-1: #f0ebeb;
+$grape-2: #cb9b9e;
+$grape-3: #873b40;
+$grape-4: #7a363b;
 
-    /* Wood
+/* Wood
   ================================================== */
-  $wood-1:#F0EDEA;
-  $wood-2:#D3BDAB;
-  $wood-3:#BA8D65;
-  $wood-4:#756151;
+$wood-1: #f0edea;
+$wood-2: #d3bdab;
+$wood-3: #ba8d65;
+$wood-4: #756151;
 
-      /* Pumpkin
+/* Pumpkin
   ================================================== */
-  $pumpkin-1:#F1ECEB;
-  $pumpkin-2:#EDD2C6;
-  $pumpkin-3:#C75724;
-  $pumpkin-4:#783014;
+$pumpkin-1: #f1eceb;
+$pumpkin-2: #edd2c6;
+$pumpkin-3: #c75724;
+$pumpkin-4: #783014;
 
-
-    /* Tundra
+/* Tundra
   ================================================== */
-  $tundra-1:#E7ECED;
-  $tundra-2:#A9C8D9;
-  $tundra-3:#205E71;
-  $tundra-4:#133843;
+$tundra-1: #e7eced;
+$tundra-2: #a9c8d9;
+$tundra-3: #205e71;
+$tundra-4: #133843;
 
-
-    /* Jungle
+/* Jungle
   ================================================== */
-  $jungle-1:#EDF0EA;
-  $jungle-2:#B6BFAA;
-  $jungle-3:#69715E;
-  $jungle-4:#313F37;
+$jungle-1: #edf0ea;
+$jungle-2: #b6bfaa;
+$jungle-3: #69715e;
+$jungle-4: #313f37;
 
-      /* Ocean
+/* Ocean
   ================================================== */
-  $ocean-1:#E8F3FF;
-  $ocean-2:#ADCFF1;
-  $ocean-3:#5D82A6;
-  $ocean-4:#0B4D6B;
+$ocean-1: #e8f3ff;
+$ocean-2: #adcff1;
+$ocean-3: #5d82a6;
+$ocean-4: #0b4d6b;
 
-    /* Aqua
+/* Aqua
   ================================================== */
-  $aqua-1:#E1F4F5;
-  $aqua-2:#81D3D6;
-  $aqua-3:#03A7AC;
-  $aqua-4:#006666;
-
+$aqua-1: #e1f4f5;
+$aqua-2: #81d3d6;
+$aqua-3: #03a7ac;
+$aqua-4: #006666;
 
 /* GoSun / Cherry
 ================================================== */
-  $palette-cherry:
-  rgb(252, 230, 229)
-  rgb(248, 193, 191)
-  rgb(244, 151, 149)
-  rgb(240, 109, 106)
-  rgb(236, 78, 74)
-  rgb(233, 47, 42)
-  rgb(230, 42, 37)
-  rgb(227, 35, 31)
-  rgb(223, 29, 25)
-  rgb(217, 18, 15)
-  rgb(255, 255, 255)
-  rgb(255, 211, 211)
-  rgb(255, 161, 160)
-  rgb(255, 135, 134)
-  ;
-  $palette-cherry-50: nth($palette-cherry, 1);
-  $palette-cherry-100: nth($palette-cherry, 2);
-  $palette-cherry-200: nth($palette-cherry, 3);
-  $palette-cherry-300: nth($palette-cherry, 4);
-  $palette-cherry-400: nth($palette-cherry, 5);
-  $palette-cherry-500: nth($palette-cherry, 6);
-  $palette-cherry-600: nth($palette-cherry, 7);
-  $palette-cherry-700: nth($palette-cherry, 8);
-  $palette-cherry-800: nth($palette-cherry, 9);
-  $palette-cherry-900: nth($palette-cherry, 10);
-  $palette-cherry-A100: nth($palette-cherry, 11);
-  $palette-cherry-A200: nth($palette-cherry, 12);
-  $palette-cherry-A400: nth($palette-cherry, 13);
-  $palette-cherry-A700: nth($palette-cherry, 14);
+$palette-cherry: rgb(252, 230, 229) rgb(248, 193, 191) rgb(244, 151, 149)
+  rgb(240, 109, 106) rgb(236, 78, 74) rgb(233, 47, 42) rgb(230, 42, 37)
+  rgb(227, 35, 31) rgb(223, 29, 25) rgb(217, 18, 15) rgb(255, 255, 255)
+  rgb(255, 211, 211) rgb(255, 161, 160) rgb(255, 135, 134);
+$palette-cherry-50: nth($palette-cherry, 1);
+$palette-cherry-100: nth($palette-cherry, 2);
+$palette-cherry-200: nth($palette-cherry, 3);
+$palette-cherry-300: nth($palette-cherry, 4);
+$palette-cherry-400: nth($palette-cherry, 5);
+$palette-cherry-500: nth($palette-cherry, 6);
+$palette-cherry-600: nth($palette-cherry, 7);
+$palette-cherry-700: nth($palette-cherry, 8);
+$palette-cherry-800: nth($palette-cherry, 9);
+$palette-cherry-900: nth($palette-cherry, 10);
+$palette-cherry-A100: nth($palette-cherry, 11);
+$palette-cherry-A200: nth($palette-cherry, 12);
+$palette-cherry-A400: nth($palette-cherry, 13);
+$palette-cherry-A700: nth($palette-cherry, 14);
 
 /* GoSun / Orange
 ================================================== */
-  $palette-orange:
-  rgb(253, 240, 229)
-  rgb(251, 218, 190)
-  rgb(249, 194, 147)
-  rgb(246, 170, 103)
-  rgb(244, 151, 71)
-  rgb(242, 133, 38)
-  rgb(240, 125, 34)
-  rgb(238, 114, 28)
-  rgb(236, 104, 23)
-  rgb(232, 85, 13)
-  rgb(255, 255, 255)
-  rgb(255, 233, 224)
-  rgb(255, 197, 173)
-  rgb(255, 179, 148)
-  ;
-  $palette-orange-50: nth($palette-orange, 1);
-  $palette-orange-100: nth($palette-orange, 2);
-  $palette-orange-200: nth($palette-orange, 3);
-  $palette-orange-300: nth($palette-orange, 4);
-  $palette-orange-400: nth($palette-orange, 5);
-  $palette-orange-500: nth($palette-orange, 6);
-  $palette-orange-600: nth($palette-orange, 7);
-  $palette-orange-700: nth($palette-orange, 8);
-  $palette-orange-800: nth($palette-orange, 9);
-  $palette-orange-900: nth($palette-orange, 10);
-  $palette-orange-A100: nth($palette-orange, 11);
-  $palette-orange-A200: nth($palette-orange, 12);
-  $palette-orange-A400: nth($palette-orange, 13);
-  $palette-orange-A700: nth($palette-orange, 14);
-
+$palette-orange: rgb(253, 240, 229) rgb(251, 218, 190) rgb(249, 194, 147)
+  rgb(246, 170, 103) rgb(244, 151, 71) rgb(242, 133, 38) rgb(240, 125, 34)
+  rgb(238, 114, 28) rgb(236, 104, 23) rgb(232, 85, 13) rgb(255, 255, 255)
+  rgb(255, 233, 224) rgb(255, 197, 173) rgb(255, 179, 148);
+$palette-orange-50: nth($palette-orange, 1);
+$palette-orange-100: nth($palette-orange, 2);
+$palette-orange-200: nth($palette-orange, 3);
+$palette-orange-300: nth($palette-orange, 4);
+$palette-orange-400: nth($palette-orange, 5);
+$palette-orange-500: nth($palette-orange, 6);
+$palette-orange-600: nth($palette-orange, 7);
+$palette-orange-700: nth($palette-orange, 8);
+$palette-orange-800: nth($palette-orange, 9);
+$palette-orange-900: nth($palette-orange, 10);
+$palette-orange-A100: nth($palette-orange, 11);
+$palette-orange-A200: nth($palette-orange, 12);
+$palette-orange-A400: nth($palette-orange, 13);
+$palette-orange-A700: nth($palette-orange, 14);
 
 /* GoSun / Pumpkin
 ================================================== */
-  $palette-pumpkin:
-  rgb(247, 231, 228)
-  rgb(235, 196, 187)
-  rgb(222, 156, 142)
-  rgb(208, 116, 97)
-  rgb(198, 87, 63)
-  #c75724
-  rgb(182, 51, 26)
-  rgb(173, 44, 21)
-  rgb(165, 36, 17)
-  rgb(151, 23, 10)
-  rgb(255, 200, 196)
-  rgb(255, 153, 145)
-  rgb(255, 105, 94)
-  rgb(255, 81, 69)
-  ;
-  $palette-pumpkin-50: nth($palette-pumpkin, 1);
-  $palette-pumpkin-100: nth($palette-pumpkin, 2);
-  $palette-pumpkin-200: nth($palette-pumpkin, 3);
-  $palette-pumpkin-300: nth($palette-pumpkin, 4);
-  $palette-pumpkin-400: nth($palette-pumpkin, 5);
-  $palette-pumpkin-500: nth($palette-pumpkin, 6);
-  $palette-pumpkin-600: nth($palette-pumpkin, 7);
-  $palette-pumpkin-700: nth($palette-pumpkin, 8);
-  $palette-pumpkin-800: nth($palette-pumpkin, 9);
-  $palette-pumpkin-900: nth($palette-pumpkin, 10);
-  $palette-pumpkin-A100: nth($palette-pumpkin, 11);
-  $palette-pumpkin-A200: nth($palette-pumpkin, 12);
-  $palette-pumpkin-A400: nth($palette-pumpkin, 13);
-  $palette-pumpkin-A700: nth($palette-pumpkin, 14);
+$palette-pumpkin: rgb(247, 231, 228) rgb(235, 196, 187) rgb(222, 156, 142)
+  rgb(208, 116, 97) rgb(198, 87, 63) #c75724 rgb(182, 51, 26) rgb(173, 44, 21)
+  rgb(165, 36, 17) rgb(151, 23, 10) rgb(255, 200, 196) rgb(255, 153, 145)
+  rgb(255, 105, 94) rgb(255, 81, 69);
+$palette-pumpkin-50: nth($palette-pumpkin, 1);
+$palette-pumpkin-100: nth($palette-pumpkin, 2);
+$palette-pumpkin-200: nth($palette-pumpkin, 3);
+$palette-pumpkin-300: nth($palette-pumpkin, 4);
+$palette-pumpkin-400: nth($palette-pumpkin, 5);
+$palette-pumpkin-500: nth($palette-pumpkin, 6);
+$palette-pumpkin-600: nth($palette-pumpkin, 7);
+$palette-pumpkin-700: nth($palette-pumpkin, 8);
+$palette-pumpkin-800: nth($palette-pumpkin, 9);
+$palette-pumpkin-900: nth($palette-pumpkin, 10);
+$palette-pumpkin-A100: nth($palette-pumpkin, 11);
+$palette-pumpkin-A200: nth($palette-pumpkin, 12);
+$palette-pumpkin-A400: nth($palette-pumpkin, 13);
+$palette-pumpkin-A700: nth($palette-pumpkin, 14);
 
 /* GoSun / jungle
 ================================================== */
-  $palette-jungle:
-  rgb(237, 237, 231)
-  rgb(210, 210, 195)
-  rgb(180, 180, 155)
-  rgb(149, 150, 114)
-  rgb(127, 128, 84)
-  rgb(104, 105, 54)
-  rgb(96, 97, 48)
-  rgb(85, 86, 41)
-  rgb(75, 76, 34)
-  rgb(58, 59, 22)
-  rgb(251, 255, 122)
-  rgb(249, 255, 71)
-  rgb(248, 255, 20)
-  rgb(242, 250, 0)
-  ;
-  $palette-jungle-50: nth($palette-jungle, 1);
-  $palette-jungle-100: nth($palette-jungle, 2);
-  $palette-jungle-200: nth($palette-jungle, 3);
-  $palette-jungle-300: nth($palette-jungle, 4);
-  $palette-jungle-400: nth($palette-jungle, 5);
-  $palette-jungle-500: nth($palette-jungle, 6);
-  $palette-jungle-600: nth($palette-jungle, 7);
-  $palette-jungle-700: nth($palette-jungle, 8);
-  $palette-jungle-800: nth($palette-jungle, 9);
-  $palette-jungle-900: nth($palette-jungle, 10);
-  $palette-jungle-A100: nth($palette-jungle, 11);
-  $palette-jungle-A200: nth($palette-jungle, 12);
-  $palette-jungle-A400: nth($palette-jungle, 13);
-  $palette-jungle-A700: nth($palette-jungle, 14);
+$palette-jungle: rgb(237, 237, 231) rgb(210, 210, 195) rgb(180, 180, 155)
+  rgb(149, 150, 114) rgb(127, 128, 84) rgb(104, 105, 54) rgb(96, 97, 48)
+  rgb(85, 86, 41) rgb(75, 76, 34) rgb(58, 59, 22) rgb(251, 255, 122)
+  rgb(249, 255, 71) rgb(248, 255, 20) rgb(242, 250, 0);
+$palette-jungle-50: nth($palette-jungle, 1);
+$palette-jungle-100: nth($palette-jungle, 2);
+$palette-jungle-200: nth($palette-jungle, 3);
+$palette-jungle-300: nth($palette-jungle, 4);
+$palette-jungle-400: nth($palette-jungle, 5);
+$palette-jungle-500: nth($palette-jungle, 6);
+$palette-jungle-600: nth($palette-jungle, 7);
+$palette-jungle-700: nth($palette-jungle, 8);
+$palette-jungle-800: nth($palette-jungle, 9);
+$palette-jungle-900: nth($palette-jungle, 10);
+$palette-jungle-A100: nth($palette-jungle, 11);
+$palette-jungle-A200: nth($palette-jungle, 12);
+$palette-jungle-A400: nth($palette-jungle, 13);
+$palette-jungle-A700: nth($palette-jungle, 14);
 
 /* GoSun / Mint
 ================================================== */
-  $palette-mint:
-  rgb(225, 244, 245)
-  rgb(179, 229, 230)
-  rgb(129, 211, 214)
-  rgb(79, 193, 197)
-  rgb(41, 180, 184)
-  rgb(3, 167, 172)
-  rgb(3, 159, 165)
-  rgb(2, 150, 155)
-  rgb(2, 140, 146)
-  rgb(1, 124, 130)
-  rgb(175, 250, 255)
-  rgb(124, 247, 255)
-  rgb(73, 244, 255)
-  rgb(48, 242, 255)
-  ;
-  $palette-mint-50: nth($palette-mint, 1);
-  $palette-mint-100: nth($palette-mint, 2);
-  $palette-mint-200: nth($palette-mint, 3);
-  $palette-mint-300: nth($palette-mint, 4);
-  $palette-mint-400: nth($palette-mint, 5);
-  $palette-mint-500: nth($palette-mint, 6);
-  $palette-mint-600: nth($palette-mint, 7);
-  $palette-mint-700: nth($palette-mint, 8);
-  $palette-mint-800: nth($palette-mint, 9);
-  $palette-mint-900: nth($palette-mint, 10);
-  $palette-mint-A100: nth($palette-mint, 11);
-  $palette-mint-A200: nth($palette-mint, 12);
-  $palette-mint-A400: nth($palette-mint, 13);
-  $palette-mint-A700: nth($palette-mint, 14);
-
-
-  
+$palette-mint: rgb(225, 244, 245) rgb(179, 229, 230) rgb(129, 211, 214)
+  rgb(79, 193, 197) rgb(41, 180, 184) rgb(3, 167, 172) rgb(3, 159, 165)
+  rgb(2, 150, 155) rgb(2, 140, 146) rgb(1, 124, 130) rgb(175, 250, 255)
+  rgb(124, 247, 255) rgb(73, 244, 255) rgb(48, 242, 255);
+$palette-mint-50: nth($palette-mint, 1);
+$palette-mint-100: nth($palette-mint, 2);
+$palette-mint-200: nth($palette-mint, 3);
+$palette-mint-300: nth($palette-mint, 4);
+$palette-mint-400: nth($palette-mint, 5);
+$palette-mint-500: nth($palette-mint, 6);
+$palette-mint-600: nth($palette-mint, 7);
+$palette-mint-700: nth($palette-mint, 8);
+$palette-mint-800: nth($palette-mint, 9);
+$palette-mint-900: nth($palette-mint, 10);
+$palette-mint-A100: nth($palette-mint, 11);
+$palette-mint-A200: nth($palette-mint, 12);
+$palette-mint-A400: nth($palette-mint, 13);
+$palette-mint-A700: nth($palette-mint, 14);
 
 /* GoSun / Honey
 ================================================== */
-  $palette-honey:
-  rgb(252, 245, 224)
-  rgb(249, 230, 179)
-  rgb(245, 213, 128)
-  rgb(240, 196, 77)
-  rgb(237, 183, 38)
-  rgb(234, 170, 0)
-  rgb(231, 163, 0)
-  rgb(228, 153, 0)
-  rgb(225, 144, 0)
-  rgb(219, 127, 0)
-  rgb(255, 255, 255)
-  rgb(255, 233, 207)
-  rgb(255, 208, 156)
-  rgb(255, 196, 131)
-  ;
-  $palette-honey-50: nth($palette-honey, 1);
-  $palette-honey-100: nth($palette-honey, 2);
-  $palette-honey-200: nth($palette-honey, 3);
-  $palette-honey-300: nth($palette-honey, 4);
-  $palette-honey-400: nth($palette-honey, 5);
-  $palette-honey-500: nth($palette-honey, 6);
-  $palette-honey-600: nth($palette-honey, 7);
-  $palette-honey-700: nth($palette-honey, 8);
-  $palette-honey-800: nth($palette-honey, 9);
-  $palette-honey-900: nth($palette-honey, 10);
-  $palette-honey-A100: nth($palette-honey, 11);
-  $palette-honey-A200: nth($palette-honey, 12);
-  $palette-honey-A400: nth($palette-honey, 13);
-  $palette-honey-A700: nth($palette-honey, 14);
+$palette-honey: rgb(252, 245, 224) rgb(249, 230, 179) rgb(245, 213, 128)
+  rgb(240, 196, 77) rgb(237, 183, 38) rgb(234, 170, 0) rgb(231, 163, 0)
+  rgb(228, 153, 0) rgb(225, 144, 0) rgb(219, 127, 0) rgb(255, 255, 255)
+  rgb(255, 233, 207) rgb(255, 208, 156) rgb(255, 196, 131);
+$palette-honey-50: nth($palette-honey, 1);
+$palette-honey-100: nth($palette-honey, 2);
+$palette-honey-200: nth($palette-honey, 3);
+$palette-honey-300: nth($palette-honey, 4);
+$palette-honey-400: nth($palette-honey, 5);
+$palette-honey-500: nth($palette-honey, 6);
+$palette-honey-600: nth($palette-honey, 7);
+$palette-honey-700: nth($palette-honey, 8);
+$palette-honey-800: nth($palette-honey, 9);
+$palette-honey-900: nth($palette-honey, 10);
+$palette-honey-A100: nth($palette-honey, 11);
+$palette-honey-A200: nth($palette-honey, 12);
+$palette-honey-A400: nth($palette-honey, 13);
+$palette-honey-A700: nth($palette-honey, 14);
 
 /* GoSun / Shade
 ================================================== */
-  $palette-shade:
-  /* 50 */
-  #f7f7f7
-  /* 100 */
-  rgba(0, 0, 0, 0.08)
-  /* 200 */
-  rgba(0, 0, 0, 0.17)
-  /* 300 */
-  rgba(0, 0, 0, 0.22)
-  /* 400 */
-  rgba(0, 0, 0, 0.35)
-  /* 500 */
-  rgba(0, 0, 0, 0.54)
-  /* 600 */
-  rgba(0, 0, 0, 0.6)
-  /* 700 */
-  rgba(0, 0, 0, 0.7)
-  /* 800 */
-  rgba(0, 0, 0, 0.79)
-  /* 900 */
-  rgba(0, 0, 0, 0.87)
-  /* A100 */
-  rgba(0, 0, 0, 0)
-  ;
-  $palette-shade-50: nth($palette-shade, 1);
-  $palette-shade-100: nth($palette-shade, 2);
-  $palette-shade-200: nth($palette-shade, 3);
-  $palette-shade-300: nth($palette-shade, 4);
-  $palette-shade-400: nth($palette-shade, 5);
-  $palette-shade-500: nth($palette-shade, 6);
-  $palette-shade-600: nth($palette-shade, 7);
-  $palette-shade-700: nth($palette-shade, 8);
-  $palette-shade-800: nth($palette-shade, 9);
-  $palette-shade-900: nth($palette-shade, 10);
-  $palette-shade-A100: nth($palette-shade, 11);
+$palette-shade:
+  /* 50 */ #f7f7f7 /* 100 */ rgba(0, 0, 0, 0.08) /* 200 */
+  rgba(0, 0, 0, 0.17) /* 300 */ rgba(0, 0, 0, 0.22) /* 400 */
+  rgba(0, 0, 0, 0.35) /* 500 */ rgba(0, 0, 0, 0.54) /* 600 */ rgba(0, 0, 0, 0.6)
+  /* 700 */ rgba(0, 0, 0, 0.7) /* 800 */ rgba(0, 0, 0, 0.79) /* 900 */
+  rgba(0, 0, 0, 0.87) /* A100 */ rgba(0, 0, 0, 0);
+$palette-shade-50: nth($palette-shade, 1);
+$palette-shade-100: nth($palette-shade, 2);
+$palette-shade-200: nth($palette-shade, 3);
+$palette-shade-300: nth($palette-shade, 4);
+$palette-shade-400: nth($palette-shade, 5);
+$palette-shade-500: nth($palette-shade, 6);
+$palette-shade-600: nth($palette-shade, 7);
+$palette-shade-700: nth($palette-shade, 8);
+$palette-shade-800: nth($palette-shade, 9);
+$palette-shade-900: nth($palette-shade, 10);
+$palette-shade-A100: nth($palette-shade, 11);
 
 /* GoSun / Tint
 ================================================== */
-  $palette-tint:
-  /* 50 */
-  hsl(220, 12%, 96%)
-  /* 100 */
-  rgba(0, 0, 0, 0.08)
-  /* 200 */
-  rgba(0, 0, 0, 0.17)
-  /* 300 */
-  rgba(0, 0, 0, 0.22)
-  /* 400 */
-  rgba(0, 0, 0, 0.35)
-  /* 500 */
-  rgba(0, 0, 0, 0.54)
-  /* 600 */
-  rgba(255,255,255,0.65)
-  /* 700 */
-  rgba(0, 0, 0, 0.7)
-  /* 800 */
-  rgba(255, 255, 255, 0.79)
-  /* 900 */
-  rgba(0, 0, 0, 0.87)
-  /* A100 */
-  #fff
-  ;
-  $palette-tint-50: nth($palette-tint, 1);
-  $palette-tint-100: nth($palette-tint, 2);
-  $palette-tint-200: nth($palette-tint, 3);
-  $palette-tint-300: nth($palette-tint, 4);
-  $palette-tint-400: nth($palette-tint, 5);
-  $palette-tint-500: nth($palette-tint, 6);
-  $palette-tint-600: nth($palette-tint, 7);
-  $palette-tint-700: nth($palette-tint, 8);
-  $palette-tint-800: nth($palette-tint, 9);
-  $palette-tint-900: nth($palette-tint, 10);
-  $palette-tint-A100: nth($palette-tint, 11);
+$palette-tint:
+  /* 50 */ hsl(220, 12%, 96%) /* 100 */ rgba(0, 0, 0, 0.08)
+  /* 200 */ rgba(0, 0, 0, 0.17) /* 300 */ rgba(0, 0, 0, 0.22) /* 400 */
+  rgba(0, 0, 0, 0.35) /* 500 */ rgba(0, 0, 0, 0.54) /* 600 */
+  rgba(255, 255, 255, 0.65) /* 700 */ rgba(0, 0, 0, 0.7) /* 800 */
+  rgba(255, 255, 255, 0.79) /* 900 */ rgba(0, 0, 0, 0.87) /* A100 */ #fff;
+$palette-tint-50: nth($palette-tint, 1);
+$palette-tint-100: nth($palette-tint, 2);
+$palette-tint-200: nth($palette-tint, 3);
+$palette-tint-300: nth($palette-tint, 4);
+$palette-tint-400: nth($palette-tint, 5);
+$palette-tint-500: nth($palette-tint, 6);
+$palette-tint-600: nth($palette-tint, 7);
+$palette-tint-700: nth($palette-tint, 8);
+$palette-tint-800: nth($palette-tint, 9);
+$palette-tint-900: nth($palette-tint, 10);
+$palette-tint-A100: nth($palette-tint, 11);
 
-
-
-
-
-
-  // Red Color Variables
-  $cardinal: #bc2026;
-  $pomegranate: #f44336;
-  $bittersweet: #ff6f60;
-  $bright-red: #ab000d;
-  $indiegogo: #e51075;
-  $indiegogo-hover: #d50f6d;
-
-
+// Red Color Variables
+$cardinal: #bc2026;
+$pomegranate: #f44336;
+$bittersweet: #ff6f60;
+$bright-red: #ab000d;
+$indiegogo: #e51075;
+$indiegogo-hover: #d50f6d;
 
 /* #Color - Old
 ================================================== */
-  // LightColor Variables
-  $white: $palette-tint-A100;
-  $alabaster: #f7f7f7;
-  $egg: #f0f0f0;
-  $smoke: #fcfcfc;
+// LightColor Variables
+$white: $palette-tint-A100;
+$alabaster: #f7f7f7;
+$egg: #f0f0f0;
+$smoke: #fcfcfc;
 
-  $silver: rgba(0, 0, 0, 0.17);
-  $iron: #dfe1e5;
-  $charcoal: #333;
+$silver: rgba(0, 0, 0, 0.17);
+$iron: #dfe1e5;
+$charcoal: #333;
 
-  $blueberry: #32325d;
+$blueberry: #32325d;
 
-  $cherry: #e92f2a;
-  $orange: #f28526;
-  $wood: #ffc99a;
-  $olive: #a58052;
-  $grape: #8c354a;
+$cherry: #e92f2a;
+$orange: #f28526;
+$wood: #ffc99a;
+$olive: #a58052;
+$grape: #8c354a;
 
-  $stripe-g: #f2f6fa;
+$stripe-g: #f2f6fa;

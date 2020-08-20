@@ -1,8 +1,8 @@
 .svg {
-  fill: var(--color-contrast-high);
+  fill: var(--color-contrast-higher);
   @include animateFast();
   &:hover {
-    fill: var(--color-secondary);
+    fill: var(--color-contrast-medium);
     @include animateFast();
   }
 }

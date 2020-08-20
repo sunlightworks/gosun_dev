@@ -8,7 +8,7 @@
 // -----------------------------------------------------------------------------
 
 .success {
-  color: $palette-success-50;
+  color: var(--color-success);
 }
 
 .alert {
@@ -165,14 +165,14 @@ $color-discount: var(--color-success-light);
 }
 
 .wood-300 {
-  background-color: $wood-2 !important; // remove this
+  background-color: var(--color-contrast-low) !important; // remove this
 }
 
 /* #Classes - Typography
   ================================================== */
 .clr-sub {
   p {
-    color: $color-text-sub !important;
+    color: var(--color-contrast-medium) !important;
   }
 }
 
@@ -220,15 +220,15 @@ $color-discount: var(--color-success-light);
 }
 
 .base-BodyUppercase {
-  color: $color-text-sub !important;
+  color: var(--color-contrast-medium) !important;
 }
 
 /* #Classes - Patterns
   ================================================== */
 
 @mixin pattern-map() {
-  background-image: url("https://cdn.shopify.com/s/files/1/0789/1333/files/cartography.png?12110") !important;
-  background-blend-mode: multiply !important;
+  //rm background-image: url("https://cdn.shopify.com/s/files/1/0789/1333/files/cartography.png?12110") !important;
+  //rm background-blend-mode: multiply !important;
 }
 
 @mixin pattern-light() {
@@ -237,7 +237,7 @@ $color-discount: var(--color-success-light);
 }
 
 .pattern-map {
-  @include pattern-map();
+  //rm @include pattern-map();
 }
 
 .pattern-light {
@@ -286,7 +286,7 @@ $color-discount: var(--color-success-light);
 .menu a span.item-pricing,
 span.item-pricing,
 .item-pricing span {
-  color: $color-text-sub !important;
+  color: var(--color-contrast-medium) !important;
 }
 
 .dropdown .header_search_form .search__results .item-result a:hover .title,
@@ -306,7 +306,7 @@ span.item-pricing,
   ================================================== */
 .subnav__menu {
   a {
-    color: $color-text-sub !important;
+    color: var(--color-contrast-medium) !important;
   }
 }
 
@@ -315,8 +315,8 @@ span.item-pricing,
 // -----------------------------------------------------------------------------
 .violator {
   &--discount {
-    background: var(--color-success-lighter);
-    color: var(--color-success-darker);
+    background: var(--color-success-light);
+    color: var(--color-success-dark);
   }
   &--attribute {
     background: var(--color-contrast-high);
@@ -339,7 +339,7 @@ span.item-pricing,
 /* Title
   ================================================== */
 h2.product_type {
-  color: $color-text-sub;
+  color: var(--color-contrast-medium);
 }
 
 /* Validation
@@ -356,7 +356,7 @@ h2.product_type {
 .modal_price .money,
 .thumbnail .was_price span.money,
 .was_price span.money {
-  color: $color-text-accent;
+  color: var(--color-contrast-medium);
 }
 /* New pric e */
 .money--discount {

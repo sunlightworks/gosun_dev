@@ -3,80 +3,77 @@
 // -----------------------------------------------------------------------------
 @import "//app/scss/bundle";
 
-
 // -----------------------------------------------------------------------------
 // #Banners - Dialog
 // -----------------------------------------------------------------------------
 
 .banners--dialog {
-    height: 116px;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    background: $white;
-    border-bottom: 2px solid #eee;
-    @include md-max() {
-        .flex-left {
-          margin-top: 16px;
-        }
-      }
-        
+  height: 116px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  background: $white;
+  border-bottom: 2px solid #eee;
+  @include md-max() {
+    .flex-left {
+      margin-top: 16px;
+    }
+  }
+
+  @include md() {
+    height: 60px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+  }
+  p {
+    width: 272px;
+    margin: 0;
     @include md() {
-        height: 60px;
-        margin-top: -30px;
-        margin-bottom: 30px;
+      width: auto;
     }
-    p {
-        width: 272px;
-        margin: 0;
-        @include md() {
-            width: auto;
-        }
+  }
+  a {
+    margin-left: 10px;
+    width: 140px;
+    text-align: center;
+    @include md() {
     }
-    a {
-        margin-left: 10px;
-        width: 140px;
-        text-align: center;
-        @include md() {
-            
-        }
+  }
+  img {
+    width: 60px;
+
+    margin-left: 0;
+    margin-right: 16px;
+    @include md() {
+      margin-left: 10px;
     }
-    img {
-        width: 60px;
-        
-        margin-left: 0;
-        margin-right: 16px;
-        @include md() {
-            margin-left: 10px;
-        }
-    }
+  }
 }
 
-
 /* Hide 'Email when available' */
-  .bis-reset.bis-edge-right {
-    display: none;
-  }
-  
+.bis-reset.bis-edge-right {
+  display: none;
+}
 
 // -----------------------------------------------------------------------------
 // #Banners - Collection
 // -----------------------------------------------------------------------------
 
-div.section.collection_description { 
-    @include flexBox(column, center, null);
-    @include size(auto,100%); 
-    position: relative;
-    padding: 20px 40px;
-    margin: 0px;
-    text-align: left;
-    h1 {
-        @include heading('h3');
-        color: white !important;
-        margin: 0 !important;
-    }
-    h2, p, a {
-        margin-top: 10px !important;
-        @include body-text('medium');
-        color: white !important;
-    }
+div.section.collection_description {
+  @include flexBox(column, center, null);
+  @include size(auto, 100%);
+  position: relative;
+  padding: 20px 40px;
+  margin: 0px;
+  text-align: left;
+  h1 {
+    @include heading("h3");
+
+    margin: 0 !important;
+  }
+  h2,
+  p,
+  a {
+    margin-top: 10px !important;
+    @include body-text("medium");
+  }
 }

@@ -36,7 +36,7 @@
   background: $white !important;
   border-bottom: 2px solid $color-border-light !important;
   a {
-    color: $color-text-accent;
+    color: var(--color-contrast-medium);
     font-weight: 600 !important;
   }
 }
@@ -128,7 +128,7 @@ td {
 /* #Features - Number count
 ================================================== */
 .features li::marker {
-  color: $color-text-accent;
+  color: var(--color-contrast-medium);
 }
 
 /* #Features - List items

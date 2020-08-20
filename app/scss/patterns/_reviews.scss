@@ -319,7 +319,7 @@ li[data-value="gender"] {
 .spr-review-reportreview {
   opacity: 0;
   text-decoration: underline;
-  color: $color-text-sub;
+  color: var(--color-contrast-medium);
 }
 
 /* #Review - [Paragraph] */

@@ -150,7 +150,7 @@ div.is-absolute {
 .top_link,
 .sublink {
   &:hover {
-    opacity: 0.7 !important;
+    //rm opacity: 0.7 !important;
   }
 }
 
@@ -235,7 +235,7 @@ div.dropdown.menu {
     &:hover,
     &:active,
     &:focus {
-      background: $palette-shade-50;
+      background: var(--color-contrast-lower);
       @include rounded();
     }
   }
@@ -248,7 +248,7 @@ div.dropdown.menu {
 .menu a.top_link:hover,
 .menu a.dropdown_link:hover,
 .menu a.active_link {
-  border-bottom: none;
+  //rm border-bottom: 2px solid var(--color-contrast-high);
 }
 
 /* Container- width */
