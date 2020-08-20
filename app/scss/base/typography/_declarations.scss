@@ -29,6 +29,10 @@ textarea {
   font: 16px "cp" !important;
 }
 
+.article-tile .affirm-modal-trigger {
+  color: var(--color-contrast-medium) !important;
+}
+
 .base-BodyTitle {
   @include body-text("medium");
   font-weight: 600;
@@ -81,7 +85,7 @@ textarea {
 }
 
 .article-tile a:hover {
-  color: rgba(0, 0, 0, 0.87);
+  //rm color: rgba(0, 0, 0, 0.87);
 }
 
 // -----------------------------------------------------------------------------
@@ -196,7 +200,7 @@ h6.article-type {
   line-height: 21px;
   margin: 0 !important;
   padding: 0 !important;
-  color: $palette-neutral-700;
+  color: var(--color-contrast-medium);
   @include md-max() {
     font: 400 14px cp;
   }

@@ -315,8 +315,8 @@ span.item-pricing,
 // -----------------------------------------------------------------------------
 .violator {
   &--discount {
-    background: var(--color-success-light);
-    color: var(--color-success-dark);
+    background: var(--color-primary-lighter);
+    color: var(--color-contrast-higher);
   }
   &--attribute {
     background: var(--color-contrast-high);

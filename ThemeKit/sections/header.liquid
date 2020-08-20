@@ -58,15 +58,18 @@
   <nav class="mobile--true mobile_nav-fixed--{{ section.settings.fixed_header }}">
    
     <section class="top_bar flex justify-between align-center clearfix">
-      <!-- Hamburger Menu -->
-      <a class="mobile_nav dropdown_link" data-dropdown-rel="menu" data-no-instant="true">
-        <div>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </a>
+      <ul class="flex align-center">
+        <!-- Hamburger Menu -->
+        <a class="mobile_nav dropdown_link margin-right-lg" data-dropdown-rel="menu" data-no-instant="true">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </a>
+        <!-- {% include '_1_switch-mobile' %} -->
+      </ul> 
       <!-- End Hamburger Menu -->
       <a href="{{ shop.url }}" title="{{ shop.name | escape }}" class="mobile_logo logo">
         {% include 'svg' with 'logo' %}
@@ -132,10 +135,12 @@
     <!-- End Drawer / Small Screens -->
   </nav>
 
+ 
+
    <!-- Header / Large Screens -->
   <nav class="header {% if feature_image and settings.header_background == false %}is-absolute {% endif %} header-fixed--{{ section.settings.fixed_header }} {% if settings.header_background %}header-background--solid{% endif %}">
     <!-- Utility Bar -->
-    <section class="top_bar flex justify-between width-100%">
+    <section class="top_bar flex justify-between align-center width-100% base">
       <ul class="menu left">
         <!-- Phone Number -->
         {% if section.settings.phone_number != blank %}     
@@ -155,12 +160,17 @@
           {% endfor %}
         {% endif %}
       </ul>
+
+      <p class="text-sm font-bold color-contrast-medium base-BodyUppercase">{{ section.settings.tagline_text }}</p>
       <!-- Utility Menu -->
       <ul class="menu right">
+        
+        <!-- {% include '_1_switch' %}-->
+
         <!-- Phone Number -->
         {% if section.settings.phone_number != blank %}     
         {% if section.settings.phone_position == "right" %}    
-        <li class="info-item info-item--top-bar">
+        <li class="margin-left-sm info-item info-item--top-bar">
           <span class="icon"><i class="material-icons-outlined">call</i></span>
           <a href="tel:+{{ section.settings.phone_number | replace: ' ', '' | replace: '+', '' | replace: '', '' }}">{{ section.settings.phone_number }}</a>
         </li>
@@ -173,6 +183,8 @@
           {% include 'currencies-switcher' %}
         </li>
         {% endif %}
+
+       
 
         {% if shop.customer_accounts_enabled %}
         <li>
@@ -307,6 +319,7 @@
     </section>
   </nav>
 
+ 
   {% include 'minicart-3' %}
 </header>
 
@@ -416,7 +429,7 @@
     {
       "type": "richtext",
       "id": "promo_text",
-      "label": "Tagline",
+      "label": "Promo text",
       "info": "Maximum character limit is 170"
     },
     {
@@ -433,6 +446,13 @@
     {
      "type": "header",
      "content": "Top bar"
+    },
+    {
+      "type": "text",
+      "id": "tagline_text",
+      "label": "Tagline",
+      "info": "Only appears on desktop",
+      "default": "Portable power for the people"
     },
     {
       "type": "checkbox",

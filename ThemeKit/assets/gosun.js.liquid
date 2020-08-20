@@ -2312,6 +2312,70 @@ if( comparisonSliders.length > 0 ) {
 }());
 
 
+// File#: _1_radio-switch
+
+  // Theme switch
+  var themeSwitch = document.getElementById('themeSwitch-mobile');
+  if(themeSwitch) {
+      initTheme(); // if user has already selected a specific theme -> apply it
+      themeSwitch.addEventListener('change', function(event){
+      resetTheme(); // update color theme
+  });
+  
+  function initTheme() {
+      var sunburstThemeSelected = (localStorage.getItem('themeSwitch-mobile') !== null && localStorage.getItem('themeSwitch-mobile') === 'sunburst');
+      // update checkbox
+      themeSwitch.checked = sunburstThemeSelected;
+          // update body data-theme attribute
+          sunburstThemeSelected ? document.body.setAttribute('data-theme', 'sunburst') : document.body.removeAttribute('data-theme');
+  };
+  
+  function resetTheme() {
+      if(themeSwitch.checked) { // dark theme has been selected
+          document.body.setAttribute('data-theme', 'sunburst');
+          localStorage.setItem('themeSwitch-mobile', 'sunburst');
+      } else {
+          document.body.removeAttribute('data-theme');
+          localStorage.removeItem('themeSwitch-mobile');
+      } 
+  };
+  }
+
+
+(function() {
+	// Theme switch
+	var themeSwitch = document.getElementById('themeSwitch');
+	if(themeSwitch) {
+		initTheme(); // if user has already selected a specific theme -> apply it
+		themeSwitch.addEventListener('change', function(event){
+    	resetTheme(); // update color theme
+    });
+
+    function initTheme() {
+    	var sunburstThemeSelected = (localStorage.getItem('themeSwitch') !== null && localStorage.getItem('themeSwitch') === 'sunburst');
+    	// update checkbox
+    	themeSwitch.checked = sunburstThemeSelected;
+			// update body data-theme attribute
+			sunburstThemeSelected ? document.body.setAttribute('data-theme', 'sunburst') : document.body.removeAttribute('data-theme');
+    };
+
+    function resetTheme() {
+    	if(themeSwitch.checked) { // dark theme has been selected
+    		document.body.setAttribute('data-theme', 'sunburst');
+    		localStorage.setItem('themeSwitch', 'sunburst');
+    	} else {
+    		document.body.removeAttribute('data-theme');
+    		localStorage.removeItem('themeSwitch');
+    	} 
+    };
+  }
+  
+
+
+
+}());
+
+    
 
 
 // File#: _1_reading-progressbar
