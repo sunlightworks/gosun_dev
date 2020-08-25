@@ -19,6 +19,7 @@ textarea,
 select {
   font-size: 1.6rem;
   max-width: 100%;
+  background: var(--color-contrast-lower);
   border: 1px solid $color-border;
   border-radius: 0;
 

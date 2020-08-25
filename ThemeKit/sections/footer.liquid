@@ -49,7 +49,7 @@
                   <input type="text" value="" name="LNAME" placeholder="{{ 'general.newsletter_form.subscriber_last_name' | t }}">
                 {% endif %}
                 <input type="email" value="" name="EMAIL" class="contact_email" placeholder="{{ 'general.newsletter_form.placeholder' | t }}">
-                <input type="submit" value="{{ 'general.newsletter_form.submit' | t }}" class="btn btn--primary action_button sign_up" name="subscribe" />
+                <input type="submit" value="{{ 'general.newsletter_form.submit' | t }}" class="btn btn--accent action_button sign_up" name="subscribe" />
               </form>
             {% else %}
               {% form 'customer' %}
@@ -71,7 +71,7 @@
 
                 <input type="hidden" name="challenge" value="false" />
                 <input type="email" class="contact_email" name="contact[email]" required placeholder="{{ 'general.newsletter_form.placeholder' | t }}" />
-                <input type='submit' class="btn btn--primary" value="{{ 'general.newsletter_form.submit' | t }}" />
+                <input type='submit' class="btn btn--accent" value="{{ 'general.newsletter_form.submit' | t }}" />
               {% endform %}
             {% endif %}
           </div>

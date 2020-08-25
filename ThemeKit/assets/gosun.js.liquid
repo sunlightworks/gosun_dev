@@ -2323,17 +2323,17 @@ if( comparisonSliders.length > 0 ) {
   });
   
   function initTheme() {
-      var sunburstThemeSelected = (localStorage.getItem('themeSwitch-mobile') !== null && localStorage.getItem('themeSwitch-mobile') === 'sunburst');
+      var darkThemeSelected = (localStorage.getItem('themeSwitch-mobile') !== null && localStorage.getItem('themeSwitch-mobile') === 'dark');
       // update checkbox
-      themeSwitch.checked = sunburstThemeSelected;
+      themeSwitch.checked = darkThemeSelected;
           // update body data-theme attribute
-          sunburstThemeSelected ? document.body.setAttribute('data-theme', 'sunburst') : document.body.removeAttribute('data-theme');
+          darkThemeSelected ? document.body.setAttribute('data-theme', 'dark') : document.body.removeAttribute('data-theme');
   };
   
   function resetTheme() {
       if(themeSwitch.checked) { // dark theme has been selected
-          document.body.setAttribute('data-theme', 'sunburst');
-          localStorage.setItem('themeSwitch-mobile', 'sunburst');
+          document.body.setAttribute('data-theme', 'dark');
+          localStorage.setItem('themeSwitch-mobile', 'dark');
       } else {
           document.body.removeAttribute('data-theme');
           localStorage.removeItem('themeSwitch-mobile');
@@ -2352,17 +2352,17 @@ if( comparisonSliders.length > 0 ) {
     });
 
     function initTheme() {
-    	var sunburstThemeSelected = (localStorage.getItem('themeSwitch') !== null && localStorage.getItem('themeSwitch') === 'sunburst');
+    	var darkThemeSelected = (localStorage.getItem('themeSwitch') !== null && localStorage.getItem('themeSwitch') === 'dark');
     	// update checkbox
-    	themeSwitch.checked = sunburstThemeSelected;
+    	themeSwitch.checked = darkThemeSelected;
 			// update body data-theme attribute
-			sunburstThemeSelected ? document.body.setAttribute('data-theme', 'sunburst') : document.body.removeAttribute('data-theme');
+			darkThemeSelected ? document.body.setAttribute('data-theme', 'dark') : document.body.removeAttribute('data-theme');
     };
 
     function resetTheme() {
     	if(themeSwitch.checked) { // dark theme has been selected
-    		document.body.setAttribute('data-theme', 'sunburst');
-    		localStorage.setItem('themeSwitch', 'sunburst');
+    		document.body.setAttribute('data-theme', 'dark');
+    		localStorage.setItem('themeSwitch', 'dark');
     	} else {
     		document.body.removeAttribute('data-theme');
     		localStorage.removeItem('themeSwitch');

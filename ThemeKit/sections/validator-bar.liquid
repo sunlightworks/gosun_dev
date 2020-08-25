@@ -3,7 +3,7 @@
 
 {% for block in section.blocks %}
     <div class="validator-item margin-sm margin-lg@lg flex flex-column align-{{ section.settings.alignment }}">
-        <span class="icon {% if section.settings.icon_style != blank %} {{ section.settings.icon_style }} {% endif %} {% if section.settings.icon_color != blank %} icon--accent {% else %} icon--default {% endif %} m0">
+        <span class="icon {% if section.settings.icon_style != blank %} {{ section.settings.icon_style }} {% endif %} {% if section.settings.icon_color != blank %} icon--display {% else %} icon--default {% endif %} m0">
             <i class="{% if section.settings.icon_style != blank %} {{ section.settings.icon_style }}{% else %} material-icons-outlined {% endif %} {% if section.settings.icon_size != blank %} {{ section.settings.icon_size }}{% else %} icon--md {% endif %}">{{ block.settings.icon_name }}</i>
         </span>
         <h5 class="text-md font-medium margin-top-xs {{ section.settings.alignment }}">{{ block.settings.title }}</h5>

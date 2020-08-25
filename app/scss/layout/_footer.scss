@@ -16,14 +16,14 @@
 }
 
 .footer {
-  background: var(--color-contrast-higher);
+  background: var(--bg-footer);
   border-top: none !important;
   a {
-    color: var(--color-contrast-low) !important;
+    color: var(--color-contrast-medium) !important;
   }
   @include md-max() {
     .footer-menu-wrap h6 {
-      border-top: 1px solid var(--color-contrast-medium);
+      border-top: 1px solid var(--color-contrast-high);
     }
   }
 }

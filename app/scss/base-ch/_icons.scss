@@ -85,10 +85,10 @@
 
 // themes
 .icon--cta {
-  color: var(--color-primary) !important;
+  color: var(--color-accent) !important;
 }
 
-.icon--accent {
+.icon--display {
   color: var(--color-primary-light) !important;
   .material-icons-two-tone {
     filter: invert(73%) sepia(24%) saturate(676%) hue-rotate(164deg)

@@ -38,7 +38,7 @@ a#customer_login_link,
 
 li.mobile-mega-menu_block,
 #mobile_menu li {
-  background: $white;
+  background: var(--color-bg);
   margin-bottom: 2px;
 }
 
@@ -50,7 +50,7 @@ li.mobile-mega-menu_block,
 /* Sub-menu border */
 li.mobile-mega-menu_block a,
 #mobile_menu li a {
-  border-top: 1px solid $palette-shade-50;
+  border-top: 1px solid var(--color-contrast-low);
 }
 
 /* #Menu [Open] - Container
@@ -72,10 +72,11 @@ li.nav-title {
 /* Sale */
 .link-sale {
   padding-left: var(--space-md);
-  color: var(--color-link);
+  color: var(--color-accent);
   a,
-  i {
-    color: var(--color-link) !important;
+  i,
+  p {
+    color: var(--color-accent) !important;
   }
   p {
     margin-top: 0 !important;

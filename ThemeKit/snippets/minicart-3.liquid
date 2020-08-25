@@ -95,9 +95,9 @@
       
 
       {% if settings.go_to_checkout %}
-        <button type="submit" class="add_to_cart action_button btn btn--primary btn--md width-100%" id="checkout">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.checkout' | t }}</button>
+        <button type="submit" class="add_to_cart action_button btn btn--accent btn--md width-100%" id="checkout">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.checkout' | t }}</button>
       {% else %}
-        <button type="submit" class="add_to_cart action_button btn btn--primary btn--md width-100% margin-y-sm" id="go_to_cart">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.go_to_cart' | t }} </button>
+        <button type="submit" class="add_to_cart action_button btn btn--accent btn--md width-100% margin-y-sm" id="go_to_cart">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.go_to_cart' | t }} </button>
       {% endif %}
       <p class="affirm-as-low-as inline-block width-100% margin-y-xs text-center" data-page-type="cart" data-amount="{{cart.total_price}}" data-affirm-type="text" data-learnmore-show="true"></p>
     </footer>

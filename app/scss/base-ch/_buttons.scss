@@ -83,14 +83,14 @@ a.btn--subtle {
 
 .btn--accent,
 a.btn--accent {
-  background-color: var(--color-secondary);
+  background-color: var(--color-accent);
   color: var(--color-bg);
   @include fontSmooth;
   &:hover {
-    background-color: var(--color-secondary-light);
+    background-color: var(--color-accent-light);
   }
   &:focus {
-    box-shadow: 0px 0px 0px 2px alpha(var(--color-secondary), 0.2);
+    box-shadow: 0px 0px 0px 2px alpha(var(--color-accent), 0.2);
   }
 }
 
