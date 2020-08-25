@@ -15,7 +15,6 @@
   {% assign dark_theme = block.settings.dark_theme %}
   {% assign show_pattern = block.settings.show_pattern %}
   {% assign background_color = block.settings.background_color %}
-  {% assign btn_type = block.settings.btn_type %}
   {% assign text_color = block.settings.text_color %}
 {% else %}
   {% assign id = section.id %}
@@ -35,7 +34,6 @@
   {% assign dark_theme = section.settings.dark_theme %}
   {% assign show_pattern = section.settings.show_pattern %}
   {% assign background_color = section.settings.background_color %}
-  {% assign btn_type = section.settings.btn_type %}
 
 {% endif %}
 
@@ -55,12 +53,12 @@
         <div class="{% if description != blank %} margin-top-md {% else %}margin-top-lg{% endif %}">
           <div class="flex flex-wrap gap-sm items-center feature-btn-group">
               {% if button1 != blank %}
-                  <a {% if button1_url != blank %}href="{{ button1_url }}"{% endif %} class="btn  {% if btn_type != blank %} {{ btn_type }} {% endif %} btn--md">{{ button1 }}&nbsp;➞</a>
+                  <a {% if button1_url != blank %}href="{{ button1_url }}"{% endif %} class="btn btn--primary  btn--md">{{ button1 }}&nbsp;➞</a>
               {% endif %}
               {% if button2 != blank %}
                   <a {% if button2_url != blank %}href="#"{% endif %} class="color-inherit">{{ button2 }}&nbsp;➞</a>
               {% endif %}
-          </div> 
+          </div>
         </div>
       </div>
     </div>
@@ -74,11 +72,7 @@
 {
   "name": "Feature 1",
   "settings": [
-    {
-      "type":      "header",
-      "content":   "Created by [Latimer Design](https:\/\/latimer.me)",
-      "info":      "Need help? [Send an email.](mailto:\/\/bailey@latimer.me)"
-    },
+
     {
       "type": "image_picker",
       "id": "image",
@@ -111,15 +105,15 @@
       "label": "Button 1 URL"
     },
     {
-        "type": "text",
-        "id": "button2",
-        "label": "Button 2 label"
-      },
-      {
-        "type": "url",
-        "id": "button2_url",
-        "label": "Button 2 URL"
-      },
+      "type": "text",
+      "id": "button2",
+      "label": "Button 2 label"
+    },
+    {
+      "type": "url",
+      "id": "button2_url",
+      "label": "Button 2 URL"
+    },
     {
       "type": "checkbox",
       "id": "hero_external",
@@ -165,45 +159,55 @@
         },
         {
           "value": "bg-contrast-lower",
-          "label": "Contrast / lower"
+          "label": "Contrast / lower",
+          "group": "Contrast"
         },
         {
           "value": "bg-contrast-low",
-          "label": "Contrast / low"
+          "label": "Contrast / low",
+          "group": "Contrast"
         },
         {
           "value": "bg-contrast-medium",
-          "label": "Contrast / medium"
+          "label": "Contrast / medium",
+          "group": "Contrast"
         },
         {
           "value": "bg-contrast-high",
-          "label": "Contrast / high"
+          "label": "Contrast / high",
+          "group": "Contrast"
         },
         {
           "value": "bg-contrast-higher",
-          "label": "Contrast / higher"
+          "label": "Contrast / higher",
+          "group": "Contrast"
         },
         
 
         {
           "value": "bg-primary-lighter",
-          "label": "Primary / lighter"
+          "label": "Primary / lighter",
+          "group": "Primary"
         },
         {
           "value": "bg-primary-light",
-          "label": "Primary / light"
+          "label": "Primary / light",
+          "group": "Primary"
         },
         {
           "value": "bg-primary",
-          "label": "Primary / medium"
+          "label": "Primary / medium",
+          "group": "Primary"
         },
         {
           "value": "bg-primary-dark",
-          "label": "Primary / dark"
+          "label": "Primary / dark",
+          "group": "Primary"
         },
         {
           "value": "bg-primary-darker",
-          "label": "Primary / darker"
+          "label": "Primary / darker",
+          "group": "Primary"
         },
 
 
@@ -236,36 +240,35 @@
         }
       ]
     },
-        {
+    {
       "type": "select",
       "id": "btn_type",
       "label": "Button type",
       "options": [
         {
           "value": "",
-          "label": "Default"
+          "label": "Default",
         },
         {
           "value": "btn--primary",
-          "label": "Primary"
+          "label": "Primary",
         },
         {
           "value": "btn--accent",
-          "label": "Secondary"
+          "label": "Secondary",
         },
         {
           "value": "btn--subtle",
-          "label": "Subtle"
+          "label": "Subtle",
         }
       ] 
     },
     {
-        "type": "checkbox",
-        "id": "show_pattern",
-        "label": "Show pattern",
-        "default": true
-      }
-    
+      "type": "checkbox",
+      "id": "show_pattern",
+      "label": "Show pattern",
+      "default": true
+    },
   ],
   "presets": [
     {

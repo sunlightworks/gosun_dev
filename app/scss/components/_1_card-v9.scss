@@ -1,5 +1,3 @@
-
-
 /* -------------------------------- 
 
 File#: _1_card-v9
@@ -9,129 +7,122 @@ Descr: Container of information used as teaser for further content exploration
 -------------------------------- */
 
 .card-v9 {
-    display: block;
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-    background-color: var(--color-white);
-    background-repeat: no-repeat;
-    background-size: contain;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    /* parallax effect 
+  display: block;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  background-color: var(--color-white);
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  /* parallax effect 
     background-attachment: fixed;
     */
-    background-position: 140px -30px;
-    background-size: 300px;
-    box-shadow: var(--shadow-sm);
-    transition: .3s;
-    width: 100%;
-    height: var(--space-xxxxl);
+  background-position: 140px -30px;
+  background-size: 300px;
+  box-shadow: var(--shadow-sm);
+  transition: 0.3s;
+  width: 100%;
+  height: var(--space-xxxxl);
+  @include lg() {
+    background-size: 350px;
+    background-position: -20% 35px;
+    height: 300px;
+  }
+  &:hover {
+    box-shadow: var(--shadow-md);
+    background-position: 130px -40px;
+    scale: 1.03;
     @include lg() {
-        background-size: 350px;
-        background-position: -20% 35px;
-        height: 300px;
-    }
- 
-    &:hover {
-      box-shadow: var(--shadow-md);
-      background-position: 130px -40px;
-      scale: 1.03;
-      h2, p {
-      color: var(--color-white) !important;
-      }
-      &:nth-child(1) {
-        background-color: var(--grape-3) !important;
-      }
-      &:nth-child(2) {
-        background-color: var(--ocean-3) !important;
-      }
-      &:nth-child(3) {
-        background-color: var(--tundra-3) !important;
-      }
-      &:nth-child(4) {
-        background-color: var(--wood-3) !important;
-      }
-      &:nth-child(5) {
-        background-color: var(--ocean-3) !important;
-      }
-      @include lg() {
-        background-position: -15% 25px;
-      }
+      background-position: -15% 25px;
     }
   }
-  
-  .card-v9__content {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
+}
+
+.card-v9--subtle:hover {
+  background-color: var(--color-primary-lighter) !important;
+}
+
+.card-v9--vibrant:hover {
+  background-color: var(--color-primary) !important;
+  h2,
+  p {
+    color: var(--color-white) !important;
+  }
+}
+
+.card-v9__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.card-v9__btn {
+  position: relative;
+  display: inline-block;
+  padding: var(--space-xs) var(--space-sm) !important;
+  @include fontSmooth;
+  box-shadow: none !important;
+  opacity: 0;
+  span {
+    // button label
     position: relative;
     z-index: 2;
-  }
-  
-  .card-v9__btn {
-    position: relative;
-    display: inline-block;
-    padding: var(--space-xs) var(--space-sm) !important;
-    @include fontSmooth;
-    box-shadow: none !important;
+    color: var(--color-bg);
     opacity: 0;
-    span { // button label
-      position: relative;
-      z-index: 2;
-      color: var(--color-bg);
-      opacity: 0;
-      transition: opacity .3s;
-    }
-  
-    &::after { // button background
-      content: '';
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: var(--radius-md);
-      background-color: alpha(var(--color-contrast-lower), 0.8);
-      opacity: 0;
-      transform: translateY(25%);
-      transition: opacity .3s, transform .3s var(--ease-out);
-    }
+    transition: opacity 0.3s;
   }
-  
-  .card-v9:hover {
-    .card-v9__btn {
-      span {
-        opacity: 1;
-      }
-  
-      &::after {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+
+  &::after {
+    // button background
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-md);
+    background-color: alpha(var(--color-contrast-lower), 0.8);
+    opacity: 0;
+    transform: translateY(25%);
+    transition: opacity 0.3s, transform 0.3s var(--ease-out);
   }
-  
-  // --overlay-bg
-  .card-v9--overlay-bg {
-    &::before {
-      content: '';
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: alpha(var(--color-bg), 0.5);
-      transition: background-color .3s;
-      opacity: 0;
-    }
-  
-    &:hover::before {
-      background-color: alpha(var(--color-bg), 0.8);
+}
+
+.card-v9:hover {
+  .card-v9__btn {
+    span {
       opacity: 1;
     }
+
+    &::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  
-  
+}
+
+// --overlay-bg
+.card-v9--overlay-bg {
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: alpha(var(--color-bg), 0.5);
+    transition: background-color 0.3s;
+    opacity: 0;
+  }
+
+  &:hover::before {
+    background-color: alpha(var(--color-bg), 0.8);
+    opacity: 1;
+  }
+}

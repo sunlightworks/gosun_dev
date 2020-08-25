@@ -52,6 +52,7 @@ a.btn {
   background-color: var(--color-contrast-higher);
   color: var(--color-bg);
   @include fontSmooth;
+  border: none !important;
   &:hover {
     background-color: var(--color-contrast-high);
   }
@@ -63,14 +64,12 @@ a.btn {
 // themes
 .btn--primary,
 a.btn--primary {
-  background-color: var(--color-primary);
-  color: var(--color-bg);
+  background-color: var(--color-primary) !important;
+  color: var(--color-bg) !important;
   @include fontSmooth;
-
   &:hover {
-    background-color: var(--color-primary-light);
+    background-color: var(--color-primary-light) !important;
   }
-
   &:focus {
     box-shadow: 0px 0px 0px 2px alpha(var(--color-primary), 0.2);
   }
@@ -87,11 +86,9 @@ a.btn--accent {
   background-color: var(--color-secondary);
   color: var(--color-bg);
   @include fontSmooth;
-
   &:hover {
     background-color: var(--color-secondary-light);
   }
-
   &:focus {
     box-shadow: 0px 0px 0px 2px alpha(var(--color-secondary), 0.2);
   }

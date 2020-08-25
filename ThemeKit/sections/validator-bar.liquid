@@ -3,8 +3,8 @@
 
 {% for block in section.blocks %}
     <div class="validator-item margin-sm margin-lg@lg flex flex-column align-{{ section.settings.alignment }}">
-        <span class="icon m0 color-contrast-medium">
-            <i class="material-icons-outlined icon--lg">{{ block.settings.icon_name }}</i>
+        <span class="icon {% if section.settings.icon_style != blank %} {{ section.settings.icon_style }} {% endif %} {% if section.settings.icon_color != blank %} icon--accent {% else %} icon--default {% endif %} m0">
+            <i class="{% if section.settings.icon_style != blank %} {{ section.settings.icon_style }}{% else %} material-icons-outlined {% endif %} {% if section.settings.icon_size != blank %} {{ section.settings.icon_size }}{% else %} icon--md {% endif %}">{{ block.settings.icon_name }}</i>
         </span>
         <h5 class="text-md font-medium margin-top-xs {{ section.settings.alignment }}">{{ block.settings.title }}</h5>
         {% if block.settings.description != blank %}
@@ -23,6 +23,11 @@
     "max_blocks": 6,
     "settings": [
       {
+        "type":      "header",
+        "content":   "Created by [Latimer Design](https:\/\/latimer.me)",
+        "info":      "Need help? [Send an email.](mailto:\/\/bailey@latimer.me)"
+      },
+      {
         "id": "alignment",
         "type": "select",
         "label": "Content",
@@ -30,6 +35,45 @@
         "options": [
           { "value": "center", "label": "Center" },
           { "value": "left", "label": "Left" }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "icon_size",
+        "label": "Icon size",
+        "options": [
+          {
+            "value": "icon--md",
+            "label": "Default"
+          },
+          {
+            "value": "icon--lg",
+            "label": "LG"
+          },
+          {
+            "value": "icon--xl",
+            "label": "XL"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "icon_color",
+        "label": "Add color"
+      },
+      {
+        "type": "select",
+        "id": "icon_style",
+        "label": "Icon style",
+        "options": [
+          {
+            "value": "material-icons-two-tone",
+            "label": "Two-tone"
+          },
+          {
+            "value": "material-icons-outlined",
+            "label": "Outline"
+          }
         ]
       }
     ],

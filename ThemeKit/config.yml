@@ -4,7 +4,7 @@ development:
   store: patricksherwin.myshopify.com
   ignore_files:
     - "*.gif"
-    - config/settings_data.json
+  
   
 
 staging:

@@ -3,21 +3,7 @@
 // -----------------------------------------------------------------------------
 @import "//app/scss/bundle";
 
-.icon {
-    float: left;
-    margin-right: 10px;
-    width: 20px;
-    text-align: center;
-    position: relative;
-    font-size: 16px !important;
-    &--lg {
-      font-size: 36px !important;  
-    }
-  }
-
-
-
-  /* Won't work unless 'Material Icons Outlined' class is applied */
+/* Won't work unless 'Material Icons Outlined' class is applied */
 /*
   [class^="icon-"]:before,
 [class*=" icon-"]:before {

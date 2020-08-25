@@ -1012,12 +1012,14 @@ u {
 
 :root {
   --icon-xxs: 12px;
-  --icon-xs:  16px;
-  --icon-sm:  24px;
-  --icon-md:  32px;
-  --icon-lg:  48px;
-  --icon-xl:  64px;
-  --icon-xxl: 128px; }
+  --icon-xs: 16px;
+  --icon-sm: 24px;
+  --icon-md: 32px;
+  --icon-lg: 48px;
+  --icon-xl: 64px;
+  --icon-xxl: 128px;
+  --icon-cta: var(--color-primary);
+  --icon-accent: var(--color-primary-light); }
 
 .icon {
   display: inline-block;
@@ -1028,26 +1030,34 @@ u {
   flex-shrink: 0;
   max-width: initial; }
 
+.icon {
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+  position: relative;
+  font-size: 16px; }
+
 .icon--xxs {
-  font-size: var(--icon-xxs); }
+  font-size: var(--icon-xxs) !important; }
 
 .icon--xs {
-  font-size: var(--icon-xs); }
+  font-size: var(--icon-xs) !important; }
 
 .icon--sm {
-  font-size: var(--icon-sm); }
+  font-size: var(--icon-sm) !important; }
 
 .icon--md {
-  font-size: var(--icon-md); }
+  font-size: var(--icon-md) !important; }
 
 .icon--lg {
-  font-size: var(--icon-lg); }
+  font-size: var(--icon-lg) !important; }
 
 .icon--xl {
-  font-size: var(--icon-xl); }
+  font-size: var(--icon-xl) !important; }
 
 .icon--xxl {
-  font-size: var(--icon-xxl); }
+  font-size: var(--icon-xxl) !important; }
 
 .icon--is-spinning {
   animation: icon-spin 1s infinite linear; }
@@ -1061,6 +1071,19 @@ u {
 .icon use {
   color: inherit;
   fill: currentColor; }
+
+.icon--cta {
+  color: var(--color-primary) !important; }
+
+.icon--accent {
+  color: var(--color-primary-light) !important; }
+  .icon--accent .material-icons-two-tone {
+    filter: invert(73%) sepia(24%) saturate(676%) hue-rotate(164deg) brightness(95%) contrast(89%); }
+
+.icon--default {
+  color: var(--color-contrast-medium) !important; }
+  .icon--default .material-icons-two-tone {
+    filter: invert(56%) sepia(19%) saturate(306%) hue-rotate(177deg) brightness(91%) contrast(87%); }
 
 :root {
   --btn-font-size: 2rem;
@@ -1108,7 +1131,8 @@ a.btn {
   background-color: var(--color-contrast-higher);
   color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  border: none !important; }
   .btn:hover,
   a.btn:hover {
     background-color: var(--color-contrast-high); }
@@ -1118,13 +1142,13 @@ a.btn {
 
 .btn--primary,
 a.btn--primary {
-  background-color: var(--color-primary);
-  color: var(--color-bg);
+  background-color: var(--color-primary) !important;
+  color: var(--color-bg) !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
   .btn--primary:hover,
   a.btn--primary:hover {
-    background-color: var(--color-primary-light); }
+    background-color: var(--color-primary-light) !important; }
   .btn--primary:focus,
   a.btn--primary:focus {
     box-shadow: 0px 0px 0px 2px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2); }
@@ -6211,16 +6235,6 @@ h2.product_type {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight; }
 
-.icon {
-  float: left;
-  margin-right: 10px;
-  width: 20px;
-  text-align: center;
-  position: relative;
-  font-size: 16px !important; }
-  .icon--lg {
-    font-size: 36px !important; }
-
 /* Won't work unless 'Material Icons Outlined' class is applied */
 /*
   [class^="icon-"]:before,
@@ -6748,14 +6762,14 @@ a.mobile_nav {
     --color-primary-h: 197;
     --color-primary-s: 100%;
     --color-primary-l: 44%;
-    --color-primary-light: hsl(197, 100%, 54%);
-    --color-primary-light-h: 197;
-    --color-primary-light-s: 100%;
-    --color-primary-light-l: 54%;
-    --color-primary-lighter: hsl(197, 100%, 64%);
-    --color-primary-lighter-h: 197;
-    --color-primary-lighter-s: 100%;
-    --color-primary-lighter-l: 64%;
+    --color-primary-light: hsl(204, 67%, 70%);
+    --color-primary-light-h: 204;
+    --color-primary-light-s: 67%;
+    --color-primary-light-l: 70%;
+    --color-primary-lighter: hsl(204, 67%, 90%);
+    --color-primary-lighter-h: 204;
+    --color-primary-lighter-s: 67%;
+    --color-primary-lighter-l: 90%;
     --color-accent-darker: hsl(27, 31%, 55%);
     --color-accent-darker-h: 27;
     --color-accent-darker-s: 31%;
@@ -6896,14 +6910,14 @@ a.mobile_nav {
     --color-primary-h: 204;
     --color-primary-s: 67%;
     --color-primary-l: 48%;
-    --color-primary-light: hsl(204, 67%, 63%);
+    --color-primary-light: hsl(204, 67%, 70%);
     --color-primary-light-h: 204;
     --color-primary-light-s: 67%;
-    --color-primary-light-l: 63%;
-    --color-primary-lighter: hsl(204, 67%, 80%);
+    --color-primary-light-l: 70%;
+    --color-primary-lighter: hsl(204, 50%, 90%);
     --color-primary-lighter-h: 204;
-    --color-primary-lighter-s: 67%;
-    --color-primary-lighter-l: 80%;
+    --color-primary-lighter-s: 50%;
+    --color-primary-lighter-l: 90%;
     --color-accent-darker: hsl(27, 31%, 55%);
     --color-accent-darker-h: 27;
     --color-accent-darker-s: 31%;
@@ -7060,22 +7074,22 @@ a.mobile_nav {
     --color-contrast-lower-h: 220;
     --color-contrast-lower-s: 8%;
     --color-contrast-lower-l: 93%;
-    --color-contrast-low: hsl(224, 12%, 83%);
-    --color-contrast-low-h: 224;
+    --color-contrast-low: hsl(216, 12%, 83%);
+    --color-contrast-low-h: 216;
     --color-contrast-low-s: 12%;
     --color-contrast-low-l: 83%;
-    --color-contrast-medium: hsl(222, 14%, 52%);
-    --color-contrast-medium-h: 222;
-    --color-contrast-medium-s: 14%;
-    --color-contrast-medium-l: 52%;
-    --color-contrast-high: hsl(218, 32%, 31%);
-    --color-contrast-high-h: 218;
-    --color-contrast-high-s: 32%;
-    --color-contrast-high-l: 31%;
-    --color-contrast-higher: hsl(210, 79%, 17%);
-    --color-contrast-higher-h: 210;
-    --color-contrast-higher-s: 79%;
-    --color-contrast-higher-l: 17%;
+    --color-contrast-medium: hsl(216, 12%, 54%);
+    --color-contrast-medium-h: 216;
+    --color-contrast-medium-s: 12%;
+    --color-contrast-medium-l: 54%;
+    --color-contrast-high: hsl(214, 25%, 33%);
+    --color-contrast-high-h: 214;
+    --color-contrast-high-s: 25%;
+    --color-contrast-high-l: 33%;
+    --color-contrast-higher: hsl(211, 50%, 21%);
+    --color-contrast-higher-h: 211;
+    --color-contrast-higher-s: 50%;
+    --color-contrast-higher-l: 21%;
     --bg-header: var(--color-white);
     --bg-header-accent: var(--color-bg);
     --bg-promo-bar: var(--color-contrast-high);
@@ -8216,7 +8230,7 @@ img {
   background-color: var(--color-primary);
   transition: background-color 200ms ease; }
   .play-btn:hover {
-    background-color: var(--color-primary-dark); }
+    background-color: var(--color-primary-light); }
   .play-btn:focus {
     outline: 0; }
 
@@ -9137,7 +9151,7 @@ Descr: Container of information used as teaser for further content exploration
   background-position: 140px -30px;
   background-size: 300px;
   box-shadow: var(--shadow-sm);
-  transition: .3s;
+  transition: 0.3s;
   width: 100%;
   height: var(--space-xxxxl); }
   @media (min-width: 992px) {
@@ -9149,21 +9163,18 @@ Descr: Container of information used as teaser for further content exploration
     box-shadow: var(--shadow-md);
     background-position: 130px -40px;
     scale: 1.03; }
-    .card-v9:hover h2, .card-v9:hover p {
-      color: var(--color-white) !important; }
-    .card-v9:hover:nth-child(1) {
-      background-color: var(--grape-3) !important; }
-    .card-v9:hover:nth-child(2) {
-      background-color: var(--ocean-3) !important; }
-    .card-v9:hover:nth-child(3) {
-      background-color: var(--tundra-3) !important; }
-    .card-v9:hover:nth-child(4) {
-      background-color: var(--wood-3) !important; }
-    .card-v9:hover:nth-child(5) {
-      background-color: var(--ocean-3) !important; }
     @media (min-width: 992px) {
       .card-v9:hover {
         background-position: -15% 25px; } }
+
+.card-v9--subtle:hover {
+  background-color: var(--color-primary-lighter) !important; }
+
+.card-v9--vibrant:hover {
+  background-color: var(--color-primary) !important; }
+  .card-v9--vibrant:hover h2,
+  .card-v9--vibrant:hover p {
+    color: var(--color-white) !important; }
 
 .card-v9__content {
   display: flex;
@@ -9185,9 +9196,9 @@ Descr: Container of information used as teaser for further content exploration
     z-index: 2;
     color: var(--color-bg);
     opacity: 0;
-    transition: opacity .3s; }
+    transition: opacity 0.3s; }
   .card-v9__btn::after {
-    content: '';
+    content: "";
     position: absolute;
     z-index: 1;
     top: 0;
@@ -9208,7 +9219,7 @@ Descr: Container of information used as teaser for further content exploration
   transform: translateY(0); }
 
 .card-v9--overlay-bg::before {
-  content: '';
+  content: "";
   position: absolute;
   z-index: 1;
   top: 0;
@@ -9216,7 +9227,7 @@ Descr: Container of information used as teaser for further content exploration
   width: 100%;
   height: 100%;
   background-color: hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.5);
-  transition: background-color .3s;
+  transition: background-color 0.3s;
   opacity: 0; }
 
 .card-v9--overlay-bg:hover::before {

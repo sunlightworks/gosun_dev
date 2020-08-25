@@ -1,12 +1,15 @@
 :root {
   // size
   --icon-xxs: 12px;
-  --icon-xs:  16px;
-  --icon-sm:  24px;
-  --icon-md:  32px;
-  --icon-lg:  48px;
-  --icon-xl:  64px;
+  --icon-xs: 16px;
+  --icon-sm: 24px;
+  --icon-md: 32px;
+  --icon-lg: 48px;
+  --icon-xl: 64px;
   --icon-xxl: 128px;
+
+  --icon-cta: var(--color-primary);
+  --icon-accent: var(--color-primary-light);
 }
 
 .icon {
@@ -19,16 +22,43 @@
   max-width: initial;
 }
 
-// icon size
-.icon--xxs { font-size: var(--icon-xxs); }
-.icon--xs  { font-size: var(--icon-xs); }
-.icon--sm  { font-size: var(--icon-sm); }
-.icon--md  { font-size: var(--icon-md); }
-.icon--lg  { font-size: var(--icon-lg); }
-.icon--xl  { font-size: var(--icon-xl); }
-.icon--xxl { font-size: var(--icon-xxl); }
+.icon {
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+  position: relative;
+  font-size: 16px;
+  &--lg {
+    //rm font-size: 36px ;
+  }
+}
 
-.icon--is-spinning { // rotate the icon infinitely
+// icon size
+.icon--xxs {
+  font-size: var(--icon-xxs) !important;
+}
+.icon--xs {
+  font-size: var(--icon-xs) !important;
+}
+.icon--sm {
+  font-size: var(--icon-sm) !important;
+}
+.icon--md {
+  font-size: var(--icon-md) !important;
+}
+.icon--lg {
+  font-size: var(--icon-lg) !important;
+}
+.icon--xl {
+  font-size: var(--icon-xl) !important;
+}
+.icon--xxl {
+  font-size: var(--icon-xxl) !important;
+}
+
+.icon--is-spinning {
+  // rotate the icon infinitely
   animation: icon-spin 1s infinite linear;
 }
 
@@ -51,4 +81,25 @@
 .icon use {
   color: inherit;
   fill: currentColor;
+}
+
+// themes
+.icon--cta {
+  color: var(--color-primary) !important;
+}
+
+.icon--accent {
+  color: var(--color-primary-light) !important;
+  .material-icons-two-tone {
+    filter: invert(73%) sepia(24%) saturate(676%) hue-rotate(164deg)
+      brightness(95%) contrast(89%);
+  }
+}
+
+.icon--default {
+  color: var(--color-contrast-medium) !important;
+  .material-icons-two-tone {
+    filter: invert(56%) sepia(19%) saturate(306%) hue-rotate(177deg)
+      brightness(91%) contrast(87%);
+  }
 }
