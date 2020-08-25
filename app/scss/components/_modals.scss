@@ -1,24 +1,19 @@
 /* Card - Body
-================================================== */     
+================================================== */
 
 .card {
-    background: $white;
-    @include rounded();
-    &--body {
-        @include shadow-nav();
+  background: var(--color-max);
+  @include rounded();
+  &--body {
+    @include shadow-nav();
+  }
+  &--md {
+    @include sizeMax(null, 320px);
+    @include md() {
+      @include sizeMax(280px, 320px);
     }
-    &--md {
-        @include sizeMax(null, 320px);
-        @include md() {
-            @include sizeMax(280px, 320px);
-        }
-    }
-    &--lg {
-        @include sizeMax(460px);
-    }
+  }
+  &--lg {
+    @include sizeMax(460px);
+  }
 }
-
-
-
-
-

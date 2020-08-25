@@ -3,144 +3,129 @@
 // -----------------------------------------------------------------------------
 @import "//app/scss/bundle";
 
-input, textarea {
-    font: 15px 'cp' !important;
-    &:hover, &:active, &:focus {
-       @include form-shadow(); 
-    }
+input,
+textarea {
+  font: 15px "cp" !important;
+  &:hover,
+  &:active,
+  &:focus {
+    @include form-shadow();
+  }
 }
 
 // -----------------------------------------------------------------------------
 // 123formbuilder
 // -----------------------------------------------------------------------------
-    #form[data-loader-type="viewer"] {
-    padding-bottom: 0px !important;
-    }
-    #form {
-    padding-top: 0px !important;
-    }
-    #form [data-role="page"][data-num-children]:not([data-num-children="0"]) {
-    margin: 0 !important;
-    width: 100% !important;
-    } 
+#form[data-loader-type="viewer"] {
+  padding-bottom: 0px !important;
+}
+#form {
+  padding-top: 0px !important;
+}
+#form [data-role="page"][data-num-children]:not([data-num-children="0"]) {
+  margin: 0 !important;
+  width: 100% !important;
+}
 
-    #form div[data-role="page"] {
-    margin: 0 !important;
-    }
+#form div[data-role="page"] {
+  margin: 0 !important;
+}
 
-    #form > div:nth-child(2) {
-   margin: 0 !important;
-    }
+#form > div:nth-child(2) {
+  margin: 0 !important;
+}
 
 .form-embed {
-    max-height: 400px;
-    overflow: scroll;
-    padding-left: 80px;
-    margin-top: 50px;
-    }
-
-
-
-
-
-
-
+  max-height: 400px;
+  overflow: scroll;
+  padding-left: 80px;
+  margin-top: 50px;
+}
 
 // -----------------------------------------------------------------------------
 // Klaviyo
 // -----------------------------------------------------------------------------
 
-
-
 /* #Email - Container
 ================================================== */
 div.section.collection_description .klaviyo-section {
-width: 100%;
- max-width: 400px;
- color: $white;
+  width: 100%;
+  max-width: 400px;
+  color: var(--color-max);
 }
 
 .klaviyo-form-container {
-    width: 100%;
-    @include flexBox(row, center, center)
-    }
+  width: 100%;
+  @include flexBox(row, center, center);
+}
 
 /* #Email - Input
 ================================================== */
 .klaviyo-form-condensed {
- width: 100%;
- input {
+  width: 100%;
+  input {
     float: left;
     padding: 7px 9px;
     @include size(70%, 50px);
     border-radius: 4px;
     font-size: 15px;
-}
+  }
 }
 
 /* #Email - Button
 ================================================== */
- .klaviyo-form-action {
- float: right;
- width: 30%;
- height: 50px;
- button {
-     @include btn-hero;
+.klaviyo-form-action {
+  float: right;
+  width: 30%;
+  height: 50px;
+  button {
+    @include btn-hero;
     height: 100%;
-    background: rgba(0,0,0,.35);
+    background: rgba(0, 0, 0, 0.35);
     &:hover {
-        background: rgba(0,0,0,.5); 
+      background: rgba(0, 0, 0, 0.5);
     }
     font-size: 15px;
     font-weight: 700;
- }
- }
+  }
+}
 
- /* #Email - Copy
+/* #Email - Copy
 ================================================== */
 .collection_description p {
- margin-top: 0;
- }
+  margin-top: 0;
+}
 
-
-   /* Mobile styles
+/* Mobile styles
 ================================================== */
 @include md-max {
-    .klaviyo-form-action {
+  .klaviyo-form-action {
     float: none;
     width: 100%;
     margin-bottom: 40px;
-    }
-    .klaviyo-form-condensed input {
+  }
+  .klaviyo-form-condensed input {
     width: 100%;
-    }
+  }
 }
-
 
 @include md-max {
-    .mt100-mobile {
-        margin-top: 100px;
-    }
+  .mt100-mobile {
+    margin-top: 100px;
+  }
 }
-
 
 input.contact_email {
-    float: left;
-    padding: 7px 9px;
-    height: 50px;
-    border-radius: 4px;
-    font-size: 15px;
+  float: left;
+  padding: 7px 9px;
+  height: 50px;
+  border-radius: 4px;
+  font-size: 15px;
 }
-
 
 input:hover {
-        @include form-shadow(); 
+  @include form-shadow();
 }
 .input-row input {
-    flex: initial !important;
+  flex: initial !important;
 }
-
-
-
-
-

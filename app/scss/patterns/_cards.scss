@@ -400,7 +400,7 @@ a.collection-info__caption {
   }
 
   .article-tile-content {
-    background: $white;
+    background: var(--color-max);
     padding: (var(--space-unit));
     display: none !important;
     position: absolute;

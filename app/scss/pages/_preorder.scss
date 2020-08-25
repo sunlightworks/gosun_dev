@@ -5,7 +5,7 @@ $screen-md-min: 768px;
   @media (max-width: #{$screen-md-min}) {
     @content;
   }
-} 
+}
 
 .preorder-container {
   @include flexBox(column, null, center);
@@ -35,7 +35,7 @@ $screen-md-min: 768px;
   min-height: 30vh;
   width: 100vw !important;
   @include flexBox(column, center, center);
-  background: $white;
+  background: var(--color-max);
 
   h1 {
     font-size: 65px;
@@ -57,10 +57,8 @@ $screen-md-min: 768px;
   }
 }
 
-
-
 .preorder-preview {
-  background: $white;
+  background: var(--color-max);
   width: 100%;
   max-width: 695px;
   padding: 0;

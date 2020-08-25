@@ -116,7 +116,6 @@ $palette-neutral-500: #9e9e9e;
 $palette-neutral-600: #757575;
 $palette-neutral-700: #616161;
 $palette-neutral-800: #424242;
-$palette-neutral-900: var(--color-contrast-higher);
 
 /* Grape
   ================================================== */
@@ -166,48 +165,6 @@ $aqua-1: #e1f4f5;
 $aqua-2: #81d3d6;
 $aqua-3: #03a7ac;
 $aqua-4: #006666;
-
-/* GoSun / Cherry
-================================================== */
-$palette-cherry: rgb(252, 230, 229) rgb(248, 193, 191) rgb(244, 151, 149)
-  rgb(240, 109, 106) rgb(236, 78, 74) rgb(233, 47, 42) rgb(230, 42, 37)
-  rgb(227, 35, 31) rgb(223, 29, 25) rgb(217, 18, 15) rgb(255, 255, 255)
-  rgb(255, 211, 211) rgb(255, 161, 160) rgb(255, 135, 134);
-$palette-cherry-50: nth($palette-cherry, 1);
-$palette-cherry-100: nth($palette-cherry, 2);
-$palette-cherry-200: nth($palette-cherry, 3);
-$palette-cherry-300: nth($palette-cherry, 4);
-$palette-cherry-400: nth($palette-cherry, 5);
-$palette-cherry-500: nth($palette-cherry, 6);
-$palette-cherry-600: nth($palette-cherry, 7);
-$palette-cherry-700: nth($palette-cherry, 8);
-$palette-cherry-800: nth($palette-cherry, 9);
-$palette-cherry-900: nth($palette-cherry, 10);
-$palette-cherry-A100: nth($palette-cherry, 11);
-$palette-cherry-A200: nth($palette-cherry, 12);
-$palette-cherry-A400: nth($palette-cherry, 13);
-$palette-cherry-A700: nth($palette-cherry, 14);
-
-/* GoSun / Orange
-================================================== */
-$palette-orange: rgb(253, 240, 229) rgb(251, 218, 190) rgb(249, 194, 147)
-  rgb(246, 170, 103) rgb(244, 151, 71) rgb(242, 133, 38) rgb(240, 125, 34)
-  rgb(238, 114, 28) rgb(236, 104, 23) rgb(232, 85, 13) rgb(255, 255, 255)
-  rgb(255, 233, 224) rgb(255, 197, 173) rgb(255, 179, 148);
-$palette-orange-50: nth($palette-orange, 1);
-$palette-orange-100: nth($palette-orange, 2);
-$palette-orange-200: nth($palette-orange, 3);
-$palette-orange-300: nth($palette-orange, 4);
-$palette-orange-400: nth($palette-orange, 5);
-$palette-orange-500: nth($palette-orange, 6);
-$palette-orange-600: nth($palette-orange, 7);
-$palette-orange-700: nth($palette-orange, 8);
-$palette-orange-800: nth($palette-orange, 9);
-$palette-orange-900: nth($palette-orange, 10);
-$palette-orange-A100: nth($palette-orange, 11);
-$palette-orange-A200: nth($palette-orange, 12);
-$palette-orange-A400: nth($palette-orange, 13);
-$palette-orange-A700: nth($palette-orange, 14);
 
 /* GoSun / Pumpkin
 ================================================== */
@@ -344,7 +301,7 @@ $indiegogo-hover: #d50f6d;
 /* #Color - Old
 ================================================== */
 // LightColor Variables
-$white: $palette-tint-A100;
+
 $alabaster: #f7f7f7;
 $egg: #f0f0f0;
 $smoke: #fcfcfc;

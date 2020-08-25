@@ -284,7 +284,7 @@
   letter-spacing: 0.04em;
   line-height: 36px;
   font-size: 14px;
-  color: $white !important;
+  color: var(--color-max) !important;
   min-width: 88px;
   padding: 0 16px;
   @include btn-transition();
@@ -329,9 +329,9 @@
 /* #Border - Light
 ================================================== */
 @mixin border-light() {
-  border: 1px solid $white !important;
+  border: 1px solid var(--color-max) !important;
   @include rounded();
-  color: $white !important;
+  color: var(--color-max) !important;
   background-color: transparent;
 }
 

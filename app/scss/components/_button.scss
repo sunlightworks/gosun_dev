@@ -8,7 +8,7 @@
 // -----------------------------------------------------------------------------
 a.highlight-true,
 a.highlight-true:hover {
-  background-color: $white !important;
+  background-color: var(--color-max) !important;
   border-color: transparent !important;
   color: var(--color-contrast-higher) !important;
 }
@@ -68,5 +68,5 @@ a.highlight-true:hover {
 /* #Button - Flits / Social login
 ================================================== */
 .flits-btn span {
-  color: $white !important;
+  color: var(--color-max) !important;
 }

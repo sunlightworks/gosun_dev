@@ -174,7 +174,7 @@ a.mobile_nav {
 .cart_container.active_link .mini_cart,
 .cart_container.active_link .mini_cart span {
   background-color: transparent;
-  color: $white !important;
+  color: var(--color-max) !important;
 }
 
 // -----------------------------------------------------------------------------

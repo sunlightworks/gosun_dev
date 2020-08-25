@@ -19,7 +19,7 @@
 
 #tabs > div,
 #tabs-app-accordion > div {
-  background: $white !important;
+  background: var(--color-max) !important;
   iframe {
     max-width: 100%;
   }
@@ -33,7 +33,7 @@
 ================================================== */
 .ui-state-default.ui-corner-top {
   padding: 10px 0 !important;
-  background: $white !important;
+  background: var(--color-max) !important;
   border-bottom: 2px solid $color-border-light !important;
   a {
     color: var(--color-contrast-medium);
@@ -84,7 +84,7 @@ td {
 }
 
 .table-format {
-  background: $white;
+  background: var(--color-max);
 }
 
 /* #Table- First column
@@ -96,7 +96,7 @@ td {
 /* #Table- Second column (active)
 ================================================== */
 .compare td:nth-child(2) {
-  color: $white;
+  color: var(--color-max);
   font-weight: bold !important;
   background: $grape-3;
   border-bottom: none !important;
@@ -109,7 +109,7 @@ td {
   color: var(--color-contrast-higher) !important;
   font-size: 16px;
   line-height: 60px !important;
-  background: $white !important;
+  background: var(--color-max) !important;
   border-bottom: 2px solid $color-border-light !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -153,7 +153,7 @@ img {
 
 .ui-accordion-header {
   padding: 10px 0 !important;
-  background: $white !important;
+  background: var(--color-max) !important;
   border-bottom: 2px solid $color-border-light !important;
 }
 

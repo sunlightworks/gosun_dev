@@ -146,7 +146,7 @@
 
 /* Text */
 .split-banner-content #bc-sf-filter-collection-title {
-  color: $white;
+  color: var(--color-max);
 }
 
 @include md-max() {

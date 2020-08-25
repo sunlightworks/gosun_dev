@@ -61,14 +61,13 @@
   @include defineColorHSL(--color-contrast-high, 214, 25%, 33%);
   @include defineColorHSL(--color-contrast-higher, 211, 50%, 21%);
 
+  --color-max: var(--color-white);
+
   // componenents
   --bg-header: var(--color-white);
   --bg-header-accent: var(--color-bg);
   --bg-promo-bar: var(--color-contrast-high);
   --bg-footer: var(--color-contrast-higher);
-
-  --color-link: var(--color-secondary);
-  --color-max: var(--color-contrast-white);
 }
 
 @supports (--css: variables) {
@@ -105,11 +104,11 @@
     @include defineColorHSL(--color-success-light, 167, 100%, 14%);
     @include defineColorHSL(--color-success-lighter, 167, 100%, 4%);
 
-    @include defineColorHSL(--color-error-darker, 5, 66%, 28%);
-    @include defineColorHSL(--color-error-dark, 5, 66%, 38%);
+    @include defineColorHSL(--color-error-darker, 5, 66%, 68%);
+    @include defineColorHSL(--color-error-dark, 5, 66%, 58%);
     @include defineColorHSL(--color-error, 5, 66%, 48%);
-    @include defineColorHSL(--color-error-light, 5, 66%, 58%);
-    @include defineColorHSL(--color-error-lighter, 5, 66%, 68%);
+    @include defineColorHSL(--color-error-light, 5, 66%, 38%);
+    @include defineColorHSL(--color-error-lighter, 5, 66%, 28%);
 
     // color contrasts
     @include defineColorHSL(--color-bg, 211, 61%, 16%);
@@ -119,13 +118,12 @@
     @include defineColorHSL(--color-contrast-high, 216, 12%, 83%);
     @include defineColorHSL(--color-contrast-higher, 220, 8%, 93%);
 
-    --bg-header: var(--color-bg);
-    --bg-header-accent: var(--color-contrast-low);
-    --bg-promo-bar: var(--color-contrast-medium);
-    --bg-footer: var(--color-bg);
+    --color-max: hsl(211, 55%, 15%);
 
-    --color-link: var(--color-secondary);
-    --color-max: var(--color-contrast-lower);
+    --bg-header: var(--color-max);
+    --bg-header-accent: var(--color-bg);
+    --bg-promo-bar: var(--color-contrast-medium);
+    --bg-footer: var(--color-max);
   }
 
   [data-theme="grape"] {
@@ -209,9 +207,8 @@ body,
   -moz-osx-font-smoothing: grayscale;
 
   // componenents
-  //--bg-header-accent: hsla(var(--bg-header), 0.125);
-  //--bg-header-accent: calc(var(--bg-header-l) -20);
-  // --color-link: var(--color-secondary);
+  --color-link: var(--color-primary);
+  --color-link-hover: var(--color-primary-dark);
 }
 
 // background-color

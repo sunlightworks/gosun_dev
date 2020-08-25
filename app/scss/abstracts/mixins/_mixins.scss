@@ -136,8 +136,8 @@
 }
 
 @mixin nav-hover() {
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.17) !important;
-  background: $alabaster;
+  box-shadow: var(--shadow-sm) !important;
+  background: var(--color-bg);
   a {
     color: var(--color-contrast-higher) !important;
   }
@@ -163,7 +163,7 @@
   line-height: 36px;
   font-size: var(--text-sm);
   letter-spacing: -0.03em;
-  color: $white !important;
+  color: var(--color-max) !important;
   min-width: 88px;
   padding: 0 16px;
   overflow: hidden !important;
@@ -206,9 +206,9 @@
 /* #Border - Light
 ================================================== */
 @mixin border-light() {
-  border: 1px solid $white !important;
+  border: 1px solid var(--color-max) !important;
   @include rounded();
-  color: $white !important;
+  color: var(--color-max) !important;
   background-color: transparent;
 }
 

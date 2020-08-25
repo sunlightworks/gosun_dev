@@ -1665,7 +1665,7 @@
         "type": "header",
         "settings": {
           "promo_icon": "card_giftcard",
-          "promo_text": "<p><strong>FREE shipping | FREE returns<br><\/strong><\/p>",
+          "promo_text": "FREE shipping | FREE returns",
           "promo_link": "",
           "promo_external": false,
           "tagline_text": "Portable power for the people",

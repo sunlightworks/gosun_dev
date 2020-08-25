@@ -11,7 +11,7 @@
   height: 116px;
   margin-top: -10px;
   margin-bottom: 10px;
-  background: $white;
+  background: var(--color-max);
   border-bottom: 2px solid #eee;
   @include md-max() {
     .flex-left {

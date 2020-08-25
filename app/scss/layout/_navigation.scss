@@ -224,7 +224,7 @@ a.mobile_logo img {
 .vertical-menu_submenu,
 .dropdown_content,
 div.dropdown.menu {
-  background: var(--color-white) !important;
+  background: var(--color-max) !important;
   @include rounded();
   @include shadow-menu();
 }
@@ -401,52 +401,6 @@ div.dropdown.menu {
   }
 }
 
-/* #Main Nav - [2-column links]
-  ================================================== 
-
-  .mega-menu-2, .mega-menu-3, .mega-menu-4 {
-    .dropdown {
-      max-width: 460px !important;
-      @include md {
-        margin-right: 41% !important;
-      }
-      @include xl {
-        margin-right: 51% !important;
-      }
-    }
-    .dropdown_column {
-      padding: 20px 0 !important;
-      background: transparent; 
-      box-shadow: none !important;
-      &:nth-of-type(2) {
-        border-left: 2px solid #f2f6fa;
-      }
-      ul.dropdown_title {
-        border-bottom: none !important; 
-        padding-bottom: 0 !important; 
-      }
-    }
-
-   
-    ul {
-      padding: 0;
-    }
-    ul, li, a, .dropdown_column__menu {
-      width: 100%;
-    }
-    ul li {
-      padding: 0  !important;
-    }
-    ul:not(.dropdown_title) li {
-      &:hover {
-        @include nav-hover;
-      }
-    }
-    a {
-      padding: 5px 35px !important;
-    }
-  }
-*/
 /* Gallery column */
 .dropdown_container.mega-menu .dropdown_column {
   @include flexBox(null, center, center);
@@ -559,7 +513,7 @@ div.dropdown.menu {
     top: 60px !important;
   }
   @include shadow-nav();
-  background-color: $white;
+  background-color: var(--color-max);
   z-index: 99;
   height: 65px;
   overflow: hidden;
@@ -593,7 +547,7 @@ div.dropdown.menu {
 .subnav__link:not(.base-BodyTitle),
 .shogun-tab-box {
   &:hover {
-    background: $alabaster;
+    background: var(--color-bg);
     color: var(--color-contrast-higher);
   }
 }
@@ -601,8 +555,6 @@ div.dropdown.menu {
 /* #Sticky - Custom buy button
   ================================================== */
 /* Product nav - position below main nav */
-.subnav {
-}
 
 /* Hide custom buy button  */
 .sticky-fade {

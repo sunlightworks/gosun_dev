@@ -27,12 +27,12 @@ $color-border-mid: $palette-shade-300;
 /* #Config - Typography
   ================================================== */
 // Dark Variables //
-$color-text-dark: $palette-neutral-900;
-$color-text-body: $palette-neutral-900;
+$color-text-dark: var(--color-contrast-higher);
+$color-text-body: var(--color-contrast-high);
 $color-text-accent: $palette-neutral-700;
 $color-text-sub: $palette-neutral-600;
 // Light Variables //
-$color-text-light: $white;
+$color-text-light: var(--color-max);
 
 $color-link-hover: $blueberry;
 
@@ -177,7 +177,7 @@ $color-discount: var(--color-success-light);
 }
 
 .text-dark {
-  color: $palette-neutral-900;
+  color: var(--color-contrast-higher);
   h1,
   h2,
   h3,
@@ -187,10 +187,10 @@ $color-discount: var(--color-success-light);
   li,
   li a,
   a {
-    color: $palette-neutral-900 !important;
+    color: var(--color-contrast-higher) !important;
   }
   p {
-    color: var(--color-contrast-medium-h) !important;
+    color: var(--color-contrast-medium) !important;
   }
 }
 
@@ -255,7 +255,7 @@ $color-discount: var(--color-success-light);
 @mixin fill($color) {
   background-color: $color;
   border: 2px solid $color;
-  color: $white;
+  color: var(--color-max);
 }
 
 @mixin hollow($color) {

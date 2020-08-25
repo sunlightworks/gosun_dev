@@ -196,7 +196,7 @@ $indiegogo-hover: #d50f6d;
 /* #Color - Old
 ================================================== */
 // LightColor Variables
-$white: $palette-tint-A100;
+var(--color-max): $palette-tint-A100;
 $alabaster: #f7f7f7;
 $egg: #f0f0f0;
 $smoke: #fcfcfc;
@@ -235,7 +235,7 @@ $color-text-body: $palette-shade-700;
 var(--color-contrast-medium): $palette-shade-500;
 var(--color-contrast-medium): $palette-shade-400;
 // Light Variables //
-$color-text-light: $white;
+$color-text-light: var(--color-max);
 
 $color-link-hover: $blueberry;
 
@@ -309,7 +309,7 @@ $color-discount: $palette-olive-700;
 @mixin fill($color) {
   background: $color;
   border: 2px solid $color;
-  color: $white;
+  color: var(--color-max);
 }
 
 @mixin hollow($color) {

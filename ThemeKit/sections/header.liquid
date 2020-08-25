@@ -39,15 +39,18 @@
     <div class="promo_banner">
       <div class="promo_banner__content">
         <div class="info-item info-item--banner">
-          <span class="icon">
+          <span class="icon mobile--false">
             <img src="https://cdn.shopify.com/s/files/1/0789/1333/files/united-states-of-america.png?v=1593021893">
             {% comment %}
             <i class="material-icons-outlined">{{ section.settings.promo_icon }}</i>
              {% endcomment %}
           </span>
-          <p>
+          <p class="font-bold mobile--false">
             {{ section.settings.promo_text }}
-            </p>
+          </p>
+          <p class="font-bold text-uppercase mobile--true">
+            {{ section.settings.tagline_text }}
+          </p>
         </div>
       </div>
       <div class="promo_banner-close"></div>
@@ -426,7 +429,7 @@
     },
 
     {
-      "type": "richtext",
+      "type": "text",
       "id": "promo_text",
       "label": "Promo text",
       "info": "Maximum character limit is 170"

@@ -105,7 +105,7 @@
 ================================================== */
 
 .sidebar-menu ul {
-  border-bottom: 1px solid $color-border-light;
+  border-bottom: 1px solid var(--color-contrast-low);
   padding: 15px 0;
   margin-bottom: var(--space-unit);
   font-size: var(--text-sm);
@@ -116,24 +116,12 @@
     letter-spacing: -0.12px;
     line-height: var(--space-unit);
   }
-
   li {
     margin-bottom: 0;
     padding: 0;
-    &:hover {
-      background: $palette-shade-50 !important;
-      @include nav-hover();
-    }
   }
 }
 
-/* Sort By - Menu
-================================================== */
-/* Sort by, Breadcrumbs [hide]
-#bc-sf-filter-top-show-limit, #bc-sf-filter-top-sorting, .sort-by, .breadcrumb-collection {
- 
-}
-*/
 /* Button - Refine by [hide when collapsed] */
 .sidebar-wrap > div {
   padding: 0px;
