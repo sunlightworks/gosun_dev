@@ -164,14 +164,13 @@
       <p class="text-sm font-bold color-contrast-medium base-BodyUppercase">{{ section.settings.tagline_text }}</p>
       <!-- Utility Menu -->
       <ul class="menu right">
-        
         <!-- {% include '_1_switch' %}-->
-
+    
         <!-- Phone Number -->
         {% if section.settings.phone_number != blank %}     
         {% if section.settings.phone_position == "right" %}    
         <li class="margin-left-sm info-item info-item--top-bar">
-          <span class="icon"><i class="material-icons-outlined">call</i></span>
+          <span class="icon"><i class="material-icons-outlined color-secondary">call</i></span>
           <a href="tel:+{{ section.settings.phone_number | replace: ' ', '' | replace: '+', '' | replace: '', '' }}">{{ section.settings.phone_number }}</a>
         </li>
         {% endif %}
@@ -236,7 +235,7 @@
 
             <!-- Sale Link -->
             {% if section.settings.sale_text != blank %}
-            <li class="link-sale sublink color-white">
+            <li class="link-sale sublink">
               <a href="{{ section.settings.sale_url }}">
                 <span class="icon">
                   <i class="material-icons-outlined"> {{ section.settings.sale_icon }}</i>

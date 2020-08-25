@@ -53,7 +53,7 @@
                 <div class="{% if description != blank %} margin-top-md {% else %}margin-top-lg{% endif %}">
                     <div class="flex flex-wrap gap-sm items-center feature-btn-group">
                         {% if button1 != blank %}
-                            <a {% if button1_url != blank %}href="{{ button1_url }}"{% endif %} class="btn btn--primary btn--md">{{ button1 }}&nbsp;➞</a>
+                            <a {% if button1_url != blank %}href="{{ button1_url }}"{% endif %} class="btn {% unless dark_theme != blank %}btn--primary{% endunless %}  btn--md">{{ button1 }}&nbsp;➞</a>
                         {% endif %}
                         {% if button2 != blank %}
                             <a {% if button2_url != blank %}href="#"{% endif %} class="color-inherit">{{ button2 }}&nbsp;➞</a>

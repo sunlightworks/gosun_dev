@@ -1103,15 +1103,28 @@ a.btn {
   a.btn:active {
     transform: translateY(2px); }
 
+.btn,
+a.btn {
+  background-color: var(--color-contrast-higher);
+  color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .btn:hover,
+  a.btn:hover {
+    background-color: var(--color-contrast-high); }
+  .btn:focus,
+  a.btn:focus {
+    box-shadow: 0px 0px 0px 2px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2); }
+
 .btn--primary,
 a.btn--primary {
-  background-color: var(--color-contrast-higher);
+  background-color: var(--color-primary);
   color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
   .btn--primary:hover,
   a.btn--primary:hover {
-    background-color: var(--color-contrast-high); }
+    background-color: var(--color-primary-light); }
   .btn--primary:focus,
   a.btn--primary:focus {
     box-shadow: 0px 0px 0px 2px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2); }
@@ -1129,7 +1142,7 @@ a.btn--accent {
   -moz-osx-font-smoothing: grayscale; }
   .btn--accent:hover,
   a.btn--accent:hover {
-    background-color: var(--color-secondary-dark); }
+    background-color: var(--color-secondary-light); }
   .btn--accent:focus,
   a.btn--accent:focus {
     box-shadow: 0px 0px 0px 2px hsla(var(--color-secondary-h), var(--color-secondary-s), var(--color-secondary-l), 0.2); }
@@ -2215,6 +2228,21 @@ html:not(.js) .no-js\:is-hidden {
 
 .color-primary-lighter {
   color: hsla(var(--color-primary-lighter-h), var(--color-primary-lighter-s), var(--color-primary-lighter-l), var(--color-o, 1)); }
+
+.color-secondary-darker {
+  color: hsla(var(--color-secondary-darker-h), var(--color-secondary-darker-s), var(--color-secondary-darker-l), var(--color-o, 1)); }
+
+.color-secondary-dark {
+  color: hsla(var(--color-secondary-dark-h), var(--color-secondary-dark-s), var(--color-secondary-dark-l), var(--color-o, 1)); }
+
+.color-secondary {
+  color: hsla(var(--color-secondary-h), var(--color-secondary-s), var(--color-secondary-l), var(--color-o, 1)); }
+
+.color-secondary-light {
+  color: hsla(var(--color-secondary-light-h), var(--color-secondary-light-s), var(--color-secondary-light-l), var(--color-o, 1)); }
+
+.color-secondary-lighter {
+  color: hsla(var(--color-secondary-lighter-h), var(--color-secondary-lighter-s), var(--color-secondary-lighter-l), var(--color-o, 1)); }
 
 .color-accent-darker {
   color: hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), var(--color-o, 1)); }
