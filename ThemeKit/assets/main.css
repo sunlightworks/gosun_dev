@@ -8657,6 +8657,100 @@ Usage: codyhouse.co/license
 
 /* -------------------------------- 
 
+File#: _1_rating
+Title: Rating
+Descr: A rating plugin that allows users to vote for your products
+
+-------------------------------- */
+:root {
+  --rating-icon-size: 1.75em; }
+
+.rating__control ul {
+  display: inline-block;
+  display: inline-flex;
+  vertical-align: top; }
+
+.rating__control li {
+  position: relative;
+  height: var(--rating-icon-size);
+  width: var(--rating-icon-size);
+  float: left;
+  cursor: pointer; }
+  .rating__control li:focus {
+    outline: none; }
+    .rating__control li:focus::before {
+      transform: scale(1);
+      opacity: 0.2; }
+  .rating__control li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.2s; }
+  .rating__control li.rating__item--zero {
+    display: none; }
+
+.rating__control--is-hidden {
+  display: none; }
+
+.rating__icon,
+.rating__control li::before,
+.rating[data-animation="on"] .rating__control ul:hover .rating__icon {
+  color: var(--color-contrast-higher); }
+
+.rating__icon--inactive,
+.rating[data-animation="on"] .rating__control li:hover ~ li .rating__icon,
+.rating__item--checked ~ li .rating__icon {
+  color: var(--color-contrast-low); }
+
+.rating__icon {
+  overflow: hidden; }
+  .rating__icon svg {
+    display: block;
+    height: var(--rating-icon-size);
+    width: var(--rating-icon-size);
+    max-width: var(--rating-icon-size);
+    pointer-events: none; }
+
+.rating--read-only .rating__control li {
+  cursor: default; }
+
+.rating__icon--inactive {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; }
+
+.rating__item--half .rating__icon:not(.rating__icon--inactive) {
+  position: relative;
+  z-index: 2;
+  width: 50%; }
+
+.rating[data-animation="on"] .rating__control li:active .rating__icon {
+  transform: scale(0.8); }
+
+.rating[data-animation="on"] .rating__icon {
+  transition: 0.2s; }
+
+.js .rating__select {
+  display: none; }
+
+.rating__link {
+  display: inline-block;
+  transition: opacity 0.2s; }
+  .rating__link:hover {
+    opacity: 0.85; }
+
+/* -------------------------------- 
+
 File#: _1_switch
 Title: Switch
 Descr: Custom ON/OFF checkbox toggle

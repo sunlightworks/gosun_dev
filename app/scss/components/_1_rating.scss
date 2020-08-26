@@ -1,0 +1,139 @@
+/* -------------------------------- 
+
+File#: _1_rating
+Title: Rating
+Descr: A rating plugin that allows users to vote for your products
+
+-------------------------------- */
+
+:root {
+  --rating-icon-size: 1.75em;
+}
+
+.rating {
+}
+
+.rating__control {
+  ul {
+    // created in js
+    display: inline-block; // flex fallback
+    display: inline-flex;
+    vertical-align: top;
+  }
+
+  li {
+    position: relative;
+    height: var(--rating-icon-size);
+    width: var(--rating-icon-size);
+    float: left;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+
+      &::before {
+        transform: scale(1);
+        opacity: 0.2;
+      }
+    }
+
+    &::before {
+      // circle focus effect
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: currentColor;
+      border-radius: 50%;
+      opacity: 0;
+      transform: scale(0);
+      transition: 0.2s;
+    }
+
+    &.rating__item--zero {
+      // hidden item - created in js if rating is 0 or not available
+      display: none;
+    }
+  }
+}
+
+.rating__control--is-hidden {
+  display: none;
+}
+
+.rating__icon,
+.rating__control li::before,
+.rating[data-animation="on"] .rating__control ul:hover .rating__icon {
+  color: var(--color-contrast-higher); // star active color
+}
+
+.rating__icon--inactive,
+.rating[data-animation="on"] .rating__control li:hover ~ li .rating__icon,
+.rating__item--checked ~ li .rating__icon {
+  color: var(--color-contrast-low); // star inactive color
+}
+
+.rating__icon {
+  // star icon
+  overflow: hidden;
+
+  svg {
+    display: block;
+    height: var(--rating-icon-size);
+    width: var(--rating-icon-size);
+    max-width: var(--rating-icon-size);
+    pointer-events: none;
+  }
+}
+
+// read-only mode
+.rating--read-only .rating__control li {
+  cursor: default;
+}
+
+.rating__icon--inactive {
+  // star icon -> off status
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.rating__item--half .rating__icon:not(.rating__icon--inactive) {
+  // show half of active star
+  position: relative;
+  z-index: 2;
+  width: 50%;
+}
+
+// animation
+.rating[data-animation="on"] {
+  .rating__control li:active .rating__icon {
+    transform: scale(0.8);
+  }
+
+  .rating__icon {
+    transition: 0.2s;
+  }
+}
+
+.js {
+  .rating__select {
+    // hide select element if js is enabled
+    display: none;
+  }
+}
+
+// --link
+.rating__link {
+  display: inline-block;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}

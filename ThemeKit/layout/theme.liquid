@@ -99,6 +99,8 @@
   <meta name="msvalidate.01" content="C9498BD5F84A663C4AFCC7D08EDF5C4B" />    
   <!----------- End GOOGLE ----------->
 
+
+
   <script src="{{ 'jquery.min.js' | asset_url }}"></script>
         
 <!----------- APPS ----------->
@@ -296,15 +298,7 @@
         {% endif %}
       <!----------- End SHOPIFY ----------->
       
-      <!----------- SCRIPTS ----------->
-        <script src="{{ 'vendors.js' | asset_url }}"></script>
-        <script src="{{ 'sections.js' | asset_url }}"></script>
-        <script src="{{ 'utilities.js' | asset_url }}"></script>
-        <script src="{{ 'app.js' | asset_url }}"></script>
-        <script rel="preconnect" src="{{ 'gosun.js' | asset_url }}"></script>
-        <script defer src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
-        <script defer src="https://kit.fontawesome.com/40a53939d2.js" crossorigin="anonymous"></script> 
-      <!----------- End SCRIPTS ----------->
+
     
       <!----------- APPS ----------->
       {% if template contains 'product' or 'collection'%}
@@ -335,6 +329,16 @@
     <script>
       {{ settings.custom_scripts }}
     </script>
+
+    <!----------- SCRIPTS ----------->
+      <script src="{{ 'vendors.js' | asset_url }}"></script>
+      <script src="{{ 'sections.js' | asset_url }}"></script>
+      <script src="{{ 'utilities.js' | asset_url }}"></script>
+      <script src="{{ 'app.js' | asset_url }}"></script>
+      <script defer src="{{ 'gosun.js' | asset_url }}"></script>
+      <script defer src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+      <script defer src="https://kit.fontawesome.com/40a53939d2.js" crossorigin="anonymous"></script> 
+    <!----------- End SCRIPTS ----------->
 
     {% if settings.show_multiple_currencies %}
       {% include 'currencies' %}

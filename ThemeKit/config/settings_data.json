@@ -330,6 +330,7 @@
           "invert": true,
           "dark_theme": true,
           "background_color": "bg-contrast-medium",
+          "btn_type": "",
           "show_pattern": false
         }
       },
@@ -376,7 +377,10 @@
           "1595533879839-2"
         ],
         "settings": {
-          "alignment": "center"
+          "alignment": "center",
+          "icon_size": "icon--lg",
+          "icon_color": false,
+          "icon_style": "material-icons-two-tone"
         }
       },
       "review-slider": {
@@ -1759,13 +1763,14 @@
           "1596745484279"
         ],
         "settings": {
-          "dark_theme": false
+          "dark_theme": false,
+          "hover_effect": "card-v9--subtle"
         }
       },
       "1596226695144": {
-        "type": "feature-1", 
+        "type": "feature-1",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Chill_Escape.jpg",
+          "image": "shopify:\/\/shop_images\/Chill_Tropical_54f68510-3c7f-4cb6-869a-18235e823858.jpg",
           "overline": "",
           "title": "Summer & open box deals are here.",
           "description": "",
@@ -1778,7 +1783,8 @@
           "full_width": true,
           "invert": false,
           "dark_theme": false,
-          "background_color": "wood-300",
+          "background_color": "bg-primary-lighter",
+          "btn_type": "btn--accent",
           "show_pattern": false
         }
       }
