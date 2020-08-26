@@ -29,15 +29,15 @@
               
               <figure class="testimonial-slideshow__profile-img radius-50% border border-2 border-primary margin-x-auto margin-bottom-sm" aria-hidden="true">
                 <!--{% include 'product-images', image_width: 'full' %}-->
-                <img src="{{ product.featured_image | img_url: '200x' }}" alt="{{ product.title }}">
+                <a href="{{ product.url }}"><img src="{{ product.featured_image | img_url: '200x' }}" alt="{{ product.title }}"></a>
               </figure>
             
-              <cite class="text-sm flex justify-center align-center">
+              <cite class="flex justify-center align-center">
                 {%- if block.settings.name != blank -%} 
                 <strong>{{ block.settings.name }}</strong>
                 {%- endif -%}
                 
-                <a href="{{ product.url }}" itemprop="name" class="block color-contrast-medium ">&nbsp;loves the&nbsp;{{ product.title }}</a>
+                <a href="{{ product.url }}" itemprop="name" class="block color-contrast-medium link-fx-5">&nbsp;loves the&nbsp;{{ product.title }}</a>
                 
               </cite>
             </footer>

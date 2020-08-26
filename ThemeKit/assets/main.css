@@ -8665,6 +8665,178 @@ Usage: codyhouse.co/license
 
 /* -------------------------------- 
 
+File#: _1_link-effects
+Title: Link Effects
+Descr: A collection of link effects
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.link-fx-1 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 6px;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .link-fx-1 .icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%) rotate(90deg);
+    font-size: 32px; }
+    .link-fx-1 .icon circle {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      transition: stroke-dashoffset 0.2s; }
+    .link-fx-1 .icon line {
+      transition: transform 0.4s;
+      transform-origin: 13px 15px; }
+    .link-fx-1 .icon line:last-child {
+      transform-origin: 19px 15px; }
+  .link-fx-1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform-origin: right center;
+    transition: transform 0.2s 0.1s; }
+  .link-fx-1:hover .icon circle {
+    stroke-dashoffset: 200;
+    transition: stroke-dashoffset 0.2s 0.1s; }
+  .link-fx-1:hover .icon line {
+    transform: rotate(-180deg); }
+  .link-fx-1:hover .icon line:last-child {
+    transform: rotate(180deg); }
+  .link-fx-1:hover::before {
+    transform: translateX(17px) scaleX(0);
+    transition: transform 0.2s; }
+
+.link-fx-2 {
+  position: relative;
+  display: inline-block;
+  padding: 4px 6px;
+  color: var(--color-contrast-higher);
+  text-decoration: none;
+  background-image: linear-gradient(var(--color-contrast-higher), var(--color-contrast-higher));
+  background-size: 100% 1px;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  transition: background-size 0.3s var(--ease-out);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .link-fx-2::after {
+    content: attr(data-link-fx-clone);
+    color: var(--color-bg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: inherit;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    transform: translateY(4px);
+    transition: clip-path 0.3s, transform 0.3s;
+    transition-timing-function: var(--ease-out); }
+  .link-fx-2:hover {
+    background-size: 100% 100%; }
+    .link-fx-2:hover::after {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      transform: translateY(0px); }
+
+.link-fx-3 {
+  position: relative;
+  display: inline-flex;
+  padding: 4px 6px;
+  text-decoration: none;
+  align-items: center; }
+  .link-fx-3 .icon {
+    display: block;
+    font-size: 12px;
+    margin-left: 8px;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s var(--ease-out), visibility 0s 0.3s; }
+    .link-fx-3 .icon line {
+      transform-origin: 9px 6px;
+      transition: transform 0.3s var(--ease-out); }
+    .link-fx-3 .icon line:first-child {
+      transform: rotate(20deg); }
+    .link-fx-3 .icon line:last-child {
+      transform: rotate(-20deg); }
+  .link-fx-3::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 18px);
+    height: 1px;
+    background-color: currentColor;
+    transition: 0.3s var(--ease-out); }
+  .link-fx-3:hover .icon {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s, transform 0.3s var(--ease-out); }
+    .link-fx-3:hover .icon line:first-child,
+    .link-fx-3:hover .icon line:last-child {
+      transform: rotate(0); }
+  .link-fx-3:hover::before {
+    width: 100%; }
+
+.link-fx-4 {
+  position: relative;
+  display: inline-block;
+  padding: 6px 10px;
+  background-color: var(--color-contrast-lower);
+  color: var(--color-contrast-higher);
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .link-fx-4::before {
+    content: attr(data-link-fx-clone);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-contrast-higher);
+    color: var(--color-bg);
+    clip-path: polygon(0% 0%, 1px 0%, 1px 100%, 0% 100%);
+    transition: clip-path 0.3s var(--ease-out); }
+  .link-fx-4:hover::before {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
+
+.link-fx-5 {
+  display: inline-block;
+  padding: 4px 0;
+  text-decoration: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4' viewBox='0 0 16 4'%3E%3Cpath d='M0,3.5c4,0,4-3,8-3s4,3,8,3' fill='none' stroke='%23288acc' opacity='0.5' stroke-miterlimit='10'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: 0px 100%;
+  background-size: 0; }
+  .link-fx-5:hover {
+    background-size: 16px 4px;
+    animation: link-fx-5-animation 0.4s linear infinite; }
+
+@keyframes link-fx-5-animation {
+  from {
+    background-position: 0px 100%; }
+  to {
+    background-position: 16px 100%; } }
+
+/* -------------------------------- 
+
 File#: _1_rating
 Title: Rating
 Descr: A rating plugin that allows users to vote for your products
