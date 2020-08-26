@@ -530,6 +530,7 @@ $(function() {
       e.preventDefault();
       var $addToCartForm = $(this).closest('form');
       var $addToCartBtn = $addToCartForm.find('.add_to_cart');
+      const drawer = document.querySelector('#drawer-cart-id');
 
       $.ajax({
         url: '/cart/add.js',
@@ -543,7 +544,8 @@ $(function() {
         },
         success: function(itemData) {
           $addToCartBtn.find('.checkmark').addClass('checkmark-active');
-
+          $addToCartBtn.find('.checkmark').addClass('checkmark-active');
+          drawer.classList.add('drawer--is-visible')
           window.setTimeout(function(){
             $addToCartBtn.removeAttr('disabled').removeClass('disabled');
             $addToCartBtn.find('.checkmark').removeClass('checkmark-active');
