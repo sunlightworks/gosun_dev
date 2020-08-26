@@ -19,6 +19,7 @@ Descr: A rating plugin that allows users to vote for your products
     display: inline-block; // flex fallback
     display: inline-flex;
     vertical-align: top;
+    margin: 0 !important;
   }
 
   li {

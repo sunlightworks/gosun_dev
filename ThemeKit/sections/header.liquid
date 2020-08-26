@@ -71,14 +71,14 @@
             <span></span>
           </div>
         </a>
-        <!-- {% include '_1_switch-mobile' %} -->
+         {% include '_1_switch-mobile' %} 
       </ul> 
       <!-- End Hamburger Menu -->
       <a href="{{ shop.url }}" title="{{ shop.name | escape }}" class="mobile_logo logo">
         {% include 'svg' with 'logo' %}
       </a>
       <div class="menu margin-left-auto">
-          <a class="mega-nav__icon-btn info-item" href="tel:+{{ section.settings.phone_number | replace: ' ', '' | replace: '+', '' | replace: '', '' }}"><span class="icon"><em class="material-icons-outlined">call</em></span></a>
+          <a class="mega-nav__icon-btn info-item" href="tel:+{{ section.settings.phone_number | replace: ' ', '' | replace: '+', '' | replace: '', '' }}"><span class="icon icon--cta"><em class="material-icons-outlined">call</em></span></a>
         {% if section.settings.search_enabled %}
           <a href="/search" class="info-item icon-search dropdown_link mega-nav__icon-btn" title="{{ 'general.search.placeholder' | t | escape }}" data-dropdown-rel="search"><span class="icon"><em class="material-icons-outlined">search</em></span></a>
         {% endif %}
@@ -167,7 +167,7 @@
       <p class="text-sm font-bold color-contrast-medium base-BodyUppercase">{{ section.settings.tagline_text }}</p>
       <!-- Utility Menu -->
       <ul class="menu right">
-       <!-- {% include '_1_switch' %}-->
+        {% include '_1_switch' %}
     
         <!-- Phone Number -->
         {% if section.settings.phone_number != blank %}     

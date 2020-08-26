@@ -4274,6 +4274,9 @@ $media-wrapper-aspect-ratios: ((4 3), (1 1)) !default;
     .margin-bottom-lg\@lg {
       margin-bottom: var(--space-lg);
     }
+    .margin-bottom-lg-neg\@lg {
+      margin-bottom: calc(var(--space-lg) * -1);
+    }
     .margin-bottom-xl\@lg {
       margin-bottom: var(--space-xl);
     }

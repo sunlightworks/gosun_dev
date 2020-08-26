@@ -4568,6 +4568,8 @@ html:not(.js) .no-js\:is-hidden {
       margin-bottom: var(--space-md); }
     .margin-bottom-lg\@lg {
       margin-bottom: var(--space-lg); }
+    .margin-bottom-lg-neg\@lg {
+      margin-bottom: calc(var(--space-lg) * -1); }
     .margin-bottom-xl\@lg {
       margin-bottom: var(--space-xl); }
     .margin-bottom-xxl\@lg {
@@ -8668,7 +8670,8 @@ Descr: A rating plugin that allows users to vote for your products
 .rating__control ul {
   display: inline-block;
   display: inline-flex;
-  vertical-align: top; }
+  vertical-align: top;
+  margin: 0 !important; }
 
 .rating__control li {
   position: relative;
