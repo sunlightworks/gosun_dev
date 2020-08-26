@@ -5811,17 +5811,19 @@ h2.product_type {
 /* #Layout - Table
 ================================================== */
 ::selection {
-  background: #B4D5FE !important;
+  background: #b4d5fe !important;
   color: #222; }
 
 body {
   overflow-x: hidden !important; }
 
-.shopify-section.product-template ul li, .shopify-section.product-template ol li {
+.shopify-section.product-template ul li,
+.shopify-section.product-template ol li {
   margin-bottom: 0px !important; }
 
 /* Hide [temp] */
-.hide, div.hide {
+.hide,
+div.hide {
   display: none !important; }
 
 @media (max-width: 465px) {
@@ -5829,7 +5831,8 @@ body {
     display: none !important; } }
 
 /* Bugs */
-.simple-translate-panel, .simple-translate-button {
+.simple-translate-panel,
+.simple-translate-button {
   display: none !important; }
 
 /* No whitespace */
@@ -5841,21 +5844,24 @@ body {
   width: 100%;
   padding-bottom: 20px;
   margin-top: var(--space-unit);
-  border-top: 2px dotted #bdbdbd; }
+  border-top: 2px dotted var(--color-contrast-low); }
 
 hr {
   border-color: #f2f6fa;
   border-width: 2px;
   border-style: solid; }
 
-.pointer:hover, a:hover {
+.pointer:hover,
+a:hover {
   cursor: pointer !important; }
 
 .feature_divider {
   display: none !important; }
 
 /* show products on Activity collection */
-#bc-sf-filter-bottom-pagination, #bc-sf-filter-top-pagination, [data-bc-sort="best-selling"] {
+#bc-sf-filter-bottom-pagination,
+#bc-sf-filter-top-pagination,
+[data-bc-sort="best-selling"] {
   /* display: none; */
   display: block !important; }
 
@@ -6819,14 +6825,14 @@ a.mobile_nav {
     --color-contrast-medium-h: 216;
     --color-contrast-medium-s: 12%;
     --color-contrast-medium-l: 54%;
-    --color-contrast-high: hsl(216, 12%, 73%);
+    --color-contrast-high: hsl(216, 12%, 83%);
     --color-contrast-high-h: 216;
     --color-contrast-high-s: 12%;
-    --color-contrast-high-l: 73%;
-    --color-contrast-higher: hsl(220, 8%, 82%);
+    --color-contrast-high-l: 83%;
+    --color-contrast-higher: hsl(220, 8%, 93%);
     --color-contrast-higher-h: 220;
     --color-contrast-higher-s: 8%;
-    --color-contrast-higher-l: 82%;
+    --color-contrast-higher-l: 93%;
     --color-max: hsl(211, 55%, 15%);
     --bg-header: var(--color-max);
     --bg-header-accent: var(--color-bg);
@@ -7803,6 +7809,9 @@ a.highlight-true:hover {
 ================================================== */
 .flits-btn span {
   color: var(--color-max) !important; }
+
+.flits-wsl-heart-empty {
+  fill: var(--color-contrast-low) !important; }
 
 /* #Container - Default
 ================================================== */
@@ -14372,7 +14381,7 @@ td {
 
 .shogun-accordion {
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0) !important;
-  border-bottom: 2px dotted #bdbdbd !important; }
+  border-bottom: 2px dotted var(--color-contrast-low) !important; }
 
 /* 5f317b94624e08006b1d23e1.css | https://cdn.getshogun.com/5f317b94624e08006b1d23e1.css */
 .shogun-accordion-icon > span {

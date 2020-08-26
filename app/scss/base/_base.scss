@@ -3,37 +3,37 @@
 // -----------------------------------------------------------------------------
 @import "//app/scss/bundle";
 
-
-::selection { 
-  background: #B4D5FE !important; 
+::selection {
+  background: #b4d5fe !important;
   color: #222;
- }
-
+}
 
 body {
   overflow-x: hidden !important;
 }
 
 .shopify-section.product-template {
-  ul li, ol li {
-      margin-bottom: 0px !important;
+  ul li,
+  ol li {
+    margin-bottom: 0px !important;
   }
 }
 
 /* Hide [temp] */
-.hide, div.hide {
-display: none !important;
+.hide,
+div.hide {
+  display: none !important;
 }
-
 
 @include sm-max() {
   .mobile-hide {
-      display: none !important;
+    display: none !important;
   }
 }
 
 /* Bugs */
-.simple-translate-panel, .simple-translate-button {
+.simple-translate-panel,
+.simple-translate-button {
   display: none !important;
 }
 
@@ -42,16 +42,15 @@ display: none !important;
   min-height: 50vh;
 }
 
-$border-dotted:  2px dotted  $palette-neutral-400;
+$border-dotted: 2px dotted var(--color-contrast-low);
 
 .divider {
-  height:2px;
-  width:100%;
-  padding-bottom:20px;
+  height: 2px;
+  width: 100%;
+  padding-bottom: 20px;
   margin-top: var(--space-unit);
   border-top: $border-dotted;
- }
- 
+}
 
 hr {
   border-color: $stripe-g;
@@ -59,8 +58,8 @@ hr {
   border-style: solid;
 }
 
-
-.pointer, a {
+.pointer,
+a {
   &:hover {
     cursor: pointer !important;
   }
@@ -70,10 +69,11 @@ hr {
   display: none !important;
 }
 
-
 /* show products on Activity collection */
 
-#bc-sf-filter-bottom-pagination, #bc-sf-filter-top-pagination, [data-bc-sort="best-selling"] {
+#bc-sf-filter-bottom-pagination,
+#bc-sf-filter-top-pagination,
+[data-bc-sort="best-selling"] {
   /* display: none; */
   display: block !important;
 }
