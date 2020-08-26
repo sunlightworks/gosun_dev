@@ -1600,8 +1600,14 @@ html:not(.js) .no-js\:is-hidden {
 .margin-bottom-md {
   margin-bottom: var(--space-md); }
 
+.margin-bottom-md-neg {
+  margin-bottom: calc(var(--space-md) * -1); }
+
 .margin-bottom-lg {
   margin-bottom: var(--space-lg); }
+
+.margin-bottom-lg-neg {
+  margin-bottom: calc(var(--space-lg) * -1); }
 
 .margin-bottom-xl {
   margin-bottom: var(--space-xl); }
@@ -10517,7 +10523,9 @@ Descr: Show a collection of items one at a time
   --slideshow-btn-width: 1.6em;
   --slideshow-btn-height: 3.2em;
   --slideshow-btn-icon-size: 1.6em;
-  --slideshow-btn-offset: var(--space-md); }
+  --slideshow-btn-offset: var(
+    --space-md
+  ); }
   @media (min-width: 576px) {
     :root {
       --slideshow-height: 400px; } }
@@ -10714,7 +10722,7 @@ Descr: Show a collection of items one at a time
 
 .js .slideshow[data-controls="hover"] .slideshow__control {
   opacity: 0;
-  transition: opacity .3s; }
+  transition: opacity 0.3s; }
 
 .js .slideshow[data-controls="hover"]:hover .slideshow__control {
   opacity: 1; }
@@ -10744,7 +10752,7 @@ Descr: Show a collection of items one at a time
   width: var(--slideshow-btn-width);
   border-radius: var(--radius-md);
   cursor: pointer;
-  transition: background .2s, transform 0.2s; }
+  transition: background 0.2s, transform 0.2s; }
   .slideshow__btn:hover {
     background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.85); }
     .slideshow__btn:hover .icon {
@@ -10756,7 +10764,7 @@ Descr: Show a collection of items one at a time
     width: var(--slideshow-btn-icon-size);
     height: var(--slideshow-btn-icon-size);
     margin: 0 auto;
-    transition: color .2s;
+    transition: color 0.2s;
     color: var(--color-white); }
   @supports (grid-area: auto) {
     .slideshow__btn {
@@ -10789,9 +10797,9 @@ Descr: Show a collection of items one at a time
     background-color: currentColor;
     opacity: 0.4;
     cursor: pointer;
-    transition: background .3s; }
+    transition: background 0.3s; }
     .slideshow__nav-item button::before {
-      content: '';
+      content: "";
       position: absolute;
       top: calc(50% - 0.5em);
       left: calc(50% - 0.5em);
@@ -10814,7 +10822,7 @@ Descr: Show a collection of items one at a time
 
 @media (min-width: 768px) {
   .slideshow__navigation {
-    height: 40px; }
+    height: 60px; }
   .slideshow__nav-item button {
     font-size: 10px; }
     .slideshow__nav-item button::before {
@@ -11238,41 +11246,55 @@ Descr: A Slideshow to display a gallery of testimonials
       --slideshow-card-height: 300px; } }
 
 .testimonial-slideshow {
-  --slideshow-height: 320px; }
+  --slideshow-height: 400px; }
   @media (min-width: 768px) {
     .testimonial-slideshow {
       --slideshow-height: 500px; } }
 
 .stamped-container {
-  font-family: 'cp' !important; }
+  font-family: "cp" !important; }
 
-.stamped-reviews-title a, .stamped-review-header-title {
+.stamped-reviews-title a,
+.stamped-review-header-title {
   font-size: var(--text-md), 1.2em; }
 
-.stamped-reviews-author, .author {
+.stamped-reviews-author,
+.author {
   margin-left: 0 !important;
   font-size: var(--text-md), 1.2em;
   color: var(--color-contrast-high); }
 
-.stamped-reviews-date, .created {
+.stamped-reviews-date,
+.created {
   font-size: var(--text-sm); }
 
-.stamped-reviews-message-block, p.stamped-review-content-body {
-  font-family: 'cp' !important;
+.stamped-reviews-message-block,
+p.stamped-review-content-body {
+  font-family: "cp" !important;
   font-size: var(--text-md) !important;
   line-height: var(--text-md) !important;
   font-style: normal !important;
   color: var(--color-contrast-medium) !important; }
 
-.stamped-reviews-author, .author {
+.stamped-reviews-author,
+.author {
   margin-left: 0 !important;
   font-size: var(--text-md), 1.2em;
   color: var(--color-contrast-high); }
 
-.stamped-reviews-date, .created {
+.stamped-reviews-date,
+.created {
   font-size: var(--text-sm); }
 
-.stamped-summary-recommend-percent, .stamped-review-header .stamped-verified-badge, .stamped-review-header .verified, .stamped-review-header .verified .fa-check-circle-o, .stamped-review-header .verified .stamped-fa-check-circle-o, .stamped-review-header .verified-badge, .stamped-review-header .verified-badge .fa-check-circle-o, .stamped-review-header .verified-badge .stamped-fa-check-circle-o, .stamped-verified-badge {
+.stamped-summary-recommend-percent,
+.stamped-review-header .stamped-verified-badge,
+.stamped-review-header .verified,
+.stamped-review-header .verified .fa-check-circle-o,
+.stamped-review-header .verified .stamped-fa-check-circle-o,
+.stamped-review-header .verified-badge,
+.stamped-review-header .verified-badge .fa-check-circle-o,
+.stamped-review-header .verified-badge .stamped-fa-check-circle-o,
+.stamped-verified-badge {
   color: var(--color-contrast-medium) !important; }
 
 .stamped-reviews .stamped-review-avatar {
@@ -11281,7 +11303,8 @@ Descr: A Slideshow to display a gallery of testimonials
   .stamped-reviews .stamped-review-avatar .stamped-review-avatar-content {
     color: #756151 !important; }
 
-.stamped-review[data-verified="buyer"] .stamped-review-avatar::before, .stamped-review-recommend[data-is-recommend="true"]::before {
+.stamped-review[data-verified="buyer"] .stamped-review-avatar::before,
+.stamped-review-recommend[data-is-recommend="true"]::before {
   color: #756151 !important; }
 
 .testimonial-slideshow__profile-img {
@@ -11323,7 +11346,7 @@ Descr: A Slideshow to display a gallery of testimonials
         width: 50% !important;
         padding: var(--space-lg); } }
     #stamped-reviews-widget[data-widget-type="carousel"] .stamped-carousel-scroll #stamped-carousel-scroll-wrapper .block:before {
-      content: '';
+      content: "";
       width: 100%;
       height: 100%;
       position: absolute;
@@ -11339,36 +11362,53 @@ Descr: A Slideshow to display a gallery of testimonials
   #stamped-reviews-widget[data-widget-type="carousel"] .stamped-carousel-scroll #stamped-carousel-scroll-wrapper .stamped-reviews-image {
     display: none; }
 
-.stamped-carousel-button-left, stamped-carousel-button-right {
+.stamped-carousel-button-left,
+stamped-carousel-button-right {
   display: block;
   background-color: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.75);
   height: var(--slideshow-btn-height);
   width: var(--slideshow-btn-width);
   border-radius: var(--radius-md);
   cursor: pointer;
-  transition: background .2s, transform 0.2s; }
-  .stamped-carousel-button-left:hover, stamped-carousel-button-right:hover {
+  transition: background 0.2s, transform 0.2s; }
+  .stamped-carousel-button-left:hover,
+  stamped-carousel-button-right:hover {
     background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.85); }
-    .stamped-carousel-button-left:hover:before, stamped-carousel-button-right:hover:before {
+    .stamped-carousel-button-left:hover:before,
+    stamped-carousel-button-right:hover:before {
       color: var(--color-bg); }
-  .slideshow:not(.slideshow--is-animating) .stamped-carousel-button-left:active, .slideshow:not(.slideshow--is-animating) stamped-carousel-button-right:active {
+  .slideshow:not(.slideshow--is-animating) .stamped-carousel-button-left:active, .slideshow:not(.slideshow--is-animating)
+  stamped-carousel-button-right:active {
     transform: translateY(2px); }
-  .stamped-carousel-button-left .icon, stamped-carousel-button-right .icon {
+  .stamped-carousel-button-left .icon,
+  stamped-carousel-button-right .icon {
     display: block;
     width: var(--slideshow-btn-icon-size);
     height: var(--slideshow-btn-icon-size);
     margin: 0 auto;
-    transition: color .2s;
+    transition: color 0.2s;
     color: var(--color-white); }
   @supports (grid-area: auto) {
-    .stamped-carousel-button-left, stamped-carousel-button-right {
+    .stamped-carousel-button-left,
+    stamped-carousel-button-right {
       background-color: transparent; }
-      .stamped-carousel-button-left .icon, stamped-carousel-button-right .icon {
+      .stamped-carousel-button-left .icon,
+      stamped-carousel-button-right .icon {
         color: var(--color-contrast-higher); } }
 
-.fa-star, .fa-star-o, .fa-star-half-o, .stamped-fa-star, .stamped-fa-star-o, .stamped-fa-star-half-o {
+.fa-star,
+.fa-star-o,
+.fa-star-half-o,
+.stamped-fa-star,
+.stamped-fa-star-o,
+.stamped-fa-star-half-o {
   color: var(--color-contrast-high) !important; }
-  .fa-star:before, .fa-star-o:before, .fa-star-half-o:before, .stamped-fa-star:before, .stamped-fa-star-o:before, .stamped-fa-star-half-o:before {
+  .fa-star:before,
+  .fa-star-o:before,
+  .fa-star-half-o:before,
+  .stamped-fa-star:before,
+  .stamped-fa-star-o:before,
+  .stamped-fa-star-half-o:before {
     font-size: var(--text-md); }
 
 /* -------------------------------- 

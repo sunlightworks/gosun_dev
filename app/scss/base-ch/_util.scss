@@ -209,8 +209,14 @@
 .margin-bottom-md {
   margin-bottom: var(--space-md);
 }
+.margin-bottom-md-neg {
+  margin-bottom: calc(var(--space-md) * -1);
+}
 .margin-bottom-lg {
   margin-bottom: var(--space-lg);
+}
+.margin-bottom-lg-neg {
+  margin-bottom: calc(var(--space-lg) * -1);
 }
 .margin-bottom-xl {
   margin-bottom: var(--space-xl);
