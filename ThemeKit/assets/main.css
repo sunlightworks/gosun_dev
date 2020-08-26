@@ -2254,21 +2254,6 @@ html:not(.js) .no-js\:is-hidden {
 .color-primary-lighter {
   color: hsla(var(--color-primary-lighter-h), var(--color-primary-lighter-s), var(--color-primary-lighter-l), var(--color-o, 1)); }
 
-.color-secondary-darker {
-  color: hsla(var(--color-secondary-darker-h), var(--color-secondary-darker-s), var(--color-secondary-darker-l), var(--color-o, 1)); }
-
-.color-secondary-dark {
-  color: hsla(var(--color-secondary-dark-h), var(--color-secondary-dark-s), var(--color-secondary-dark-l), var(--color-o, 1)); }
-
-.color-secondary {
-  color: hsla(var(--color-secondary-h), var(--color-secondary-s), var(--color-secondary-l), var(--color-o, 1)); }
-
-.color-secondary-light {
-  color: hsla(var(--color-secondary-light-h), var(--color-secondary-light-s), var(--color-secondary-light-l), var(--color-o, 1)); }
-
-.color-secondary-lighter {
-  color: hsla(var(--color-secondary-lighter-h), var(--color-secondary-lighter-s), var(--color-secondary-lighter-l), var(--color-o, 1)); }
-
 .color-accent-darker {
   color: hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), var(--color-o, 1)); }
 
@@ -2872,7 +2857,7 @@ html:not(.js) .no-js\:is-hidden {
   background-color: hsla(var(--color-primary-light-h), var(--color-primary-light-s), var(--color-primary-light-l), var(--bg-o, 1)); }
 
 .bg-primary-lighter {
-  background-color: hsla(var(--color-primary-lighter-h), var(--color-primary-lighter-s), var(--color-primary-lighter-l), var(--bg-o, 1)); }
+  background-color: var(--color-primary-lighter); }
 
 .bg-accent-darker {
   background-color: hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), var(--bg-o, 1)); }
@@ -6840,7 +6825,7 @@ a.mobile_nav {
     --bg-header-accent: var(--color-bg);
     --bg-promo-bar: var(--color-contrast-medium);
     --bg-footer: var(--color-max); }
-  [data-theme="grape"] {
+  [data-theme="organic"] {
     --color-primary-darker: hsl(356, 39%, 18%);
     --color-primary-darker-h: 356;
     --color-primary-darker-s: 39%;
@@ -6857,50 +6842,50 @@ a.mobile_nav {
     --color-primary-light-h: 356;
     --color-primary-light-s: 39%;
     --color-primary-light-l: 48%;
-    --color-primary-lighter: hsl(356, 39%, 58%);
-    --color-primary-lighter-h: 356;
-    --color-primary-lighter-s: 39%;
-    --color-primary-lighter-l: 58%;
-    --color-accent-darker: hsl(27, 31%, 55%);
-    --color-accent-darker-h: 27;
-    --color-accent-darker-s: 31%;
-    --color-accent-darker-l: 55%;
-    --color-accent-dark: hsl(27, 31%, 65%);
-    --color-accent-dark-h: 27;
-    --color-accent-dark-s: 31%;
-    --color-accent-dark-l: 65%;
-    --color-accent: hsl(27, 31%, 75%);
-    --color-accent-h: 27;
-    --color-accent-s: 31%;
-    --color-accent-l: 75%;
-    --color-accent-light: hsl(27, 31%, 85%);
-    --color-accent-light-h: 27;
-    --color-accent-light-s: 31%;
-    --color-accent-light-l: 85%;
-    --color-accent-lighter: hsl(27, 31%, 95%);
-    --color-accent-lighter-h: 27;
-    --color-accent-lighter-s: 31%;
-    --color-accent-lighter-l: 95%;
-    --color-secondary-darker: hsl(19, 69%, 26%);
-    --color-secondary-darker-h: 19;
-    --color-secondary-darker-s: 69%;
-    --color-secondary-darker-l: 26%;
-    --color-secondary-dark: hsl(19, 69%, 36%);
-    --color-secondary-dark-h: 19;
-    --color-secondary-dark-s: 69%;
-    --color-secondary-dark-l: 36%;
-    --color-secondary: hsl(19, 69%, 46%);
-    --color-secondary-h: 19;
-    --color-secondary-s: 69%;
-    --color-secondary-l: 46%;
-    --color-secondary-light: hsl(19, 69%, 56%);
-    --color-secondary-light-h: 19;
-    --color-secondary-light-s: 69%;
-    --color-secondary-light-l: 56%;
-    --color-secondary-lighter: hsl(19, 69%, 66%);
-    --color-secondary-lighter-h: 19;
-    --color-secondary-lighter-s: 69%;
-    --color-secondary-lighter-l: 66%;
+    --color-primary-lighter: hsl(27, 31%, 85%);
+    --color-primary-lighter-h: 27;
+    --color-primary-lighter-s: 31%;
+    --color-primary-lighter-l: 85%;
+    --color-accent-darker: hsl(19, 69%, 26%);
+    --color-accent-darker-h: 19;
+    --color-accent-darker-s: 69%;
+    --color-accent-darker-l: 26%;
+    --color-accent-dark: hsl(19, 69%, 36%);
+    --color-accent-dark-h: 19;
+    --color-accent-dark-s: 69%;
+    --color-accent-dark-l: 36%;
+    --color-accent: hsl(19, 69%, 46%);
+    --color-accent-h: 19;
+    --color-accent-s: 69%;
+    --color-accent-l: 46%;
+    --color-accent-light: hsl(19, 69%, 56%);
+    --color-accent-light-h: 19;
+    --color-accent-light-s: 69%;
+    --color-accent-light-l: 56%;
+    --color-accent-lighter: hsl(19, 69%, 66%);
+    --color-accent-lighter-h: 19;
+    --color-accent-lighter-s: 69%;
+    --color-accent-lighter-l: 66%;
+    --color-secondary-darker: hsl(27, 31%, 55%);
+    --color-secondary-darker-h: 27;
+    --color-secondary-darker-s: 31%;
+    --color-secondary-darker-l: 55%;
+    --color-secondary-dark: hsl(27, 31%, 65%);
+    --color-secondary-dark-h: 27;
+    --color-secondary-dark-s: 31%;
+    --color-secondary-dark-l: 65%;
+    --color-secondary: hsl(27, 31%, 75%);
+    --color-secondary-h: 27;
+    --color-secondary-s: 31%;
+    --color-secondary-l: 75%;
+    --color-secondary-light: hsl(27, 31%, 85%);
+    --color-secondary-light-h: 27;
+    --color-secondary-light-s: 31%;
+    --color-secondary-light-l: 85%;
+    --color-secondary-lighter: hsl(30, 17%, 93%);
+    --color-secondary-lighter-h: 30;
+    --color-secondary-lighter-s: 17%;
+    --color-secondary-lighter-l: 93%;
     --color-tertiary-darker: hsl(85, 9%, 21%);
     --color-tertiary-darker-h: 85;
     --color-tertiary-darker-s: 9%;

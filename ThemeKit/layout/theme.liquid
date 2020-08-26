@@ -221,31 +221,31 @@
       {% assign feature_image = false %}
   {% endif %}
 
-<noscript>
-    <style>
-    .product_section .product_form,
-    .product_gallery {
-        opacity: 1;
-    }
-    .multi_select,
-    form .select {
-        display: block !important;
-    <script src="{{ 'jquery.min.js' | asset_url }}"></script>
-    }
-    .image-element__wrap {
-        display: none;
-    }
-    </style>
-</noscript>
+  <noscript>
+      <style>
+      .product_section .product_form,
+      .product_gallery {
+          opacity: 1;
+      }
+      .multi_select,
+      form .select {
+          display: block !important;
+      <script src="{{ 'jquery.min.js' | asset_url }}"></script>
+      }
+      .image-element__wrap {
+          display: none;
+      }
+      </style>
+  </noscript>
 
-    <body data-theme="default" class="{% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %}"
-    data-money-format="{{ shop.money_format }}" data-shop-url="{{ shop.url }}">
-     
+  <body class="{% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %}"
+    data-money-format="{{ shop.money_format }}" data-shop-url="{{ shop.url }}" data-theme="default" > 
+      
       <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGR467V"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- End Google Tag Manager (noscript) -->
-     
+      
       <!----------- SHOPIFY ----------->
         {% section 'header' %}
 
@@ -319,7 +319,7 @@
         <!----------- End APPS ----------->
 
       
-   
+    
 
       {% if settings.show_shipping_calculator and template contains "cart" %}
         {% include 'cart-shipping-scripts' %}
@@ -330,7 +330,7 @@
         <script data-no-instant>
           function inIframe(){try{return window.self!==window.top}catch(t){return!0}}inIframe()||InstantClick.on("change",function(){try{setTimeout(function(){StampedFn.reloadUGC()},1e3)}catch(t){}$('head script[src*="shopify"]').each(function(){var t=document.createElement("script");t.type="text/javascript",t.src=$(this).attr("src"),$("body").append(t)}),$("body").removeClass("fancybox-active"),$.fancybox.destroy()});
         </script>
-     {% endunless %}
+      {% endunless %}
     
     <script>
       {{ settings.custom_scripts }}

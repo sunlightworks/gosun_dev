@@ -126,25 +126,25 @@
     --bg-footer: var(--color-max);
   }
 
-  [data-theme="grape"] {
+  [data-theme="organic"] {
     // main
     @include defineColorHSL(--color-primary-darker, 356, 39%, 18%);
     @include defineColorHSL(--color-primary-dark, 356, 39%, 28%);
     @include defineColorHSL(--color-primary, 356, 39%, 38%);
     @include defineColorHSL(--color-primary-light, 356, 39%, 48%);
-    @include defineColorHSL(--color-primary-lighter, 356, 39%, 58%);
+    @include defineColorHSL(--color-primary-lighter, 27, 31%, 85%);
 
-    @include defineColorHSL(--color-accent-darker, 27, 31%, 55%);
-    @include defineColorHSL(--color-accent-dark, 27, 31%, 65%);
-    @include defineColorHSL(--color-accent, 27, 31%, 75%);
-    @include defineColorHSL(--color-accent-light, 27, 31%, 85%);
-    @include defineColorHSL(--color-accent-lighter, 27, 31%, 95%);
+    @include defineColorHSL(--color-accent-darker, 19, 69%, 26%);
+    @include defineColorHSL(--color-accent-dark, 19, 69%, 36%);
+    @include defineColorHSL(--color-accent, 19, 69%, 46%);
+    @include defineColorHSL(--color-accent-light, 19, 69%, 56%);
+    @include defineColorHSL(--color-accent-lighter, 19, 69%, 66%);
 
-    @include defineColorHSL(--color-secondary-darker, 19, 69%, 26%);
-    @include defineColorHSL(--color-secondary-dark, 19, 69%, 36%);
-    @include defineColorHSL(--color-secondary, 19, 69%, 46%);
-    @include defineColorHSL(--color-secondary-light, 19, 69%, 56%);
-    @include defineColorHSL(--color-secondary-lighter, 19, 69%, 66%);
+    @include defineColorHSL(--color-secondary-darker, 27, 31%, 55%);
+    @include defineColorHSL(--color-secondary-dark, 27, 31%, 65%);
+    @include defineColorHSL(--color-secondary, 27, 31%, 75%);
+    @include defineColorHSL(--color-secondary-light, 27, 31%, 85%);
+    @include defineColorHSL(--color-secondary-lighter, 30, 17%, 93%);
 
     @include defineColorHSL(--color-tertiary-darker, 85, 9%, 21%);
     @include defineColorHSL(--color-tertiary-dark, 85, 9%, 31%);

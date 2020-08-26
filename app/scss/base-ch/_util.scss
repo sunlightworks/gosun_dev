@@ -955,21 +955,7 @@
 .color-primary-lighter {
   color: alpha(var(--color-primary-lighter), var(--color-o, 1));
 }
-.color-secondary-darker {
-  color: alpha(var(--color-secondary-darker), var(--color-o, 1));
-}
-.color-secondary-dark {
-  color: alpha(var(--color-secondary-dark), var(--color-o, 1));
-}
-.color-secondary {
-  color: alpha(var(--color-secondary), var(--color-o, 1));
-}
-.color-secondary-light {
-  color: alpha(var(--color-secondary-light), var(--color-o, 1));
-}
-.color-secondary-lighter {
-  color: alpha(var(--color-secondary-lighter), var(--color-o, 1));
-}
+
 .color-accent-darker {
   color: alpha(var(--color-accent-darker), var(--color-o, 1));
 }
@@ -1714,7 +1700,7 @@ $media-wrapper-aspect-ratios: ((4 3), (1 1)) !default;
   background-color: alpha(var(--color-primary-light), var(--bg-o, 1));
 }
 .bg-primary-lighter {
-  background-color: alpha(var(--color-primary-lighter), var(--bg-o, 1));
+  background-color: var(--color-primary-lighter);
 }
 .bg-accent-darker {
   background-color: alpha(var(--color-accent-darker), var(--bg-o, 1));
