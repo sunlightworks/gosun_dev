@@ -1,15 +1,48 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the Reviews
 // -----------------------------------------------------------------------------
-@import "//app/scss/bundle";
-
 // -----------------------------------------------------------------------------
 // Reviews - Write a Review
 // -----------------------------------------------------------------------------
 /* #Stamped.io
   ================================================== */
 
-.stamped-review-variant {
+.stamped-summary-text-1 {
+  font-size: var(--text-xxxxl) !important;
+  margin-bottom: var(--space-xxs);
+  color: var(--color-contrast-higher) !important;
+}
+
+.summary-rating-bar {
+  background: var(--color-contrast-lower) !important;
+  .summary-rating-bar-content {
+    background: var(--color-contrast-high) !important;
+  }
+}
+
+// Make color theme-switch compatible
+.stamped-container {
+  > div,
+  > span,
+  > a {
+    color: var(--color-contrast-high) !important;
+  }
+}
+
+#tab-reviews,
+#tab-questions {
+  color: var(--color-contrast-higher) !important;
+}
+
+// Review count bubble
+li#tab-questions[data-count][data-new-tab],
+li#tab-reviews[data-count] {
+  &::after {
+    background: var(--color-contrast-lower) !important;
+  }
+}
+
+.stamped-review .stamped-review-variant {
   opacity: 0;
   margin-top: -10px;
 }
@@ -34,7 +67,7 @@
 }
 
 .new-review-form .stamped-form-custom-option-scale label div {
-  color: $palette-tint-400;
+  color: var(--color-contrast-high);
 }
 
 .stamped-form-review-recommend-label {
@@ -196,12 +229,12 @@ div.stamped-review-options:nth-child(5) {
   span.stamped-review-option-scale[data-value="4"]
   span:nth-last-child(n + 2),
 .stamped-reviews span.stamped-review-option-scale[data-value="5"] span {
-  background: $grape-2 !important;
+  background: var(--color-primary-lighter) !important;
 }
 
 /* Slider- First and last */
 .stamped-review-option-scale span {
-  background: $grape-3;
+  background: var(--color-primary);
   &:nth-of-type(1) {
     border-radius: 4px 0 0 4px;
   }
@@ -281,9 +314,9 @@ li[data-value="gender"] {
     &:hover,
     &:active,
     &:focus {
-      background: $palette-success-10;
+      background: var(--color-success-lighter);
       .stamped-fa.stamped-fa-thumbs-up {
-        color: $palette-success-50;
+        color: var(--color-success);
       }
     }
   }
@@ -292,9 +325,9 @@ li[data-value="gender"] {
     &:hover,
     &:active,
     &:focus {
-      background: $palette-alert-10;
+      background: var(--color-error-lighter);
       .stamped-fa.stamped-fa-thumbs-down {
-        color: $palette-alert-50;
+        color: var(--color-error);
       }
     }
   }
@@ -363,64 +396,7 @@ li[data-value="gender"] {
   font-weight: 700;
 }
 
-/*
-.stamped-reply-q::after {
-  /* content: ""; */
-/* content: "Q"; */
-/* content: "Qu"; */
-/* content: "Que"; */
-/* content: "Ques"; */
-/* content: "Quest"; */
-/* content: "Quest["; */
-/* content: "Quest[n"; */
-/* content: "Questi"; */
-/* content: "Questio"; 
-  content: "Question";
-  opacity: 1 !important;
-  position: absolute;
-  left: 64px;
-}
-
-.stamped-reply-q {
-  display: block;
-  position: relative;
-  text-indent: -100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.stamped-reply-a {
-  font-weight: 700;
-  margin-left: -20px;
-  position: absolute;
-  opacity: 0;
-  display: block;
-  position: relative;
-  text-indent: -100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.stamped-reply-a::after {
-  content: "Answer";
-  opacity: 1 !important;
-  position: absolute;
-  left: 73px;
-}
-
-.stamped-reply-a {
-  /* opacity: 0; 
-}
-*/
-
-/* Inline #27 | https://gosun.co/products/chill */
-
 .summary-overview {
   display: flex;
   flex-direction: column;
-}
-
-.stamped-summary-text-1 {
-  font-size: var(--text-xxxxl) !important;
-  margin-bottom: var(--space-xxs);
 }

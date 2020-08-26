@@ -76,16 +76,19 @@ p.stamped-review-content-body {
 .stamped-verified-badge {
   color: var(--color-contrast-medium) !important;
 }
-.stamped-reviews .stamped-review-avatar {
-  background: $wood-2 !important;
-  text-shadow: none !important;
-  .stamped-review-avatar-content {
-    color: $wood-4 !important;
+.stamped-reviews,
+.stamped-questions {
+  .stamped-review-avatar {
+    background: var(--color-primary-lighter) !important;
+    text-shadow: none !important;
+    .stamped-review-avatar-content {
+      color: var(--color-primary) !important;
+    }
   }
 }
 .stamped-review[data-verified="buyer"] .stamped-review-avatar::before,
 .stamped-review-recommend[data-is-recommend="true"]::before {
-  color: $wood-4 !important;
+  color: var(--color-primary) !important;
 }
 
 // -----------------------------------------------------------------------------

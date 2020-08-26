@@ -141,6 +141,8 @@
         window.shopCurrency = "{{ shop.currency }}";
         window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
       </script>
+
+      <script defer src="{{ '_1_stamped.js' | asset_url }}"></script>
     {% endif %}
   {%  endunless %}
 
@@ -249,6 +251,9 @@
       <!-- End Google Tag Manager (noscript) -->
       
       <!----------- SHOPIFY ----------->
+      {% unless condition %}
+        
+      {% endunless %}
         {% section 'header' %}
 
         <div class="mega-menu-container">
@@ -276,7 +281,7 @@
         {{ content_for_layout }}
         </div>
 
-        {% unless template contains 'index' or settings.secondary_newsletter_banner == false %}
+        {% unless template contains 'index' or 'customer' or settings.secondary_newsletter_banner == false %}
           {% section 'newsletter' %}
         {% endunless %}
 

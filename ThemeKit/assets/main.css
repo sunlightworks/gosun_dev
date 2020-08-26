@@ -17,7 +17,6 @@
 @import "//app/scss/bundle";
 @import "//app/scss/bundle";
 @import "//app/scss/bundle";
-@import "//app/scss/bundle";
 *, *::after, *::before {
   box-sizing: inherit; }
 
@@ -6820,14 +6819,14 @@ a.mobile_nav {
     --color-contrast-medium-h: 216;
     --color-contrast-medium-s: 12%;
     --color-contrast-medium-l: 54%;
-    --color-contrast-high: hsl(216, 12%, 83%);
+    --color-contrast-high: hsl(216, 12%, 73%);
     --color-contrast-high-h: 216;
     --color-contrast-high-s: 12%;
-    --color-contrast-high-l: 83%;
-    --color-contrast-higher: hsl(220, 8%, 93%);
+    --color-contrast-high-l: 73%;
+    --color-contrast-higher: hsl(220, 8%, 82%);
     --color-contrast-higher-h: 220;
     --color-contrast-higher-s: 8%;
-    --color-contrast-higher-l: 93%;
+    --color-contrast-higher-l: 82%;
     --color-max: hsl(211, 55%, 15%);
     --bg-header: var(--color-max);
     --bg-header-accent: var(--color-bg);
@@ -11469,15 +11468,17 @@ p.stamped-review-content-body {
 .stamped-verified-badge {
   color: var(--color-contrast-medium) !important; }
 
-.stamped-reviews .stamped-review-avatar {
-  background: #d3bdab !important;
+.stamped-reviews .stamped-review-avatar,
+.stamped-questions .stamped-review-avatar {
+  background: var(--color-primary-lighter) !important;
   text-shadow: none !important; }
-  .stamped-reviews .stamped-review-avatar .stamped-review-avatar-content {
-    color: #756151 !important; }
+  .stamped-reviews .stamped-review-avatar .stamped-review-avatar-content,
+  .stamped-questions .stamped-review-avatar .stamped-review-avatar-content {
+    color: var(--color-primary) !important; }
 
 .stamped-review[data-verified="buyer"] .stamped-review-avatar::before,
 .stamped-review-recommend[data-is-recommend="true"]::before {
-  color: #756151 !important; }
+  color: var(--color-primary) !important; }
 
 .testimonial-slideshow__profile-img {
   width: var(--testimonial-slideshow-profile-img-size);
@@ -12798,7 +12799,30 @@ a.collection-info__caption .product-details {
 
 /* #Stamped.io
   ================================================== */
-.stamped-review-variant {
+.stamped-summary-text-1 {
+  font-size: var(--text-xxxxl) !important;
+  margin-bottom: var(--space-xxs);
+  color: var(--color-contrast-higher) !important; }
+
+.summary-rating-bar {
+  background: var(--color-contrast-lower) !important; }
+  .summary-rating-bar .summary-rating-bar-content {
+    background: var(--color-contrast-high) !important; }
+
+.stamped-container > div,
+.stamped-container > span,
+.stamped-container > a {
+  color: var(--color-contrast-high) !important; }
+
+#tab-reviews,
+#tab-questions {
+  color: var(--color-contrast-higher) !important; }
+
+li#tab-questions[data-count][data-new-tab]::after,
+li#tab-reviews[data-count]::after {
+  background: var(--color-contrast-lower) !important; }
+
+.stamped-review .stamped-review-variant {
   opacity: 0;
   margin-top: -10px; }
 
@@ -12819,7 +12843,7 @@ a.collection-info__caption .product-details {
   font-size: var(--text-sm); }
 
 .new-review-form .stamped-form-custom-option-scale label div {
-  color: rgba(0, 0, 0, 0.35); }
+  color: var(--color-contrast-high); }
 
 .stamped-form-review-recommend-label {
   font-weight: 700; }
@@ -12960,11 +12984,11 @@ span:nth-last-child(n + 3),
 span.stamped-review-option-scale[data-value="4"]
 span:nth-last-child(n + 2),
 .stamped-reviews span.stamped-review-option-scale[data-value="5"] span {
-  background: #cb9b9e !important; }
+  background: var(--color-primary-lighter) !important; }
 
 /* Slider- First and last */
 .stamped-review-option-scale span {
-  background: #873b40; }
+  background: var(--color-primary); }
   .stamped-review-option-scale span:nth-of-type(1) {
     border-radius: 4px 0 0 4px; }
   .stamped-review-option-scale span:nth-of-type(5) {
@@ -13030,14 +13054,14 @@ li[data-value="gender"] {
   border-radius: 4px; }
 
 .stamped-rating-holder .stamped-thumbs-up:hover, .stamped-rating-holder .stamped-thumbs-up:active, .stamped-rating-holder .stamped-thumbs-up:focus {
-  background: #effeed; }
+  background: var(--color-success-lighter); }
   .stamped-rating-holder .stamped-thumbs-up:hover .stamped-fa.stamped-fa-thumbs-up, .stamped-rating-holder .stamped-thumbs-up:active .stamped-fa.stamped-fa-thumbs-up, .stamped-rating-holder .stamped-thumbs-up:focus .stamped-fa.stamped-fa-thumbs-up {
-    color: #00c986; }
+    color: var(--color-success); }
 
 .stamped-rating-holder .stamped-thumbs-down:hover, .stamped-rating-holder .stamped-thumbs-down:active, .stamped-rating-holder .stamped-thumbs-down:focus {
-  background: #fff6ec; }
+  background: var(--color-error-lighter); }
   .stamped-rating-holder .stamped-thumbs-down:hover .stamped-fa.stamped-fa-thumbs-down, .stamped-rating-holder .stamped-thumbs-down:active .stamped-fa.stamped-fa-thumbs-down, .stamped-rating-holder .stamped-thumbs-down:focus .stamped-fa.stamped-fa-thumbs-down {
-    color: #ff6a55; }
+    color: var(--color-error); }
 
 /* #Shopify
   ================================================== */
@@ -13091,63 +13115,9 @@ li[data-value="gender"] {
 .stamped-reply-q {
   font-weight: 700; }
 
-/*
-.stamped-reply-q::after {
-  /* content: ""; */
-/* content: "Q"; */
-/* content: "Qu"; */
-/* content: "Que"; */
-/* content: "Ques"; */
-/* content: "Quest"; */
-/* content: "Quest["; */
-/* content: "Quest[n"; */
-/* content: "Questi"; */
-/* content: "Questio"; 
-  content: "Question";
-  opacity: 1 !important;
-  position: absolute;
-  left: 64px;
-}
-
-.stamped-reply-q {
-  display: block;
-  position: relative;
-  text-indent: -100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.stamped-reply-a {
-  font-weight: 700;
-  margin-left: -20px;
-  position: absolute;
-  opacity: 0;
-  display: block;
-  position: relative;
-  text-indent: -100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.stamped-reply-a::after {
-  content: "Answer";
-  opacity: 1 !important;
-  position: absolute;
-  left: 73px;
-}
-
-.stamped-reply-a {
-  /* opacity: 0; 
-}
-*/
-/* Inline #27 | https://gosun.co/products/chill */
 .summary-overview {
   display: flex;
   flex-direction: column; }
-
-.stamped-summary-text-1 {
-  font-size: var(--text-xxxxl) !important;
-  margin-bottom: var(--space-xxs); }
 
 .cd-signin-modal {
   visibility: hidden;

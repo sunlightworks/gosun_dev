@@ -115,8 +115,8 @@
     @include defineColorHSL(--color-contrast-lower, 211, 50%, 21%);
     @include defineColorHSL(--color-contrast-low, 214, 25%, 33%);
     @include defineColorHSL(--color-contrast-medium, 216, 12%, 54%);
-    @include defineColorHSL(--color-contrast-high, 216, 12%, 83%);
-    @include defineColorHSL(--color-contrast-higher, 220, 8%, 93%);
+    @include defineColorHSL(--color-contrast-high, 216, 12%, 73%);
+    @include defineColorHSL(--color-contrast-higher, 220, 8%, 82%);
 
     --color-max: hsl(211, 55%, 15%);
 
