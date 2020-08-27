@@ -2,68 +2,75 @@
 ================================================== */
 table {
   margin-bottom: 0 !important;
-  }
-
-/*Remove table padding */
-div#tabs > div, div.custom-product-description-tabs > div, div#tabs-app-accordion > div {
-      padding: 0 !important;
 }
 
+/*Remove table padding */
+div#tabs > div,
+div.custom-product-description-tabs > div,
+div#tabs-app-accordion > div {
+  padding: 0 !important;
+}
 
-
+/*
 td {
   @include flexBox(column,flex-start,flex-start)
 }
+*/
 
 /* One column */
 .one-up {
-  td, th {
-  width: calc(100%/1) !important;
+  td,
+  th {
+    width: calc(100% / 1) !important;
   }
 }
 
 /* Two columns */
 .two-up {
-  td, th {
-  width: calc(100%/2) !important;
-  float: left;
+  td,
+  th {
+    width: calc(100% / 2) !important;
+    float: left;
   }
 }
 
 /* Three columns */
 .three-up {
-  td, th {
-  width: calc(100%/3) !important;
-  float: left;
+  td,
+  th {
+    width: calc(100% / 3) !important;
+    float: left;
   }
 }
 
 /* Four columns */
 .four-up {
-  td, th {
-  width: calc(100%/4) !important;
-  float: left;
+  td,
+  th {
+    width: calc(100% / 4) !important;
+    float: left;
   }
 }
 
 /* Five columns */
 .five-up {
-  td, th {
-  width: calc(100%/5) !important;
-  float: left;
+  td,
+  th {
+    width: calc(100% / 5) !important;
+    float: left;
   }
 }
 
 /* Six columns */
 .six-up {
-  td, th {
-  width: calc(100%/6) !important;
-  float: left;
+  td,
+  th {
+    width: calc(100% / 6) !important;
+    float: left;
   }
 }
 
-
-  /* #Grid - [Container] */
+/* #Grid - [Container] */
 .flex-100 {
   display: flex;
   flex-wrap: wrap;
@@ -78,37 +85,34 @@ td {
   position: relative;
 }
 
-
-
 /* #Specs
 ================================================== */
 .table.table-striped {
-border-collapse: collapse;
-border-spacing: 0;
-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
 
-@include rounded();
-@include animateMd();
+  @include rounded();
+  @include animateMd();
 
-
-thead th {
-  vertical-align: bottom;
-}
-th {
-  text-align: left;
-  padding: 30px 0px;
-  line-height: 17px;
-  font-weight: normal;
-  font-style: normal;
+  thead th {
+    vertical-align: bottom;
   }
-tr {
-  border-top: 1px solid #e6e6e6;
-}
+  th {
+    text-align: left;
+    padding: 30px 0px;
+    line-height: 17px;
+    font-weight: normal;
+    font-style: normal;
+  }
+  tr {
+    border-top: 1px solid #e6e6e6;
+  }
 }
 
 /* First column */
 .table.table-striped th:nth-child(1) {
-font-weight: 500;
+  font-weight: 500;
 }
 
 /* Head */
@@ -120,7 +124,6 @@ font-weight: 500;
 /* #Specs - Expand/Collapse
 ================================================== */
 .table tbody tr:nth-child(n + 6) {
-  
   @include animateMd();
 }
 
@@ -129,7 +132,7 @@ font-weight: 500;
   position: relative;
   width: 100%;
   @include animateMd();
-   &:after {
+  &:after {
     content: "+";
     display: inline;
     position: absolute;
@@ -154,16 +157,11 @@ font-weight: 500;
 }
 */
 
-
 .show {
   display: table-row !important;
   @include animateMd();
 }
 
-
 .overflow-container {
   position: relative;
 }
-
-
-

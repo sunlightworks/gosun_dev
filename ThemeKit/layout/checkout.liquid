@@ -49,32 +49,64 @@
         </aside>
       </div>
     </div>
-    {{ 'checkout-util.scss' | asset_url | stylesheet_tag }} <!-- Utility classes -->
+
+    {{ 'main.css' | asset_url | stylesheet_tag }}
+    {{ 'fonts.scss.css' | asset_url | stylesheet_tag }}
     {{ 'checkout.scss' | asset_url | stylesheet_tag }} <!-- Checkout specific classes -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" as="font" type="text/css" >
     
     <script>
+
+
+        let valueProp = document.createElement('section');  // Create with DOM
+
+
         $(document).on(`page:load page:change`, function() { // Handle page switching
             document.querySelector('img[alt="GoSun"]').setAttribute('src', '//cdn.shopify.com/s/files/1/0789/1333/files/gosun_logo--contrast-higher.svg?v=1597953204'); // Change logo to SVG
-            let valueProp = document.createElement('section');  // Create with DOM
-                valueProp.innerHTML = "<div class='border-top border-2 width-100\% cart__gift bg-contrast-lower radius-md padding-md inline-flex flex-column items-left margin-y-xl'>" +   
-                    "<h4 class='margin-bottom-sm'> The perks of every order</h4>" +         
-                    "<div class='inline-flex color-contrast-medium margin-bottom-xxs'>" + 
-                    "<i class='icon--sm margin-right-xxs material-icons-outlined color-contrast-low'>{{ 'value_props.warranty.icon' | t }}</i>" + 
-                    "<p>{{ 'value_props.warranty.title' | t }}</p>" + 
-                   "</div>" + 
-                    "<div class='inline-flex color-contrast-medium margin-bottom-xxs'>" + 
-                    "<i class='icon--sm margin-right-xxs material-icons-outlined color-contrast-low'>{{ 'value_props.shipping.icon' | t }}</i>" + 
-                    "<p>{{ 'value_props.shipping.title' | t }}</p>" + 
-                    "</div>" + 
-                    "<div class='inline-flex color-contrast-medium margin-bottom-xxs'>" + 
-                    "<i class='icon--sm margin-right-xxs material-icons-outlined color-contrast-low'>{{ 'value_props.security.icon' | t }}</i>" + 
-                    "<p>{{ 'value_props.security.title' | t }}</p>" + 
-                    "</div>" + 
-                "</div>";
-            document.querySelector("div[data-order-summary-section='payment-lines']").append(valueProp); // Append to payment section
+            
+                valueProp.innerHTML = "<div class='border-top border-2 width-100\% cart__gift bg-contrast-lower radius-md padding-md inline-flex flex-column items-left margin-y-xl text-center'>" +   
+                    "<h4 class='margin-bottom-sm'> The perks of every order</h4>" +       
+                    "<section class='flex'>" +  
+                      "<div class='validator-item margin-sm flex flex-column align-center'>" + 
+                        "<span class='icon icon--default'>" +
+                          "<i class='icon--md material-icons-two-tone'>{{ 'value_props.warranty.icon' | t }}</i>" + 
+                        "</span>" +
+                        "<p class='text-sm font-medium margin-top-xs'>{{ 'value_props.warranty.title' | t }}</p>" + 
+                      "</div>" + 
+
+                      "<div class='validator-item margin-sm flex flex-column align-center'>" + 
+                        "<span class='icon icon--default'>" +
+                          "<i class='icon--md material-icons-two-tone'>{{ 'value_props.shipping.icon' | t }}</i>" + 
+                        "</span>" +
+                        "<p class='text-sm font-medium margin-top-xs'>{{ 'value_props.shipping.title' | t }}</p>" + 
+                      "</div>" + 
+
+                      "<div class='validator-item margin-sm flex flex-column align-center'>" + 
+                        "<span class='icon icon--default'>" +
+                          "<i class='icon--md material-icons-two-tone'>{{ 'value_props.security.icon' | t }}</i>" + 
+                        "</span>" +
+                        "<p class='text-sm font-medium margin-top-xs'>{{ 'value_props.security.title' | t }}</p>" + 
+                      "</div>" + 
+                  "</section></div>";
+
+            function mediaQuery(width) {
+              if (width.matches) { // If media query matches
+                document.querySelector(".main__content").append(valueProp); // Append to payment section
+              } else {
+                document.querySelector("div[data-order-summary-section='payment-lines']").append(valueProp); // Append to payment section
+              }
+            }
+
+            let width = window.matchMedia("(max-width: 1000px)")
+            mediaQuery(width) // Call listener function at run time
+            width.addListener(mediaQuery) // Attach listener function on state changes 
+          
         });
+
+
+
     </script>
+    
 
     {{ tracking_code }}
   </body>

@@ -1,15 +1,44 @@
+body {
+  background: var(--wood-1); // body
+  color: var(--color-contrast-higher) !important;
+}
+
+.content {
+  margin-top: 0 !important; // override .customers-login, .content { margin-top: var(--space-lg) }
+}
+
 button,
 .btn {
-  padding: var(--space-md) var(--space-xl);
-  background-color: var(--color-contrast-higher); // continue button
+  background-color: var(--color-accent); // continue button
 }
 button:hover,
 .btn:hover {
-  background-color: var(--color-contrast-high);
+  background-color: var(--color-accent-light);
 }
 
-body {
-  background: var(--wood-1); // body
+.order-summary-toggle {
+  background-color: var(--color-bg);
+}
+.order-summary-toggle:hover {
+  background-color: var(
+    --color-contrast-lower
+  ); // Remove default button hover bg
+}
+
+.input-checkbox:checked,
+.input-radio:checked {
+  border: none;
+  -webkit-box-shadow: 0 0 0 10px var(--color-contrast-high) inset;
+  box-shadow: 0 0 0 10px var(--color-contrast-high) inset; // Checkbox bg
+}
+
+.step__footer__continue-btn {
+  padding: var(--space-md) var(--space-xl);
+}
+
+.product-thumbnail__quantity {
+  background: var(--color-primary-lighter);
+  color: var(--color-contrast-higher) !important;
 }
 
 /* navigation */
@@ -30,5 +59,63 @@ body {
 }
 
 .breadcrumb li:first-child {
-  display: none; // hide 'Cart >'
+  display: none; // hide 'Cart > -'
+}
+
+.product__description {
+  padding-left: var(--space-md);
+}
+
+#checkout_reduction_code {
+  height: var(--btn-height-lg); // Match discount form to button height
+}
+
+/* Typography */
+.main h2,
+.main .heading-2,
+.default-background h3,
+.default-background .heading-3,
+.content-box h3,
+.content-box .heading-3,
+.sidebar h2,
+.sidebar .heading-2,
+.content-box h2,
+.content-box .heading-2,
+.default-background h2,
+.default-background .heading-2,
+.main h3,
+.main .heading-3,
+.sidebar h3,
+.sidebar .heading-3,
+.content-box .payment-due__price,
+.total-recap__final-price,
+.sidebar .payment-due__price,
+.content-box .payment-due-label__total,
+.sidebar .reduction-code__text,
+.content-box .reduction-code__text,
+.sidebar .order-summary__emphasis,
+.content-box .order-summary__emphasis,
+.sidebar .payment-due-label__total,
+.default-background .emphasis,
+.content-box .emphasis,
+.sidebar .emphasis,
+.main .emphasis {
+  color: var(--color-contrast-higher) !important;
+}
+
+.main .small-text .emphasis,
+.sidebar .small-text .emphasis,
+.content-box .small-text .emphasis,
+.default-background .small-text .emphasis,
+.main .small-text,
+.sidebar .small-text,
+.content-box .small-text,
+.default-background .small-text,
+.sidebar .payment-due-label__taxes,
+.content-box .payment-due-label__taxes,
+.sidebar .payment-due__currency,
+.content-box .payment-due__currency,
+.sidebar .order-summary__small-text,
+.content-box .order-summary__small-text {
+  color: var(--color-contrast-medium) !important;
 }

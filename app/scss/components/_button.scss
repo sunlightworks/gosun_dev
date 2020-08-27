@@ -38,7 +38,7 @@ a.highlight-true:hover {
     color 0.2s ease-in-out;
   white-space: nowrap;
 
-  height: 56px !important;
+  height: var(--btn-height-lg) !important;
   padding: 0 14px !important;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
   font-size: 15px !important;

@@ -73,10 +73,11 @@
 
 /* #Table- Cells
 ================================================== */
-td {
+/* td {
   padding: 10px 20px 40px 10px !important;
   border-right: 1px dashed $color-border-mid !important;
 }
+*/
 
 /* #Table- Global
 ================================================== */
@@ -118,7 +119,7 @@ td {
 /* #Table - Alternating rows
 ================================================== */
 .table-format tr:nth-child(2n + 1) {
-  background: #f2f2f2;
+  background: #f2f2f1;
 }
 
 // -----------------------------------------------------------------------------

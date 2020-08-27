@@ -1,4 +1,5 @@
-.form-control {
+.form-control,
+.field__input {
   background-color: var(--color-bg, hsl(0, 0%, 95%));
   padding-top: var(--form-control-padding-y, 0.5em);
   padding-bottom: var(--form-control-padding-y, 0.5em);
@@ -36,7 +37,9 @@
 }
 
 // error message
-.form__msg-error, .form-error-msg { // .form__msg-error is fallback for older framework versions
+.form__msg-error,
+.form-error-msg {
+  // .form__msg-error is fallback for older framework versions
   color: var(--color-error, hsl(349, 75%, 51%));
   font-size: var(--text-sm, 0.833em);
   margin-top: var(--space-xxs);
@@ -46,20 +49,25 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-.form__msg-error--is-visible, .form-error-msg--is-visible {
+.form__msg-error--is-visible,
+.form-error-msg--is-visible {
   position: relative;
   clip: auto;
 }
 
 // set basic style for (native) radio and checkbox buttons
-.radio-list, .checkbox-list { // e.g., .radio-list > li > input + label
-  > * { // parent of input + label
+.radio-list,
+.checkbox-list {
+  // e.g., .radio-list > li > input + label
+  > * {
+    // parent of input + label
     position: relative;
     display: flex;
     align-items: baseline;
   }
 
-  label { // radio/checkbox labels
+  label {
+    // radio/checkbox labels
     line-height: var(--body-line-height);
   }
 

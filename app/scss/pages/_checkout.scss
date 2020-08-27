@@ -1,10 +1,13 @@
+/*
 img.logo__image.logo__image--small {
     display: block;
     filter: brightness(1.3);
     opacity: .3;
     width: 120px;
     padding-bottom: 30px;
-    &:hover {
+    &:hover ;
+    -webkit-filter: brightness(1.3);
+{
         filter: unset !important;
         -webkit-filter: unset !important;
 }
@@ -13,8 +16,8 @@ img.logo__image.logo__image--small {
 
 
 
-/* #Checkout / Mimic Shopify's native styles
-================================================== */
+// #Checkout / Mimic Shopify's native styles
+
 .total-line-table {
     width: 100%;
 }
@@ -51,8 +54,8 @@ img.logo__image.logo__image--small {
 }
 
 
-/* #Checkout / Product List
-================================================== */
+// #Checkout / Product List
+
 .cart_page_image img {
 @include filter-alabaster();
 }
@@ -63,3 +66,4 @@ img.logo__image.logo__image--small {
         padding-right: 120px;
     }
 }
+*/
