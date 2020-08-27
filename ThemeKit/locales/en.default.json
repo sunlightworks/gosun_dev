@@ -64,6 +64,38 @@
       "submit": "Search"
     }
   },
+  "value_props": {
+    "customer_count": {
+      "icon": "public",
+      "title": "50,000+ customers",
+      "description": "Lorem ipsum."
+    },
+    "customer_service": {
+      "icon": "support_agent",
+      "title": "Award-winning customer service",
+      "description": "Lorem ipsum."
+    },
+    "financing": {
+      "icon": "event_available",
+      "title": "Quick, simple financing",
+      "description": "Split your purchase into easy payments with Affirm. Oh, and there's no interest, late fees, or hidden fees."
+    },
+    "shipping": {
+      "icon": "local_shipping",
+      "title": "Free shipping & returns",
+      "description": "If you're unhappy with your purchase, we will take it back and provide a full refund."
+    },
+    "warranty": {
+      "icon": "verified_user",
+      "title": "1-year warranty",
+      "description": "GoSun offers a No-Questions-Asked Warranty covering our product's build quality and performance."
+    },
+    "security": {
+      "icon": "lock",
+      "title": "SSL secured checkout",
+      "description": "Using Shopify and SSL encryption, your credit card number is safe here."
+    }
+  },
   "blogs": {
     "general": {
       "continue_reading_html": "Read More →",
