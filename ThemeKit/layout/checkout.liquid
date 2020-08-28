@@ -57,57 +57,50 @@
     
     <script>
     let valueProp = document.createElement('section');  // Create with DOM
-    
-
     $(document).on(`page:load page:change`, function() { // Handle page switching
-
-      document.querySelector('span.order-summary__small-text').innerText = 'Free';
-
-
+      //rm document.querySelector('span.order-summary__small-text').innerText = 'Free';
       document.querySelector('img[alt="GoSun"]').setAttribute('src', '//cdn.shopify.com/s/files/1/0789/1333/files/gosun_logo--contrast-higher.svg?v=1597953204'); // Change logo to SVG
 
       $(".order-summary__section--discount").wrap("<details class='padding-y-lg'></details>");
       $("details").prepend("<summary class='color-success'>Add promo code</summary>");
 
       valueProp.innerHTML = "<div class='border-left border-contrast-high border-2 width-100\% cart__gift bg-primary-lighter radius-md padding-md inline-flex flex-column items-left margin-y-xl text-center'>" +   
-          "<h4 class='margin-bottom-sm'> The perks of every order</h4>" +       
-          "<section class='flex'>" +  
-            "<div class='validator-item margin-sm flex flex-column align-center'>" + 
-              "<span class='icon icon--default'>" +
-                "<i class='icon--md material-icons-two-tone'>{{ 'value_props.warranty.icon' | t }}</i>" + 
-              "</span>" +
-              "<p class='text-sm font-bold margin-top-xs'>{{ 'value_props.warranty.title' | t }}</p>" + 
-            "</div>" + 
+        "<h4 class='margin-bottom-sm'> The perks of every order</h4>" +       
+        "<section class='flex'>" +  
+          "<div class='validator-item margin-sm flex flex-column align-center'>" + 
+            "<span class='icon icon--default'>" +
+              "<i class='icon--md material-icons-two-tone'>{{ 'value_props.warranty.icon' | t }}</i>" + 
+            "</span>" +
+            "<p class='text-sm font-bold margin-top-xs'>{{ 'value_props.warranty.title' | t }}</p>" + 
+          "</div>" + 
 
-            "<div class='validator-item margin-sm flex flex-column align-center'>" + 
-              "<span class='icon icon--default'>" +
-                "<i class='icon--md material-icons-two-tone'>{{ 'value_props.shipping.icon' | t }}</i>" + 
-              "</span>" +
-              "<p class='text-sm font-bold margin-top-xs'>{{ 'value_props.shipping.title' | t }}</p>" + 
-            "</div>" + 
+          "<div class='validator-item margin-sm flex flex-column align-center'>" + 
+            "<span class='icon icon--default'>" +
+              "<i class='icon--md material-icons-two-tone'>{{ 'value_props.shipping.icon' | t }}</i>" + 
+            "</span>" +
+            "<p class='text-sm font-bold margin-top-xs'>{{ 'value_props.shipping.title' | t }}</p>" + 
+          "</div>" + 
 
-            "<div class='validator-item margin-sm flex flex-column align-center'>" + 
-              "<span class='icon icon--default'>" +
-                "<i class='icon--md material-icons-two-tone'>{{ 'value_props.security.icon' | t }}</i>" + 
-              "</span>" +
-              "<p class='text-sm font-bold margin-top-xs'>{{ 'value_props.security.title' | t }}</p>" + 
-            "</div>" + 
+          "<div class='validator-item margin-sm flex flex-column align-center'>" + 
+            "<span class='icon icon--default'>" +
+              "<i class='icon--md material-icons-two-tone'>{{ 'value_props.security.icon' | t }}</i>" + 
+            "</span>" +
+            "<p class='text-sm font-bold margin-top-xs'>{{ 'value_props.security.title' | t }}</p>" + 
+          "</div>" + 
         "</section></div>";
 
       function mediaQuery(width) {
         if (width.matches) { // If media query matches
-          document.querySelector(".main__content").append(valueProp); // Append to payment section
+          document.querySelector(".main__content").append(valueProp); // Append to main section [mobile 📱]
         } else {
-          document.querySelector("div[data-order-summary-section='payment-lines']").append(valueProp); // Append to payment section
+          document.querySelector("div[data-order-summary-section='payment-lines']").append(valueProp); // Append to payment section [desktop 🖥 ]
         }
       }
-
-      let width = window.matchMedia("(max-width: 1000px)")
+      const width = window.matchMedia("(max-width: 1000px)")
       mediaQuery(width) // Call listener function at run time
-      width.addListener(mediaQuery) // Attach listener function on state changes 
-    
-    });
+      width.addListener(mediaQuery) // Attach listener function on state changes
 
+      });
 
 
     </script>
@@ -115,4 +108,22 @@
 
     {{ tracking_code }}
   </body>
+
+
+{% if checkout.subtotal_price > 10000 and found_title == false %}
+<script>
+  $( document ).ready(function() {
+      var variantId = 4729161220190;
+      jQuery.post('/cart/add.js', {
+        quantity: 1,
+        id: variantId
+      });
+      setTimeout( 
+        function() {
+          window.location.reload(true);
+        }, 1000);
+  });
+</script>
+{% endif %}
+
 </html>
