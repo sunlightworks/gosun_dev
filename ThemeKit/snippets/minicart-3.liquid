@@ -16,7 +16,25 @@
     </header>
 
     <div class="drawer__body padding-x-md padding-y-sm js-drawer__body  position-relative">
-      
+
+      {% assign gift_value = 40000 %}
+      {% assign cart_total = cart.total_price %}
+      {% assign gift_value_left = gift_value | minus: cart_total %}
+
+      <div class="alert alert--success alert--is-visible js-alert margin-y-xs" role="alert">
+        <div class="flex items-center">
+          <i class="icon--sm material-icons-outlined margin-right-xxs">card_giftcard</i>
+          <span class="money js-cart_gift text-sm">
+            {% if gift_value_left > 0 %}
+            Free Snack Box on orders $400+ <span class="margin-left-xxs color-success-dark">(Only {{ gift_value_left | money }} away)</span>
+            {% else %}
+              You've unlocked a free Snack Box!
+            {% endif %}
+          </span>
+        </div>
+      </div>
+  
+
       <!-- empty content -->
       <div class="js-empty-cart__message {% if cart.item_count > 0 %}hidden{% endif %}">
         <p class="empty_cart">{{ 'layout.general.empty_cart' | t }}</p>

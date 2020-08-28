@@ -9229,7 +9229,7 @@ Descr: Feedback message
 
 .alert--success {
   background-color: hsla(var(--color-success-h), var(--color-success-s), var(--color-success-l), 0.2);
-  color: var(--color-success-darker); }
+  color: var(--color-success); }
 
 .alert--error {
   background-color: hsla(var(--color-error-h), var(--color-error-s), var(--color-error-l), 0.2);

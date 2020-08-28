@@ -94,6 +94,11 @@
       "icon": "lock",
       "title": "SSL secured checkout",
       "description": "Using Shopify and SSL encryption, your credit card number is safe here."
+    },
+    "free_gift": {
+      "icon": "card_giftcard",
+      "title": "You've unlocked a free gift",
+      "description": "Lorem ipsum."
     }
   },
   "blogs": {
