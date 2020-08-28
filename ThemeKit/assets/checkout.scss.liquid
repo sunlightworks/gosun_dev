@@ -74,8 +74,21 @@ button:hover,
   ); // Remove default button hover bg
 }
 
+/* Discounts
+==============*/
+
 #checkout_reduction_code {
   height: var(--btn-height-lg); // Match discount form to button height
+}
+
+.sidebar span.reduction-code__text {
+  font-size: var(--text-sm);
+  color: var(--color-success) !important; // discount code
+}
+
+svg.reduction-code__icon {
+  fill: currentColor !important;
+  color: var(--color-success) !important; // discount icon
 }
 
 /* Color

@@ -1,14 +1,14 @@
 {% assign found_title = false %}
-{% for item in checkout.line_items %}
-  {% if item.variant.id == 4729161220190 %}
+{% for item in cart.items %}
+  {% if item.variant.id == 32148796440670 %}
     {% assign found_title = true %}
   {% endif %}
 {% endfor %}
 
-{% if checkout.subtotal_price > 10000 and found_title == false %}
+{% if cart.subtotal_price > 10000 and found_title == false %}
 <script>
   $( document ).ready(function() {
-      var variantId = 4729161220190;
+      var variantId = 32148796440670;
       jQuery.post('/cart/add.js', {
         quantity: 1,
         id: variantId
