@@ -57,9 +57,13 @@
     
     <script>
     let valueProp = document.createElement('section');  // Create with DOM
-
+    
 
     $(document).on(`page:load page:change`, function() { // Handle page switching
+
+      document.querySelector('span.order-summary__small-text').innerText = 'Free';
+
+
       document.querySelector('img[alt="GoSun"]').setAttribute('src', '//cdn.shopify.com/s/files/1/0789/1333/files/gosun_logo--contrast-higher.svg?v=1597953204'); // Change logo to SVG
 
       $(".order-summary__section--discount").wrap("<details class='padding-y-lg'></details>");

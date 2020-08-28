@@ -1207,13 +1207,6 @@
         "settings": {
         }
       },
-      "1564326360879": {
-        "type": "divider",
-        "settings": {
-          "divider_spacing": 30,
-          "divider_border": false
-        }
-      },
       "collection-template": {
         "type": "collection-template",
         "blocks": {
@@ -1772,8 +1765,8 @@
         "settings": {
           "image": "shopify:\/\/shop_images\/Chill_Tropical_54f68510-3c7f-4cb6-869a-18235e823858.jpg",
           "overline": "",
-          "title": "Summer & open box deals are here.",
-          "description": "",
+          "title": "Savor in Labor Day Love.",
+          "description": "Just like success, solar is best when shared.",
           "button1": "Shop the Deals",
           "button1_url": "shopify:\/\/collections\/todays-deals",
           "button2": "",
@@ -1787,6 +1780,46 @@
           "btn_type": "btn--accent",
           "show_pattern": false
         }
+      },
+      "1598461380754": {
+        "type": "testimonial-slider",
+        "blocks": {
+          "1598461380754-0": {
+            "type": "product",
+            "settings": {
+              "featured_product": "solarpanel-10",
+              "rating": 5,
+              "testimonial": "<p>My favorite thing about these panels is that you can hang them from anywhere. They reliably charged my phone &amp; camera all week under cloudy weather. Looks super cool on the outside of our tent too :)<\/p>",
+              "name": "Skye M"
+            }
+          },
+          "1598461380754-1": {
+            "type": "product",
+            "settings": {
+              "featured_product": "chill",
+              "rating": 5,
+              "testimonial": "<p>I liked my first Chill so much, I got a second one to use as a freezer. This gives me great peace of mind in the event of an extended power outage.<\/p>",
+              "name": "Charlie G"
+            }
+          },
+          "1598461380754-2": {
+            "type": "product",
+            "settings": {
+              "featured_product": "fusion",
+              "rating": 4.5,
+              "testimonial": "<p>The Fusion, by far, is the best product I&rsquo;ve purchased this year. I cooked a hearty stew of mixed vegetables and diced chicken. Needless to say, I was amazed at how well it worked.<\/p>",
+              "name": "William W"
+            }
+          }
+        },
+        "block_order": [
+          "1598461380754-0",
+          "1598461380754-1",
+          "1598461380754-2"
+        ],
+        "settings": {
+          "title": "See why customers love GoSun."
+        }
       }
     },
     "content_for_index": [
@@ -1797,7 +1830,7 @@
       "1596230707797",
       "1574447604302",
       "1594926564453",
-      "1564326360879",
+      "1598461380754",
       "1595519740851",
       "1596824502217",
       "1562619980179",
