@@ -55,37 +55,13 @@
     	} 
     };
   }
+  console.log('Theme switch complete!')
 }());
 
     
 
 
 
-
-
-
-
-
-
-
-
-
-var themeSwitch = document.getElementById('themeSwitch');
-if(themeSwitch) {
-  themeSwitch.addEventListener('change', function(event){
-    resetTheme(); // update color theme
-  });
-
-  function resetTheme() {
-    if(themeSwitch.checked) { // dark theme has been selected
-      document.body.setAttribute('data-theme', 'dark');
-      localStorage.setItem('themeSwitch', 'dark'); // save theme selection 
-    } else {
-      document.body.removeAttribute('data-theme');
-      localStorage.removeItem('themeSwitch'); // reset theme selection 
-    } 
-  };
-}
 
 
 
