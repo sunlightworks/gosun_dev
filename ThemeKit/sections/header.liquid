@@ -71,7 +71,11 @@
             <span></span>
           </div>
         </a>
-         {% include '_1_switch-mobile' %} 
+
+        {% if settings.theme_switch %}
+          {% include '_1_switch-mobile' %} 
+        {% endif %}
+         
       </ul> 
       <!-- End Hamburger Menu -->
       <a href="{{ shop.url }}" title="{{ shop.name | escape }}" class="mobile_logo logo">
@@ -167,7 +171,10 @@
       <p class="text-sm font-bold color-contrast-medium base-BodyUppercase">{{ section.settings.tagline_text }}</p>
       <!-- Utility Menu -->
       <ul class="menu right">
-        {% include '_1_switch' %}
+        
+        {% if settings.theme_switch %}
+          {% include '_1_switch' %} 
+        {% endif %}
     
         <!-- Phone Number -->
         {% if section.settings.phone_number != blank %}     

@@ -51,6 +51,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.css">
       {% endif %}
 
+
+      {% if settings.theme_switch %}
+        <script defer src="{{ 'theme_switch.js' | asset_url }}"></script>
+      {% endif %}
+
       <!-- Icons -->
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" as="font" type="text/css" >
     <!----------- End STYLE ----------->
