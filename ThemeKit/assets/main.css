@@ -8757,6 +8757,42 @@ Usage: codyhouse.co/license
     border-radius: var(--radius-md);
     padding: var(--space-sm); } }
 
+.snize-ac-results-content {
+  background: var(--color-max) !important; }
+
+.snize-ac-over-nodrop {
+  background: var(--color-contrast-lower) !important; }
+
+.snize-ac-results-multicolumn-list .snize-title {
+  color: var(--color-contrast-higher) !important;
+  font-weight: 500 !important; }
+
+.snize-ac-results-multicolumn-list .snize-description {
+  color: var(--color-contrast-high) !important; }
+
+.snize-ac-results {
+  color: var(--color-contrast-high) !important; }
+  .snize-ac-results a,
+  .snize-ac-results .snize-page,
+  .snize-ac-results .snize-vendor,
+  .snize-ac-results .snize-tag,
+  .snize-ac-results .snize-category,
+  .snize-ac-results .snize-suggestion,
+  .snize-ac-results .snize-no-categories-found,
+  .snize-ac-results .snize-no-pages-found,
+  .snize-ac-results .snize-no-suggestions-found,
+  .snize-ac-results .snize-price-list {
+    color: var(--color-contrast-high) !important; }
+  .snize-ac-results .snize-discounted-price,
+  .snize-ac-results .snize-attribute,
+  .snize-ac-results .snize-sku {
+    color: var(--color-contrast-medium) !important; }
+  .snize-ac-results .snize-label {
+    color: var(--color-contrast-medium) !important;
+    border-color: var(--color-contrast-low) !important; }
+  .snize-ac-results .snize-arrow-inner {
+    border-color: var(--color-max) !important; }
+
 /* -------------------------------- 
 
 File#: _1_link-effects

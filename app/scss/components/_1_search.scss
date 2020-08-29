@@ -1,0 +1,44 @@
+.snize-ac-results-content {
+  background: var(--color-max) !important;
+}
+
+.snize-ac-over-nodrop {
+  background: var(--color-contrast-lower) !important;
+}
+
+.snize-ac-results-multicolumn-list .snize-title {
+  color: var(--color-contrast-higher) !important;
+  font-weight: 500 !important;
+}
+
+.snize-ac-results-multicolumn-list .snize-description {
+  color: var(--color-contrast-high) !important;
+}
+
+.snize-ac-results {
+  color: var(--color-contrast-high) !important;
+  a,
+  .snize-page,
+  .snize-vendor,
+  .snize-tag,
+  .snize-category,
+  .snize-suggestion,
+  .snize-no-categories-found,
+  .snize-no-pages-found,
+  .snize-no-suggestions-found,
+  .snize-price-list {
+    color: var(--color-contrast-high) !important;
+  }
+  .snize-discounted-price,
+  .snize-attribute,
+  .snize-sku {
+    color: var(--color-contrast-medium) !important;
+  }
+  .snize-label {
+    color: var(--color-contrast-medium) !important;
+    border-color: var(--color-contrast-low) !important;
+  }
+  .snize-arrow-inner {
+    border-color: var(--color-max) !important;
+  }
+}
