@@ -53,7 +53,7 @@ $border-dotted: 2px dotted var(--color-contrast-low);
 }
 
 hr {
-  border-color: $stripe-g;
+  border-color: var(--color-contrast-low);
   border-width: 2px;
   border-style: solid;
 }

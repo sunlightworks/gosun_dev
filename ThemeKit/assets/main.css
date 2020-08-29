@@ -5864,7 +5864,7 @@ div.hide {
   border-top: 2px dotted var(--color-contrast-low); }
 
 hr {
-  border-color: #f2f6fa;
+  border-color: var(--color-contrast-low);
   border-width: 2px;
   border-style: solid; }
 
@@ -12223,7 +12223,7 @@ html:not(.js) .mega-nav--mobile .mega-nav__nav, html:not(.js) .mega-nav--mobile 
   transition-duration: 0.28s !important;
   transition-property: all !important;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
-  background: #f7f7f7;
+  background: var(--color-contrast-lower);
   flex-direction: column;
   justify-content: space-between;
   /* #Card [Inner] - Size
@@ -12238,7 +12238,7 @@ html:not(.js) .mega-nav--mobile .mega-nav__nav, html:not(.js) .mega-nav--mobile 
       .article-card:hover {
         border: none;
         box-shadow: rgba(0, 0, 0, 0.2) 0 5px 5px -3px, rgba(0, 0, 0, 0.14) 0 8px 10px 1px, rgba(0, 0, 0, 0.12) 0 3px 14px 2px;
-        background: #f7f7f7; }
+        background: var(--color-primary-lighter); }
         .product-wrap:hover .image__container,
         .article-card:hover .image__container {
           padding: 10px !important; } }
@@ -12326,7 +12326,7 @@ a.collection-info__caption .product-details {
     transform: scale(1.06) translatex(1px) translatey(-1px) !important;
     filter: none !important; }
   .article-card:hover .article-readmore a {
-    color: #873b40; }
+    color: var(--color-primary); }
 
 /* #Article - Thumbnail
   ================================================== */
@@ -12579,7 +12579,7 @@ a.collection-info__caption .product-details {
   left: 0;
   right: 0;
   font-size: 60px;
-  color: #fff;
+  color: var(--color-contrast-higher);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12615,7 +12615,7 @@ a.collection-info__caption .product-details {
     -ms-transform: translateY(-2px) scale(1.05);
     -o-transform: translateY(-2px) scale(1.05); }
     .cards a:hover p {
-      color: #fff !important; }
+      color: var(--color-contrast-higher) !important; }
   .cards a:after {
     display: none !important; }
   .cards a .article-media {
@@ -14780,7 +14780,7 @@ Usage: codyhouse.co/license
       left: 0;
       top: 50%;
       height: 150%;
-      background-color: #fff;
+      background-color: var(--color-contrast-lower);
       transform: translate(-60px, -50%) rotate(12deg);
       z-index: 1;
       transition: transform 0.2s ease-out; } }

@@ -19,14 +19,14 @@
   height: 292px;
   @include card();
   @include btn-transition();
-  background: $palette-shade-50;
+  background: var(--color-contrast-lower);
   flex-direction: column;
   justify-content: space-between;
   @include lg {
     height: 380px;
     &:hover {
       @include card-hover();
-      background: $palette-shade-50;
+      background: var(--color-primary-lighter);
       .image__container {
         padding: 10px !important;
       }
@@ -134,7 +134,7 @@ a.collection-info__caption {
       @include hover-zoom();
     }
     .article-readmore a {
-      color: $grape-3;
+      color: var(--color-primary);
     }
   }
 }
@@ -446,7 +446,7 @@ a.collection-info__caption {
       left: 0;
       right: 0;
       font-size: 60px;
-      color: #fff;
+      color: var(--color-contrast-higher);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -480,7 +480,7 @@ a.collection-info__caption {
     &:hover {
       @include shadowCard("hover");
       p {
-        color: $palette-tint-A100 !important;
+        color: var(--color-contrast-higher) !important;
       }
     }
     &:after {

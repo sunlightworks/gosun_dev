@@ -2984,12 +2984,12 @@ ul.toggle_list li ul {
   text-align: right;
   float: right;
   .blog_filter, .tag_filter, .sort_by {
-    color: {{settings.collection_filter_color}};
+    color: var(--color-contrast-medium);
     display: inline-block;
     border: none;
     padding-right: 30px;
     background-position: 100% 50%;
-    background-color: {{ settings.shop_bg_color }};
+    background-color: var(--color-contrast-lower);;
     font-family: {{ settings.nav__font.family }}, {{ settings.nav__font.fallback_families }};
     font-weight: {{ settings.nav__font.weight }};
     font-style: {{ settings.nav__font.style }};
@@ -5781,7 +5781,7 @@ div.section { margin: 10px 0; }
 .paginate .page a,
 .paginate .current,
 a.tag {
-  border: solid 1px {{ settings.border_color }};
+  border: solid 1px var(--color-contrast-low);
   margin: 10px 5px;
   padding: 0.5rem 1rem;
   display: inline-block;
@@ -5791,17 +5791,17 @@ a.tag {
     border-radius: 50%;
   {% endif %}
   &:hover {
-    color: #fff;
-    background-color: {{ settings.link_hover_color }};
-    border: solid 1px {{ settings.link_hover_color }};
+    color: var(--color-contrast-higher);
+    background-color: var(--color-primary-lighter);
+    border: solid 1px var(--color-primary-lighter);
   }
 }
 
 .paginate .current {
   font-weight: bold;
-  color: #fff;
-  background-color: {{ settings.link_hover_color }};
-  border: solid 1px {{ settings.link_hover_color }};
+  color: var(--color-contrast-higher);
+  background-color: var(--color-primary-lighter);
+  border: solid 1px var(--color-primary-lighter);
 }
 
 .paginate .next,
@@ -6557,11 +6557,11 @@ body.article { padding-bottom: 0 }
 }
 
 .blog_meta, .blog_meta a {
-  color: {{ settings.was_price_color }};
+  color: var(--color-contrast-medium);
 }
 
 .blog_meta a:hover {
-  color: {{ settings.link_hover_color }};
+  color: var(--color-primary);
 }
 
 .count {
