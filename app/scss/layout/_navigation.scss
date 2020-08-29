@@ -484,6 +484,9 @@ div.dropdown.menu {
     padding: 21px 18px;
   }
 }
+.shogun-heading-component h1 {
+  color: var(--color-contrast-higher) !important;
+}
 
 /* Active */
 .shogun-tabs > li.shogun-tab-active > .shogun-tab-box {

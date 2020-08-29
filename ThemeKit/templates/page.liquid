@@ -17,16 +17,16 @@
           </div>
         </div>
     </div>
-      </div>
+    </div>
       {% endif %}
 
 
-<div class="flex-center">
+<div class="flex justify-center">
 
   {% if page.metafields.custom_fields["page_width"] != blank %}
     <div class="sixteen columns page clearfix wrapper--{{ page.metafields.custom_fields['page_width'] }}">
     {% else %}
-    <div class="sixteen columns page clearfix wrapper--sm">
+    <div class="sixteen columns page clearfix max-width-adaptive-md">
   {% endif %}
 
 
@@ -60,7 +60,7 @@
       {% include 'page-staff' %}
 
 
-      <div>
+      <div class="text-component">
         {% include 'page-multi-column', content: page.content %}
       </div>
 

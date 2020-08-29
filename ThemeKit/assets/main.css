@@ -14204,6 +14204,9 @@ div.dropdown.menu {
     .shogun-tab-box {
       padding: 21px 18px; } }
 
+.shogun-heading-component h1 {
+  color: var(--color-contrast-higher) !important; }
+
 /* Active */
 .shogun-tabs > li.shogun-tab-active > .shogun-tab-box {
   background-color: var(--color-contrast-lower) !important; }
