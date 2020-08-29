@@ -36,17 +36,17 @@ Descr: Feedback message
 // themes
 .alert--success {
   background-color: alpha(var(--color-success), 0.2);
-  color: var(--color-success);
+  color: var(--color-success-dark);
 }
 
 .alert--error {
   background-color: alpha(var(--color-error), 0.2);
-  color: var(--color-error-darker);
+  color: var(--color-error-dark);
 }
 
 .alert--warning {
   background-color: alpha(var(--color-warning), 0.2);
-  color: var(--color-warning-darker);
+  color: var(--color-warning-dark);
 }
 
 // toggle visibility
