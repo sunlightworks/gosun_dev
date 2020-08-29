@@ -8068,7 +8068,7 @@ img {
   border-color: transparent !important;
   max-width: 92% !important;
   height: 24px !important;
-  border-radius: 4px 0 !important; }
+  border-radius: 0 !important; }
   @media (min-width: 768px) {
     .violator {
       max-width: 70% !important; } }
