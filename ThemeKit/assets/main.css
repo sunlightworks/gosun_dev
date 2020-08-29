@@ -8793,6 +8793,81 @@ Usage: codyhouse.co/license
   .snize-ac-results .snize-arrow-inner {
     border-color: var(--color-max) !important; }
 
+/* Results / Controls 
+---------------------- */
+div.snize .snize-main-panel-controls ul li a.active,
+div.snize div.snize-main-panel-controls ul li a:hover {
+  background-color: var(--color-primary-lighter) !important;
+  color: var(--color-contrast-higher) !important; }
+
+div.snize div.snize-main-panel-controls ul li a {
+  color: var(--color-contrast-high) !important; }
+
+div.snize div.snize-main-panel {
+  border: none !important; }
+
+div.snize div.snize-main-panel-dropdown a {
+  color: var(--color-contrast-higher) !important; }
+
+div.snize div.snize-main-panel-dropdown > a {
+  border: none !important;
+  background: var(--color-primary-lighter) !important; }
+
+div.snize div.snize-main-panel-dropdown ul.snize-main-panel-dropdown-content {
+  background-color: var(--color-contrast-lower) !important;
+  border: none !important; }
+  div.snize div.snize-main-panel-dropdown ul.snize-main-panel-dropdown-content:hover > a {
+    background-color: var(--color-contrast-lower) !important; }
+  div.snize div.snize-main-panel-dropdown ul.snize-main-panel-dropdown-content a:hover {
+    background-color: var(--color-primary-lighter) !important; }
+
+div.snize div.snize-main-panel-dropdown :not(.ssw-fave-icon) {
+  color: var(--color-contrast-high) !important; }
+
+/* Results / Products
+======================== */
+.snize-product:hover {
+  background: var(--color-max) !important; }
+
+.snize-thumbnail {
+  height: 200px !important;
+  border: none !important; }
+
+.snize-overhidden {
+  background: transparent !important; }
+
+.snize-sku,
+.snize-attribute {
+  color: var(--color-contrast-medium) !important; }
+
+.snize-title,
+.snize-price-list {
+  color: var(--color-contrast-higher) !important; }
+
+div.snize li.snize-product span.snize-description {
+  color: var(--color-contrast-high) !important; }
+
+.snize-overhidden > * {
+  text-align: left !important;
+  font-size: 50% !important; }
+
+.snize-description {
+  color: var(--color-contrast-high) !important; }
+
+.snize-item-image {
+  filter: brightness(0.92); }
+
+.snize-sku,
+.snize-attribute {
+  margin-top: calc( var(--space-sm) * -1) !important; }
+
+/* Results / Pages
+==================== */
+.snize-page {
+  border-color: var(--color-contrast-low); }
+  .snize-page:hover {
+    background-color: var(--color-contrast-lower); }
+
 /* -------------------------------- 
 
 File#: _1_link-effects
