@@ -4,7 +4,7 @@
 
     <p class="sr-only">Slideshow Items</p>
     
-    <ul class="slideshow__content">
+    <ul class="slideshow__content reveal-fx reveal-fx--translate-right">
       {% if section.blocks.size > 0 %}
       {% for block in section.blocks %}
         {%- assign product = all_products[block.settings.featured_product] -%}

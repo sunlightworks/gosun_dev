@@ -18,7 +18,7 @@
               slideshow_animation--{{ section.settings.slideshow_animation }}
               popup-enabled--{{ section.settings.enable_product_lightbox }}"
       data-zoom="{{ section.settings.activate_zoom }}"
-      data-autoplay="{{ section.settings.activate_autoplay }}">
+      data-autoplay="{{ section.settings.activate_autoplay }} reveal-fx reveal-fx--translate-right">
 
       {% for image_item in image_list %}
         {% assign image = image_item | split: "`~`" %}

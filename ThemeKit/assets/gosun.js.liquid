@@ -4,16 +4,7 @@ $(window).resize(function(){
   }	
 });
 
-// ============================================================================
-// Media / Video
-// ============================================================================
-$('#play').on('click', function(e) {
-  e.preventDefault();
-  $("#player")[0].src += "?autoplay=1;rel=0;modestbranding=1&amp;title=";
-  $('#player').show();
-  $('#video-cover').hide();
-  $('.btn-wrap').hide();
-});
+
 
 
 $(function() {
@@ -32,7 +23,7 @@ $(function() {
 // ============================================================================
 // Navigation / Product
 // ============================================================================
-
+/*
 function sticktothetop() {
 var window_top = $(window).scrollTop();
 var top = $('#stick-here').offset().top;
@@ -41,16 +32,12 @@ if (window_top > top) {
     $('#stickThis').addClass('stick');
     $('#stick-here').height($('#stickThis').outerHeight());
     $('.sticky-fade').fadeIn("fast");
-    /*
-    $('.purchase-details__buttons').addClass('sticky-buy');
-    */
+
 } else {
     $('#stickThis').removeClass('stick');
     $('#stick-here').height(0);
     $('.sticky-fade').fadeOut("fast");
-    /*
-    $('.purchase-details__buttons').removeClass('sticky-buy');
-    */
+
 }
 }
 $(function(){
@@ -79,7 +66,7 @@ $('section--page').each(function(i) {
 });
 }).scroll();
 
-
+*/
 // ============================================================================
 // Navigation / Promo Banner
 // ============================================================================
@@ -95,16 +82,10 @@ if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 40) {
 } 
 
 
-
-
-
-
 /* #Banners / Dialog - [Show/Hide] */
 $(".dismiss-trigger").click(function(){
 $(".dismiss-target").addClass("hide");
 });
-
-
 
 
 
@@ -147,6 +128,17 @@ if ($(window).width() > 768 ) {
 });
 
 
+
+// ============================================================================
+// Media / Video
+// ============================================================================
+$('#play').on('click', function(e) {
+  e.preventDefault();
+  $("#player")[0].src += "?autoplay=1;rel=0;modestbranding=1&amp;title=";
+  $('#player').show();
+  $('#video-cover').hide();
+  $('.btn-wrap').hide();
+});
 
 /* #Media / Video – Autoloop */
 window.addEventListener('load', async () => {

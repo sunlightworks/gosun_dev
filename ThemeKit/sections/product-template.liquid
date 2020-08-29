@@ -87,7 +87,7 @@
         <div id="product-images" class="ten columns medium-down--one-whole {% if section.settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}">
           {% include 'product-images' %}
         </div>
-        <div id="product-details"class="six columns medium-down--one-whole product--overview  {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
+        <div id="product-details"class="reveal-fx reveal-fx--translate-left six columns medium-down--one-whole product--overview  {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
           {% assign collection_handles = product.collections | map: 'handle' %}
           {% assign variant = product.selected_or_first_available_variant %}
           {% if product.available %}
@@ -224,7 +224,7 @@
 
 
     {% comment %}START / Details{% endcomment %}
-    <section id="features">
+    <section id="features reveal-fx">
 
       {{product.metafields.shogun.above}}
 
