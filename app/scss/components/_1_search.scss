@@ -1,5 +1,6 @@
 .snize-ac-results-content {
   background: var(--color-max) !important;
+  padding-top: var(--space-lg) !important;
 }
 
 .snize-ac-over-nodrop {
@@ -15,7 +16,13 @@
   color: var(--color-contrast-high) !important;
 }
 
+.snize-no-products-found-text {
+  color: var(--color-contrast-low) !important;
+  font-size: var(--text-xl) !important;
+}
+
 .snize-ac-results {
+  z-index: 99 !important;
   color: var(--color-contrast-high) !important;
   a,
   .snize-page,
@@ -41,6 +48,18 @@
   .snize-arrow-inner {
     border-color: var(--color-max) !important;
   }
+}
+
+.snize-product {
+  text-align: left !important;
+  &:hover {
+    background: var(--color-contrast-lower) !important;
+  }
+}
+
+.snize-view-all-link,
+.snize-view-all-pages {
+  color: var(--color-contrast-high) !important;
 }
 
 /* Results / Controls 
@@ -90,10 +109,8 @@ div.snize {
 
 /* Results / Products
 ======================== */
-.snize-product:hover {
-  background: var(--color-max) !important;
-}
-.snize-thumbnail {
+
+.snize-search-results-main-content .snize-thumbnail {
   height: 200px !important;
   border: none !important;
 }
@@ -104,6 +121,7 @@ div.snize {
 
 .snize-sku,
 .snize-attribute {
+  margin-top: var(--space-xs);
   color: var(--color-contrast-medium) !important;
 }
 

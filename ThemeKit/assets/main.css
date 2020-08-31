@@ -8727,7 +8727,8 @@ Usage: codyhouse.co/license
     padding: var(--space-sm); } }
 
 .snize-ac-results-content {
-  background: var(--color-max) !important; }
+  background: var(--color-max) !important;
+  padding-top: var(--space-lg) !important; }
 
 .snize-ac-over-nodrop {
   background: var(--color-contrast-lower) !important; }
@@ -8739,7 +8740,12 @@ Usage: codyhouse.co/license
 .snize-ac-results-multicolumn-list .snize-description {
   color: var(--color-contrast-high) !important; }
 
+.snize-no-products-found-text {
+  color: var(--color-contrast-low) !important;
+  font-size: var(--text-xl) !important; }
+
 .snize-ac-results {
+  z-index: 99 !important;
   color: var(--color-contrast-high) !important; }
   .snize-ac-results a,
   .snize-ac-results .snize-page,
@@ -8761,6 +8767,15 @@ Usage: codyhouse.co/license
     border-color: var(--color-contrast-low) !important; }
   .snize-ac-results .snize-arrow-inner {
     border-color: var(--color-max) !important; }
+
+.snize-product {
+  text-align: left !important; }
+  .snize-product:hover {
+    background: var(--color-contrast-lower) !important; }
+
+.snize-view-all-link,
+.snize-view-all-pages {
+  color: var(--color-contrast-high) !important; }
 
 /* Results / Controls 
 ---------------------- */
@@ -8795,10 +8810,7 @@ div.snize div.snize-main-panel-dropdown :not(.ssw-fave-icon) {
 
 /* Results / Products
 ======================== */
-.snize-product:hover {
-  background: var(--color-max) !important; }
-
-.snize-thumbnail {
+.snize-search-results-main-content .snize-thumbnail {
   height: 200px !important;
   border: none !important; }
 
@@ -8807,6 +8819,7 @@ div.snize div.snize-main-panel-dropdown :not(.ssw-fave-icon) {
 
 .snize-sku,
 .snize-attribute {
+  margin-top: var(--space-xs);
   color: var(--color-contrast-medium) !important; }
 
 .snize-title,
