@@ -10,7 +10,7 @@
 .summary-rating-bar {
   background: var(--color-contrast-lower) !important;
   .summary-rating-bar-content {
-    background: var(--color-contrast-high) !important;
+    background: var(--color-warning-light) !important;
   }
 }
 
@@ -124,7 +124,7 @@ li#tab-reviews[data-count] {
 }
 
 /* #Buttons - Write review, Ask question */
-span.stamped-summary-actions {
+div[data-widget-style*="standard"] span.stamped-summary-actions {
   float: right;
   position: relative;
   @include flexBox(row, null, null);
@@ -204,7 +204,8 @@ div.stamped-review-options:nth-child(5) {
   background: $grape-1 !important;
   border: none !important;
   width: calc(100% / 5);
-  box-shadow: inset 1px 0 0 $alabaster, inset -1px 0 0 rgba(255, 255, 255, 0) !important;
+  box-shadow: inset 1px 0 0 var(--color-bg),
+    inset -1px 0 0 rgba(255, 255, 255, 0) !important;
   @include md() {
     margin-bottom: 0 !important;
     margin-top: 0;
@@ -328,9 +329,9 @@ li[data-value="gender"] {
     &:hover,
     &:active,
     &:focus {
-      background: var(--color-success-lighter);
+      background: var(--color-success-lighter) !important;
       .stamped-fa.stamped-fa-thumbs-up {
-        color: var(--color-success);
+        color: var(--color-success) !important;
       }
     }
   }
@@ -339,9 +340,9 @@ li[data-value="gender"] {
     &:hover,
     &:active,
     &:focus {
-      background: var(--color-error-lighter);
+      background: var(--color-error-lighter) !important;
       .stamped-fa.stamped-fa-thumbs-down {
-        color: var(--color-error);
+        color: var(--color-error) !important;
       }
     }
   }
@@ -413,4 +414,55 @@ li[data-value="gender"] {
 .summary-overview {
   display: flex;
   flex-direction: column;
+}
+
+/* PASTE
+========== */
+
+.stamped-summary-keywords-list li {
+  color: var(--color-contrast-medium) !important;
+  background: var(--color-contrast-lower) !important;
+  &:hover {
+    background: var(--color-primary-lighter) !important;
+  }
+}
+
+div.stamped-reviews-search-text input.stamped-reviews-search-input {
+  color: var(--color-contrast-higher) !important;
+  background-color: var(--color-contrast-lower) !important;
+  border: none !important;
+}
+
+.review-location,
+.created {
+  color: var(--color-contrast-medium) !important;
+  font-size: var(--text-sm) !important;
+}
+
+.fa-check-circle-o,
+.fa-share-alt,
+.fa-thumbs-down,
+.fa-thumbs-up,
+.stamped-fa-check-circle-o,
+.stamped-fa-share-alt,
+.stamped-fa-thumbs-down,
+.stamped-fa-thumbs-up {
+  color: var(--color-contrast-medium) !important;
+}
+
+.stamped-summary-ratings {
+  border: none !important;
+}
+
+.stamped-container ul.stamped-tabs {
+  border-bottom: 1px solid var(--color-contrast-low) !important;
+}
+
+.stamped-reviews-filter[data-show-filters="part"],
+.stamped-reviews-filter[data-show-filters="true"] {
+  border-bottom: 1px solid var(--color-contrast-low) !important;
+}
+
+.stamped-photos-carousel .photo.stamped-photo {
+  border: none !important;
 }

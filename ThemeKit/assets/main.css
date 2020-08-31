@@ -1326,7 +1326,6 @@ a.button,
 .button,
 .banners a,
 .lightbox-text-link,
-button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
@@ -11644,10 +11643,10 @@ Descr: A Slideshow to display a gallery of testimonials
 .stamped-reviews-message-block,
 p.stamped-review-content-body {
   font-family: "cp" !important;
-  font-size: var(--text-md) !important;
-  line-height: var(--text-md) !important;
+  font-size: var(--text-base-size) !important;
+  line-height: var(--text-lg) !important;
   font-style: normal !important;
-  color: var(--color-contrast-medium) !important; }
+  color: var(--color-contrast-high) !important; }
 
 .stamped-reviews-author,
 .author {
@@ -13009,7 +13008,7 @@ a.collection-info__caption .product-details {
 .summary-rating-bar {
   background: var(--color-contrast-lower) !important; }
   .summary-rating-bar .summary-rating-bar-content {
-    background: var(--color-contrast-high) !important; }
+    background: var(--color-warning-light) !important; }
 
 .stamped-container > div,
 .stamped-container > span,
@@ -13099,12 +13098,12 @@ li#tab-reviews[data-count]::after {
     background: var(--color-contrast-lower) !important; }
 
 /* #Buttons - Write review, Ask question */
-span.stamped-summary-actions {
+div[data-widget-style*="standard"] span.stamped-summary-actions {
   float: right;
   position: relative;
   display: flex !important;
   flex-direction: row; }
-  span.stamped-summary-actions .stamped-summary-actions-newreview.button {
+  div[data-widget-style*="standard"] span.stamped-summary-actions .stamped-summary-actions-newreview.button {
     margin-bottom: 5px !important; }
 
 /* Button icon */
@@ -13165,7 +13164,7 @@ div.stamped-review-options:nth-child(5) {
   background: #f0ebeb !important;
   border: none !important;
   width: calc(100% / 5);
-  box-shadow: inset 1px 0 0 #f7f7f7, inset -1px 0 0 rgba(255, 255, 255, 0) !important; }
+  box-shadow: inset 1px 0 0 var(--color-bg), inset -1px 0 0 rgba(255, 255, 255, 0) !important; }
   @media (min-width: 768px) {
     .stamped-reviews span.stamped-review-option-scale span {
       margin-bottom: 0 !important;
@@ -13265,14 +13264,14 @@ li[data-value="gender"] {
   border-radius: 4px; }
 
 .stamped-rating-holder .stamped-thumbs-up:hover, .stamped-rating-holder .stamped-thumbs-up:active, .stamped-rating-holder .stamped-thumbs-up:focus {
-  background: var(--color-success-lighter); }
+  background: var(--color-success-lighter) !important; }
   .stamped-rating-holder .stamped-thumbs-up:hover .stamped-fa.stamped-fa-thumbs-up, .stamped-rating-holder .stamped-thumbs-up:active .stamped-fa.stamped-fa-thumbs-up, .stamped-rating-holder .stamped-thumbs-up:focus .stamped-fa.stamped-fa-thumbs-up {
-    color: var(--color-success); }
+    color: var(--color-success) !important; }
 
 .stamped-rating-holder .stamped-thumbs-down:hover, .stamped-rating-holder .stamped-thumbs-down:active, .stamped-rating-holder .stamped-thumbs-down:focus {
-  background: var(--color-error-lighter); }
+  background: var(--color-error-lighter) !important; }
   .stamped-rating-holder .stamped-thumbs-down:hover .stamped-fa.stamped-fa-thumbs-down, .stamped-rating-holder .stamped-thumbs-down:active .stamped-fa.stamped-fa-thumbs-down, .stamped-rating-holder .stamped-thumbs-down:focus .stamped-fa.stamped-fa-thumbs-down {
-    color: var(--color-error); }
+    color: var(--color-error) !important; }
 
 /* #Shopify
   ================================================== */
@@ -13329,6 +13328,47 @@ li[data-value="gender"] {
 .summary-overview {
   display: flex;
   flex-direction: column; }
+
+/* PASTE
+========== */
+.stamped-summary-keywords-list li {
+  color: var(--color-contrast-medium) !important;
+  background: var(--color-contrast-lower) !important; }
+  .stamped-summary-keywords-list li:hover {
+    background: var(--color-primary-lighter) !important; }
+
+div.stamped-reviews-search-text input.stamped-reviews-search-input {
+  color: var(--color-contrast-higher) !important;
+  background-color: var(--color-contrast-lower) !important;
+  border: none !important; }
+
+.review-location,
+.created {
+  color: var(--color-contrast-medium) !important;
+  font-size: var(--text-sm) !important; }
+
+.fa-check-circle-o,
+.fa-share-alt,
+.fa-thumbs-down,
+.fa-thumbs-up,
+.stamped-fa-check-circle-o,
+.stamped-fa-share-alt,
+.stamped-fa-thumbs-down,
+.stamped-fa-thumbs-up {
+  color: var(--color-contrast-medium) !important; }
+
+.stamped-summary-ratings {
+  border: none !important; }
+
+.stamped-container ul.stamped-tabs {
+  border-bottom: 1px solid var(--color-contrast-low) !important; }
+
+.stamped-reviews-filter[data-show-filters="part"],
+.stamped-reviews-filter[data-show-filters="true"] {
+  border-bottom: 1px solid var(--color-contrast-low) !important; }
+
+.stamped-photos-carousel .photo.stamped-photo {
+  border: none !important; }
 
 .cd-signin-modal {
   visibility: hidden;
