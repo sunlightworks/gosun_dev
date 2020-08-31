@@ -30,21 +30,6 @@ a.highlight-true:hover {
   font-weight: 700;
 }
 
-/* #Buttons - Submit */
-#stamped-button-submit,
-.stamped-summary-actions-newreview,
-.stamped-summary-actions-newquestion {
-  transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out,
-    color 0.2s ease-in-out;
-  white-space: nowrap;
-
-  height: var(--btn-height-lg) !important;
-  padding: 0 14px !important;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
-  font-size: 15px !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.025em !important;
-}
 #stamped-button-submit {
   line-height: 40px !important;
 }

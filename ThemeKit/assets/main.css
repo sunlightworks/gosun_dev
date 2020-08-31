@@ -1099,6 +1099,7 @@ u {
   --btn-padding-x: var(--space-md);
   --btn-padding-y: var(--space-unit);
   --btn-radius: 0.25em;
+  --btn-height-md: 40px;
   --btn-height-lg: 56px; }
 
 .btn,
@@ -1162,8 +1163,14 @@ a.btn--primary {
 
 .btn--subtle,
 a.btn--subtle {
-  background-color: var(--color-contrast-lower);
-  color: var(--color-contrast-higher); }
+  background-color: var(--color-contrast-lower) !important;
+  color: var(--color-contrast-higher) !important; }
+  .btn--subtle:hover,
+  a.btn--subtle:hover {
+    background-color: var(--color-contrast-low) !important; }
+  .btn--subtle:focus,
+  a.btn--subtle:focus {
+    box-shadow: 0px 0px 0px 2px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2); }
 
 .btn--accent,
 a.btn--accent {
@@ -1297,43 +1304,19 @@ a.btn--accent {
         color: var(--color-bg) !important;
         background: var(--color-contrast-higher) !important; }
 
-#stamped-button-submit,
-.stamped-summary-actions-newreview,
-.stamped-summary-actions-newquestion,
 .lightbox-text-link {
   border: 3px solid rgba(255, 255, 255, 0) !important;
   color: var(--color-bg) !important;
   background: var(--color-contrast-higher) !important; }
-  #stamped-button-submit:hover, #stamped-button-submit:focus, #stamped-button-submit:active,
-  .stamped-summary-actions-newreview:hover,
-  .stamped-summary-actions-newreview:focus,
-  .stamped-summary-actions-newreview:active,
-  .stamped-summary-actions-newquestion:hover,
-  .stamped-summary-actions-newquestion:focus,
-  .stamped-summary-actions-newquestion:active,
-  .lightbox-text-link:hover,
-  .lightbox-text-link:focus,
-  .lightbox-text-link:active {
+  .lightbox-text-link:hover, .lightbox-text-link:focus, .lightbox-text-link:active {
     color: var(--color-contrast-higher) !important;
     background: var(--color-bg) !important;
     border-color: var(--color-contrast-higher) !important; }
-  #stamped-button-submit.-hollow,
-  .stamped-summary-actions-newreview.-hollow,
-  .stamped-summary-actions-newquestion.-hollow,
   .lightbox-text-link.-hollow {
     background: none !important;
     color: var(--color-contrast-higher) !important;
     border: 3px solid var(--color-contrast-higher) !important; }
-    #stamped-button-submit.-hollow:hover, #stamped-button-submit.-hollow:focus, #stamped-button-submit.-hollow:active,
-    .stamped-summary-actions-newreview.-hollow:hover,
-    .stamped-summary-actions-newreview.-hollow:focus,
-    .stamped-summary-actions-newreview.-hollow:active,
-    .stamped-summary-actions-newquestion.-hollow:hover,
-    .stamped-summary-actions-newquestion.-hollow:focus,
-    .stamped-summary-actions-newquestion.-hollow:active,
-    .lightbox-text-link.-hollow:hover,
-    .lightbox-text-link.-hollow:focus,
-    .lightbox-text-link.-hollow:active {
+    .lightbox-text-link.-hollow:hover, .lightbox-text-link.-hollow:focus, .lightbox-text-link.-hollow:active {
       color: var(--color-bg) !important;
       background: var(--color-contrast-higher) !important; }
 
@@ -7860,19 +7843,6 @@ a.highlight-true:hover {
   border-color: transparent !important;
   color: var(--color-contrast-higher) !important; }
 
-/* #Buttons - Submit */
-#stamped-button-submit,
-.stamped-summary-actions-newreview,
-.stamped-summary-actions-newquestion {
-  transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
-  white-space: nowrap;
-  height: var(--btn-height-lg) !important;
-  padding: 0 14px !important;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
-  font-size: 15px !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.025em !important; }
-
 #stamped-button-submit {
   line-height: 40px !important; }
 
@@ -10317,6 +10287,32 @@ Descr: A slide-in panel used to display critical content
     left: 0; }
   .drawer--modal .drawer__content {
     max-width: var(--drawer-width); }
+
+/* -------------------------------- 
+
+File#: _1_read-more
+Title: Read More
+Descr: A truncated paragraph with the option of reading more content
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.js .read-more {
+  opacity: 0; }
+
+.js .read-more--loaded {
+  opacity: 1; }
+
+.read-more__btn {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  line-height: inherit;
+  appearance: none;
+  cursor: pointer;
+  color: var(--color-primary);
+  text-decoration: underline; }
 
 /* -------------------------------- 
 
@@ -13028,9 +13024,11 @@ li#tab-questions[data-count][data-new-tab]::after,
 li#tab-reviews[data-count]::after {
   background: var(--color-contrast-lower) !important; }
 
-.stamped-review .stamped-review-variant {
-  opacity: 0;
-  margin-top: -10px; }
+.stamped-review {
+  border-color: var(--color-contrast-low) !important; }
+  .stamped-review .stamped-review-variant {
+    opacity: 0;
+    margin-top: -10px; }
 
 [data-widget-type="minimal"] .stamped-review .stamped-review-content {
   font-family: "cp" !important;
@@ -13110,11 +13108,8 @@ span.stamped-summary-actions {
     margin-bottom: 5px !important; }
 
 /* Button icon */
-.stamped-summary-actions-newquestion::before,
-.stamped-summary-actions-newreview::before,
-.stamped-summary-actions-mobile-filter i::before,
-.stamped-summary-actions-clear::before {
-  color: var(--color-contrast-medium) !important; }
+.stamped-summary-actions > *:before {
+  display: none !important; }
 
 /* #Reviews - Overview
   ================================================== */
@@ -13251,7 +13246,17 @@ li[data-value="gender"] {
 .stamped-review-reply {
   margin: 30px 0 0 0 !important;
   background: var(--color-contrast-lower) !important;
-  padding: var(--space-lg) !important; }
+  padding: var(--space-lg) !important;
+  border-color: var(--color-contrast-low) !important; }
+
+.reply--official {
+  background: hsla(var(--color-success-h), var(--color-success-s), var(--color-success-l), 0.2) !important;
+  border-color: var(--color-success) !important; }
+  .reply--official span {
+    color: var(--color-success-dark) !important; }
+  .reply--official div,
+  .reply--official a {
+    color: var(--color-success) !important; }
 
 /* #Reviews - Helpful
   ================================================== */

@@ -1,9 +1,3 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the Reviews
-// -----------------------------------------------------------------------------
-// -----------------------------------------------------------------------------
-// Reviews - Write a Review
-// -----------------------------------------------------------------------------
 /* #Stamped.io
   ================================================== */
 
@@ -42,9 +36,12 @@ li#tab-reviews[data-count] {
   }
 }
 
-.stamped-review .stamped-review-variant {
-  opacity: 0;
-  margin-top: -10px;
+.stamped-review {
+  border-color: var(--color-contrast-low) !important;
+  .stamped-review-variant {
+    opacity: 0;
+    margin-top: -10px;
+  }
 }
 
 [data-widget-type="minimal"] .stamped-review .stamped-review-content {
@@ -137,11 +134,10 @@ span.stamped-summary-actions {
 }
 
 /* Button icon */
-.stamped-summary-actions-newquestion::before,
-.stamped-summary-actions-newreview::before,
-.stamped-summary-actions-mobile-filter i::before,
-.stamped-summary-actions-clear::before {
-  color: var(--color-contrast-medium) !important;
+.stamped-summary-actions > * {
+  &:before {
+    display: none !important; // Hide icon
+  }
 }
 
 // -----------------------------------------------------------------------------
@@ -300,6 +296,24 @@ li[data-value="gender"] {
   margin: 30px 0 0 0 !important;
   background: var(--color-contrast-lower) !important;
   padding: var(--space-lg) !important;
+  border-color: var(--color-contrast-low) !important;
+}
+
+.reply--official {
+  background: hsla(
+    var(--color-success-h),
+    var(--color-success-s),
+    var(--color-success-l),
+    0.2
+  ) !important;
+  border-color: var(--color-success) !important;
+  span {
+    color: var(--color-success-dark) !important; // Title
+  }
+  div,
+  a {
+    color: var(--color-success) !important; // Body
+  }
 }
 
 /* #Reviews - Helpful
