@@ -8852,6 +8852,50 @@ div.snize li.snize-product span.snize-description {
 
 /* -------------------------------- 
 
+File#: _1_section-divider
+Title: Section divider
+Descr: A collection of SVG section dividers.
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --section-divider-width: 1920;
+  --section-divider-height: 60;
+  --section-divider-ratio: calc(
+    100% * var(--section-divider-height) / var(--section-divider-width)
+  ); }
+
+[class*="has-section-divider"] {
+  position: relative; }
+
+.has-section-dividers {
+  padding-top: var(--section-divider-ratio);
+  padding-bottom: var(--section-divider-ratio); }
+  .has-section-dividers .section-divider:first-child {
+    bottom: auto;
+    top: -1px;
+    transform: scaleY(-1); }
+
+.has-section-divider-top {
+  padding-top: var(--section-divider-ratio); }
+  .has-section-divider-top .section-divider {
+    bottom: auto;
+    top: -1px;
+    transform: scaleY(-1); }
+
+.has-section-divider-bottom {
+  padding-bottom: var(--section-divider-ratio); }
+
+.section-divider {
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: auto;
+  width: 100%; }
+
+/* -------------------------------- 
+
 File#: _1_link-effects
 Title: Link Effects
 Descr: A collection of link effects
