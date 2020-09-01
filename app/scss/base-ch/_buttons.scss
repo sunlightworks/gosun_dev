@@ -10,8 +10,21 @@
   --btn-height-lg: 56px;
 }
 
+@mixin btn($bg: var(--color-contrast-high), $color: var(--color-bg)) {
+  background-color: $bg !important;
+  color: $color !important;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: lightness($bg, 1.15) !important;
+  }
+}
+
+// themes
 .btn,
 a.btn {
+  @include fontSmooth;
+  border: none !important;
   // basic button style
   position: relative;
   display: inline-flex;
@@ -28,41 +41,19 @@ a.btn {
     0px 1px 1px 0 alpha(var(--color-black), 0.12);
   transition: all 0.3s ease;
   font-size: var(--btn-font-size, 2rem);
-  padding-top: var(--btn-padding-y, 0.5em);
-  padding-bottom: var(--btn-padding-y, 0.5em);
-  padding-left: var(--btn-padding-x, 0.75em);
-  padding-right: var(--btn-padding-x, 0.75em);
+  padding: var(--btn-padding-y, 0.5em) var(--btn-padding-x, 0.75em);
   border-radius: var(--btn-radius, 0.25em);
   &:hover {
     box-shadow: 0px 1px 2px 0 alpha(var(--color-black), 0.12),
       0px 1px 1px 0 alpha(var(--color-black), 0.12);
   }
-
   &:focus {
     box-shadow: 0px 0px 0px 2px alpha(var(--color-black), 0.2);
     outline: none;
   }
-
   &:active {
     transform: translateY(2px);
   }
-}
-
-@mixin btn($bg: var(--color-contrast-high), $color: var(--color-bg)) {
-  background-color: $bg !important;
-  color: $color !important;
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: lightness($bg, 1.15) !important;
-  }
-}
-
-// themes
-.btn,
-a.btn {
-  @include fontSmooth;
-  border: none !important;
   &--primary {
     @include btn(var(--color-primary));
   }

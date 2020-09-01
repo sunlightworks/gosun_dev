@@ -9,8 +9,8 @@
  
  
 function buttonStyle() {
-    $(".stamped-summary-actions-newquestion, .stamped-pagination a").addClass("btn btn--subtle flex");
-    $(".stamped-summary-actions-newreview").addClass("btn btn--primary");
+    $(".stamped-summary-actions-newquestion, .stamped-pagination a, .stamped-file-uploader-btn").addClass("btn btn--subtle");
+    $(".stamped-summary-actions-newreview, #stamped-button-submit").addClass("btn btn--primary");
     console.log('Button style finished');
 };
 

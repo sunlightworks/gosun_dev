@@ -1104,6 +1104,9 @@ u {
 
 .btn,
 a.btn {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: none !important;
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -1118,10 +1121,7 @@ a.btn {
   box-shadow: 0px 2px 8px 0 hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.12), 0px 1px 1px 0 hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.12);
   transition: all 0.3s ease;
   font-size: var(--btn-font-size, 2rem);
-  padding-top: var(--btn-padding-y, 0.5em);
-  padding-bottom: var(--btn-padding-y, 0.5em);
-  padding-left: var(--btn-padding-x, 0.75em);
-  padding-right: var(--btn-padding-x, 0.75em);
+  padding: var(--btn-padding-y, 0.5em) var(--btn-padding-x, 0.75em);
   border-radius: var(--btn-radius, 0.25em); }
   .btn:hover,
   a.btn:hover {
@@ -1133,12 +1133,6 @@ a.btn {
   .btn:active,
   a.btn:active {
     transform: translateY(2px); }
-
-.btn,
-a.btn {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border: none !important; }
   .btn--primary,
   a.btn--primary {
     background-color: var(--color-primary) !important;
