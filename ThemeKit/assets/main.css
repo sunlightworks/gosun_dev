@@ -13055,12 +13055,23 @@ a.collection-info__caption .product-details {
   text-transform: capitalize;
   font-weight: 700; }
 
-/* #Stamped.io
+/* Overview / Controls
   ================================================== */
+.stamped-header {
+  margin-top: calc( var(--space-md) * -1) !important; }
+
+.stamped-summary-starrating {
+  margin-top: var(--space-xs) !important; }
+
 .stamped-summary-text-1 {
   font-size: var(--text-xxxxl) !important;
   margin-bottom: var(--space-xxs);
   color: var(--color-contrast-higher) !important; }
+
+.stamped-summary-text {
+  font-size: var(--text-sm) !important;
+  color: var(--color-contrast-medium) !important;
+  margin: 0 !important; }
 
 .summary-rating-bar {
   background: var(--color-contrast-lower) !important; }
@@ -13079,6 +13090,17 @@ a.collection-info__caption .product-details {
 li#tab-questions[data-count][data-new-tab]::after,
 li#tab-reviews[data-count]::after {
   background: var(--color-contrast-lower) !important; }
+
+.stamped-reviews-filter-label {
+  display: none !important; }
+
+.stamped-summary-actions-clear,
+.stamped-summary-actions-mobile-filter {
+  background: var(--color-contrast-lower) !important;
+  color: var(--color-contrast-high) !important;
+  border: none !important;
+  margin-top: var(--space-xs) !important;
+  font-size: var(--text-sm) !important; }
 
 .stamped-review {
   border-color: var(--color-contrast-low) !important; }
@@ -13159,13 +13181,16 @@ div[data-widget-style*="standard"] span.stamped-summary-actions {
   float: right;
   position: relative;
   display: flex !important;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: space-between; }
   div[data-widget-style*="standard"] span.stamped-summary-actions .stamped-summary-actions-newreview.button {
     margin-bottom: 5px !important; }
 
 /* Button icon */
-.stamped-summary-actions > *:before {
-  display: none !important; }
+.stamped-summary-actions > * {
+  width: 48% !important; }
+  .stamped-summary-actions > *:before {
+    display: none !important; }
 
 /* #Reviews - Overview
   ================================================== */
@@ -13480,12 +13505,12 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
 /* Section - Narrow
 ================================================== */
 .section--page {
-  padding: 60px 0 !important; }
+  padding: var(--space-lg) 0 !important; }
   .section--page:nth-of-type(2n) {
     background: var(--color-max); }
 
 .section--xl {
-  margin-bottom: 80px; }
+  margin-bottom: var(--space-xl); }
 
 /* Shogun - Full-width */
 @media (max-width: 768px) {

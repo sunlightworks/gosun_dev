@@ -1,10 +1,24 @@
-/* #Stamped.io
+/* Overview / Controls
   ================================================== */
+.stamped-header {
+  margin-top: calc(
+    var(--space-md) * -1
+  ) !important; // Remove extra space for section 📱
+}
+.stamped-summary-starrating {
+  margin-top: var(--space-xs) !important; // Add space between stars and rating
+}
 
 .stamped-summary-text-1 {
   font-size: var(--text-xxxxl) !important;
   margin-bottom: var(--space-xxs);
-  color: var(--color-contrast-higher) !important;
+  color: var(--color-contrast-higher) !important; // Review rating
+}
+
+.stamped-summary-text {
+  font-size: var(--text-sm) !important;
+  color: var(--color-contrast-medium) !important;
+  margin: 0 !important; // Review count
 }
 
 .summary-rating-bar {
@@ -34,6 +48,19 @@ li#tab-reviews[data-count] {
   &::after {
     background: var(--color-contrast-lower) !important;
   }
+}
+
+// Filter Reviews
+.stamped-reviews-filter-label {
+  display: none !important;
+}
+.stamped-summary-actions-clear,
+.stamped-summary-actions-mobile-filter {
+  background: var(--color-contrast-lower) !important;
+  color: var(--color-contrast-high) !important;
+  border: none !important;
+  margin-top: var(--space-xs) !important;
+  font-size: var(--text-sm) !important;
 }
 
 .stamped-review {
@@ -127,7 +154,7 @@ li#tab-reviews[data-count] {
 div[data-widget-style*="standard"] span.stamped-summary-actions {
   float: right;
   position: relative;
-  @include flexBox(row, null, null);
+  @include flexBox(row, space-between, null);
   .stamped-summary-actions-newreview.button {
     margin-bottom: 5px !important;
   }
@@ -135,6 +162,7 @@ div[data-widget-style*="standard"] span.stamped-summary-actions {
 
 /* Button icon */
 .stamped-summary-actions > * {
+  width: 48% !important;
   &:before {
     display: none !important; // Hide icon
   }

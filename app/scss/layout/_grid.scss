@@ -54,13 +54,13 @@
 ================================================== */
 .section {
   &--page {
-    padding: 60px 0 !important;
+    padding: var(--space-lg) 0 !important;
     &:nth-of-type(2n) {
       background: var(--color-max);
     }
   }
   &--xl {
-    margin-bottom: 80px;
+    margin-bottom: var(--space-xl);
   }
 }
 

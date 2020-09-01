@@ -7,7 +7,6 @@
     "theme_support_url": "https:\/\/latimer.me",
     "theme_documentation_url": "https:\/\/latimer.me"
   },
-  
   {
     "name": "Performance",
     "settings": [
@@ -89,7 +88,7 @@
         "type": "checkbox",
         "id": "theme_switch",
         "label": "Enable theme switching",
-        "info": "Allow users to switch between light/dark mode",
+        "info": "Allow users to switch between light\/dark mode",
         "default": true
       },
       {
