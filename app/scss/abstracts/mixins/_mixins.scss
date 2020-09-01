@@ -154,23 +154,6 @@
 
 /* #Button - Default
 ================================================== */
-@mixin btn() {
-  @include rounded();
-  @include btn-transition();
-  @include btn-shadow();
-  cursor: pointer !important;
-  height: 36px;
-  letter-spacing: 0.04em;
-  line-height: 36px;
-  font-size: var(--text-sm);
-  letter-spacing: -0.03em;
-  color: var(--color-max) !important;
-  min-width: 88px;
-  padding: 0 16px;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-}
 
 // -----------------------------------------------------------------------------
 // Cards

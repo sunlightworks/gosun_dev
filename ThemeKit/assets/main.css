@@ -1122,7 +1122,10 @@ a.btn {
   transition: all 0.3s ease;
   font-size: var(--btn-font-size, 2rem);
   padding: var(--btn-padding-y, 0.5em) var(--btn-padding-x, 0.75em);
-  border-radius: var(--btn-radius, 0.25em); }
+  border-radius: var(--btn-radius, 0.25em);
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important; }
   .btn:hover,
   a.btn:hover {
     box-shadow: 0px 1px 2px 0 hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.12), 0px 1px 1px 0 hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.12); }
@@ -7705,9 +7708,6 @@ a.highlight-true:hover {
   border-color: transparent !important;
   color: var(--color-contrast-higher) !important; }
 
-#stamped-button-submit {
-  line-height: 40px !important; }
-
 /* #Button - Kickstarter
 ================================================== */
 .-kickstarter,
@@ -8224,16 +8224,14 @@ div.section.collection_description .klaviyo-section {
   width: 30%;
   height: 50px; }
   .klaviyo-form-action button {
-    height: 50px;
-    background: rgba(0, 0, 0, 0.35);
-    font-size: 16px;
-    font-weight: 700;
+    background-color: var(--color-contrast-high) !important;
+    color: var(--color-bg) !important;
     height: 100%;
     background: rgba(0, 0, 0, 0.35);
     font-size: 15px;
     font-weight: 700; }
-    .klaviyo-form-action button:hover {
-      background: rgba(0, 0, 0, 0.5); }
+    .klaviyo-form-action button:hover, .klaviyo-form-action button:focus, .klaviyo-form-action button:active {
+      background-color: hsl(var(--color-contrast-high-h), var(--color-contrast-high-s), calc(var(--color-contrast-high-l) * 1.15)) !important; }
     .klaviyo-form-action button:hover {
       background: rgba(0, 0, 0, 0.5); }
 
@@ -13005,15 +13003,19 @@ li#tab-reviews[data-count]::after {
   text-transform: none !important;
   font-family: "cp" !important; }
 
-.stamped-form-custom-question > label {
+.stamped-form-custom-question > label,
+.stamped-form-review-recommend-label {
   text-transform: none;
-  font-size: var(--text-sm); }
+  font-size: var(--text-sm) !important; }
 
 .new-review-form .stamped-form-custom-option-scale label div {
   color: var(--color-contrast-high); }
 
 .stamped-form-review-recommend-label {
   font-weight: 700; }
+
+.stamped-form-review-recommend label {
+  font-weight: 400 !important; }
 
 .stamped-form-input {
   max-width: 700px; }
@@ -13036,19 +13038,6 @@ li#tab-reviews[data-count]::after {
 /* #Reviews - Buttons
   ================================================== */
 /* #Buttons - Upload photo */
-.stamped-file-uploader-btn {
-  border: 2px solid var(--color-contrast-higher);
-  padding: 12px 10px !important;
-  -webkit-border-radius: var(--radius-md) !important;
-  -moz-border-radius: var(--radius-md) !important;
-  border-radius: var(--radius-md) !important;
-  -ms-border-radius: var(--radius-md) !important;
-  -o-border-radius: var(--radius-md) !important;
-  margin-top: 10px !important; }
-
-.stamped-container[data-widget-show-upload="true"] .stamped-file-uploader {
-  margin-top: 10px !important; }
-
 .stamped-review-recommend {
   display: none !important; }
 
@@ -13321,13 +13310,12 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
 .stamped-fa-check-circle-o,
 .stamped-fa-share-alt,
 .stamped-fa-thumbs-down,
-.stamped-fa-thumbs-up,
-.stamped-form-label,
-.stamped-form-custom-question {
+.stamped-fa-thumbs-up {
   color: var(--color-contrast-medium) !important; }
 
-.stamped-form-label {
-  color: var(--color-contrast-higher) !important; }
+.stamped-form-label,
+.stamped-form-custom-question {
+  color: var(--color-contrast-high) !important; }
 
 .cd-signin-modal {
   visibility: hidden;

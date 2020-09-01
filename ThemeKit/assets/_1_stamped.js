@@ -10,8 +10,8 @@
  
 function buttonStyle() {
     $(".stamped-summary-actions-newquestion, .stamped-pagination a, .stamped-file-uploader-btn").addClass("btn btn--subtle");
-    $(".stamped-summary-actions-newreview, #stamped-button-submit").addClass("btn btn--primary");
-    console.log('Button style finished');
+    $(".stamped-summary-actions-newreview, #stamped-button-submit, .stamped-button-primary").addClass("btn btn--primary");
+    console.log('✅ buttonStyle finished');
 };
 
 function readMorePrep(characterCount) {
@@ -20,22 +20,29 @@ function readMorePrep(characterCount) {
         'data-characters': characterCount,
         'data-btn-class':'read-more__btn js-tab-focus'
     });
-    console.log('Read more finished');
+    console.log('✅ readMorePrep finished');
 };
 
 
     
 function officialReply() {
     $('[data-author="GoSun"]').closest('.stamped-review-reply').addClass('reply--official');
-    console.log('Official reply finished');
+    console.log('✅ officialReply finished');
 };
+
+// Add (1-5) to scale questions
+function scaleContext() {
+  $('[data-type="scale"] > label:first-child').append("<span class='font-light'>&nbsp;(1-5)</span>");
+  console.log('✅ scaleContext finished');
+}
 
 
 
 $(window).bind("load", function() {
     buttonStyle();
     readMorePrep(180);
-    $('.stamped-tabs li', '.next a', '.page a').click(officialReply, buttonStyle, readMorePrep);
+    scaleContext();
+    $('.stamped-tabs li, .next a, .page a').on('click', function() { officialReply(); buttonStyle(); readMorePrep(180); scaleContext()});
 
 
 

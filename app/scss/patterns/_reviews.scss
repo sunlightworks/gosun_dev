@@ -115,9 +115,10 @@ li#tab-reviews[data-count] {
   font-family: "cp" !important;
 }
 
-.stamped-form-custom-question > label {
+.stamped-form-custom-question > label,
+.stamped-form-review-recommend-label {
   text-transform: none;
-  font-size: var(--text-sm);
+  font-size: var(--text-sm) !important; // Form labels
 }
 
 .new-review-form .stamped-form-custom-option-scale label div {
@@ -125,7 +126,10 @@ li#tab-reviews[data-count] {
 }
 
 .stamped-form-review-recommend-label {
-  font-weight: 700;
+  font-weight: 700; // Recommend label
+}
+.stamped-form-review-recommend label {
+  font-weight: 400 !important; // Recommend options
 }
 
 .stamped-form-input {
@@ -156,13 +160,6 @@ li#tab-reviews[data-count] {
   ================================================== */
 /* #Buttons - Upload photo */
 .stamped-file-uploader-btn {
-  border: 2px solid var(--color-contrast-higher);
-  padding: 12px 10px !important;
-  @include rounded();
-  margin-top: 10px !important;
-}
-.stamped-container[data-widget-show-upload="true"] .stamped-file-uploader {
-  margin-top: 10px !important;
 }
 
 .stamped-review-recommend {
@@ -504,12 +501,11 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
 .stamped-fa-check-circle-o,
 .stamped-fa-share-alt,
 .stamped-fa-thumbs-down,
-.stamped-fa-thumbs-up,
-.stamped-form-label,
-.stamped-form-custom-question {
+.stamped-fa-thumbs-up {
   color: var(--color-contrast-medium) !important;
 }
 
-.stamped-form-label {
-  color: var(--color-contrast-higher) !important;
+.stamped-form-label,
+.stamped-form-custom-question {
+  color: var(--color-contrast-high) !important;
 }

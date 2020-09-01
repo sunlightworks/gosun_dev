@@ -20,20 +20,6 @@ a.highlight-true:hover {
 // -----------------------------------------------------------------------------
 // Preorder - Chill // ----------------------------------------------------------------------
 
-@mixin btn-hero {
-  height: 50px;
-  background: rgba(0, 0, 0, 0.35);
-  &:hover {
-    background: rgba(0, 0, 0, 0.5);
-  }
-  font-size: 16px;
-  font-weight: 700;
-}
-
-#stamped-button-submit {
-  line-height: 40px !important;
-}
-
 /* #Button - Kickstarter
 ================================================== */
 .-kickstarter,

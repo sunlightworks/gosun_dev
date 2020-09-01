@@ -43,6 +43,9 @@ a.btn {
   font-size: var(--btn-font-size, 2rem);
   padding: var(--btn-padding-y, 0.5em) var(--btn-padding-x, 0.75em);
   border-radius: var(--btn-radius, 0.25em);
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
   &:hover {
     box-shadow: 0px 1px 2px 0 alpha(var(--color-black), 0.12),
       0px 1px 1px 0 alpha(var(--color-black), 0.12);
