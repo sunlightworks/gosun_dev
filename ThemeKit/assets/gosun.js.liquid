@@ -1,13 +1,16 @@
+document.querySelector('.menu a').addEventListener('click', function() {
+  event.preventDefault();
+});
+
+$("a.top_link:nth-child(-n+3)").click(function( event ){event.preventDefault(); console.log('✌🏼 Dont think so')}
+);
+
+
 $(window).resize(function(){
   if ($(window).width() <= 768){	
     $('.width-small-1-1').removeClass('width-1-2');
   }	
 });
-
-
-
-
-
 
 
 $(function() {

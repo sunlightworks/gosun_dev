@@ -1832,8 +1832,8 @@ body.is-active {
 .dropdown {
   @include background-opacity({{ settings.header_bg_color }}, {% if settings.transparent_header %}0.9{% else %}1{% endif %});
   clear: both;
-  transition: all 0.3s linear;
-  animation: fadeIn 0.3s linear none;
+  //rm transition: all 0.3s linear;
+  //rm animation: fadeIn 0.3s linear none;
 }
 
 {% if settings.header_background == false %}
@@ -2336,6 +2336,7 @@ input[type="submit"].guest_button, input[type="button"].guest_button {
   clear: both;
   width: 100%;
   display: none;
+  animotion: none !important;
 }
 
 .dropdown_container img {
