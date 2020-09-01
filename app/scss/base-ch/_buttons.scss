@@ -48,64 +48,34 @@ a.btn {
   }
 }
 
+@mixin btn($bg: var(--color-contrast-high), $color: var(--color-bg)) {
+  background-color: $bg !important;
+  color: $color !important;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: lightness($bg, 1.15) !important;
+  }
+}
+
 // themes
 .btn,
 a.btn {
-  background-color: var(--color-contrast-higher);
-  color: var(--color-bg);
   @include fontSmooth;
   border: none !important;
-  &:hover {
-    background-color: var(--color-contrast-high);
+  &--primary {
+    @include btn(var(--color-primary));
   }
-  &:focus {
-    box-shadow: 0px 0px 0px 2px alpha(var(--color-primary), 0.2);
+  &--accent {
+    @include btn(var(--color-accent));
   }
-}
-
-// themes
-.btn--primary,
-a.btn--primary {
-  background-color: var(--color-primary) !important;
-  color: var(--color-bg) !important;
-  @include fontSmooth;
-  &:hover {
-    background-color: var(--color-primary-light) !important;
+  &--subtle {
+    @include btn(var(--color-contrast-lower), var(--color-contrast-higher));
   }
-  &:focus {
-    box-shadow: 0px 0px 0px 2px alpha(var(--color-primary), 0.2);
+  &--disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
-}
-
-.btn--subtle,
-a.btn--subtle {
-  background-color: var(--color-contrast-lower) !important;
-  color: var(--color-contrast-higher) !important;
-  &:hover {
-    background-color: var(--color-contrast-low) !important;
-  }
-  &:focus {
-    box-shadow: 0px 0px 0px 2px alpha(var(--color-primary), 0.2);
-  }
-}
-
-.btn--accent,
-a.btn--accent {
-  background-color: var(--color-accent);
-  color: var(--color-bg);
-  @include fontSmooth;
-  &:hover {
-    background-color: var(--color-accent-light);
-  }
-  &:focus {
-    box-shadow: 0px 0px 0px 2px alpha(var(--color-accent), 0.2);
-  }
-}
-
-// feedback
-.btn--disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
 }
 
 // size
@@ -127,57 +97,6 @@ a.btn--accent {
 // -----------------------------------------------------------------------------
 // My Own
 // -----------------------------------------------------------------------------
-@mixin btn($background, $color) {
-  border: 3px solid rgba(255, 255, 255, 0) !important; // You'll want to customize this
-  color: $color !important;
-  background: $background !important;
-  &:hover,
-  &:focus,
-  &:active {
-    color: $background !important;
-    background: $color !important;
-    border-color: $background !important;
-  }
-  &.-hollow {
-    background: none !important;
-    color: $background !important;
-    border: 3px solid $background !important; // The thickness should correspond with the thickness set above
-    &:hover,
-    &:focus,
-    &:active {
-      color: $color !important;
-      background: $background !important;
-    }
-  }
-}
-// End Mixin
-
-// Using the mixin
-.button,
-.lightbox-text-link {
-  transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out,
-    color 0.2s ease-in-out;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-
-  &.-primary {
-    @include btn(var(--color-primary), var(--color-bg));
-  }
-  &.-light {
-    @include btn(var(--color-bg), var(--color-contrast-higher));
-  }
-  &.-dark {
-    @include btn(var(--color-contrast-higher), var(--color-bg));
-  }
-  &.-disabled {
-    color: var(--color-contrast-higher) !important;
-    background: var(--color-contrast-medium) !important;
-    border-color: var(--color-contrast-medium) !important;
-    cursor: default !important;
-  }
-  &.-shine {
-    @include btn(var(--color-contrast-higher), var(--color-bg));
-  }
-}
 
 .lightbox-text-link {
   @include btn(var(--color-contrast-higher), var(--color-bg));

@@ -1136,58 +1136,40 @@ a.btn {
 
 .btn,
 a.btn {
-  background-color: var(--color-contrast-higher);
-  color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   border: none !important; }
-  .btn:hover,
-  a.btn:hover {
-    background-color: var(--color-contrast-high); }
-  .btn:focus,
-  a.btn:focus {
-    box-shadow: 0px 0px 0px 2px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2); }
-
-.btn--primary,
-a.btn--primary {
-  background-color: var(--color-primary) !important;
-  color: var(--color-bg) !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-  .btn--primary:hover,
-  a.btn--primary:hover {
-    background-color: var(--color-primary-light) !important; }
-  .btn--primary:focus,
-  a.btn--primary:focus {
-    box-shadow: 0px 0px 0px 2px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2); }
-
-.btn--subtle,
-a.btn--subtle {
-  background-color: var(--color-contrast-lower) !important;
-  color: var(--color-contrast-higher) !important; }
-  .btn--subtle:hover,
-  a.btn--subtle:hover {
-    background-color: var(--color-contrast-low) !important; }
-  .btn--subtle:focus,
-  a.btn--subtle:focus {
-    box-shadow: 0px 0px 0px 2px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2); }
-
-.btn--accent,
-a.btn--accent {
-  background-color: var(--color-accent);
-  color: var(--color-bg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-  .btn--accent:hover,
-  a.btn--accent:hover {
-    background-color: var(--color-accent-light); }
-  .btn--accent:focus,
-  a.btn--accent:focus {
-    box-shadow: 0px 0px 0px 2px hsla(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l), 0.2); }
-
-.btn--disabled {
-  opacity: 0.6;
-  cursor: not-allowed; }
+  .btn--primary,
+  a.btn--primary {
+    background-color: var(--color-primary) !important;
+    color: var(--color-bg) !important; }
+    .btn--primary:hover, .btn--primary:focus, .btn--primary:active,
+    a.btn--primary:hover,
+    a.btn--primary:focus,
+    a.btn--primary:active {
+      background-color: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) * 1.15)) !important; }
+  .btn--accent,
+  a.btn--accent {
+    background-color: var(--color-accent) !important;
+    color: var(--color-bg) !important; }
+    .btn--accent:hover, .btn--accent:focus, .btn--accent:active,
+    a.btn--accent:hover,
+    a.btn--accent:focus,
+    a.btn--accent:active {
+      background-color: hsl(var(--color-accent-h), var(--color-accent-s), calc(var(--color-accent-l) * 1.15)) !important; }
+  .btn--subtle,
+  a.btn--subtle {
+    background-color: var(--color-contrast-lower) !important;
+    color: var(--color-contrast-higher) !important; }
+    .btn--subtle:hover, .btn--subtle:focus, .btn--subtle:active,
+    a.btn--subtle:hover,
+    a.btn--subtle:focus,
+    a.btn--subtle:active {
+      background-color: hsl(var(--color-contrast-lower-h), var(--color-contrast-lower-s), calc(var(--color-contrast-lower-l) * 1.15)) !important; }
+  .btn--disabled,
+  a.btn--disabled {
+    opacity: 0.6;
+    cursor: not-allowed; }
 
 .btn--sm {
   font-size: var(--btn-font-size-sm, 0.8em); }
@@ -1201,124 +1183,11 @@ a.btn--accent {
 .btn--icon {
   padding: var(--btn-padding-y, 0.5em); }
 
-.button,
 .lightbox-text-link {
-  transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); }
-  .button.-primary,
-  .lightbox-text-link.-primary {
-    border: 3px solid rgba(255, 255, 255, 0) !important;
-    color: var(--color-bg) !important;
-    background: var(--color-primary) !important; }
-    .button.-primary:hover, .button.-primary:focus, .button.-primary:active,
-    .lightbox-text-link.-primary:hover,
-    .lightbox-text-link.-primary:focus,
-    .lightbox-text-link.-primary:active {
-      color: var(--color-primary) !important;
-      background: var(--color-bg) !important;
-      border-color: var(--color-primary) !important; }
-    .button.-primary.-hollow,
-    .lightbox-text-link.-primary.-hollow {
-      background: none !important;
-      color: var(--color-primary) !important;
-      border: 3px solid var(--color-primary) !important; }
-      .button.-primary.-hollow:hover, .button.-primary.-hollow:focus, .button.-primary.-hollow:active,
-      .lightbox-text-link.-primary.-hollow:hover,
-      .lightbox-text-link.-primary.-hollow:focus,
-      .lightbox-text-link.-primary.-hollow:active {
-        color: var(--color-bg) !important;
-        background: var(--color-primary) !important; }
-  .button.-light,
-  .lightbox-text-link.-light {
-    border: 3px solid rgba(255, 255, 255, 0) !important;
-    color: var(--color-contrast-higher) !important;
-    background: var(--color-bg) !important; }
-    .button.-light:hover, .button.-light:focus, .button.-light:active,
-    .lightbox-text-link.-light:hover,
-    .lightbox-text-link.-light:focus,
-    .lightbox-text-link.-light:active {
-      color: var(--color-bg) !important;
-      background: var(--color-contrast-higher) !important;
-      border-color: var(--color-bg) !important; }
-    .button.-light.-hollow,
-    .lightbox-text-link.-light.-hollow {
-      background: none !important;
-      color: var(--color-bg) !important;
-      border: 3px solid var(--color-bg) !important; }
-      .button.-light.-hollow:hover, .button.-light.-hollow:focus, .button.-light.-hollow:active,
-      .lightbox-text-link.-light.-hollow:hover,
-      .lightbox-text-link.-light.-hollow:focus,
-      .lightbox-text-link.-light.-hollow:active {
-        color: var(--color-contrast-higher) !important;
-        background: var(--color-bg) !important; }
-  .button.-dark,
-  .lightbox-text-link.-dark {
-    border: 3px solid rgba(255, 255, 255, 0) !important;
-    color: var(--color-bg) !important;
-    background: var(--color-contrast-higher) !important; }
-    .button.-dark:hover, .button.-dark:focus, .button.-dark:active,
-    .lightbox-text-link.-dark:hover,
-    .lightbox-text-link.-dark:focus,
-    .lightbox-text-link.-dark:active {
-      color: var(--color-contrast-higher) !important;
-      background: var(--color-bg) !important;
-      border-color: var(--color-contrast-higher) !important; }
-    .button.-dark.-hollow,
-    .lightbox-text-link.-dark.-hollow {
-      background: none !important;
-      color: var(--color-contrast-higher) !important;
-      border: 3px solid var(--color-contrast-higher) !important; }
-      .button.-dark.-hollow:hover, .button.-dark.-hollow:focus, .button.-dark.-hollow:active,
-      .lightbox-text-link.-dark.-hollow:hover,
-      .lightbox-text-link.-dark.-hollow:focus,
-      .lightbox-text-link.-dark.-hollow:active {
-        color: var(--color-bg) !important;
-        background: var(--color-contrast-higher) !important; }
-  .button.-disabled,
-  .lightbox-text-link.-disabled {
-    color: var(--color-contrast-higher) !important;
-    background: var(--color-contrast-medium) !important;
-    border-color: var(--color-contrast-medium) !important;
-    cursor: default !important; }
-  .button.-shine,
-  .lightbox-text-link.-shine {
-    border: 3px solid rgba(255, 255, 255, 0) !important;
-    color: var(--color-bg) !important;
-    background: var(--color-contrast-higher) !important; }
-    .button.-shine:hover, .button.-shine:focus, .button.-shine:active,
-    .lightbox-text-link.-shine:hover,
-    .lightbox-text-link.-shine:focus,
-    .lightbox-text-link.-shine:active {
-      color: var(--color-contrast-higher) !important;
-      background: var(--color-bg) !important;
-      border-color: var(--color-contrast-higher) !important; }
-    .button.-shine.-hollow,
-    .lightbox-text-link.-shine.-hollow {
-      background: none !important;
-      color: var(--color-contrast-higher) !important;
-      border: 3px solid var(--color-contrast-higher) !important; }
-      .button.-shine.-hollow:hover, .button.-shine.-hollow:focus, .button.-shine.-hollow:active,
-      .lightbox-text-link.-shine.-hollow:hover,
-      .lightbox-text-link.-shine.-hollow:focus,
-      .lightbox-text-link.-shine.-hollow:active {
-        color: var(--color-bg) !important;
-        background: var(--color-contrast-higher) !important; }
-
-.lightbox-text-link {
-  border: 3px solid rgba(255, 255, 255, 0) !important;
-  color: var(--color-bg) !important;
-  background: var(--color-contrast-higher) !important; }
+  background-color: var(--color-contrast-higher) !important;
+  color: var(--color-bg) !important; }
   .lightbox-text-link:hover, .lightbox-text-link:focus, .lightbox-text-link:active {
-    color: var(--color-contrast-higher) !important;
-    background: var(--color-bg) !important;
-    border-color: var(--color-contrast-higher) !important; }
-  .lightbox-text-link.-hollow {
-    background: none !important;
-    color: var(--color-contrast-higher) !important;
-    border: 3px solid var(--color-contrast-higher) !important; }
-    .lightbox-text-link.-hollow:hover, .lightbox-text-link.-hollow:focus, .lightbox-text-link.-hollow:active {
-      color: var(--color-bg) !important;
-      background: var(--color-contrast-higher) !important; }
+    background-color: hsl(var(--color-contrast-higher-h), var(--color-contrast-higher-s), calc(var(--color-contrast-higher-l) * 1.15)) !important; }
 
 /* #Buttons
 ================================================== */
@@ -13055,13 +12924,16 @@ a.collection-info__caption .product-details {
   text-transform: capitalize;
   font-weight: 700; }
 
-/* Overview / Controls
+/* Overview
   ================================================== */
 .stamped-header {
   margin-top: calc( var(--space-md) * -1) !important; }
 
 .stamped-summary-starrating {
   margin-top: var(--space-xs) !important; }
+
+.stamped-summary-ratings {
+  border: none !important; }
 
 .stamped-summary-text-1 {
   font-size: var(--text-xxxxl) !important;
@@ -13076,13 +12948,21 @@ a.collection-info__caption .product-details {
 .summary-rating-bar {
   background: var(--color-contrast-lower) !important; }
   .summary-rating-bar .summary-rating-bar-content {
-    background: var(--color-warning-light) !important; }
+    background: var(--color-warning) !important; }
+
+i.stamped-fa-star {
+  color: var(--color-warning) !important; }
 
 .stamped-container > div,
 .stamped-container > span,
 .stamped-container > a {
   color: var(--color-contrast-high) !important; }
 
+.stamped-photos-carousel .photo.stamped-photo {
+  border: none !important; }
+
+/* Tabs / Controls
+  ================================================== */
 #tab-reviews,
 #tab-questions {
   color: var(--color-contrast-higher) !important; }
@@ -13090,6 +12970,15 @@ a.collection-info__caption .product-details {
 li#tab-questions[data-count][data-new-tab]::after,
 li#tab-reviews[data-count]::after {
   background: var(--color-contrast-lower) !important; }
+
+.stamped-tab-container ul.stamped-tabs {
+  border-bottom: 1px solid var(--color-contrast-low) !important; }
+  .stamped-tab-container ul.stamped-tabs li.active {
+    border-color: var(--color-primary) !important; }
+
+.stamped-reviews-filter[data-show-filters="part"],
+.stamped-reviews-filter[data-show-filters="true"] {
+  border-bottom: 1px solid var(--color-contrast-low) !important; }
 
 .stamped-reviews-filter-label {
   display: none !important; }
@@ -13102,6 +12991,8 @@ li#tab-reviews[data-count]::after {
   margin-top: var(--space-xs) !important;
   font-size: var(--text-sm) !important; }
 
+/* Start reviews
+  ================================================== */
 .stamped-review {
   border-color: var(--color-contrast-low) !important; }
   .stamped-review .stamped-review-variant {
@@ -13436,21 +13327,13 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
 .stamped-fa-check-circle-o,
 .stamped-fa-share-alt,
 .stamped-fa-thumbs-down,
-.stamped-fa-thumbs-up {
+.stamped-fa-thumbs-up,
+.stamped-form-label,
+.stamped-form-custom-question {
   color: var(--color-contrast-medium) !important; }
 
-.stamped-summary-ratings {
-  border: none !important; }
-
-.stamped-container ul.stamped-tabs {
-  border-bottom: 1px solid var(--color-contrast-low) !important; }
-
-.stamped-reviews-filter[data-show-filters="part"],
-.stamped-reviews-filter[data-show-filters="true"] {
-  border-bottom: 1px solid var(--color-contrast-low) !important; }
-
-.stamped-photos-carousel .photo.stamped-photo {
-  border: none !important; }
+.stamped-form-label {
+  color: var(--color-contrast-higher) !important; }
 
 .cd-signin-modal {
   visibility: hidden;

@@ -1,4 +1,4 @@
-/* Overview / Controls
+/* Overview
   ================================================== */
 .stamped-header {
   margin-top: calc(
@@ -7,6 +7,10 @@
 }
 .stamped-summary-starrating {
   margin-top: var(--space-xs) !important; // Add space between stars and rating
+}
+
+.stamped-summary-ratings {
+  border: none !important;
 }
 
 .stamped-summary-text-1 {
@@ -24,8 +28,12 @@
 .summary-rating-bar {
   background: var(--color-contrast-lower) !important;
   .summary-rating-bar-content {
-    background: var(--color-warning-light) !important;
+    background: var(--color-warning) !important;
   }
+}
+
+i.stamped-fa-star {
+  color: var(--color-warning) !important;
 }
 
 // Make color theme-switch compatible
@@ -37,6 +45,12 @@
   }
 }
 
+.stamped-photos-carousel .photo.stamped-photo {
+  border: none !important;
+}
+
+/* Tabs / Controls
+  ================================================== */
 #tab-reviews,
 #tab-questions {
   color: var(--color-contrast-higher) !important;
@@ -48,6 +62,20 @@ li#tab-reviews[data-count] {
   &::after {
     background: var(--color-contrast-lower) !important;
   }
+}
+
+.stamped-tab-container {
+  ul.stamped-tabs {
+    border-bottom: 1px solid var(--color-contrast-low) !important;
+    li.active {
+      border-color: var(--color-primary) !important;
+    }
+  }
+}
+
+.stamped-reviews-filter[data-show-filters="part"],
+.stamped-reviews-filter[data-show-filters="true"] {
+  border-bottom: 1px solid var(--color-contrast-low) !important;
 }
 
 // Filter Reviews
@@ -63,6 +91,8 @@ li#tab-reviews[data-count] {
   font-size: var(--text-sm) !important;
 }
 
+/* Start reviews
+  ================================================== */
 .stamped-review {
   border-color: var(--color-contrast-low) !important;
   .stamped-review-variant {
@@ -474,23 +504,12 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
 .stamped-fa-check-circle-o,
 .stamped-fa-share-alt,
 .stamped-fa-thumbs-down,
-.stamped-fa-thumbs-up {
+.stamped-fa-thumbs-up,
+.stamped-form-label,
+.stamped-form-custom-question {
   color: var(--color-contrast-medium) !important;
 }
 
-.stamped-summary-ratings {
-  border: none !important;
-}
-
-.stamped-container ul.stamped-tabs {
-  border-bottom: 1px solid var(--color-contrast-low) !important;
-}
-
-.stamped-reviews-filter[data-show-filters="part"],
-.stamped-reviews-filter[data-show-filters="true"] {
-  border-bottom: 1px solid var(--color-contrast-low) !important;
-}
-
-.stamped-photos-carousel .photo.stamped-photo {
-  border: none !important;
+.stamped-form-label {
+  color: var(--color-contrast-higher) !important;
 }
