@@ -30,19 +30,18 @@ function officialReply() {
     console.log('✅ officialReply finished');
 };
 
-// Add (1-5) to scale questions
+// Append scale units to question labels (1-5)
 function scaleContext() {
   $('[data-type="scale"] > label:first-child').append("<span class='font-light'>&nbsp;(1-5)</span>");
   console.log('✅ scaleContext finished');
 }
 
 
-
 $(window).bind("load", function() {
     buttonStyle();
     readMorePrep(180);
     scaleContext();
-    $('.stamped-tabs li, .next a, .page a').on('click', function() { officialReply(); buttonStyle(); readMorePrep(180); scaleContext()});
+    $('.stamped-tabs li, .next a, .page a').on('click', function() { officialReply(); buttonStyle(); readMorePrep(180)});
 
 
 

@@ -253,6 +253,39 @@ div.stamped-review-options:nth-child(5) {
   }
 }
 
+input.stamped-form-input,
+input.stamped-form-input-email,
+input.stamped-form-input-text,
+textarea.stamped-form-input-textarea {
+  border: none !important;
+}
+
+.stamped-container {
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="search"],
+  input[type="url"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="range"],
+  input[type="color"],
+  select,
+  textarea {
+    background: var(--color-max);
+    color: var(--color-contrast-higher);
+  }
+}
+
+.stamped-form-label,
+.stamped-form-custom-question {
+  margin-bottom: var(--space-xs); // Add space between question and answer
+}
+
 /* Slider */
 .stamped-reviews span.stamped-review-option-scale span {
   margin-bottom: 5px !important;

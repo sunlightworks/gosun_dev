@@ -13114,6 +13114,34 @@ div.stamped-review-options:nth-child(5) {
       float: right !important;
       width: 29.75% !important; } }
 
+input.stamped-form-input,
+input.stamped-form-input-email,
+input.stamped-form-input-text,
+textarea.stamped-form-input-textarea {
+  border: none !important; }
+
+.stamped-container input[type="text"],
+.stamped-container input[type="password"],
+.stamped-container input[type="email"],
+.stamped-container input[type="search"],
+.stamped-container input[type="url"],
+.stamped-container input[type="tel"],
+.stamped-container input[type="number"],
+.stamped-container input[type="date"],
+.stamped-container input[type="month"],
+.stamped-container input[type="week"],
+.stamped-container input[type="time"],
+.stamped-container input[type="range"],
+.stamped-container input[type="color"],
+.stamped-container select,
+.stamped-container textarea {
+  background: var(--color-max);
+  color: var(--color-contrast-higher); }
+
+.stamped-form-label,
+.stamped-form-custom-question {
+  margin-bottom: var(--space-xs); }
+
 /* Slider */
 .stamped-reviews span.stamped-review-option-scale span {
   margin-bottom: 5px !important;
@@ -14523,7 +14551,7 @@ td {
     font-weight: normal;
     font-style: normal; }
   .table.table-striped tr {
-    border-top: 1px solid #e6e6e6; }
+    border-top: 1px solid var(--color-contrast-lower); }
 
 /* First column */
 .table.table-striped th:nth-child(1) {
