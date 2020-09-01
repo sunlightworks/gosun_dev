@@ -53,7 +53,7 @@ li.mobile-mega-menu_block a,
   border-top: 1px solid var(--color-contrast-low);
 }
 
-/* #Menu [Open] - Container
+/* Main Menu
   ================================================== */
 /* Menu Titles */
 li.nav-title {
@@ -66,7 +66,9 @@ li.nav-title {
 }
 
 .menu li {
-  padding: 0 var(--space-sm); // Spacing between list items
+  a {
+    padding: var(--space-sm); // Spacing between list items
+  }
 }
 
 /* Sale */
