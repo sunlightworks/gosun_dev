@@ -35,6 +35,10 @@
 <!------ START HEADER ------>
 
 <header id="header">
+
+{% include '1_pre-header' %}
+
+  <!-- Edit - Temp hide old promo bar
   {% if section.settings.promo_text != blank %}
     <div class="promo_banner">
       <div class="promo_banner__content">
@@ -56,6 +60,7 @@
       <div class="promo_banner-close"></div>
     </div>
   {% endif %}
+-->
 
   <!-- Header / Small Screens -->
   <nav class="mobile--true mobile_nav-fixed--{{ section.settings.fixed_header }}">
@@ -439,7 +444,8 @@
       "type": "text",
       "id": "promo_text",
       "label": "Promo text",
-      "info": "Maximum character limit is 170"
+      "info": "Maximum character limit is 170",
+      "default": "Free shipping & returns"
     },
     {
       "type": "url",
