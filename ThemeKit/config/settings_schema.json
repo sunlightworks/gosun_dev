@@ -8,6 +8,17 @@
     "theme_documentation_url": "https:\/\/latimer.me"
   },
   {
+    "name": "Sub navigation",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_sub-navigation",
+        "label": "Enable sub-navigation on product pages",
+        "default": true
+      }
+    ]
+  },
+  {
     "name": "Performance",
     "settings": [
       {

@@ -69,7 +69,7 @@ $large-down: "large-down";
 $large-up: "large-up";
 $widescreen: "widescreen";
 
-$breakpoints: (
+$breakpointss: (
   $small "(max-width: #{$grid-medium - 1})",
   $medium "(min-width: #{$grid-medium}) and (max-width: #{$grid-large - 1})",
   $medium-down "(max-width: #{$grid-large - 1})",
