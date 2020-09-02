@@ -259,7 +259,10 @@
       {% unless condition %}
         
       {% endunless %}
+      
+      <div class="hide-nav js-hide-nav js-hide-nav--main" style="z-index: 9999;" data-nav-target-class="active_link">
         {% section 'header' %}
+      </div>
 
         <div class="mega-menu-container">
           {% if settings.mega_menu_1 %}
@@ -278,6 +281,13 @@
             {% section 'mega-menu-5' %}
           {% endif %}
         </div>
+
+        {% if settings.show_sub-navigation %}
+       
+          {% section '1_sub-navigation'  %}
+ 
+        {% endif %}
+
 
         {% unless feature_image %}
         <div class="container main content">

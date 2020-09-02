@@ -33,10 +33,10 @@
 
 
 <!------ START HEADER ------>
-
+{% include '1_pre-header' %}
 <header id="header">
 
-{% include '1_pre-header' %}
+
 
   <!-- Edit - Temp hide old promo bar
   {% if section.settings.promo_text != blank %}
@@ -404,7 +404,7 @@
 {% schema %}
 {
   "name": "Header",
-  "class": "header-section",
+  "class": "header-section ",
   "settings": [
     {
       "type": "header",
