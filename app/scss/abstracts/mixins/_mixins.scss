@@ -138,8 +138,8 @@
 
 @mixin nav-hover() {
   box-shadow: var(--shadow-sm) !important;
-  background: var(--color-bg);
-  a {
+  background: var(--color-primary-lighter);
+  a p {
     color: var(--color-contrast-higher) !important;
   }
 }

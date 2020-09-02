@@ -14191,19 +14191,24 @@ div.dropdown.menu {
     position: absolute; } }
 
 .dropdown_column {
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 0;
-  padding-left: 20px;
-  padding: 0 30px !important; }
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-left: 2px solid var(--color-contrast-lower); }
+  .dropdown_column:hover {
+    box-shadow: var(--shadow-sm) !important;
+    background: var(--color-primary-lighter); }
+    .dropdown_column:hover a p {
+      color: var(--color-contrast-higher) !important; }
+    .dropdown_column:hover img {
+      filter: saturate(1) brightness(0.97) !important;
+      -webkit-filter: saturate(1) brightness(0.97) !important; }
+  .dropdown_column p {
+    margin-top: 0 !important; }
   .dropdown_column img {
+    margin-bottom: 0;
     filter: saturate(0) !important;
     -webkit-filter: saturate(0) !important; }
-  .dropdown_column:hover a p {
-    color: var(--color-contrast-high) !important; }
-  .dropdown_column:hover img {
-    filter: saturate(1) brightness(0.97) !important;
-    -webkit-filter: saturate(1) brightness(0.97) !important; }
 
 .mega-menu__image-caption-link img {
   max-width: 200px;
@@ -14211,7 +14216,8 @@ div.dropdown.menu {
 
 .mega-menu__image-caption-link a {
   height: auto;
-  width: 220px !important; }
+  width: 100% !important;
+  padding: var(--space-lg); }
   .mega-menu__image-caption-link a:hover a p {
     color: var(--color-contrast-high) !important; }
   .mega-menu__image-caption-link a:hover img {
@@ -14253,27 +14259,6 @@ div.dropdown.menu {
 
 .mega-menu .image-element__wrap {
   width: 120px; }
-
-/* Gallery column */
-.dropdown_container.mega-menu .dropdown_column {
-  display: flex !important;
-  justify-content: center;
-  align-items: center; }
-
-/* Gallery column */
-.mega-menu .dropdown_column {
-  border-left: 2px solid var(--color-contrast-lower); }
-  .mega-menu .dropdown_column:hover {
-    box-shadow: var(--shadow-sm) !important;
-    background: var(--color-bg); }
-    .mega-menu .dropdown_column:hover a {
-      color: var(--color-contrast-higher) !important; }
-
-.mega-menu p {
-  margin-top: 0 !important; }
-
-.mega-menu img {
-  margin-bottom: 0; }
 
 /* #Mobile Nav - [Base]
   ================================================== */
