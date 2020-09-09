@@ -1,11 +1,10 @@
 <div class="container flex flex-wrap flex-center padding-y-md@xl">
 
 {% for block in section.blocks %}
-
-
     <div aria-controls="{{ block.settings.value_prop | prepend: 'value_props'}}" class="cursor-pointer validator-item margin-sm margin-lg@lg flex flex-column align-{{ section.settings.alignment }}">
         <span  class="icon {% if section.settings.icon_style != blank %} {{ section.settings.icon_style }} {% endif %} {% if section.settings.icon_color != blank %} icon--display {% else %} icon--default {% endif %} m0">
-            <i class="{% if section.settings.icon_style != blank %} {{ section.settings.icon_style }}{% else %} material-icons-outlined {% endif %} {% if section.settings.icon_size != blank %} {{ section.settings.icon_size }}{% else %} icon--md {% endif %}">              {% case block.settings.value_prop %}
+            <i class="{% if section.settings.icon_style != blank %} {{ section.settings.icon_style }}{% else %} material-icons-outlined {% endif %} {% if section.settings.icon_size != blank %} {{ section.settings.icon_size }}{% else %} icon--md {% endif %}">
+            {% case block.settings.value_prop %}
               {% when 'shipping' %}
               {{ 'value_props.shipping.icon' | t }}
               {% when 'customer_count' %}
@@ -19,9 +18,26 @@
               {% when 'security' %}
               {{ 'value_props.security.icon' | t }}
               {% else %}
-            {% endcase %}</i>
+            {% endcase %}
+          </i>
         </span>
-        <h5 class="text-md font-medium margin-top-xs {{ section.settings.alignment }}">{{ block.settings.title }}</h5>
+        <h5 class="text-md font-medium margin-top-xs {{ section.settings.alignment }}">
+          {% case block.settings.value_prop %}
+            {% when 'shipping' %}
+            {{ 'value_props.shipping.title' | t }}
+            {% when 'customer_count' %}
+            {{ 'value_props.customer_count.title' | t }}
+            {% when 'customer_service' %}
+            {{ 'value_props.customer_service.title' | t }}
+            {% when 'financing' %}
+            {{ 'value_props.financing.title' | t }}
+            {% when 'warranty' %}
+            {{ 'value_props.warranty.title' | t }}
+            {% when 'security' %}
+            {{ 'value_props.security.title' | t }}
+            {% else %}
+          {% endcase %}
+        </h5>
         
         <div id="{{ block.settings.value_prop | prepend: 'value_props'}}" class="popover bg padding-sm radius-md shadow-md js-popover js-tab-focus" role="dialog">
           <div class="text-component text-sm">

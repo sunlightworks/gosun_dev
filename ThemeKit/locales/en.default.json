@@ -68,7 +68,7 @@
     "customer_count": {
       "icon": "public",
       "title": "50,000+ customers",
-      "description": "Lorem ipsum."
+      "description": "Join a passionate group of solar heros across 60 different countries."
     },
     "customer_service": {
       "icon": "support_agent",
@@ -88,7 +88,7 @@
     "warranty": {
       "icon": "verified_user",
       "title": "1-year warranty",
-      "description": "GoSun offers a No-Questions-Asked Warranty covering our product's build quality and performance."
+      "description": "We offer a no-questions-asked warranty covering our product's build quality and performance."
     },
     "security": {
       "icon": "lock",
