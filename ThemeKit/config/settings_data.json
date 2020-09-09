@@ -3,6 +3,7 @@
     "performance": "ludicrous",
     "image_loading_style": "blur-up",
     "custom_scripts": "",
+    "theme_switch": true,
     "logo_color": "#ffffff",
     "regular_color": "#424242",
     "banner_color": "#ffffff",
@@ -1763,11 +1764,11 @@
       "1596226695144": {
         "type": "feature-1",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Chill_Tropical_54f68510-3c7f-4cb6-869a-18235e823858.jpg",
+          "image": "shopify:\/\/shop_images\/prepper_combo.png",
           "overline": "",
-          "title": "Savor in Labor Day Love.",
-          "description": "Just like success, solar is best when shared.",
-          "button1": "Shop the Deals",
+          "title": "Sept. Prepped Month",
+          "description": "Time to Grab a GoSun Prep Kit.",
+          "button1": "Let's Get Prepared",
           "button1_url": "shopify:\/\/collections\/todays-deals",
           "button2": "",
           "button2_url": "",

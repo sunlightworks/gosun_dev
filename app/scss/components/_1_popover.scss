@@ -1,0 +1,36 @@
+/* -------------------------------- 
+
+File#: _1_popover
+Title: Popover
+Descr: A pop-up box controlled by a trigger element
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --popover-width: 250px;
+  --popover-vertical-gap: 4px; // vertical gap between the popover element and its control
+  --popover-viewport-gap: 20px; // ⚠️ use px units - vertical gap between the popover and the viewport - visible if popover height > viewport height
+}
+
+.popover {
+  position: fixed; // top/left position set in JS
+  width: var(--popover-width);
+  z-index: var(--zindex-popover);
+  margin-top: var(--popover-vertical-gap);
+  margin-bottom: var(--popover-vertical-gap);
+  overflow: auto;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.2s, opacity 0.2s;
+}
+
+.popover--is-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.2s;
+}
+
+.popover-control--active {
+  // class added to the trigger when popover is visible
+}

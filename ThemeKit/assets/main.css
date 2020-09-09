@@ -9953,6 +9953,35 @@ Usage: codyhouse.co/license
 
 /* -------------------------------- 
 
+File#: _1_popover
+Title: Popover
+Descr: A pop-up box controlled by a trigger element
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --popover-width: 250px;
+  --popover-vertical-gap: 4px;
+  --popover-viewport-gap: 20px; }
+
+.popover {
+  position: fixed;
+  width: var(--popover-width);
+  z-index: var(--zindex-popover);
+  margin-top: var(--popover-vertical-gap);
+  margin-bottom: var(--popover-vertical-gap);
+  overflow: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.2s, opacity 0.2s; }
+
+.popover--is-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.2s; }
+
+/* -------------------------------- 
+
 File#: _1_modal-window
 Title: Modal Window
 Descr: A modal dialog used to display critical information
