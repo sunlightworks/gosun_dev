@@ -1,6 +1,5 @@
 var gulp = require("gulp");
 var sass = require("gulp-sass");
-var pug = require("gulp-pug");
 var browserSync = require("browser-sync");
 var useref = require("gulp-useref");
 var gulpIf = require("gulp-if");
@@ -34,27 +33,6 @@ gulp.task("sass", function() {
       })
     );
 });
-
-
-
-// Pug
-gulp.task("pug", function() {
-  return gulp
-    .src([
-      "app/pug/**/**/*.pug",
-      "!app/pug/**/_*/" //exclude folders starting with '_'])
-    ])
-    .pipe(
-      pug({
-        pretty: true,
-        basedir: "app"
-      })
-    )
-    .pipe(rename({ dirname: "" }))
-    .pipe(gulp.dest("app/html")); // Outputs it in the html folder
-});
-
-
 
 // Watchers
 gulp.task("watch", function() {

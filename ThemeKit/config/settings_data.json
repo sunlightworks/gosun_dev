@@ -330,8 +330,8 @@
           "full_width": true,
           "invert": true,
           "dark_theme": true,
-          "background_color": "bg-contrast-medium",
-          "btn_type": "",
+          "background_color": "bg-primary-lighter",
+          "btn_type": "btn--primary",
           "show_pattern": false
         }
       },
@@ -341,33 +341,25 @@
           "1595533985043": {
             "type": "content",
             "settings": {
-              "icon_name": "public",
-              "title": "50,000+ customers",
-              "description": ""
+              "value_prop": "customer_count"
             }
           },
           "1595533879839-1": {
             "type": "content",
             "settings": {
-              "icon_name": "event_available",
-              "title": "Quick, simple financing",
-              "description": ""
+              "value_prop": "financing"
             }
           },
           "1595533879839-0": {
             "type": "content",
             "settings": {
-              "icon_name": "local_shipping",
-              "title": "Free shipping & returns",
-              "description": ""
+              "value_prop": "shipping"
             }
           },
           "1595533879839-2": {
             "type": "content",
             "settings": {
-              "icon_name": "verified_user",
-              "title": "1-year warranty",
-              "description": ""
+              "value_prop": "warranty"
             }
           }
         },
@@ -1764,11 +1756,11 @@
       "1596226695144": {
         "type": "feature-1",
         "settings": {
-          "image": "shopify:\/\/shop_images\/prepper_combo.png",
-          "overline": "",
-          "title": "Sept. Prepped Month",
-          "description": "Time to Grab a GoSun Prep Kit.",
-          "button1": "Let's Get Prepared",
+          "image": "shopify:\/\/shop_images\/Chill_Tent_Angela.jpg",
+          "overline": "National Preparedness Month",
+          "title": "Power when you need it most.",
+          "description": "Shop the new limited edition Prep Kits available in September only.",
+          "button1": "Shop the kits",
           "button1_url": "shopify:\/\/collections\/todays-deals",
           "button2": "",
           "button2_url": "",

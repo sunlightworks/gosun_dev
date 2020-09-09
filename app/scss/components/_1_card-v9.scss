@@ -25,6 +25,7 @@ Descr: Container of information used as teaser for further content exploration
   transition: 0.3s;
   width: 100%;
   height: var(--space-xxxxl);
+  transition: 0.3s;
   @include lg() {
     background-size: 350px;
     background-position: -20% 35px;

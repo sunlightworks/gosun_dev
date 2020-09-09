@@ -5361,6 +5361,57 @@ html:not(.js) .no-js\:is-hidden {
  * Returns the transition properties in the correct format
  * This function is used by @mixin transition($transitions...)
  */
+/**
+ * Sets a media query for the specified breakpoint
+ *
+ * Accepts:
+ * - $media-query: {String} Breakpoint variable (list found in variables.scss)
+ *
+ * Usage:
+ * .selector {
+ *   @include media-query($medium-up) {
+ *     color: red;
+ *   }
+ * }
+ */
+/**
+ * Outputs list of transition properties
+ *
+ * Accepts:
+ * - $transitions: {String} List of transition properties to set
+ *
+ * Usage:
+ * .selector {
+ *   @include transition(width, height 0.5s ease-in);
+ * }
+ */
+/**
+ * Forces an element to self-clear its children
+ *
+ * Usage:
+ * .selector {
+ *   @include clearfix;
+ * }
+ */
+/**
+ * Hide element but make it accessible to screen readers
+ *
+ * Usage:
+ * .selector {
+ *   @include visually-hidden;
+ * }
+ */
+/**
+ * Reverse the properties applied by @mixin visually-hidden
+ *
+ * Accepts:
+ * - $position: {String} Positioning method for element
+ *
+ * Usage:
+ * .selector {
+ *   @include visually-shown(relative);
+ * }
+ */
 :root {
   /* Grape
 ================================================== */
@@ -6297,57 +6348,6 @@ a.mobile_nav {
 ================================================== */
 /* #Backgrounds - Pattern Map
 ================================================== */
-/**
- * Sets a media query for the specified breakpoint
- *
- * Accepts:
- * - $media-query: {String} Breakpoint variable (list found in variables.scss)
- *
- * Usage:
- * .selector {
- *   @include media-query($medium-up) {
- *     color: red;
- *   }
- * }
- */
-/**
- * Outputs list of transition properties
- *
- * Accepts:
- * - $transitions: {String} List of transition properties to set
- *
- * Usage:
- * .selector {
- *   @include transition(width, height 0.5s ease-in);
- * }
- */
-/**
- * Forces an element to self-clear its children
- *
- * Usage:
- * .selector {
- *   @include clearfix;
- * }
- */
-/**
- * Hide element but make it accessible to screen readers
- *
- * Usage:
- * .selector {
- *   @include visually-hidden;
- * }
- */
-/**
- * Reverse the properties applied by @mixin visually-hidden
- *
- * Accepts:
- * - $position: {String} Positioning method for element
- *
- * Usage:
- * .selector {
- *   @include visually-shown(relative);
- * }
- */
 :root,
 [data-theme="default"] {
   --color-primary-darker: hsl(204, 67%, 26%);
@@ -9453,7 +9453,8 @@ Descr: Container of information used as teaser for further content exploration
   box-shadow: var(--shadow-sm);
   transition: 0.3s;
   width: 100%;
-  height: var(--space-xxxxl); }
+  height: var(--space-xxxxl);
+  transition: 0.3s; }
   @media (min-width: 992px) {
     .card-v9 {
       background-size: 350px;
