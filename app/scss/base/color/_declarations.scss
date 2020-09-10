@@ -279,6 +279,10 @@ $color-discount: var(--color-success-light);
 /* Top / Search
   ================================================== */
 
+.search__results {
+  display: none !important; // Hide duplicate search window;
+}
+
 .search__results .title {
   color: var(--color-contrast-higher) !important;
 }

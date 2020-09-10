@@ -5652,6 +5652,9 @@ html:not(.js) .no-js\:is-hidden {
 
 /* Top / Search
   ================================================== */
+.search__results {
+  display: none !important; }
+
 .search__results .title {
   color: var(--color-contrast-higher) !important; }
 
