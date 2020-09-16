@@ -8713,6 +8713,305 @@ div.snize li.snize-product span.snize-description {
 
 /* -------------------------------- 
 
+File#: _1_reveal-effects
+Title: Reveal Effects
+Descr: A collection of reveal effects targeting specific elements as they enter the viewport
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --reveal-fx-duration: 0.6s;
+  --reveal-fx-timing-function: var(--ease-out); }
+
+.js .reveal-fx {
+  opacity: 0;
+  transition: opacity, transform var(--reveal-fx-timing-function);
+  transition-duration: var(--reveal-fx-duration); }
+  .js .reveal-fx::before {
+    display: none;
+    content: 'reveal-fx'; }
+
+.js .reveal-fx--translate, .js .reveal-fx--translate-up {
+  transform: translateY(50px); }
+
+.js .reveal-fx--translate-right {
+  transform: translateX(-50px); }
+
+.js .reveal-fx--translate-left {
+  transform: translateX(50px); }
+
+.js .reveal-fx--translate-down {
+  transform: translateY(-50px); }
+
+.js .reveal-fx--scale {
+  transform: scale(0.8); }
+
+.js .reveal-fx--scale-up {
+  transform: translateY(50px) scale(0.8); }
+
+.js .reveal-fx--scale-right {
+  transform: translateX(-50px) scale(0.8); }
+
+.js .reveal-fx--scale-left {
+  transform: translateX(50px) scale(0.8); }
+
+.js .reveal-fx--scale-down {
+  transform: translateY(-50px) scale(0.8); }
+
+.js .reveal-fx--rotate, .js .reveal-fx--rotate-down, .js .reveal-fx--rotate-right, .js .reveal-fx--rotate-left, .js .reveal-fx--rotate-up {
+  perspective: 1000px; }
+  .js .reveal-fx--rotate > *, .js .reveal-fx--rotate-down > *, .js .reveal-fx--rotate-right > *, .js .reveal-fx--rotate-left > *, .js .reveal-fx--rotate-up > * {
+    transition: transform var(--reveal-fx-duration) var(--reveal-fx-timing-function);
+    backface-visibility: hidden; }
+
+.js .reveal-fx--rotate > *, .js .reveal-fx--rotate-down > * {
+  transform-origin: top;
+  transform: rotateX(-45deg); }
+
+.js .reveal-fx--rotate-right > * {
+  transform-origin: left center;
+  transform: rotateY(45deg); }
+
+.js .reveal-fx--rotate-left > * {
+  transform-origin: right center;
+  transform: rotateY(-45deg); }
+
+.js .reveal-fx--rotate-up > * {
+  transform-origin: bottom;
+  transform: rotateX(45deg); }
+
+.js .reveal-fx--text-mask {
+  overflow: hidden;
+  display: inline-flex;
+  line-height: 1; }
+  .js .reveal-fx--text-mask > * {
+    display: block;
+    line-height: inherit;
+    transform: translateY(100%);
+    transition: transform var(--reveal-fx-duration) var(--reveal-fx-timing-function);
+    will-change: transform; }
+
+.js [class*="reveal-fx--translate"], .js [class*="reveal-fx--scale"] {
+  will-change: opacity, transform; }
+
+.js .reveal-fx--text-mask > *, .js [class*="reveal-fx--rotate"] > * {
+  will-change: transform; }
+
+.js .reveal-fx--clip-x > *,
+.js .reveal-fx--clip-y > * {
+  transition: opacity, clip-path var(--ease-out);
+  transition-duration: var(--reveal-fx-duration); }
+
+.js .reveal-fx--clip-x > * {
+  clip-path: polygon(10% 0%, 90% 0%, 90% 100%, 10% 100%); }
+
+.js .reveal-fx--clip-y > * {
+  clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%); }
+
+.js .reveal-fx--is-visible {
+  opacity: 1; }
+  .js .reveal-fx--is-visible[class*="reveal-fx--translate"], .js .reveal-fx--is-visible[class*="reveal-fx--scale"],
+  .js .reveal-fx--is-visible[class*="reveal-fx--rotate"] > *,
+  .js .reveal-fx--is-visible.reveal-fx--text-mask > * {
+    transform: translate(0); }
+  .js .reveal-fx--is-visible.reveal-fx--clip-x > *, .js .reveal-fx--is-visible.reveal-fx--clip-y > * {
+    opacity: 1;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
+
+/* -------------------------------- 
+
+File#: _1_skeleton
+Title: Skeleton Screen
+Descr: Content placeholder used to indicate that content is loading
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --ske-animation-duration: 1s;
+  --ske-radius: var(--radius-md); }
+
+.ske {
+  position: relative;
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1);
+  overflow: hidden; }
+  .ske::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0), hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1), hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0));
+    background-repeat: no-repeat;
+    background-size: 500px 100%;
+    background-position: -500px 0;
+    will-change: background-position;
+    animation: ske-background var(--ske-animation-duration) infinite; }
+
+@keyframes ske-background {
+  from {
+    background-position: -500px 0; }
+  to {
+    background-position: calc(100% + 500px) 0; } }
+
+.ske--circle {
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  clip-path: circle(50% at 50% 50%); }
+
+.ske--rect,
+[class*="ske--rect-"],
+.ske--square {
+  border-radius: var(--ske-radius);
+  clip-path: inset(0% 0% 0% 0% round var(--ske-radius)); }
+
+[class*="ske--rect-"],
+.ske--square {
+  height: 0;
+  padding-bottom: calc(100% / (var(--ske-aspect-ratio))); }
+
+.ske--rect-16\:9 {
+  --ske-aspect-ratio: 16/9; }
+
+.ske--rect-4\:3 {
+  --ske-aspect-ratio: 4/3; }
+
+.ske--square,
+.ske--rect-1\:1 {
+  --ske-aspect-ratio: 1/1; }
+
+.ske--text {
+  height: 1em;
+  border-radius: var(--ske-radius);
+  clip-path: inset(0% 0% 0% 0% round var(--ske-radius)); }
+
+.snize-ac-results-content {
+  background: var(--color-max) !important;
+  padding-top: var(--space-lg) !important; }
+
+.snize-ac-over-nodrop {
+  background: var(--color-contrast-lower) !important; }
+
+.snize-ac-results-multicolumn-list .snize-title {
+  color: var(--color-contrast-higher) !important;
+  font-weight: 500 !important; }
+
+.snize-ac-results-multicolumn-list .snize-description {
+  color: var(--color-contrast-high) !important; }
+
+.snize-no-products-found-text {
+  color: var(--color-contrast-low) !important;
+  font-size: var(--text-xl) !important; }
+
+.snize-ac-results {
+  z-index: 99 !important;
+  color: var(--color-contrast-high) !important; }
+  .snize-ac-results a,
+  .snize-ac-results .snize-page,
+  .snize-ac-results .snize-vendor,
+  .snize-ac-results .snize-tag,
+  .snize-ac-results .snize-category,
+  .snize-ac-results .snize-suggestion,
+  .snize-ac-results .snize-no-categories-found,
+  .snize-ac-results .snize-no-pages-found,
+  .snize-ac-results .snize-no-suggestions-found,
+  .snize-ac-results .snize-price-list {
+    color: var(--color-contrast-high) !important; }
+  .snize-ac-results .snize-discounted-price,
+  .snize-ac-results .snize-attribute,
+  .snize-ac-results .snize-sku {
+    color: var(--color-contrast-medium) !important; }
+  .snize-ac-results .snize-label {
+    color: var(--color-contrast-medium) !important;
+    border-color: var(--color-contrast-low) !important; }
+  .snize-ac-results .snize-arrow-inner {
+    border-color: var(--color-max) !important; }
+
+.snize-product {
+  text-align: left !important; }
+  .snize-product:hover {
+    background: var(--color-contrast-lower) !important; }
+
+.snize-view-all-link,
+.snize-view-all-pages {
+  color: var(--color-contrast-high) !important; }
+
+/* Results / Controls 
+---------------------- */
+div.snize .snize-main-panel-controls ul li a.active,
+div.snize div.snize-main-panel-controls ul li a:hover {
+  background-color: var(--color-primary-lighter) !important;
+  color: var(--color-contrast-higher) !important; }
+
+div.snize div.snize-main-panel-controls ul li a {
+  color: var(--color-contrast-high) !important; }
+
+div.snize div.snize-main-panel {
+  border: none !important; }
+
+div.snize div.snize-main-panel-dropdown a {
+  color: var(--color-contrast-higher) !important; }
+
+div.snize div.snize-main-panel-dropdown > a {
+  border: none !important;
+  background: var(--color-primary-lighter) !important; }
+
+div.snize div.snize-main-panel-dropdown ul.snize-main-panel-dropdown-content {
+  background-color: var(--color-contrast-lower) !important;
+  border: none !important; }
+  div.snize div.snize-main-panel-dropdown ul.snize-main-panel-dropdown-content:hover > a {
+    background-color: var(--color-contrast-lower) !important; }
+  div.snize div.snize-main-panel-dropdown ul.snize-main-panel-dropdown-content a:hover {
+    background-color: var(--color-primary-lighter) !important; }
+
+div.snize div.snize-main-panel-dropdown :not(.ssw-fave-icon) {
+  color: var(--color-contrast-high) !important; }
+
+/* Results / Products
+======================== */
+.snize-search-results-main-content .snize-thumbnail {
+  height: 200px !important;
+  border: none !important; }
+
+.snize-overhidden {
+  background: transparent !important; }
+
+.snize-sku,
+.snize-attribute {
+  margin-top: var(--space-xs);
+  color: var(--color-contrast-medium) !important; }
+
+.snize-title,
+.snize-price-list {
+  color: var(--color-contrast-higher) !important; }
+
+div.snize li.snize-product span.snize-description {
+  color: var(--color-contrast-high) !important; }
+
+.snize-overhidden > * {
+  text-align: left !important;
+  font-size: 50% !important; }
+
+.snize-description {
+  color: var(--color-contrast-high) !important; }
+
+.snize-item-image {
+  filter: brightness(0.92); }
+
+.snize-sku,
+.snize-attribute {
+  margin-top: calc( var(--space-sm) * -1) !important; }
+
+/* Results / Pages
+==================== */
+.snize-page {
+  border-color: var(--color-contrast-low); }
+  .snize-page:hover {
+    background-color: var(--color-contrast-lower); }
+
+/* -------------------------------- 
+
 File#: _1_section-divider
 Title: Section divider
 Descr: A collection of SVG section dividers.
@@ -9157,113 +9456,6 @@ Descr: Custom radio toggle
   transition: transform var(--radio-switch-animation-duration); }
   .radio-switch__input:checked ~ .radio-switch__marker {
     transform: translateX(100%); }
-
-/* -------------------------------- 
-
-File#: _1_reveal-effects
-Title: Reveal Effects
-Descr: A collection of reveal effects targeting specific elements as they enter the viewport
-Usage: codyhouse.co/license
-
--------------------------------- */
-:root {
-  --reveal-fx-duration: 0.6s;
-  --reveal-fx-timing-function: var(--ease-out); }
-
-.js .reveal-fx {
-  opacity: 0;
-  transition: opacity, transform var(--reveal-fx-timing-function);
-  transition-duration: var(--reveal-fx-duration); }
-  .js .reveal-fx::before {
-    display: none;
-    content: 'reveal-fx'; }
-
-.js .reveal-fx--translate, .js .reveal-fx--translate-up {
-  transform: translateY(50px); }
-
-.js .reveal-fx--translate-right {
-  transform: translateX(-50px); }
-
-.js .reveal-fx--translate-left {
-  transform: translateX(50px); }
-
-.js .reveal-fx--translate-down {
-  transform: translateY(-50px); }
-
-.js .reveal-fx--scale {
-  transform: scale(0.8); }
-
-.js .reveal-fx--scale-up {
-  transform: translateY(50px) scale(0.8); }
-
-.js .reveal-fx--scale-right {
-  transform: translateX(-50px) scale(0.8); }
-
-.js .reveal-fx--scale-left {
-  transform: translateX(50px) scale(0.8); }
-
-.js .reveal-fx--scale-down {
-  transform: translateY(-50px) scale(0.8); }
-
-.js .reveal-fx--rotate, .js .reveal-fx--rotate-down, .js .reveal-fx--rotate-right, .js .reveal-fx--rotate-left, .js .reveal-fx--rotate-up {
-  perspective: 1000px; }
-  .js .reveal-fx--rotate > *, .js .reveal-fx--rotate-down > *, .js .reveal-fx--rotate-right > *, .js .reveal-fx--rotate-left > *, .js .reveal-fx--rotate-up > * {
-    transition: transform var(--reveal-fx-duration) var(--reveal-fx-timing-function);
-    backface-visibility: hidden; }
-
-.js .reveal-fx--rotate > *, .js .reveal-fx--rotate-down > * {
-  transform-origin: top;
-  transform: rotateX(-45deg); }
-
-.js .reveal-fx--rotate-right > * {
-  transform-origin: left center;
-  transform: rotateY(45deg); }
-
-.js .reveal-fx--rotate-left > * {
-  transform-origin: right center;
-  transform: rotateY(-45deg); }
-
-.js .reveal-fx--rotate-up > * {
-  transform-origin: bottom;
-  transform: rotateX(45deg); }
-
-.js .reveal-fx--text-mask {
-  overflow: hidden;
-  display: inline-flex;
-  line-height: 1; }
-  .js .reveal-fx--text-mask > * {
-    display: block;
-    line-height: inherit;
-    transform: translateY(100%);
-    transition: transform var(--reveal-fx-duration) var(--reveal-fx-timing-function);
-    will-change: transform; }
-
-.js [class*="reveal-fx--translate"], .js [class*="reveal-fx--scale"] {
-  will-change: opacity, transform; }
-
-.js .reveal-fx--text-mask > *, .js [class*="reveal-fx--rotate"] > * {
-  will-change: transform; }
-
-.js .reveal-fx--clip-x > *,
-.js .reveal-fx--clip-y > * {
-  transition: opacity, clip-path var(--ease-out);
-  transition-duration: var(--reveal-fx-duration); }
-
-.js .reveal-fx--clip-x > * {
-  clip-path: polygon(10% 0%, 90% 0%, 90% 100%, 10% 100%); }
-
-.js .reveal-fx--clip-y > * {
-  clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%); }
-
-.js .reveal-fx--is-visible {
-  opacity: 1; }
-  .js .reveal-fx--is-visible[class*="reveal-fx--translate"], .js .reveal-fx--is-visible[class*="reveal-fx--scale"],
-  .js .reveal-fx--is-visible[class*="reveal-fx--rotate"] > *,
-  .js .reveal-fx--is-visible.reveal-fx--text-mask > * {
-    transform: translate(0); }
-  .js .reveal-fx--is-visible.reveal-fx--clip-x > *, .js .reveal-fx--is-visible.reveal-fx--clip-y > * {
-    opacity: 1;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
 
 /* -------------------------------- 
 
