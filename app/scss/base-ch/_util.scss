@@ -945,6 +945,7 @@
 }
 .color-contrast-higher {
   color: alpha(var(--color-contrast-higher), var(--color-o, 1));
+  fill: alpha(var(--color-contrast-higher), var(--color-o, 1));
 }
 .color-primary-darker {
   color: alpha(var(--color-primary-darker), var(--color-o, 1));

@@ -8,8 +8,8 @@
       "page": "Page {{ page_number }}"
     },
     "404": {
-      "title": "Page Not Found",
-      "subtext": "We're sorry, but the page you requested could not be found.",
+      "title": "Oh snap!",
+      "subtext": "Sorry, we can't find that page. It might be an old link or maybe it moved.",
       "continue_shopping_html": "Try searching or <a href=\"\/collections\/all\">continue shopping &rarr;<\/a>"
     },
     "password_page": {

@@ -2107,7 +2107,8 @@ html:not(.js) .no-js\:is-hidden {
   color: hsla(var(--color-contrast-high-h), var(--color-contrast-high-s), var(--color-contrast-high-l), var(--color-o, 1)); }
 
 .color-contrast-higher {
-  color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), var(--color-o, 1)); }
+  color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), var(--color-o, 1));
+  fill: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), var(--color-o, 1)); }
 
 .color-primary-darker {
   color: hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), var(--color-o, 1)); }
@@ -8885,6 +8886,42 @@ Usage: codyhouse.co/license
   height: 1em;
   border-radius: var(--ske-radius);
   clip-path: inset(0% 0% 0% 0% round var(--ske-radius)); }
+
+/* -------------------------------- 
+
+File#: _1_404
+Title: 404
+Descr: 404 error section
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.fof__animation svg {
+  display: block;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto; }
+
+#i-fof-browser {
+  transform-origin: 260px 304px;
+  animation: i-fof-browser 4s infinite; }
+
+#i-fof-shadow {
+  transform-origin: 282px 410px;
+  animation: i-fof-shadow 4s infinite; }
+
+@keyframes i-fof-browser {
+  0%,
+  100% {
+    transform: translateY(0) scale(1); }
+  50% {
+    transform: translateY(-10%) scale(0.9); } }
+
+@keyframes i-fof-shadow {
+  0%,
+  100% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0.8); } }
 
 .snize-ac-results-content {
   background: var(--color-max) !important;
