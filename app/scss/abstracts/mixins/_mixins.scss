@@ -35,12 +35,8 @@
 }
 /* #Shadows - Nav
 ================================================== */
-@mixin shadow-nav() {
-  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05),
-    0 1px 3px 0 rgba(63, 63, 68, 0.15);
-}
 .shadow-nav {
-  @include shadow-nav();
+  box-shadow: var(--shadow-xs);
   &:hover {
     @include shadow-menu();
   }

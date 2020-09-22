@@ -5,7 +5,7 @@
   background: var(--color-max);
   @include rounded();
   &--body {
-    @include shadow-nav();
+    box-shadow: var(--shadow-xs);
   }
   &--md {
     @include sizeMax(null, 320px);

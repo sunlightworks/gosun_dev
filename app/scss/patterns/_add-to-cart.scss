@@ -26,7 +26,7 @@
 }
 
 .followMeBar.fixed {
-  @include shadow-nav();
+  box-shadow: var(--shadow-xs);
   background: var(--color-max);
   height: 60px;
   left: 0;

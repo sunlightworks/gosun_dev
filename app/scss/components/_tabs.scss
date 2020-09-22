@@ -7,7 +7,7 @@
 ================================================== */
 
 #tabs {
-  @include shadow-nav;
+  box-shadow: var(--shadow-xs);
 }
 
 .ui-accordion,
@@ -159,6 +159,6 @@ img {
 }
 
 #tabs-app-accordion {
-  @include shadow-nav();
+  box-shadow: var(--shadow-xs);
   @include rounded();
 }

@@ -6319,7 +6319,7 @@ a.mobile_nav {
 /* #Shadows - Nav
 ================================================== */
 .shadow-nav {
-  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }
+  box-shadow: var(--shadow-xs); }
   .shadow-nav:hover {
     -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.17) !important;
     -moz-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.17) !important;
@@ -7494,7 +7494,7 @@ Usage: codyhouse.co/license
   -ms-border-radius: var(--radius-md) !important;
   -o-border-radius: var(--radius-md) !important; }
   .card--body {
-    box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }
+    box-shadow: var(--shadow-xs); }
   .card--md {
     max-height: 320px; }
     @media (min-width: 768px) {
@@ -7733,7 +7733,7 @@ a.highlight-true:hover {
 /* #Container - Default
 ================================================== */
 #tabs {
-  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }
+  box-shadow: var(--shadow-xs); }
 
 .ui-accordion td,
 .ui-tabs td {
@@ -7844,7 +7844,7 @@ img {
   border-bottom: 2px solid rgba(0, 0, 0, 0.08) !important; }
 
 #tabs-app-accordion {
-  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+  box-shadow: var(--shadow-xs);
   -webkit-border-radius: var(--radius-md) !important;
   -moz-border-radius: var(--radius-md) !important;
   border-radius: var(--radius-md) !important;
@@ -12939,7 +12939,7 @@ a.collection-info__caption .product-details {
   display: none !important; }
 
 .followMeBar.fixed {
-  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+  box-shadow: var(--shadow-xs);
   background: var(--color-max);
   height: 60px;
   left: 0;
@@ -14257,7 +14257,7 @@ div.is-absolute {
       width: 100% !important;
       height: var(--mega-nav-height) !important;
       padding: 0 var(--space-sm);
-      box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); } }
+      box-shadow: var(--shadow-xs); } }
   .top_bar a {
     font-size: var(--text-sm); }
 
@@ -14269,7 +14269,7 @@ div.is-absolute {
 
 .main_nav_wrapper {
   background-color: var(--bg-header) !important;
-  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+  box-shadow: var(--shadow-xs);
   display: flex !important;
   flex-direction: row;
   justify-content: center;
@@ -14551,7 +14551,7 @@ div.dropdown.menu {
 /* #SubNav Bar - Base Styles 
 ================================================== */
 .subnav {
-  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+  box-shadow: var(--shadow-xs);
   background-color: var(--color-max);
   z-index: 99;
   height: 65px;
