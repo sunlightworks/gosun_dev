@@ -1,8 +1,17 @@
 {% if product.metafields.custom_fields["available_year"] != blank %}
-    <div class="pill pill--stock margin-top-sm color-contrast-medium width-1-2 ">
-        <span class="icon"><i class="material-icons">schedule</i></span>
+    <div aria-controls="backorder" class="pill pill--stock margin-top-sm color-contrast-medium width-1-2 cursor-pointer">
+        <span class="icon"><i class="material-icons">{{ 'value_props.backorder.icon' | t }}</i></span>
         <p> Ships&nbsp;{{ product.metafields.custom_fields["available_month"] }}&nbsp;{{ product.metafields.custom_fields["available_year"] }} </p>
+        <div id="backorder" class="popover bg padding-sm radius-md shadow-md js-popover js-tab-focus" role="dialog">
+            <div class="text-component text-sm">
+              <h1 class="text-md">{{ 'value_props.backorder.title' | t }}</h1>
+              <p>{{ 'value_props.backorder.description' | t }}</p>
+            </div>
+        </div>
     </div> 
+
+
+
 {% elsif collection_handles contains 'retired' %}
     <div class="pill pill--stock margin-top-sm color-contrast-medium width-1-2">
         <span class="icon"><i class="material-icons">beach_access</i></span>
@@ -30,4 +39,12 @@
         <span class="icon"><i class="material-icons">check_circle_outline</i></span>
         <p>	Ready to ship | Free shipping & returns </p>
     </div>
+
+    <div class="popover bg padding-sm radius-md shadow-md js-popover js-tab-focus" role="dialog">
+        <div class="text-component text-sm">
+          <h1 class="text-md">{{ 'value_props.shipping.title' | t }}</h1>
+          <p>{{ 'value_props.shipping.description' | t }}</p>
+        </div>
+    </div>
+
 {% endif %}

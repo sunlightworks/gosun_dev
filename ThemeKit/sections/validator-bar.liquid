@@ -1,5 +1,4 @@
 <div class="container flex flex-wrap flex-center padding-y-md@xl">
-
 {% for block in section.blocks %}
     <div aria-controls="{{ block.settings.value_prop | prepend: 'value_props'}}" class="cursor-pointer validator-item margin-sm margin-lg@lg flex flex-column align-{{ section.settings.alignment }}">
         <span  class="icon {% if section.settings.icon_style != blank %} {{ section.settings.icon_style }} {% endif %} {% if section.settings.icon_color != blank %} icon--display {% else %} icon--default {% endif %} m0">
