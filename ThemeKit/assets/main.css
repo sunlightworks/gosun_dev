@@ -2117,7 +2117,7 @@ html:not(.js) .no-js\:is-hidden {
   color: hsla(var(--color-primary-dark-h), var(--color-primary-dark-s), var(--color-primary-dark-l), var(--color-o, 1)); }
 
 .color-primary {
-  color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), var(--color-o, 1)); }
+  color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), var(--color-o, 1)) !important; }
 
 .color-primary-light {
   color: hsla(var(--color-primary-light-h), var(--color-primary-light-s), var(--color-primary-light-l), var(--color-o, 1)); }

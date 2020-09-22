@@ -954,7 +954,7 @@
   color: alpha(var(--color-primary-dark), var(--color-o, 1));
 }
 .color-primary {
-  color: alpha(var(--color-primary), var(--color-o, 1));
+  color: alpha(var(--color-primary), var(--color-o, 1)) !important;
 }
 .color-primary-light {
   color: alpha(var(--color-primary-light), var(--color-o, 1));
