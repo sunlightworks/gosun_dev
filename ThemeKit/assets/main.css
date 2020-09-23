@@ -6462,14 +6462,14 @@ a.mobile_nav {
   --color-white-h: 0;
   --color-white-s: 0%;
   --color-white-l: 100%;
-  --color-warning-darker: hsl(46, 86%, 55%);
-  --color-warning-darker-h: 46;
-  --color-warning-darker-s: 86%;
-  --color-warning-darker-l: 55%;
-  --color-warning-dark: hsl(46, 86%, 65%);
-  --color-warning-dark-h: 46;
-  --color-warning-dark-s: 86%;
-  --color-warning-dark-l: 65%;
+  --color-warning-darker: hsl(38, 88%, 34%);
+  --color-warning-darker-h: 38;
+  --color-warning-darker-s: 88%;
+  --color-warning-darker-l: 34%;
+  --color-warning-dark: hsl(44, 90%, 52%);
+  --color-warning-dark-h: 44;
+  --color-warning-dark-s: 90%;
+  --color-warning-dark-l: 52%;
   --color-warning: hsl(46, 86%, 75%);
   --color-warning-h: 46;
   --color-warning-s: 86%;
@@ -8887,42 +8887,6 @@ Usage: codyhouse.co/license
   border-radius: var(--ske-radius);
   clip-path: inset(0% 0% 0% 0% round var(--ske-radius)); }
 
-/* -------------------------------- 
-
-File#: _1_404
-Title: 404
-Descr: 404 error section
-Usage: codyhouse.co/license
-
--------------------------------- */
-.fof__animation svg {
-  display: block;
-  max-width: 520px;
-  margin-left: auto;
-  margin-right: auto; }
-
-#i-fof-browser {
-  transform-origin: 260px 304px;
-  animation: i-fof-browser 4s infinite; }
-
-#i-fof-shadow {
-  transform-origin: 282px 410px;
-  animation: i-fof-shadow 4s infinite; }
-
-@keyframes i-fof-browser {
-  0%,
-  100% {
-    transform: translateY(0) scale(1); }
-  50% {
-    transform: translateY(-10%) scale(0.9); } }
-
-@keyframes i-fof-shadow {
-  0%,
-  100% {
-    transform: scale(1); }
-  50% {
-    transform: scale(0.8); } }
-
 .snize-ac-results-content {
   background: var(--color-max) !important;
   padding-top: var(--space-lg) !important; }
@@ -9532,7 +9496,7 @@ Descr: Feedback message
 
 .alert--warning {
   background-color: hsla(var(--color-warning-h), var(--color-warning-s), var(--color-warning-l), 0.2);
-  color: var(--color-warning-dark); }
+  color: var(--color-warning-darker); }
 
 .alert--is-visible {
   position: static;
@@ -10183,6 +10147,86 @@ Usage: codyhouse.co/license
   transition: background-color .2s; }
   .feature-v9__link:hover {
     background-color: hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1); }
+
+/* -------------------------------- 
+
+File#: _1_tooltip
+Title: Tooltip
+Descr: A popup displaying additional text information
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --tooltip-triangle-size: 12px;
+  --tooltip-width: 200px;
+  --tooltip-width-lg: 256px; }
+
+.tooltip-trigger {
+  white-space: nowrap;
+  cursor: help; }
+
+.tooltip {
+  display: inline-block;
+  position: absolute;
+  z-index: var(--zindex-popover);
+  padding: var(--space-xxs);
+  border-radius: var(--radius-sm);
+  max-width: var(--tooltip-width);
+  background-color: var(--color-max);
+  box-shadow: var(--shadow-md);
+  color: var(--color-contrast-high);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: opacity 0.2s, visibility 0.2s; }
+  .tooltip a {
+    color: inherit;
+    text-decoration: underline; }
+  @supports (clip-path: inset(50%)) {
+    .tooltip::before {
+      content: "";
+      position: absolute;
+      background-color: inherit;
+      border: inherit;
+      width: var(--tooltip-triangle-size);
+      height: var(--tooltip-triangle-size);
+      clip-path: polygon(0% 0%, 100% 100%, 100% 100%, 0% 100%); } }
+
+.tootip:not(.tooltip--sticky) {
+  pointer-events: none; }
+
+.tooltip--lg {
+  max-width: var(--tooltip-width-lg);
+  padding: var(--space-md); }
+
+.tooltip--top::before,
+.tooltip--bottom::before {
+  left: calc(50% - var(--tooltip-triangle-size) / 2); }
+
+.tooltip--top::before {
+  bottom: calc(var(--tooltip-triangle-size) * -0.5);
+  transform: rotate(-45deg); }
+
+.tooltip--bottom::before {
+  top: calc(var(--tooltip-triangle-size) * -0.5);
+  transform: rotate(135deg); }
+
+.tooltip--left::before,
+.tooltip--right::before {
+  top: calc(50% - var(--tooltip-triangle-size) / 2); }
+
+.tooltip--left::before {
+  right: calc(var(--tooltip-triangle-size) * -0.5);
+  transform: rotate(-135deg); }
+
+.tooltip--right::before {
+  left: calc(var(--tooltip-triangle-size) * -0.5);
+  transform: rotate(45deg); }
+
+.tooltip--is-hidden {
+  visibility: hidden;
+  opacity: 0; }
 
 /* -------------------------------- 
 

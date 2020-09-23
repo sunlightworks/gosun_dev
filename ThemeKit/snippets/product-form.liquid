@@ -87,20 +87,12 @@
       
       {% endunless %}
     </div>
-    
-    {% include 'components_pill_stock' %}
-
-    {% unless product.available %}
-    {% else %}
-
-    {% endunless %}
-
-    
-
   </section>
-
 {% endform %} 
+<div class="padding-bottom-md width-100%">{% include 'components_pill_stock' %}</div>
 </div>
+
+
 
 
 

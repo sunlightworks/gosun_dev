@@ -68,7 +68,8 @@
     "backorder": {
       "icon": "schedule",
       "title": "Why the delay?",
-      "description": "Looks like you picked a winner! This product is popular and temporarily out of stock. You can still order now and our small crew will ship your order as soon as possible."
+      "description": "Looks like you picked a winner! This product is popular and temporarily out of stock. <br><br> You can still order now and our small team will notify you once it's shipped.",
+      "more_info": "The shipping delay on this item is due to high demand and COVID-19."
     },
     "customer_count": {
       "icon": "public",

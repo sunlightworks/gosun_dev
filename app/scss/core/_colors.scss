@@ -35,8 +35,8 @@
   @include defineColorHSL(--color-white, 0, 0%, 100%);
 
   // feedback
-  @include defineColorHSL(--color-warning-darker, 46, 86%, 55%);
-  @include defineColorHSL(--color-warning-dark, 46, 86%, 65%);
+  @include defineColorHSL(--color-warning-darker, 38, 88%, 34%);
+  @include defineColorHSL(--color-warning-dark, 44, 90%, 52%);
   @include defineColorHSL(--color-warning, 46, 86%, 75%);
   @include defineColorHSL(--color-warning-light, 46, 86%, 85%);
   @include defineColorHSL(--color-warning-lighter, 46, 86%, 95%);
