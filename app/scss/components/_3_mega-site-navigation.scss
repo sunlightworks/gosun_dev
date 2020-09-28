@@ -1,5 +1,3 @@
-
-
 /* -------------------------------- 
 
 File#: _3_mega-site-navigation
@@ -8,713 +6,736 @@ Descr: Navigation template for mega-sites
 
 -------------------------------- */
 
-:root {
-    --mega-nav-height: 50px;
-    --mega-nav-content-max-width: var(--max-width-lg); // set max-width for navigation content
-    --promo-banner-height: 40px;
-    --header-height: calc(var(--mega-nav-height) + var(--promo-banner-height));
-    @include md() {
-      --header-height: calc(var(--mega-nav-height) + var(--promo-banner-height) + var(--promo-banner-height));
-    };
-    @include md() {
-      --mega-nav-height: 70px;
+.mega-nav {
+  height: var(--mega-nav-height);
+  width: 100%;
+  z-index: var(--zindex-header);
+  box-shadow: inset 0px -1px 0px alpha(var(--color-contrast-higher), 0.1); // border bottom
+}
+
+// change mega-nav style if menu = expanded
+.mega-nav--expanded {
+  background-color: var(--color-bg);
+}
+
+.mega-nav__container {
+  width: calc(100% - 2 * var(--component-padding));
+  height: 100%;
+  max-width: var(--mega-nav-content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// logo
+.mega-nav__logo {
+  display: block;
+  width: 104px; // logo width
+  height: 30px; // logo height
+
+  > * {
+    // logo SVG
+    width: inherit;
+    height: inherit;
+  }
+}
+
+// mobile buttons
+.mega-nav__icon-btns {
+  display: flex;
+  align-items: center;
+}
+
+.mega-nav__icon-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 24px; // icon size
+  color: var(--color-contrast-high); // icon color
+  cursor: pointer;
+  transition: 0.2s;
+
+  .icon {
+    display: block;
+  }
+
+  .icon__group {
+    stroke-width: 1px; // icon stroke width
+
+    > * {
+      transition: transform 0.3s var(--ease-in-out), stroke-dashoffset 0.3s,
+        opacity 0.3s;
     }
   }
-  
-  .mega-nav {
-    height: var(--mega-nav-height);
+}
+
+// animated menu button
+.mega-nav__icon-btn--menu {
+  .icon__group {
+    > * {
+      stroke-dasharray: 24;
+    }
+
+    > *:nth-child(1) {
+      transform-origin: 12px 6px;
+    }
+
+    > *:nth-child(2) {
+      stroke-dashoffset: 0;
+    }
+
+    > *:nth-child(3) {
+      transform-origin: 12px 18px;
+    }
+  }
+
+  &.mega-nav__icon-btn--state-b {
+    .icon__group {
+      > *:nth-child(1) {
+        transform: translateY(6px) rotate(-45deg);
+      }
+
+      > *:nth-child(2) {
+        stroke-dashoffset: 24;
+      }
+
+      > *:nth-child(3) {
+        transform: translateY(-6px) rotate(45deg);
+      }
+    }
+  }
+}
+
+// animated search button
+.mega-nav__icon-btn--search {
+  .icon__group {
+    transform-origin: 12px 12px;
+    transform: rotate(0deg);
+    transition: transform 0.3s var(--ease-out);
+
+    > *:nth-child(1) {
+      stroke-dashoffset: 34;
+      stroke-dasharray: 24;
+    }
+
+    > *:nth-child(2) {
+      stroke-dashoffset: 24;
+      stroke-dasharray: 24;
+    }
+
+    > *:nth-child(3) {
+      transform-origin: 9.5px 9.5px;
+      transform: rotate(45deg);
+      stroke-dashoffset: 84;
+      stroke-dasharray: 42;
+      opacity: 1;
+    }
+  }
+
+  &.mega-nav__icon-btn--state-b {
+    .icon__group {
+      transform: rotate(-90deg);
+
+      > *:nth-child(1) {
+        stroke-dashoffset: 48;
+      }
+
+      > *:nth-child(2) {
+        stroke-dashoffset: 48;
+      }
+
+      > *:nth-child(3) {
+        stroke-dashoffset: 42;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+// animated arrow icon
+.mega-nav__arrow-icon {
+  font-size: 16px; // icon size
+  color: currentColor; // icon color
+  transition: color 0.2s;
+
+  .icon {
+    display: block;
+  }
+
+  .icon__group {
+    stroke-width: 1px; // icon stroke width
+    will-change: transform;
+    transform-origin: 8px 8px;
+    transition: transform 0.3s var(--ease-out);
+
+    > * {
+      stroke-dasharray: 17;
+      transform-origin: 8px 8px;
+      transform: translateY(3px);
+      transition: transform 0.3s, stroke-dashoffset 0.3s;
+      transition-timing-function: var(--ease-out);
+    }
+
+    > *:first-child {
+      stroke-dashoffset: 8.5;
+    }
+
+    > *:last-child {
+      stroke-dashoffset: 8.5;
+    }
+  }
+}
+
+// label/divider
+.mega-nav__label {
+  color: var(--color-contrast-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: var(--text-xs);
+}
+
+// card
+.mega-nav__card {
+  img {
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+.mega-nav__card-title {
+  color: var(--color-contrast-higher);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// --------------------------------
+
+// --mobile - style affecting only small screens 👇
+
+// --------------------------------
+
+.mega-nav--mobile {
+  .mega-nav__icon-btns--desktop {
+    display: none; // hide --desktop icon buttons
+  }
+
+  .mega-nav__nav,
+  .mega-nav__search {
+    display: none;
+    position: absolute;
+    top: var(--mega-nav-height);
+    left: 0;
     width: 100%;
-    z-index: var(--zindex-header);
-    box-shadow: inset 0px -1px 0px alpha(var(--color-contrast-higher), 0.1); // border bottom
-  }
-  
-  // change mega-nav style if menu = expanded
-  .mega-nav--expanded {
+    height: calc(
+      100vh - var(--mega-nav-height) - var(--mega-nav-offset-y, 0px)
+    ); // set --mega-nav-offset-y in JS
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
     background-color: var(--color-bg);
+    box-shadow: var(--shadow-lg);
   }
-  
-  .mega-nav__container {
-    width: calc(100% - 2*var(--component-padding));
-    height: 100%;
+
+  .mega-nav__nav--is-visible,
+  .mega-nav__search--is-visible {
+    display: block;
+
+    > * {
+      animation: mega-nav-entry-animation 0.5s var(--ease-out);
+    }
+  }
+
+  .mega-nav__nav-inner,
+  .mega-nav__search-inner {
+    padding: var(--space-md) 0;
+    width: calc(100% - 2 * var(--component-padding));
     max-width: var(--mega-nav-content-max-width);
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
-  
-  // logo
-  .mega-nav__logo {
-    display: block;
-    width: 104px; // logo width
-    height: 30px; // logo height
-  
-    > * { // logo SVG
-      width: inherit;
-      height: inherit;
-    }
-  }
-  
-  // mobile buttons
-  .mega-nav__icon-btns {
-    display: flex;
-    align-items: center;
-  }
-  
-  .mega-nav__icon-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    font-size: 24px; // icon size
-    color: var(--color-contrast-high); // icon color
-    cursor: pointer;
-    transition: .2s;
-  
-    .icon {
-      display: block;
-    }
-  
-    .icon__group {
-      stroke-width: 1px; // icon stroke width
-  
-      > * {
-        transition: transform .3s var(--ease-in-out), stroke-dashoffset .3s, opacity .3s;
-      }
-    }
-  }
-  
-  // animated menu button
-  .mega-nav__icon-btn--menu {
-    .icon__group {
-      > * {
-        stroke-dasharray: 24;
-      }
-  
-      > *:nth-child(1) {
-        transform-origin: 12px 6px;
-      }
-  
-      > *:nth-child(2) {
-        stroke-dashoffset: 0;
-      }
-  
-      > *:nth-child(3) {
-        transform-origin: 12px 18px;
-      }
-    }
-  
-    &.mega-nav__icon-btn--state-b {
-      .icon__group {
-        > *:nth-child(1) {
-          transform: translateY(6px) rotate(-45deg);
-        }
-    
-        > *:nth-child(2) {
-          stroke-dashoffset: 24;
-        }
-    
-        > *:nth-child(3) {
-          transform: translateY(-6px) rotate(45deg);
-        }
-      }
-    }
-  }
-  
-  // animated search button
-  .mega-nav__icon-btn--search {
-    .icon__group {
-      transform-origin: 12px 12px;
-      transform: rotate(0deg);
-      transition: transform .3s var(--ease-out);
-  
-      > *:nth-child(1) {
-        stroke-dashoffset: 34;
-        stroke-dasharray: 24;
-      }
-  
-      > *:nth-child(2) {
-        stroke-dashoffset: 24;
-        stroke-dasharray: 24;
-      }
-  
-      > *:nth-child(3) {
-        transform-origin: 9.5px 9.5px;
-        transform: rotate(45deg);
-        stroke-dashoffset: 84;
-        stroke-dasharray: 42;
-        opacity: 1;
-      }
-    }
-  
-    &.mega-nav__icon-btn--state-b {
-      .icon__group {
-        transform: rotate(-90deg);
-  
-        > *:nth-child(1) {
-          stroke-dashoffset: 48;
-        }
-  
-        > *:nth-child(2) {
-          stroke-dashoffset: 48;
-        }
-  
-        > *:nth-child(3) {
-          stroke-dashoffset: 42;
-          opacity: 0;
-        }
-      }
-    }
-  }
-  
-  // animated arrow icon
-  .mega-nav__arrow-icon {
-    font-size: 16px; // icon size
-    color: currentColor; // icon color
-    transition: color .2s;
-  
-    .icon {
-      display: block;
-    }
-  
-    .icon__group {
-      stroke-width: 1px; // icon stroke width
-      will-change: transform;
-      transform-origin: 8px 8px;
-      transition: transform .3s var(--ease-out);
-  
-      > * {
-        stroke-dasharray: 17;
-        transform-origin: 8px 8px;
-        transform: translateY(3px);
-        transition: transform .3s, stroke-dashoffset .3s;
-        transition-timing-function: var(--ease-out);
-      }
-  
-      > *:first-child {
-        stroke-dashoffset: 8.5;
-      }
-  
-      > *:last-child {
-        stroke-dashoffset: 8.5;
-      }
-    }
-  }
-  
-  // label/divider
+
   .mega-nav__label {
-    color: var(--color-contrast-medium);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: var(--text-xs);
+    // label/divider
+    margin: var(--space-lg) 0 var(--space-xs);
   }
-  
-  // card
-  .mega-nav__card {
-    img {
-      transition: opacity .3s;
-  
-      &:hover {
-        opacity: 0.85;
-      }
-    }
+
+  .mega-nav__item {
+    // main navigation items
+    border-bottom: 1px solid var(--color-contrast-lower);
   }
-  
-  .mega-nav__card-title {
+
+  .mega-nav__control {
+    // navigation main controls (buttons/links)
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: var(--text-md);
+    text-align: left;
+    padding: var(--space-sm) 0;
     color: var(--color-contrast-higher);
     text-decoration: none;
-  
+    cursor: pointer;
+  }
+
+  a[aria-current="page"] {
+    // current page
+    color: var(--color-primary);
+  }
+
+  .mega-nav__arrow-icon {
+    margin-left: auto;
+    margin-right: 12px;
+  }
+
+  .mega-nav__btn {
+    // button
+    width: 100%;
+    margin: var(--space-sm) 0;
+    font-size: var(--text-md);
+  }
+
+  // sub navigation
+  .mega-nav__sub-nav-wrapper {
+    // sub navigation content
+    display: none;
+    padding: 0 var(--space-md) var(--space-lg);
+    overflow: hidden;
+  }
+
+  .mega-nav__sub-items {
+    // list of sub items
+    &:not(:last-child) {
+      margin-bottom: var(--space-lg);
+    }
+  }
+
+  .mega-nav__sub-item {
+    // sub item
+    border-bottom: 1px solid var(--color-contrast-lower);
+  }
+
+  .mega-nav__sub-link {
+    // sub link
+    display: block;
+    color: var(--color-contrast-higher);
+    text-decoration: none;
+    padding: var(--space-xxs) 0;
+  }
+
+  .mega-nav__quick-link {
+    // search quick links
+    display: block;
+    color: var(--color-contrast-higher);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-contrast-lower);
+    padding: var(--space-xs) 0;
+  }
+
+  .mega-nav__sub-nav--layout-1 {
+    // layout 1 -> tabbed content
+    .mega-nav__sub-items {
+      margin-bottom: 0;
+    }
+
+    .mega-nav__tabs {
+      display: none; // hide tabbed content on smaller screens
+    }
+  }
+
+  .mega-nav__sub-nav--layout-3 {
+    // layout 3 -> gallery
+    padding-top: var(--space-md);
+    display: grid;
+    gap: var(--space-md);
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(260px, 1fr)
+    ); // auto add new cols
+  }
+
+  .mega-nav__item--expanded {
+    .mega-nav__arrow-icon {
+      .icon__group {
+        // animated arrow icon
+        > *:first-child {
+          transform: translateY(-3px) rotate(-90deg);
+        }
+
+        > *:last-child {
+          transform: translateY(-3px) rotate(90deg);
+        }
+      }
+    }
+
+    .mega-nav__sub-nav-wrapper {
+      display: block;
+
+      > * {
+        animation: mega-nav-entry-animation 0.5s var(--ease-out);
+      }
+    }
+  }
+}
+
+// --------------------------------
+
+// --desktop - style affecting only big screens 👇
+
+// --------------------------------
+
+.mega-nav--desktop {
+  .mega-nav__icon-btns--mobile,
+  .mega-nav__sub-nav-wrapper,
+  .mega-nav__search,
+  .mega-nav__label {
+    display: none;
+  }
+
+  .mega-nav__logo {
+    flex-shrink: 0;
+    margin-right: var(--space-sm);
+  }
+
+  .mega-nav__nav {
+    flex-grow: 1;
+    height: 100%;
+  }
+
+  .mega-nav__nav-inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between; // navigation layout - change to "flex-end" to push the navigation to the right
+  }
+
+  .mega-nav__items {
+    display: flex;
+    height: 100%;
+  }
+
+  .mega-nav__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .mega-nav__control {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-md);
+    height: 100%;
+    font-size: var(--text-sm);
+    color: var(--color-contrast-higher);
+    text-decoration: none;
+    transition: 0.2s;
+
+    &::after {
+      // marker
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-contrast-higher);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .mega-nav__arrow-icon {
+      margin-left: var(--space-xxs);
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: alpha(var(--color-contrast-higher), 0.05);
+    }
+  }
+
+  .mega-nav__sub-nav-wrapper,
+  .mega-nav__search {
+    position: absolute;
+    top: var(--mega-nav-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg);
+    box-shadow: var(--shadow-lg);
+    max-height: calc(
+      100vh - var(--mega-nav-height) - var(--mega-nav-offset-y, 0px)
+    ); // set --mega-nav-offset-y in JS
+    overflow: auto;
+  }
+
+  .mega-nav__sub-nav,
+  .mega-nav__search-inner {
+    width: calc(100% - 2 * var(--component-padding));
+    margin: 0 auto;
+    padding: var(--space-xl) 0;
+
+    .mega-nav__label {
+      display: block;
+    }
+  }
+
+  .mega-nav__sub-nav {
+    max-width: var(--mega-nav-content-max-width);
+  }
+
+  .mega-nav__search-inner {
+    max-width: var(--max-width-xs); // reduce max-width for search content
+  }
+
+  .mega-nav__label {
+    margin-bottom: var(--space-md);
+  }
+
+  .mega-nav__sub-item:not(:last-child) {
+    margin-bottom: var(--space-xxs);
+  }
+
+  .mega-nav__sub-link {
+    font-size: var(--text-sm);
+    color: var(--color-contrast-higher);
+    text-decoration: none;
+
     &:hover {
       text-decoration: underline;
     }
   }
-  
-  // --------------------------------
-  
-  // --mobile - style affecting only small screens 👇
-  
-  // --------------------------------
-  
-  .mega-nav--mobile {
-    .mega-nav__icon-btns--desktop {
-      display: none; // hide --desktop icon buttons
+
+  .mega-nav__quick-link {
+    // search quick links
+    display: inline-block;
+    margin-bottom: var(--space-xxs);
+    font-size: var(--text-sm);
+    color: var(--color-contrast-higher);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
-  
-    .mega-nav__nav, .mega-nav__search {
-      display: none;
-      position: absolute;
-      top: var(--mega-nav-height);
-      left: 0;
-      width: 100%;
-      height: calc(100vh - var(--mega-nav-height) - var(--mega-nav-offset-y, 0px)); // set --mega-nav-offset-y in JS
-      overflow: auto;
-      -webkit-overflow-scrolling: touch;
-      background-color: var(--color-bg);
-      box-shadow: var(--shadow-lg);
+  }
+
+  .mega-nav__btn {
+    font-size: var(--text-sm);
+    margin-left: var(--space-sm);
+  }
+
+  .mega-nav__sub-nav--layout-1 {
+    // layout 1 -> tabbed content
+    .mega-nav__sub-items {
+      display: none; // hide links
     }
-  
-    .mega-nav__nav--is-visible, .mega-nav__search--is-visible {
-      display: block;
-  
-      > * {
-        animation: mega-nav-entry-animation .5s var(--ease-out);
-      }
+
+    .mega-nav__tabs {
+      display: flex;
     }
-  
-    .mega-nav__nav-inner, .mega-nav__search-inner {
-      padding: var(--space-md) 0;
-      width: calc(100% - 2*var(--component-padding));
-      max-width: var(--mega-nav-content-max-width);
-      margin-left: auto;
-      margin-right: auto;
+  }
+
+  .mega-nav__sub-nav--layout-2 {
+    // layout 2 -> multi lists
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-sm);
+
+    // ⚠️ if you need to provide a fallback for browsers not supporting CSS grid (e.g., IE11), use the code below 👇
+    // @include gridFallback(var(--space-sm)); // grid fallback
+    // margin-left: auto;
+    // margin-right: auto;
+    // @supports (grid-area: auto) {
+    //   display: grid;
+    //   grid-template-columns: repeat(5, 1fr);
+    //   gap: var(--space-sm);
+    //   margin: 0 auto;
+    // }
+
+    // > * {
+    //   @include column(1/5);
+    // }
+  }
+
+  .mega-nav__sub-nav--layout-3 {
+    // layout 3 -> gallery
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+
+    // ⚠️ if you need to provide a fallback for browsers not supporting CSS grid (e.g., IE11), use the code below 👇
+    // @include gridFallback(var(--space-md)); // grid fallback
+    // margin-left: auto;
+    // margin-right: auto;
+    // @supports (grid-area: auto) {
+    //   display: grid;
+    //   grid-template-columns: repeat(4, 1fr);
+    //   gap: var(--space-md);
+    //   margin: 0 auto;
+    // }
+
+    // > * {
+    //   @include column(1/4);
+    // }
+  }
+
+  .mega-nav__sub-nav--layout-4 {
+    // layout 4 -> single list
+    text-align: center;
+
+    .mega-nav__sub-link {
+      font-size: var(--text-lg);
     }
-  
-    .mega-nav__label { // label/divider
-      margin: var(--space-lg) 0 var(--space-xs);
-    }
-  
-    .mega-nav__item { // main navigation items
+  }
+
+  // tabs
+  .mega-nav__tabs-controls {
+    > *:not(:last-child) {
       border-bottom: 1px solid var(--color-contrast-lower);
     }
-  
-    .mega-nav__control { // navigation main controls (buttons/links)
-      display: flex;
-      align-items: center;
-      width: 100%;
-      font-size: var(--text-md);
-      text-align: left;
-      padding: var(--space-sm) 0;
-      color: var(--color-contrast-higher);
-      text-decoration: none;
-      cursor: pointer;
+  }
+
+  .mega-nav__tabs-control {
+    display: block;
+    width: 100%;
+    padding: var(--space-xs);
+    overflow: hidden;
+    color: var(--color-contrast-higher);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+
+    .icon {
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: transform 0.5s var(--ease-out), opacity 0.5s;
     }
-  
-    a[aria-current="page"] { // current page
+
+    &:hover,
+    &[aria-selected="true"] {
       color: var(--color-primary);
     }
-  
-    .mega-nav__arrow-icon {
-      margin-left: auto;
-      margin-right: 12px;
-    }
-  
-    .mega-nav__btn { // button
-      width: 100%;
-      margin: var(--space-sm) 0;
-      font-size: var(--text-md);
-    }
-  
-    // sub navigation
-    .mega-nav__sub-nav-wrapper { // sub navigation content
-      display: none;
-      padding: 0 var(--space-md) var(--space-lg);
-      overflow: hidden;
-    }
-  
-    .mega-nav__sub-items { // list of sub items
-      &:not(:last-child) {
-        margin-bottom: var(--space-lg);
-      }
-    }
-  
-    .mega-nav__sub-item { // sub item
-      border-bottom: 1px solid var(--color-contrast-lower);
-    }
-  
-    .mega-nav__sub-link { // sub link
-      display: block;
-      color: var(--color-contrast-higher);
-      text-decoration: none;
-      padding: var(--space-xxs) 0;
-    }
-  
-    .mega-nav__quick-link {  // search quick links
-      display: block;
-      color: var(--color-contrast-higher);
-      text-decoration: none;
-      border-bottom: 1px solid var(--color-contrast-lower);
-      padding: var(--space-xs) 0;
-    }
-  
-    .mega-nav__sub-nav--layout-1 { // layout 1 -> tabbed content
-      .mega-nav__sub-items {
-        margin-bottom: 0;
-      }
-  
-      .mega-nav__tabs {
-        display: none; // hide tabbed content on smaller screens
-      }
-    }
-  
-    .mega-nav__sub-nav--layout-3 { // layout 3 -> gallery
-      padding-top: var(--space-md);
-      display: grid;
-      gap: var(--space-md);
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); // auto add new cols
-    }
-  
-    .mega-nav__item--expanded {
-      .mega-nav__arrow-icon {
-        .icon__group { // animated arrow icon
-          > *:first-child {
-            transform: translateY(-3px) rotate(-90deg);
-          }
-      
-          > *:last-child {
-            transform: translateY(-3px) rotate(90deg);
-          }
-        }
-      }
-  
-      .mega-nav__sub-nav-wrapper {
-        display: block;
-  
-        > * {
-          animation: mega-nav-entry-animation .5s var(--ease-out);
-        }
-      }
-    }
-  }
-  
-  // --------------------------------
-  
-  // --desktop - style affecting only big screens 👇
-  
-  // --------------------------------
-  
-  .mega-nav--desktop {
-    .mega-nav__icon-btns--mobile, .mega-nav__sub-nav-wrapper, .mega-nav__search, .mega-nav__label {
-      display: none;
-    }
-  
-    .mega-nav__logo {
-      flex-shrink: 0;
-      margin-right: var(--space-sm);
-    }
-  
-    .mega-nav__nav {
-      flex-grow: 1;
-      height: 100%;
-    }
-  
-    .mega-nav__nav-inner {
-      height: 100%;
-      display: flex;
-      justify-content: space-between; // navigation layout - change to "flex-end" to push the navigation to the right
-    }
-  
-    .mega-nav__items {
-      display: flex;
-      height: 100%;
-    }
-  
-    .mega-nav__item {
-      display: flex;
-      align-items: center;
-    }
-  
-    .mega-nav__control {
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding: 0 var(--space-md);
-      height: 100%;
-      font-size: var(--text-sm);
-      color: var(--color-contrast-higher);
-      text-decoration: none;
-      transition: .2s;
-  
-      &::after { // marker
-        content: '';
-        position: absolute;
-        bottom: 0px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: var(--color-contrast-higher);
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity .2s;
-      }
-  
-      .mega-nav__arrow-icon {
-        margin-left: var(--space-xxs);
-      }
-  
-      &:hover {
-        cursor: pointer;
-        background-color: alpha(var(--color-contrast-higher), 0.05);
-      }
-    }
-  
-    .mega-nav__sub-nav-wrapper, .mega-nav__search {
-      position: absolute;
-      top: var(--mega-nav-height);
-      left: 0;
-      width: 100%;
-      background-color: var(--color-bg);
-      box-shadow: var(--shadow-lg);
-      max-height: calc(100vh - var(--mega-nav-height) - var(--mega-nav-offset-y, 0px)); // set --mega-nav-offset-y in JS 
-      overflow: auto;
-    }
-  
-    .mega-nav__sub-nav, .mega-nav__search-inner {
-      width: calc(100% - 2*var(--component-padding));
-      margin: 0 auto;
-      padding: var(--space-xl) 0;
-      
-      .mega-nav__label {
-        display: block;
-      }
-    }
-    
-    .mega-nav__sub-nav {
-      max-width: var(--mega-nav-content-max-width);
-    }
-  
-    .mega-nav__search-inner {
-      max-width: var(--max-width-xs); // reduce max-width for search content
-    }
-  
-    .mega-nav__label {
-      margin-bottom: var(--space-md);
-    }
-  
-    .mega-nav__sub-item:not(:last-child) {
-      margin-bottom: var(--space-xxs);
-    }
-  
-    .mega-nav__sub-link {
-      font-size: var(--text-sm);
-      color: var(--color-contrast-higher);
-      text-decoration: none;
-  
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  
-    .mega-nav__quick-link { // search quick links
-      display: inline-block;
-      margin-bottom: var(--space-xxs);
-      font-size: var(--text-sm);
-      color: var(--color-contrast-higher);
-      text-decoration: none;
-  
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  
-    .mega-nav__btn {
-      font-size: var(--text-sm);
-      margin-left: var(--space-sm);
-    }
-  
-    .mega-nav__sub-nav--layout-1 { // layout 1 -> tabbed content
-      .mega-nav__sub-items {
-        display: none; // hide links
-      }
-  
-      .mega-nav__tabs {
-        display: flex;
-      }
-    }
-  
-    .mega-nav__sub-nav--layout-2 { // layout 2 -> multi lists
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: var(--space-sm);
-  
-      // ⚠️ if you need to provide a fallback for browsers not supporting CSS grid (e.g., IE11), use the code below 👇
-      // @include gridFallback(var(--space-sm)); // grid fallback
-      // margin-left: auto;
-      // margin-right: auto;
-      // @supports (grid-area: auto) {
-      //   display: grid;
-      //   grid-template-columns: repeat(5, 1fr);
-      //   gap: var(--space-sm);
-      //   margin: 0 auto;
-      // }
-  
-      // > * {
-      //   @include column(1/5);
-      // }
-    }
-  
-    .mega-nav__sub-nav--layout-3 { // layout 3 -> gallery
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: var(--space-md);
-  
-      // ⚠️ if you need to provide a fallback for browsers not supporting CSS grid (e.g., IE11), use the code below 👇
-      // @include gridFallback(var(--space-md)); // grid fallback
-      // margin-left: auto;
-      // margin-right: auto;
-      // @supports (grid-area: auto) {
-      //   display: grid;
-      //   grid-template-columns: repeat(4, 1fr);
-      //   gap: var(--space-md);
-      //   margin: 0 auto;
-      // }
-  
-      // > * {
-      //   @include column(1/4);
-      // }
-    }
-  
-    .mega-nav__sub-nav--layout-4 { // layout 4 -> single list
-      text-align: center;
-  
-      .mega-nav__sub-link {
-        font-size: var(--text-lg);
-      }
-    }
-  
-    // tabs
-    .mega-nav__tabs-controls {
-      > *:not(:last-child) {
-        border-bottom: 1px solid var(--color-contrast-lower);
-      }
-    }
-  
-    .mega-nav__tabs-control {
-      display: block;
-      width: 100%;
-      padding: var(--space-xs);
-      overflow: hidden;
-      color: var(--color-contrast-higher);
-      text-decoration: none;
-      cursor: pointer;
-      transition: .2s;
-  
+
+    &[aria-selected="true"] {
       .icon {
-        opacity: 0;
-        transform: translateX(-10px);
-        transition: transform .5s var(--ease-out), opacity .5s;
-      }
-  
-      &:hover, &[aria-selected="true"] {
-        color: var(--color-primary);
-      }
-  
-      &[aria-selected="true"] {
-        .icon {
-          opacity: 1;
-          transform: translateX(0px);
-        }
+        opacity: 1;
+        transform: translateX(0px);
       }
     }
-  
-    .mega-nav__tabs-img {
-      display: block;
-      overflow: hidden;
-      border-radius: var(--radius-lg);
-      transition: opacity .3s;
-  
-      &:hover {
-        opacity: 0.85;
-      }
+  }
+
+  .mega-nav__tabs-img {
+    display: block;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.85;
     }
-  
-    .mega-nav__item--expanded {
-      .mega-nav__control {
-        background-color: alpha(var(--color-contrast-higher), 0.05);
-  
-        &::after { // marker
-          opacity: 1;
-        }
-      }
-  
-      .mega-nav__arrow-icon {
-        .icon__group {
-          transform: rotate(-90deg);
-  
-          > *:first-child, *:last-child {
-            stroke-dashoffset: 0;
-            transform: translateY(0px);
-          }
-        }
-      }
-  
-      .mega-nav__sub-nav-wrapper {
-        display: block;
-      }
-  
-      .mega-nav__sub-nav {
-        animation: mega-nav-entry-animation .5s var(--ease-out);
-      }
-    }
-  
-    // icon buttons
-    .mega-nav__icon-btn {
-      border-radius: 50%;
-      margin-left: var(--space-xxxxs);
-    }
-  
-    .mega-nav__icon-btn:hover, 
-    .mega-nav__icon-btn--state-b {
+  }
+
+  .mega-nav__item--expanded {
+    .mega-nav__control {
       background-color: alpha(var(--color-contrast-higher), 0.05);
+
+      &::after {
+        // marker
+        opacity: 1;
+      }
     }
-  
-    .mega-nav__search--is-visible {
+
+    .mega-nav__arrow-icon {
+      .icon__group {
+        transform: rotate(-90deg);
+
+        > *:first-child,
+        *:last-child {
+          stroke-dashoffset: 0;
+          transform: translateY(0px);
+        }
+      }
+    }
+
+    .mega-nav__sub-nav-wrapper {
       display: block;
-  
-      .mega-nav__search-inner {
-        animation: mega-nav-entry-animation .5s var(--ease-out);
-      }
+    }
+
+    .mega-nav__sub-nav {
+      animation: mega-nav-entry-animation 0.5s var(--ease-out);
     }
   }
-  
-  // animations
-  @keyframes mega-nav-entry-animation {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
-  
-  // used in JS - detect when the menu needs to switch from --mobile to --desktop layout
-  [class*="mega-nav--desktop"]::before {
-    display: none;
-    content: 'mobile';
+
+  // icon buttons
+  .mega-nav__icon-btn {
+    border-radius: 50%;
+    margin-left: var(--space-xxxxs);
   }
 
-  // DELETED BREAKPOINT HERE
+  .mega-nav__icon-btn:hover,
+  .mega-nav__icon-btn--state-b {
+    background-color: alpha(var(--color-contrast-higher), 0.05);
+  }
 
+  .mega-nav__search--is-visible {
+    display: block;
 
-  // no JS
-  html:not(.js) {
-    .mega-nav--mobile {
-      .mega-nav__logo {
-        margin: var(--space-md) 0;
-      }
-  
-      .mega-nav__icon-btns {
-        display: none;
-      }
-  
-      .mega-nav__container, .mega-nav__sub-nav-wrapper {
-        display: block;
-      }
-  
-      .mega-nav__nav, .mega-nav__search {
-        display: block;
-        position: static;
-        height: auto;
-        box-shadow: none;
-        border-top: 1px solid var(--color-contrast-lower);
-      }
+    .mega-nav__search-inner {
+      animation: mega-nav-entry-animation 0.5s var(--ease-out);
     }
   }
-  
+}
 
-  
-  
+// animations
+@keyframes mega-nav-entry-animation {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+// used in JS - detect when the menu needs to switch from --mobile to --desktop layout
+[class*="mega-nav--desktop"]::before {
+  display: none;
+  content: "mobile";
+}
+
+// DELETED BREAKPOINT HERE
+
+// no JS
+html:not(.js) {
+  .mega-nav--mobile {
+    .mega-nav__logo {
+      margin: var(--space-md) 0;
+    }
+
+    .mega-nav__icon-btns {
+      display: none;
+    }
+
+    .mega-nav__container,
+    .mega-nav__sub-nav-wrapper {
+      display: block;
+    }
+
+    .mega-nav__nav,
+    .mega-nav__search {
+      display: block;
+      position: static;
+      height: auto;
+      box-shadow: none;
+      border-top: 1px solid var(--color-contrast-lower);
+    }
+  }
+}

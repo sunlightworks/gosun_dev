@@ -6576,7 +6576,8 @@ a.mobile_nav {
     #55c496 66.44%,
     #d4e613 100%
   );
-  --top-chef: linear-gradient(265.99deg, #f99c37 0%, #dd7300 100%); }
+  --top-chef: linear-gradient(265.99deg, #f99c37 0%, #dd7300 100%);
+  --tech-crunch: linear-gradient(265.99deg, #0a9e01 0%, #055700 100%); }
 
 @supports (--css: variables) {
   [data-theme="dark"],
@@ -13870,6 +13871,23 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
 .payment_methods,
 .footer-logo {
   display: none !important; }
+
+:root {
+  --mega-nav-height: 50px;
+  --mega-nav-content-max-width: var(
+    --max-width-lg
+  );
+  --promo-banner-height: 40px;
+  --header-height: calc(var(--mega-nav-height) + var(--promo-banner-height)); }
+  @media (min-width: 768px) {
+    :root {
+      --header-height: calc(
+      var(--mega-nav-height) + var(--promo-banner-height) +
+        var(--promo-banner-height)
+    ); } }
+  @media (min-width: 768px) {
+    :root {
+      --mega-nav-height: 70px; } }
 
 .menu.right {
   display: flex; }
