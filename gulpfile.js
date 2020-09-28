@@ -49,7 +49,9 @@ gulp.task("css", function() {
   return gulp
     .src("app/css/main.css")
     .pipe(postcss(plugins))
+    .pipe(gulp.dest("app"))
     .pipe(gulp.dest("ThemeKit/assets"));
+    
 });
 
 // Cleaning

@@ -68,6 +68,22 @@
   --bg-header-accent: var(--color-bg);
   --bg-promo-bar: var(--color-primary);
   --bg-footer: var(--color-contrast-higher);
+
+  //brands
+  --forbes: linear-gradient(265.99deg, #3a6da7 0%, #103763 100%);
+  --discovery-channel: linear-gradient(265.99deg, #1575c5 0%, #005195 100%);
+  --rei: rgb(0, 78, 0);
+  --national-geographic: linear-gradient(265.99deg, #ffd520 0%, #e3a400 100%);
+  --inc: linear-gradient(265.99deg, #ff3b00 0%, #ac3e00 100%);
+  --fortune: #000;
+  --ces: linear-gradient(
+    90deg,
+    #47a1de 1.47%,
+    #68cef6 30.21%,
+    #55c496 66.44%,
+    #d4e613 100%
+  );
+  --top-chef: linear-gradient(265.99deg, #f99c37 0%, #dd7300 100%);
 }
 
 @supports (--css: variables) {
@@ -217,6 +233,21 @@
 
     --color-link: var(--color-secondary);
     --color-max: var(--color-white);
+
+    //brands
+    --forbes: #33629a;
+    --discovery-channel: #1575c5;
+    --rei: rgb(0, 78, 0);
+    --national-geographic: #ffce00;
+    --inc: rgb(255, 59, 0);
+    --fortune: #000;
+    --ces: linear-gradient(
+      90deg,
+      #47a1de 1.47%,
+      #68cef6 30.21%,
+      #55c496 66.44%,
+      #d4e613 100%
+    );
   }
 }
 

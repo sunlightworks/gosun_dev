@@ -9,18 +9,18 @@
 }
 }
 */
-.homepage-video,
-.testimonial-block,
-.banner {
-  img {
-    filter: brightness(1) contrast(0.75) saturate(1.15) !important;
-    -webkit-filter: brightness(1) contrast(0.75) saturate(1.15) !important;
-  }
-}
+// .homepage-video,
+// .testimonial-block,
+// .banner {
+//   img {
+//     filter: brightness(1) contrast(0.75) saturate(1.15) !important;
+//     -webkit-filter: brightness(1) contrast(0.75) saturate(1.15) !important;
+//   }
+// }
 
-.banner img {
-  object-fit: cover;
-}
+// .banner img {
+//   object-fit: cover;
+// }
 
 section.homepage-video,
 .testimonial-block,

@@ -1,0 +1,81 @@
+/* -------------------------------- 
+
+File#: _1_socials-v3
+Title: Socials v3
+Descr: Section with links to social media accounts
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.socials-v3 {
+  position: relative;
+  z-index: 1;
+}
+
+.socials-v3__btns {
+  display: flex;
+
+  > * {
+    flex-grow: 1;
+  }
+
+  &:hover {
+    .socials-v3__btn {
+      opacity: 0.5; // reduce opacity of btns if list:hover
+
+      &::after {
+        opacity: 0; // remove dividers if list:hover
+      }
+    }
+  }
+
+  li:last-child .socials-v3__btn::after {
+    display: none;
+  }
+}
+
+.socials-v3__btn {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-radius: var(--radius-md);
+  transition: 0.3s;
+
+  .icon {
+    font-size: 1.6em;
+    color: var(--color-contrast-high);
+    transition: color 0.2s, transform 0.2s;
+  }
+
+  &::after {
+    // divider
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: var(--color-contrast-lower);
+    transition: opacity 0.2s;
+  }
+
+  &:hover {
+    background-color: var(--color-bg);
+    box-shadow: var(--shadow-md);
+    opacity: 1 !important;
+
+    .icon {
+      color: var(--color-primary);
+      transform: scale(1.2);
+    }
+  }
+}
+
+@include breakpoint(sm) {
+  .socials-v3__btn {
+    .icon {
+      font-size: 2em;
+    }
+  }
+}

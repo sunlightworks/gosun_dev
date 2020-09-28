@@ -928,6 +928,14 @@
 .white {
   background-color: white;
 }
+
+.color-max {
+  color: var(--color-max);
+}
+.bg-max {
+  background: var(--color-max);
+}
+
 .color-bg {
   color: alpha(var(--color-bg), var(--color-o, 1));
 }

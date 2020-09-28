@@ -1,5 +1,3 @@
-
-
 /* -------------------------------- 
 
 File#: _1_tabs
@@ -8,15 +6,17 @@ Descr: A list of content sections (panels), accessible one at a time using contr
 
 -------------------------------- */
 
-.tabs {}
+.tabs {
+}
 
 .tabs__control {
   text-decoration: none;
   color: var(--color-contrast-medium);
 
   &:focus {
-    outline: 2px solid alpha(var(--color-primary), 0.2);
-    outline-offset: 2px;
+    // outline: 2px solid alpha(var(--color-primary), 0.2);
+    // outline-offset: 2px;
+    outline: none !important;
   }
 
   &:hover {
@@ -30,4 +30,3 @@ Descr: A list of content sections (panels), accessible one at a time using contr
     text-decoration: underline;
   }
 }
-

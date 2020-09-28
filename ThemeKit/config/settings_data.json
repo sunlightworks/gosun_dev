@@ -1813,6 +1813,70 @@
         "settings": {
           "title": "See why customers love GoSun."
         }
+      },
+      "1601324457687": {
+        "type": "image-tabs",
+        "blocks": {
+          "1601324457687-0": {
+            "type": "tab",
+            "settings": {
+              "name": "Forbes",
+              "testimonial": "<p>People can now improve their quality of life without requiring the use of fossil fuels or deforestation.<\/p>",
+              "image": "shopify:\/\/shop_images\/Forbes.png"
+            }
+          },
+          "1601324457687-1": {
+            "type": "tab",
+            "settings": {
+              "name": "Discovery Channel",
+              "testimonial": "<p>The GoSun is a stunning, tube-shaped portable oven powerful enough to bake, fry or broil a meal in as little as 10 minutes.<\/p>",
+              "image": "shopify:\/\/shop_images\/Discovery_Channel.png"
+            }
+          },
+          "1601324457687-2": {
+            "type": "tab",
+            "settings": {
+              "name": "REI",
+              "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
+              "image": "shopify:\/\/shop_images\/REI.png"
+            }
+          },
+          "1601324618148": {
+            "type": "tab",
+            "settings": {
+              "name": "National Geographic",
+              "testimonial": "<p>\"For simmering our sauces, we used GoSunStoves, which are smaller and more compact but still have incredible power.\" - Jos&eacute; Andr&eacute;s<\/p>",
+              "image": "shopify:\/\/shop_images\/Nat_Geo.png"
+            }
+          },
+          "1601324683693": {
+            "type": "tab",
+            "settings": {
+              "name": "Inc",
+              "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
+              "image": "shopify:\/\/shop_images\/Inc.png"
+            }
+          },
+          "1601324707790": {
+            "type": "tab",
+            "settings": {
+              "name": "Fortune",
+              "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
+              "image": "shopify:\/\/shop_images\/Fortune.png"
+            }
+          }
+        },
+        "block_order": [
+          "1601324457687-0",
+          "1601324457687-1",
+          "1601324457687-2",
+          "1601324618148",
+          "1601324683693",
+          "1601324707790"
+        ],
+        "settings": {
+          "title": "Featured in"
+        }
       }
     },
     "content_for_index": [
@@ -1822,6 +1886,7 @@
       "1576887130693",
       "1596230707797",
       "1574447604302",
+      "1601324457687",
       "1594926564453",
       "1598461380754",
       "1595519740851",
