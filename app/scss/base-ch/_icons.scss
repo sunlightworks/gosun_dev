@@ -91,12 +91,17 @@
   color: var(--color-accent) !important;
 }
 
-.icon--display {
-  color: var(--color-primary-light) !important;
+@mixin icon--display {
   .material-icons-two-tone {
-    filter: invert(73%) sepia(24%) saturate(676%) hue-rotate(164deg)
+    filter: invert(73%) sepia(80%) saturate(676%) hue-rotate(164deg)
+      brightness(95%) contrast(89%);
+    -webkit-filter: invert(73%) sepia(80%) saturate(676%) hue-rotate(164deg)
       brightness(95%) contrast(89%);
   }
+}
+
+.icon--display {
+  @include icon--display();
 }
 
 .icon--default {

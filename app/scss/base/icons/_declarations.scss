@@ -54,6 +54,12 @@
 }
 
 .validator-item {
+  &:hover {
+    @include icon--display();
+    h5 {
+      color: var(--color-primary) !important;
+    }
+  }
   @include md-max {
     flex: 40%;
   }

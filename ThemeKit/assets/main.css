@@ -1081,10 +1081,9 @@ u {
 .icon--cta {
   color: var(--color-accent) !important; }
 
-.icon--display {
-  color: var(--color-primary-light) !important; }
-  .icon--display .material-icons-two-tone {
-    filter: invert(73%) sepia(24%) saturate(676%) hue-rotate(164deg) brightness(95%) contrast(89%); }
+.icon--display .material-icons-two-tone {
+  filter: invert(73%) sepia(80%) saturate(676%) hue-rotate(164deg) brightness(95%) contrast(89%);
+  -webkit-filter: invert(73%) sepia(80%) saturate(676%) hue-rotate(164deg) brightness(95%) contrast(89%); }
 
 .icon--default {
   color: var(--color-contrast-medium) !important; }
@@ -6205,6 +6204,13 @@ h2.product_type {
 .info-item--top-bar .icon {
   bottom: 0px;
   color: var(--color-contrast-high); }
+
+.validator-item:hover .material-icons-two-tone {
+  filter: invert(73%) sepia(80%) saturate(676%) hue-rotate(164deg) brightness(95%) contrast(89%);
+  -webkit-filter: invert(73%) sepia(80%) saturate(676%) hue-rotate(164deg) brightness(95%) contrast(89%); }
+
+.validator-item:hover h5 {
+  color: var(--color-primary) !important; }
 
 @media (max-width: 768px) {
   .validator-item {
