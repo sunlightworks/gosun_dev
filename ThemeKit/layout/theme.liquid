@@ -315,7 +315,6 @@
       <!----------- APPS ----------->
       {% if template contains 'product' or 'collection'%}
         <!-- Currency Switcher / Accounts -->{% include 'mlveda-currencies-switcher' %}{% include 'mlveda-currencies' %}{% include 'mlveda-flag' %}
-        <!-- EasyVideo / Products -->{% include 'easyvideo' %}
       {% endif %}
         <!-- Flits / Accounts -->{% render 'flits_snippet' %}
         <!-- AfterShip / Shipping --><div id="as-root"></div><script>(function(e,t,n){var r,i=e.getElementsByTagName(t)[0];if(e.getElementById(n))return;r=e.createElement(t);r.id=n;r.src="https://button.aftership.com/all.js";i.parentNode.insertBefore(r,i)})(document,"script","aftership-jssdk")</script>
@@ -348,8 +347,8 @@
       <script src="{{ 'utilities.js' | asset_url }}"></script>
       <script src="{{ 'app.js' | asset_url }}"></script>
       <script defer src="{{ 'gosun.js' | asset_url }}"></script>
-      <script defer src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
-      <script defer src="https://kit.fontawesome.com/40a53939d2.js" crossorigin="anonymous"></script> 
+      <!-- <script defer src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script> -->
+      <!-- <script defer src="https://kit.fontawesome.com/40a53939d2.js" crossorigin="anonymous"></script>  -->
     <!----------- End SCRIPTS ----------->
 
     {% if settings.show_multiple_currencies %}
