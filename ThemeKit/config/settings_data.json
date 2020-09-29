@@ -1047,6 +1047,7 @@
       },
       "1594926564453": {
         "type": "marquee-logo-list",
+        "disabled": true,
         "blocks": {
           "1594926564453-0": {
             "type": "logo_block",
@@ -1822,7 +1823,8 @@
             "settings": {
               "name": "Forbes",
               "testimonial": "<p>People can now improve their quality of life without requiring the use of fossil fuels or deforestation.<\/p>",
-              "image": "shopify:\/\/shop_images\/Forbes.png"
+              "image": "shopify:\/\/shop_images\/Forbes_9df8b2ca-1c20-4fdf-b9c2-e6bef515adc8.png",
+              "quote": true
             }
           },
           "1601324457687-1": {
@@ -1830,52 +1832,57 @@
             "settings": {
               "name": "Discovery Channel",
               "testimonial": "<p>The GoSun is a stunning, tube-shaped portable oven powerful enough to bake, fry or broil a meal in as little as 10 minutes.<\/p>",
-              "image": "shopify:\/\/shop_images\/Discovery_Channel.png"
+              "image": "shopify:\/\/shop_images\/Discovery_Channel_-_Logo_2019_1.png",
+              "quote": true
             }
           },
           "1601324457687-2": {
             "type": "tab",
             "settings": {
-              "name": "REI",
-              "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
-              "image": "shopify:\/\/shop_images\/REI.png"
+              "name": "CES",
+              "testimonial": "<p>GoSun won <strong>Climate Change Innovation Award<\/strong> (2019) and <strong>Small Business of the Year Award<\/strong> (2017).<\/p>",
+              "image": "shopify:\/\/shop_images\/CES_Cutout_cbe5255c-b009-48f4-924a-8f76b9da35b8.png",
+              "quote": false
             }
           },
           "1601324618148": {
             "type": "tab",
             "settings": {
               "name": "National Geographic",
-              "testimonial": "<p>\"For simmering our sauces, we used GoSunStoves, which are smaller and more compact but still have incredible power.\" - Jos&eacute; Andr&eacute;s<\/p>",
-              "image": "shopify:\/\/shop_images\/Nat_Geo.png"
+              "testimonial": "<p>\"For simmering our sauces, we used GoSun Stoves, which are smaller and more compact but still have incredible power.\" - Jos&eacute; Andr&eacute;s<\/p>",
+              "image": "shopify:\/\/shop_images\/Nat_Geo_4ac47710-e6d5-4302-81c7-70ceb34120bb.png",
+              "quote": true
             }
           },
           "1601324683693": {
             "type": "tab",
             "settings": {
-              "name": "Inc",
-              "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
-              "image": "shopify:\/\/shop_images\/Inc.png"
+              "name": "Tech Crunch",
+              "testimonial": "<p>Fire is for prehistoric man. The modern man uses the sustainable and renewable energy to cook meats and veggies &ndash; like the GoSun Stove .<\/p>",
+              "image": "shopify:\/\/shop_images\/Tech_Crunch_5874e5c2-0199-4850-b73c-487d4728b7b2.png",
+              "quote": true
             }
           },
           "1601324707790": {
             "type": "tab",
             "settings": {
-              "name": "Fortune",
-              "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
-              "image": "shopify:\/\/shop_images\/Fortune.png"
+              "name": "Top Chef",
+              "testimonial": "<p>Jos&eacute; Andr&eacute;s challenges contestants to cook with GoSun solar-powered stoves.<\/p>",
+              "image": "shopify:\/\/shop_images\/Top-Chef.png",
+              "quote": false
             }
           }
         },
         "block_order": [
+          "1601324457687-2",
           "1601324457687-0",
           "1601324457687-1",
-          "1601324457687-2",
-          "1601324618148",
+          "1601324707790",
           "1601324683693",
-          "1601324707790"
+          "1601324618148"
         ],
         "settings": {
-          "title": "Featured in"
+          "title": "In the press"
         }
       }
     },
