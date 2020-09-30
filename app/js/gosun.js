@@ -16,6 +16,7 @@
     $("#player")[0].src += "?autoplay=1;rel=0;modestbranding=1&amp;title=";
     $('#player').show();
     $('#video-cover').hide();
+    $('.overlay-bottom').hide();
     $('#play').hide();
   });
 

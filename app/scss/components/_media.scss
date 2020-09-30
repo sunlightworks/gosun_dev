@@ -71,7 +71,6 @@
   height: 0;
   overflow: hidden !important;
   @include border-radius(large);
-  @include article-shadow();
   @include animateSlow();
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -88,6 +87,13 @@
     .material-icons {
       opacity: 0.8;
     }
+  }
+}
+
+.gallery-cell {
+  .video-wrapper,
+  video {
+    margin-top: 90px;
   }
 }
 
