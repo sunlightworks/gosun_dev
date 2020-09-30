@@ -427,7 +427,7 @@
               "menu_4_link": "",
               "image_bottom": "shopify:\/\/shop_images\/Sport_200w.png",
               "image_caption_bottom": "Sport",
-              "image_link_bottom": "shopify:\/\/products\/sport",
+              "image_link_bottom": "shopify:\/\/products\/sport-pro-pack",
               "richtext_bottom": ""
             }
           },
@@ -1818,6 +1818,15 @@
       "1601324457687": {
         "type": "image-tabs",
         "blocks": {
+          "1601324457687-2": {
+            "type": "tab",
+            "settings": {
+              "name": "CES",
+              "testimonial": "<p>GoSun won <strong>Climate Change Innovation Award<\/strong> (2019) and <strong>Small Business of the Year Award<\/strong> (2017).<\/p>",
+              "image": "shopify:\/\/shop_images\/CES_Cutout_cbe5255c-b009-48f4-924a-8f76b9da35b8.png",
+              "quote": false
+            }
+          },
           "1601324457687-0": {
             "type": "tab",
             "settings": {
@@ -1836,22 +1845,13 @@
               "quote": true
             }
           },
-          "1601324457687-2": {
+          "1601324707790": {
             "type": "tab",
             "settings": {
-              "name": "CES",
-              "testimonial": "<p>GoSun won <strong>Climate Change Innovation Award<\/strong> (2019) and <strong>Small Business of the Year Award<\/strong> (2017).<\/p>",
-              "image": "shopify:\/\/shop_images\/CES_Cutout_cbe5255c-b009-48f4-924a-8f76b9da35b8.png",
+              "name": "Top Chef",
+              "testimonial": "<p>Jos&eacute; Andr&eacute;s challenges contestants to cook with GoSun solar-powered stoves.<\/p>",
+              "image": "shopify:\/\/shop_images\/Top-Chef.png",
               "quote": false
-            }
-          },
-          "1601324618148": {
-            "type": "tab",
-            "settings": {
-              "name": "National Geographic",
-              "testimonial": "<p>\"For simmering our sauces, we used GoSun Stoves, which are smaller and more compact but still have incredible power.\" - Jos&eacute; Andr&eacute;s<\/p>",
-              "image": "shopify:\/\/shop_images\/Nat_Geo_4ac47710-e6d5-4302-81c7-70ceb34120bb.png",
-              "quote": true
             }
           },
           "1601324683693": {
@@ -1863,13 +1863,13 @@
               "quote": true
             }
           },
-          "1601324707790": {
+          "1601324618148": {
             "type": "tab",
             "settings": {
-              "name": "Top Chef",
-              "testimonial": "<p>Jos&eacute; Andr&eacute;s challenges contestants to cook with GoSun solar-powered stoves.<\/p>",
-              "image": "shopify:\/\/shop_images\/Top-Chef.png",
-              "quote": false
+              "name": "National Geographic",
+              "testimonial": "<p>\"For simmering our sauces, we used GoSun Stoves, which are smaller and more compact but still have incredible power.\" - Jos&eacute; Andr&eacute;s<\/p>",
+              "image": "shopify:\/\/shop_images\/Nat_Geo_4ac47710-e6d5-4302-81c7-70ceb34120bb.png",
+              "quote": true
             }
           }
         },
