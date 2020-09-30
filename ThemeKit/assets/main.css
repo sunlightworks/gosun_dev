@@ -8517,7 +8517,6 @@ Usage: codyhouse.co/license
       --cart-product-image-size: 128px; } }
 
 .cart {
-  position: relative;
   z-index: 1; }
 
 .cart__product {
@@ -8528,12 +8527,13 @@ Usage: codyhouse.co/license
 .cart__product-img {
   width: var(--cart-product-image-size);
   flex-shrink: 0; }
-  .cart__product-img a, .cart__product-img img {
+  .cart__product-img a,
+  .cart__product-img img {
     display: block;
     width: 100%; }
   .cart__product-img a {
     overflow: hidden;
-    transition: opacity .2s; }
+    transition: opacity 0.2s; }
   .cart__product-img a:hover {
     opacity: 0.85; }
 
@@ -8592,7 +8592,8 @@ Usage: codyhouse.co/license
     margin-left: auto; } }
 
 @media (min-width: 576px) {
-  .cart__product, .cart__product-info {
+  .cart__product,
+  .cart__product-info {
     align-items: center; }
   .cart__product-tot {
     grid-template-columns: auto minmax(6em, auto);
