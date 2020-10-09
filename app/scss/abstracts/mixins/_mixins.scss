@@ -241,7 +241,11 @@
     rgba(0, 0, 0, 0) 25%
   );
   background-blend-mode: multiply;
-  border-radius: 20px;
+  border-radius: var(--radius-md);
+  -webkit-border-radius: var(--radius-md);
+  -moz-border-radius: var(--radius-md);
+  -ms-border-radius: var(--radius-md);
+  -o-border-radius: var(--radius-md);
 }
 
 @mixin filter-blur() {

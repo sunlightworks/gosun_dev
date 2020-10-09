@@ -936,6 +936,15 @@
   background: var(--color-max);
 }
 
+.color-gradient-accent {
+  background: -webkit-linear-gradient(
+    var(--color-warning-dark),
+    var(--color-accent)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .color-bg {
   color: alpha(var(--color-bg), var(--color-o, 1));
 }

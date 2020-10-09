@@ -13,30 +13,40 @@ Descr: Container of information used as teaser for further content exploration
   text-decoration: none;
   background-color: var(--color-white);
   background-repeat: no-repeat;
-  background-size: contain;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  /* parallax effect 
-    background-attachment: fixed;
-    */
-  background-position: 140px -30px;
-  background-size: 300px;
+  background-size: cover;
   box-shadow: var(--shadow-sm);
   transition: 0.3s;
   width: 100%;
   height: var(--space-xxxxl);
   transition: 0.3s;
   @include lg() {
-    background-size: 350px;
-    background-position: -20% 35px;
     height: 300px;
   }
   &:hover {
     box-shadow: var(--shadow-md);
-    background-position: 130px -40px;
-    scale: 1.03;
+    .hide-content {
+      opacity: 0;
+    }
+  }
+  &--product {
+    background-size: contain;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    /* parallax effect 
+      background-attachment: fixed;
+      */
+    background-position: 140px -30px;
+    background-size: 300px;
     @include lg() {
-      background-position: -15% 25px;
+      background-size: 350px;
+      background-position: -20% 35px;
+    }
+    &:hover {
+      background-position: 130px -40px;
+      scale: 1.03;
+      @include lg() {
+        background-position: -15% 25px;
+      }
     }
   }
 }
@@ -86,7 +96,6 @@ Descr: Container of information used as teaser for further content exploration
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: var(--radius-md);
     background-color: alpha(var(--color-contrast-lower), 0.8);
     opacity: 0;
     transform: translateY(25%);
@@ -117,13 +126,84 @@ Descr: Container of information used as teaser for further content exploration
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: alpha(var(--color-bg), 0.5);
-    transition: background-color 0.3s;
-    opacity: 0;
+    background: var(--color-primary);
+  }
+  &:hover {
+    backdrop-filter: blur(34px);
+    &::before {
+      // background: rgba(27, 53, 80, 0.5) !important;
+      // background-blend-mode: multiply;
+      background: var(--color-primary-dark);
+    }
+  }
+}
+
+.filter-bottom {
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(27, 53, 80, 0) 46.35%,
+      rgba(27, 53, 80, 0.5) 81.25%
+    );
+    background-blend-mode: multiply;
+  }
+}
+.adv-gallery-v3__img-link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
   }
 
-  &:hover::before {
-    background-color: alpha(var(--color-bg), 0.8);
+  &::before {
+    // icon background
+    clip-path: polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%);
+    background-color: var(--color-primary);
+    transition: clip-path 0.2s var(--ease-out);
+  }
+
+  &::after {
+    // icon
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpolyline points='4 2 14 2 14 12' fill='none' stroke='%23FFF' stroke-miterlimit='10' stroke-width='2'/%3E%3Cline x1='14' y1='2' x2='2' y2='14' fill='none' stroke='%23FFF' stroke-miterlimit='10' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(0.5) translateX(-5px) translateY(5px);
+    will-change: transform;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s var(--ease-out);
+  }
+
+  &:hover {
+    &::before {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    &::after {
+      transform: scale(1) translateX(0) translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.reveal-content {
+  opacity: 0;
+  &:hover {
     opacity: 1;
   }
 }

@@ -201,7 +201,7 @@
     "facebook_link": "https:\/\/www.facebook.com\/gosun.co\/",
     "youtube_link": "https:\/\/www.youtube.com\/user\/sunwindworker",
     "vimeo_link": "",
-    "pinterest_link": "",
+    "pinterest_link": "https:\/\/www.pinterest.com\/gosun\/_created\/",
     "tumblr_link": "",
     "instagram_link": "https:\/\/www.instagram.com\/gosun\/",
     "snapchat_link": "",
@@ -1757,11 +1757,11 @@
       "1596226695144": {
         "type": "feature-1",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Chill_Tent_Angela.jpg",
-          "overline": "National Preparedness Month",
-          "title": "Power when you need it most.",
-          "description": "Shop the new limited edition Prep Kits available in September only.",
-          "button1": "Shop the kits",
+          "image": "shopify:\/\/shop_images\/20201003-Brew--022-3.jpg",
+          "overline": "Customer Appreciation Days",
+          "title": "Celebration time.",
+          "description": "It's GoSun's Anniversary, so we're celebrating with 15% off & free gifts.",
+          "button1": "Shop Deals",
           "button1_url": "shopify:\/\/collections\/todays-deals",
           "button2": "",
           "button2_url": "",
@@ -1778,13 +1778,13 @@
       "1598461380754": {
         "type": "testimonial-slider",
         "blocks": {
-          "1598461380754-0": {
+          "1598461380754-2": {
             "type": "product",
             "settings": {
-              "featured_product": "solarpanel-10",
-              "rating": 5,
-              "testimonial": "<p>My favorite thing about these panels is that you can hang them from anywhere. They reliably charged my phone &amp; camera all week under cloudy weather. Looks super cool on the outside of our tent too :)<\/p>",
-              "name": "Skye M"
+              "featured_product": "fusion",
+              "rating": 4.5,
+              "testimonial": "<p>The Fusion, by far, is the best product I&rsquo;ve purchased this year. I cooked a hearty stew of mixed vegetables and diced chicken. Needless to say, I was amazed at how well it worked.<\/p>",
+              "name": "William W"
             }
           },
           "1598461380754-1": {
@@ -1796,20 +1796,20 @@
               "name": "Charlie G"
             }
           },
-          "1598461380754-2": {
+          "1598461380754-0": {
             "type": "product",
             "settings": {
-              "featured_product": "fusion",
-              "rating": 4.5,
-              "testimonial": "<p>The Fusion, by far, is the best product I&rsquo;ve purchased this year. I cooked a hearty stew of mixed vegetables and diced chicken. Needless to say, I was amazed at how well it worked.<\/p>",
-              "name": "William W"
+              "featured_product": "solarpanel-10",
+              "rating": 5,
+              "testimonial": "<p>My favorite thing about these panels is that you can hang them from anywhere. They reliably charged my phone &amp; camera all week under cloudy weather. Looks super cool on the outside of our tent too :)<\/p>",
+              "name": "Skye M"
             }
           }
         },
         "block_order": [
-          "1598461380754-0",
+          "1598461380754-2",
           "1598461380754-1",
-          "1598461380754-2"
+          "1598461380754-0"
         ],
         "settings": {
           "title": "See why customers love GoSun."
