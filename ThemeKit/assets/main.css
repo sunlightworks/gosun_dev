@@ -9977,8 +9977,7 @@ Usage: codyhouse.co/license
     opacity: 0.15; }
 
 .banner__figure {
-  height: 0;
-  padding-bottom: 50%;
+  height: 300px;
   transition: 0.3s var(--ease-out);
   background-position: center center;
   background-repeat: no-repeat;
