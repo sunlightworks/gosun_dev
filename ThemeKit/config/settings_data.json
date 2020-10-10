@@ -577,6 +577,7 @@
       },
       "1595519740851": {
         "type": "advanced-gallery",
+        "disabled": true,
         "blocks": {
           "1595519740851-0": {
             "type": "image",
@@ -1777,6 +1778,7 @@
       },
       "1598461380754": {
         "type": "testimonial-slider",
+        "disabled": true,
         "blocks": {
           "1598461380754-2": {
             "type": "product",
@@ -1884,6 +1886,68 @@
         "settings": {
           "title": "In the press"
         }
+      },
+      "1602281874842": {
+        "type": "social-gallery--v2",
+        "blocks": {
+          "1602281874842-0": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/20201003-Brew--023.jpg",
+              "featured_product": "fusion",
+              "rating": 4.5,
+              "title": "Fast, fun, & delicious.",
+              "description": "I cooked a hearty stew of mixed vegetables & diced chicken.",
+              "handle": "sarah",
+              "activity": "BBQ"
+            }
+          },
+          "1602281874842-1": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/20190330-IMG_9302.jpg",
+              "featured_product": "chill",
+              "rating": 5,
+              "title": "Changed the way we boat.",
+              "description": "I liked my first Chill so much, I got a second one to use as a freezer.",
+              "handle": "McKenna",
+              "activity": "boating"
+            }
+          },
+          "1602281874842-2": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/20201003-Brew--025.jpg",
+              "featured_product": "flow-pro",
+              "rating": 5,
+              "title": "Much better than hand-sanitizer.",
+              "description": "No more grimy hands. The sink is perfect for dishes too.",
+              "handle": "ruby",
+              "activity": "camping"
+            }
+          },
+          "1602281874842-3": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/20200908-P1100017.MP4.00_00_04_11.Still001.jpg",
+              "featured_product": "solarpanel-30",
+              "rating": 4.5,
+              "title": "Peace of mind, anywhere.",
+              "description": "When the grid goes down, I still have all the power I need.",
+              "handle": "thomas",
+              "activity": "emergencies"
+            }
+          }
+        },
+        "block_order": [
+          "1602281874842-0",
+          "1602281874842-1",
+          "1602281874842-2",
+          "1602281874842-3"
+        ],
+        "settings": {
+          "title": "See why customers love GoSun."
+        }
       }
     },
     "content_for_index": [
@@ -1893,8 +1957,9 @@
       "1576887130693",
       "1596230707797",
       "1574447604302",
-      "1601324457687",
       "1594926564453",
+      "1601324457687",
+      "1602281874842",
       "1598461380754",
       "1595519740851",
       "1596824502217",

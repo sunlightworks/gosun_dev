@@ -1,4 +1,4 @@
-<h2 class="text-center margin-y-lg">{{ section.settings.title }}</h2>
+<h2 class="text-center margin-y-lg">{{ section.settings.title }} <a href="https://www.instagram.com/explore/tags/gosun/"><span class="color-gradient-accent">#GoSun</span></a></h2>
 <div class="grid gap-sm">
 {% if section.blocks.size > 0 %}
 {% for block in section.blocks %}
@@ -35,7 +35,7 @@
 
       <div class="padding-x-md b10 z-index-3 hide-content">
         <span class="text-base gallery-caption">
-          <p itemprop="name" class="block color-white text-bold link-fx-5">@{{ block.settings.handle }}&nbsp;loves the&nbsp;<span class="color-gradient-accent">{{ product.title }}</span> for {{ block.settings.activity }}</p>
+          <p itemprop="name" class="block color-white text-bold link-fx-5">{{ block.settings.handle | capitalize }}&nbsp;loves the&nbsp;<span class="color-gradient-accent">{{ product.title }}</span> for {{ block.settings.activity }}</p>
         </span>
       </div>
 
