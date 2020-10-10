@@ -1895,7 +1895,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/20201003-Brew--023.jpg",
               "featured_product": "fusion",
-              "rating": 4.5,
+              "rating": 4,
               "title": "Fast, fun, & delicious.",
               "description": "I cooked a hearty stew of mixed vegetables & diced chicken.",
               "handle": "sarah",
@@ -1946,7 +1946,7 @@
           "1602281874842-3"
         ],
         "settings": {
-          "title": "See why customers love GoSun."
+          "title": "Share your adventures with"
         }
       }
     },

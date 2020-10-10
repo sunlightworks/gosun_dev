@@ -9992,13 +9992,12 @@ Usage: codyhouse.co/license
     height: 250px !important; } }
 
 .banner__logo {
-  width: 300px !important;
+  width: 250px !important;
   filter: brightness(0) invert(1) !important;
   -webkit-filter: brightness(0) invert(1) !important; }
   @media (max-width: 768px) {
     .banner__logo {
-      width: 200px !important;
-      margin-top: 50%; } }
+      width: 200px !important; } }
 
 .banner {
   position: relative;
@@ -10037,11 +10036,13 @@ Usage: codyhouse.co/license
     opacity: 0.15; }
 
 .banner__figure {
-  height: 300px;
   transition: 0.3s var(--ease-out);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover; }
+  @media (min-width: 64rem) {
+    .banner__figure {
+      height: 300px; } }
 
 .banner:hover .banner__link {
   transform: scale(1.3); }

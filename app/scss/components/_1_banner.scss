@@ -15,9 +15,9 @@ Usage: codyhouse.co/license
 .banner__logo {
   @include md-max() {
     width: 200px !important;
-    margin-top: 50%;
+    // margin-top: 50%;
   }
-  width: 300px !important;
+  width: 250px !important;
   filter: brightness(0) invert(1) !important; // turn to white
   -webkit-filter: brightness(0) invert(1) !important;
 }
@@ -72,7 +72,9 @@ Usage: codyhouse.co/license
 }
 
 .banner__figure {
-  height: 300px;
+  @include breakpoint(md) {
+    height: 300px;
+  }
   // padding-bottom: 50%;
   transition: 0.3s var(--ease-out);
   background-position: center center;
