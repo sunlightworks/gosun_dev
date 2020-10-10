@@ -133,7 +133,7 @@ Descr: Container of information used as teaser for further content exploration
     &::before {
       // background: rgba(27, 53, 80, 0.5) !important;
       // background-blend-mode: multiply;
-      background: var(--color-primary-dark);
+      background: var(--color-primary-lighter);
     }
   }
 }
@@ -150,7 +150,7 @@ Descr: Container of information used as teaser for further content exploration
     background: linear-gradient(
       180deg,
       rgba(27, 53, 80, 0) 46.35%,
-      rgba(27, 53, 80, 0.5) 81.25%
+      rgba(27, 53, 80, 0.7) 81.25%
     );
     background-blend-mode: multiply;
   }
@@ -174,7 +174,7 @@ Descr: Container of information used as teaser for further content exploration
   &::before {
     // icon background
     clip-path: polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%);
-    background-color: var(--color-primary);
+    background: linear-gradient(#59d5f9, var(--color-primary));
     transition: clip-path 0.2s var(--ease-out);
   }
 

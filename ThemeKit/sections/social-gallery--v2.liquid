@@ -18,16 +18,16 @@
 
     
 
-      <div class="card-v9__content padding-md adv-gallery-v3__img-link  reveal-content  z-index-3">
+      <div class="card-v9__content padding-md adv-gallery-v3__img-link reveal-content z-index-3">
 
         <div class="padding-bottom-xxxl max-width-xxs ">
-          <h2 class="color-white color-opacity-50% margin-bottom-xxs">{{ block.settings.title }}</h2>
-          <h3 class="color-white" id="card-title-2">{{ block.settings.description }}</h3>
+          <h2 class="margin-bottom-xxs"><span class="color-gradient-accent">{{ block.settings.title }}</span></h2>
+          <h3 class="color-contrast-higher" id="card-title-2">{{ block.settings.description }}</h3>
         </div>
         
         <div class="b10 z-index-3">
           <span class="text-base gallery-caption">
-            <p itemprop="name" class="block color-white text-bold link-fx-5"><span class="color-gradient-accent"></span>Shop&nbsp;{{ product.title }} ➞</p>
+            <p itemprop="name" class="block color-white text-bold link-fx-5"><span class="color-gradient-accent">Shop&nbsp;{{ product.title }} ➞</span></p>
           </span>
         </div>
 
@@ -35,7 +35,7 @@
 
       <div class="padding-x-md b10 z-index-3 hide-content">
         <span class="text-base gallery-caption">
-          <p itemprop="name" class="block color-white text-bold link-fx-5">@{{ block.settings.handle }}&nbsp;loves the&nbsp;{{ product.title }} for <span class="color-gradient-accent">{{ block.settings.activity }}</span></p>
+          <p itemprop="name" class="block color-white text-bold link-fx-5">@{{ block.settings.handle }}&nbsp;loves the&nbsp;<span class="color-gradient-accent">{{ product.title }}</span> for {{ block.settings.activity }}</p>
         </span>
       </div>
 
@@ -50,7 +50,7 @@
 {% schema %}
 {
   "name": "Social Gallery v2",
-  "class": "container",
+  "class": "container padding-bottom-xl",
   "settings": [
   {
     "type":      "header",

@@ -937,10 +937,7 @@
 }
 
 .color-gradient-accent {
-  background: -webkit-linear-gradient(
-    var(--color-warning-dark),
-    var(--color-accent)
-  );
+  background: -webkit-linear-gradient(#59d5f9, var(--color-primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
