@@ -6802,7 +6802,7 @@ a.mobile_nav {
     --color-max: hsl(211, 55%, 18%);
     --bg-header: var(--color-max);
     --bg-header-accent: var(--color-bg);
-    --bg-promo-bar: var(--color-contrast-medium);
+    --bg-promo-bar: var(--color-primary);
     --bg-footer: var(--color-max); }
   [data-theme="organic"] {
     --color-primary-darker: hsl(356, 39%, 18%);
@@ -14740,7 +14740,7 @@ div.dropdown.menu {
 .promo_banner {
   height: var(--promo-banner-height) !important;
   background-color: var(--bg-promo-bar);
-  color: var(--color-contrast-lower); }
+  color: var(--color-max); }
   .promo_banner:hover {
     cursor: pointer; }
 
