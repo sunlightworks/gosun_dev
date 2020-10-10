@@ -1,5 +1,5 @@
-<h2 class="text-center margin-y-lg">{{ section.settings.title }} <a href="https://www.instagram.com/explore/tags/gosun/" target="_blank"><span class="color-gradient-accent">#GoSun</span></a></h2>
-<div class="grid gap-sm">
+<h2 class="text-center">{{ section.settings.title }} <a href="https://www.instagram.com/explore/tags/gosun/" target="_blank"><span class="color-gradient-accent">#GoSun</span></a></h2>
+<div class="grid gap-sm padding-top-md">
 {% if section.blocks.size > 0 %}
 {% for block in section.blocks %}
   {%- assign product = all_products[block.settings.featured_product] -%}
@@ -50,7 +50,7 @@
 {% schema %}
 {
   "name": "Social Gallery v2",
-  "class": "container padding-bottom-xl",
+  "class": "container padding-y-xl",
   "settings": [
   {
     "type":      "header",
