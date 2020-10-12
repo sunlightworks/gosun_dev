@@ -9987,6 +9987,10 @@ Descr: A CTA banner containing text + media
 Usage: codyhouse.co/license
 
 -------------------------------- */
+.cta-banner img {
+  max-height: 250px;
+  object-fit: cover; }
+
 @media (min-width: 64rem) {
   .image-tabs {
     height: 250px !important; } }

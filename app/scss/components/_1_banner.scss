@@ -6,6 +6,13 @@ Descr: A CTA banner containing text + media
 Usage: codyhouse.co/license
 
 -------------------------------- */
+.cta-banner {
+  img {
+    max-height: 250px;
+    object-fit: cover;
+  }
+}
+
 .image-tabs {
   @include breakpoint(md) {
     height: 250px !important;
