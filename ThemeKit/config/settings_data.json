@@ -316,6 +316,7 @@
       },
       "1596230707797": {
         "type": "feature-1",
+        "disabled": true,
         "settings": {
           "image": "shopify:\/\/shop_images\/Exterior_v2.jpg",
           "overline": "Coming Fall 2020",
@@ -1656,11 +1657,11 @@
       "header": {
         "type": "header",
         "settings": {
-          "promo_icon": "card_giftcard",
-          "promo_text": "Free shipping & returns | Free Snack Box on orders $400+",
-          "promo_link": "",
-          "promo_external": false,
-          "tagline_text": "Portable power for the people",
+          "promo_icon": "offline_bolt",
+          "promo_text": "Brew: Coffee + Power | Now live on Kickstarter ➞",
+          "promo_link": "https:\/\/www.kickstarter.com\/projects\/patricksherwin\/gosun-brew-travel-coffee-mug-and-portable-power",
+          "promo_external": true,
+          "tagline_text": "Free shipping & Returns | Free snack box on orders $400+",
           "social_icons_header": false,
           "phone_number": "+1 888.868.6154",
           "top_bar_menu": "top-bar-1",
@@ -1760,7 +1761,7 @@
         "settings": {
           "image": "shopify:\/\/shop_images\/20201003-Brew--022-3.jpg",
           "overline": "COOK. COOL. LIGHT. CHARGE. PURIFY.",
-          "title": "Power when you need it, where you need it.",
+          "title": "Power when you need it most.",
           "description": "Solar powered clean tech products for every day use.",
           "button1": "Shop Deals",
           "button1_url": "shopify:\/\/collections\/todays-deals",
@@ -1948,6 +1949,22 @@
         "settings": {
           "title": "Share your adventures with"
         }
+      },
+      "1602523575506": {
+        "type": "cta-banner",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Exterior_v2.jpg",
+          "overline": "Coming 2021",
+          "title": "Living off-grid has never been easier.",
+          "description": "Meet the GoSun Dream: A solar powered, off-grid, smart tiny home.",
+          "button1": "Learn more",
+          "button1_url": "shopify:\/\/pages\/dream-tiny-house",
+          "hero_external": false,
+          "invert": false,
+          "dark_theme": false,
+          "background_color": "bg-primary-lighter",
+          "btn_type": "btn--primary"
+        }
       }
     },
     "content_for_index": [
@@ -1955,15 +1972,16 @@
       "1595533879839",
       "1576887448540",
       "1576887130693",
-      "1596230707797",
-      "1574447604302",
-      "1594926564453",
-      "1601324457687",
       "1602281874842",
-      "1598461380754",
-      "1595519740851",
+      "1602523575506",
+      "1601324457687",
       "1596824502217",
       "1562619980179",
+      "1596230707797",
+      "1594926564453",
+      "1574447604302",
+      "1598461380754",
+      "1595519740851",
       "1573056412858"
     ]
   }

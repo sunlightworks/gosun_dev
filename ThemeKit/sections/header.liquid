@@ -36,14 +36,11 @@
 
 <header id="header">
   {% if section.settings.promo_text != blank %}
-    <div class="promo_banner">
+    <div class="promo_banner" {% if promo_link != blank %} onclick="window.open('{{ promo_link }}', {% if section.settings.promo_external %} '_blank' {% else %} '_self'{% endif %})" {% endif %}>
       <div class="promo_banner__content">
         <div class="info-item info-item--banner">
-          <span class="icon mobile--false margin-right-md">
-            <!-- <img src="https://cdn.shopify.com/s/files/1/0789/1333/files/united-states-of-america.png?v=1593021893"> -->
-          
+          <span class="icon mobile--false margin-right-md">        
             <i class="material-icons-outlined">{{ section.settings.promo_icon }}</i>
-         
           </span>
           <p class="font-bold mobile--false">
             {{ section.settings.promo_text }}
