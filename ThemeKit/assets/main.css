@@ -3329,6 +3329,9 @@ html:not(.js) .no-js\:is-hidden {
       font-size: var(--text-xxl, 2.074em); }
     .text-xxxl\@xs {
       font-size: var(--text-xxxl, 2.488em); } }
+  .hide {
+    display: none !important;
+    opacity: 0 !important; }
   .hide\@xs {
     display: none !important; } }
 
@@ -7533,7 +7536,6 @@ Usage: codyhouse.co/license
     min-height: 177px;
     height: 100%;
     transition: all 0.5s ease-in-out;
-    filter: brightness(0.85) contrast(0.75) saturate(1.15) !important;
     object-fit: cover;
     border-radius: 4px 4px 0 0; }
   .collection_banner:hover img {
@@ -8009,10 +8011,6 @@ img {
 
 /* Collection [banners]
 ================================================== */
-.collection_banner img.transition--blur-up.lazyloaded {
-  filter: brightness(0.7) !important;
-  -webkit-filter: brightness(0.7) !important; }
-
 /* Blog - All images
 ================================================== */
 .article_content img {
@@ -12939,7 +12937,7 @@ a.collection-info__caption .product-details {
 .article-tile,
 .article-a {
   position: relative;
-  display: flex !important;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   -webkit-border-radius: var(--radius-md) !important;
@@ -13044,19 +13042,23 @@ a.collection-info__caption .product-details {
   margin: 0 !important;
   height: 180px;
   background-size: cover;
-  background-position: top;
-  -webkit-clip-path: inset(8% 4% 0 4% round 4px 4px 4px 4px);
-  clip-path: inset(8% 4% 0 4% round 4px 4px 4px 4px); }
+  background-position: top; }
   @media (min-width: 768px) {
     .cards--staff .article-media {
       height: 220px; } }
 
-.cards--staff .article-tile .article-a {
-  background: transparent; }
-  .cards--staff .article-tile .article-a:hover .article-tile-content {
-    display: flex !important;
-    transform: scale(1.08);
-    transition: transform 300ms cubic-bezier(0.215, 0.61, 0.355, 1); }
+.cards--staff .article-tile,
+.cards--staff .article-a {
+  background: linear-gradient(#59d5f9, var(--color-primary)); }
+  .cards--staff .article-tile:hover,
+  .cards--staff .article-a:hover {
+    background: linear-gradient(181.01deg, #fda640 -4.84%, #c94512 132.05%);
+    transition: 300ms cubic-bezier(0.215, 0.61, 0.355, 1); }
+    .cards--staff .article-tile:hover .article-tile-content,
+    .cards--staff .article-a:hover .article-tile-content {
+      display: flex !important;
+      transform: scale(1.08);
+      transition: 300ms cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 .cards--staff .article-tile-content {
   background: var(--color-max);

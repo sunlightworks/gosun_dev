@@ -2,3 +2,11 @@
   background-color: var(--color-bg, hsl(0, 0%, 100%));
   color: var(--color-contrast-high, hsl(240, 4%, 20%));
 }
+
+@mixin gradient-primary() {
+  background: linear-gradient(#59d5f9, var(--color-primary));
+}
+
+@mixin gradient-accent() {
+  background: linear-gradient(181.01deg, #fda640 -4.84%, #c94512 132.05%);
+}
