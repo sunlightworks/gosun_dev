@@ -39,14 +39,18 @@
     <div class="promo_banner" {% if promo_link != blank %} onclick="window.open('{{ promo_link }}', {% if section.settings.promo_external %} '_blank' {% else %} '_self'{% endif %})" {% endif %}>
       <div class="promo_banner__content">
         <div class="info-item info-item--banner">
-          <span class="icon mobile--false margin-right-md">        
+          <span class="icon margin-right-md">        
             <i class="material-icons-outlined">{{ section.settings.promo_icon }}</i>
           </span>
           <p class="font-bold mobile--false">
             {{ section.settings.promo_text }}
           </p>
-          <p class="font-bold text-uppercase mobile--true">
+          <p class="font-bold mobile--true">
+            {% if section.settings.promo_text_mobile != blank %} 
+            {{ section.settings.promo_text_mobile }}
+            {% else %}
             {{ section.settings.promo_text }}
+            {% endif %}
           </p>
         </div>
       </div>
@@ -437,6 +441,12 @@
       "id": "promo_text",
       "label": "Promo text",
       "info": "Maximum character limit is 170"
+    },
+    {
+      "type": "text",
+      "id": "promo_text_mobile",
+      "label": "Promo text --mobile",
+      "info": "Only appears on mobile"
     },
     {
       "type": "url",
