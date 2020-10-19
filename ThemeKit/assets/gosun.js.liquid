@@ -4933,7 +4933,7 @@ if( loopTabs.length > 0 ) {
 }
 }());
 
-{% if template contains "product" %} 
+ 
 // File#: _1_pie-chart
 // Usage: codyhouse.co/license
 (function() {
@@ -5321,7 +5321,7 @@ if( loopTabs.length > 0 ) {
       var circunference = 2*Math.PI*radius,
         percentage = parseInt(chart.percentages[i].textContent);
 
-      chart.chartDashStroke.push([circunference*percentage/100, circunference*(100-percentage)/100, circunference]);
+      chart.chartDashStroke.push([circunference*(percentage*7)/100, circunference*(100-(percentage*7))/100, circunference]);
 
       Util.setAttributes(circleBg, {cx: chart.height/2, cy: chart.width/2, r: radius, class: 'radial-bar__circle radial-bar__circle__bg', 'data-index': i});
 
@@ -5500,7 +5500,7 @@ if( loopTabs.length > 0 ) {
   }
 }());
 
-{% endif %}
+
 
 // File#: _2_slideshow ============================================================================
 // Usage: codyhouse.co/license

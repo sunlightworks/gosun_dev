@@ -59,7 +59,8 @@ Usage: codyhouse.co/license
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   font-size: var(--text-sm);
-  background-color: var(--color-bg);
+  font-weight: 500;
+  background-color: var(--color-max);
   padding: var(--space-xs);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);

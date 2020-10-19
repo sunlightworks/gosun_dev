@@ -10744,7 +10744,8 @@ Usage: codyhouse.co/license
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   font-size: var(--text-sm);
-  background-color: var(--color-bg);
+  font-weight: 500;
+  background-color: var(--color-max);
   padding: var(--space-xs);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
@@ -11238,6 +11239,21 @@ Descr: A list of content sections (panels), accessible one at a time using contr
 .js .tabs__control[aria-selected="true"] {
   color: var(--color-contrast-high);
   text-decoration: underline; }
+
+.bg-media {
+  background-size: cover;
+  height: 100%;
+  width: 100%; }
+
+@media (min-aspect-ratio: 16 / 9) {
+  .bg-video {
+    width: 100%;
+    height: auto; } }
+
+@media (max-aspect-ratio: 16 / 9) {
+  .bg-video {
+    width: auto;
+    height: 100%; } }
 
 /* -------------------------------- 
 
@@ -15337,6 +15353,9 @@ td {
 .shogun-accordion-title {
   /* color: rgba(33, 33, 33, 1); */
   color: var(--color-contrast-high) !important; }
+
+.shg-c {
+  height: 100%; }
 
 /*
 .homepage-video, .testimonial-block, .banner {
