@@ -10763,6 +10763,59 @@ html:not(.js) .radial-bar__area {
 
 /* -------------------------------- 
 
+File#: _1_pie-chart
+Title: Pie Chart
+Descr: Data visualisation using SVG Radial Chart
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --pie-chart-size: 200px;
+  --pie-chart-gap: 2px;
+  --pie-chart-legend-bullet-size: 10px;
+  --pie-chart-donut-width: 30px; }
+
+.pie-chart__area {
+  position: relative;
+  display: block;
+  width: var(--pie-chart-size);
+  height: var(--pie-chart-size); }
+
+.pie-chart__svg {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0; }
+
+.pie-chart__data-path {
+  stroke: var(--color-bg);
+  stroke-width: var(--pie-chart-gap);
+  transition: opacity 0.2s;
+  fill: var(--color-primary); }
+  .pie-chart__data-path:hover {
+    opacity: 0.8; }
+
+.pie-chart__bullet {
+  display: block;
+  width: var(--pie-chart-legend-bullet-size);
+  height: var(--pie-chart-legend-bullet-size);
+  border-radius: 50%;
+  flex-shrink: 0; }
+
+.pie-chart__tooltip {
+  position: absolute;
+  z-index: 2;
+  font-size: var(--text-sm);
+  background-color: var(--color-bg);
+  padding: var(--space-xs);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none; }
+
+/* -------------------------------- 
+
 File#: _1_read-more
 Title: Read More
 Descr: A truncated paragraph with the option of reading more content
