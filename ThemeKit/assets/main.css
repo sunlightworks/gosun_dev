@@ -10698,6 +10698,71 @@ html:not(.js) .select .icon {
 
 /* -------------------------------- 
 
+File#: _1_radial-bar-chart
+Title: Radial Bar Chart
+Descr: A Radial SVG graph used to display a list of percentage values
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --radial-bar-size: 200px;
+  --radial-bar-bar-stroke-width: 10px;
+  --radial-bar-gap: 4px;
+  --radial-bar-legend-bullet-size: 10px; }
+
+.radial-bar__area {
+  position: relative;
+  height: var(--radial-bar-size);
+  width: var(--radial-bar-size); }
+
+.radial-bar__svg {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0; }
+
+.radial-bar__circle {
+  stroke-width: var(--radial-bar-bar-stroke-width);
+  stroke-linecap: round;
+  fill: none; }
+
+.radial-bar__circle__fill {
+  stroke: currentColor;
+  transition: opacity 0.2s; }
+
+.radial-bar__group:hover .radial-bar__circle__fill {
+  opacity: 0.8; }
+
+.radial-bar__circle__bg {
+  stroke: var(--color-contrast-lower); }
+
+.radial-bar__tooltip {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: var(--text-sm);
+  background-color: var(--color-bg);
+  padding: var(--space-xs);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none; }
+
+.radial-bar__bullet {
+  display: block;
+  width: var(--radial-bar-legend-bullet-size);
+  height: var(--radial-bar-legend-bullet-size);
+  border-radius: 50%;
+  flex-shrink: 0; }
+
+html:not(.js) .radial-bar__area {
+  display: none; }
+
+/* -------------------------------- 
+
 File#: _1_read-more
 Title: Read More
 Descr: A truncated paragraph with the option of reading more content
@@ -11945,6 +12010,117 @@ Usage: codyhouse.co/license
     width: 55%; }
   100% {
     width: 50%; } }
+
+/* -------------------------------- 
+
+File#: _2_chart
+Title: Chart
+Descr: A plugin to create custom SVG charts
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --chart-height: 360px;
+  --chart-data-line-stroke-width: 2px;
+  --chart-marker-size: 4px;
+  --chart-axis-stroke-width: 1px;
+  --chart-guides-stroke-width: 1px;
+  --chart-y-indicator-dash: 3px;
+  --chart-y-indicator-stroke-width: 1px;
+  --chart-data-color: var(--color-primary);
+  --chart-data-fill-opacity: 0.2;
+  --chart-legend-bullet-size: 10px; }
+
+.chart__area {
+  position: relative;
+  height: var(--chart-height); }
+
+.chart__svg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .chart__svg text {
+    fill: var(--color-contrast-high); }
+
+.chart__tooltip {
+  position: absolute;
+  font-size: var(--text-xs);
+  background-color: var(--color-contrast-lower);
+  padding: var(--space-sm);
+  pointer-events: none;
+  white-space: nowrap; }
+
+.chart__bullet {
+  display: block;
+  width: var(--chart-legend-bullet-size);
+  height: var(--chart-legend-bullet-size);
+  border-radius: 50%;
+  flex-shrink: 0; }
+
+.chart__axis-legend {
+  font-size: var(--text-xs);
+  user-select: none; }
+
+.chart__axis-label {
+  font-size: var(--text-xs);
+  pointer-events: none; }
+
+.chart__axis {
+  pointer-events: none;
+  stroke: var(--color-contrast-low);
+  stroke-width: var(--chart-axis-stroke-width); }
+
+.chart__tick {
+  stroke-width: var(--chart-axis-stroke-width);
+  stroke: var(--color-contrast-low); }
+
+.chart__guides {
+  fill: transparent;
+  stroke-width: var(--chart-guides-stroke-width);
+  stroke: var(--color-contrast-lower); }
+
+.chart__dataset {
+  pointer-events: none; }
+
+.chart__data-line {
+  fill: none;
+  stroke-width: var(--chart-data-line-stroke-width);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--chart-data-color); }
+
+.chart__data-fill {
+  pointer-events: none;
+  fill: none; }
+
+.chart--area .chart__data-fill {
+  fill: var(--chart-data-color);
+  opacity: var(--chart-data-fill-opacity); }
+
+.chart__marker {
+  r: var(--chart-marker-size);
+  opacity: 0;
+  fill: var(--chart-data-color); }
+
+.chart__marker--selected {
+  opacity: 1; }
+
+.chart__y-indicator {
+  stroke-width: var(--chart-y-indicator-stroke-width);
+  stroke: var(--color-contrast-low);
+  stroke-dasharray: var(--chart-y-indicator-dash);
+  pointer-events: none; }
+
+.chart__data-bar {
+  pointer-events: none;
+  fill: var(--chart-data-color); }
+
+.chart--column .chart__marker {
+  visibility: hidden; }
+
+.chart--column .chart__y-indicator {
+  display: none; }
 
 /* -------------------------------- 
 

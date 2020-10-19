@@ -1,0 +1,82 @@
+/* -------------------------------- 
+
+File#: _1_radial-bar-chart
+Title: Radial Bar Chart
+Descr: A Radial SVG graph used to display a list of percentage values
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+:root {
+  --radial-bar-size: 200px;
+  --radial-bar-bar-stroke-width: 10px; // bar width - value in px
+  --radial-bar-gap: 4px; // gap among bars - value in px
+
+  // legend bullet point
+  --radial-bar-legend-bullet-size: 10px; // height and width of legend dot indicator
+}
+
+.radial-bar__area {
+  position: relative;
+  height: var(--radial-bar-size);
+  width: var(--radial-bar-size);
+}
+
+.radial-bar__svg {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.radial-bar__circle {
+  stroke-width: var(--radial-bar-bar-stroke-width);
+  stroke-linecap: round;
+  fill: none;
+}
+
+// circle fill
+.radial-bar__circle__fill {
+  stroke: currentColor;
+  transition: opacity 0.2s;
+}
+
+.radial-bar__group:hover .radial-bar__circle__fill {
+  opacity: 0.8;
+}
+
+// circle background
+.radial-bar__circle__bg {
+  stroke: var(--color-contrast-lower);
+}
+
+// tooltip
+.radial-bar__tooltip {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: var(--text-sm);
+  background-color: var(--color-bg);
+  padding: var(--space-xs);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+}
+
+// legend bullets
+.radial-bar__bullet {
+  display: block;
+  width: var(--radial-bar-legend-bullet-size);
+  height: var(--radial-bar-legend-bullet-size);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+// no-js support
+html:not(.js) .radial-bar__area {
+  display: none;
+}

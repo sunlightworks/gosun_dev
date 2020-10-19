@@ -1,0 +1,182 @@
+/* -------------------------------- 
+
+File#: _2_chart
+Title: Chart
+Descr: A plugin to create custom SVG charts
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+:root {
+  // general
+  --chart-height: 360px;
+
+  // line + area charts
+  --chart-data-line-stroke-width: 2px; // chart stroke width
+  --chart-marker-size: 4px; // data marker - dot
+
+  // line + area + bar charts
+  --chart-axis-stroke-width: 1px; // main x/y axis stroke width
+  --chart-guides-stroke-width: 1px; // chart grid guides stroke width
+
+  // line following the tooltip
+  --chart-y-indicator-dash: 3px; // dash length
+  --chart-y-indicator-stroke-width: 1px;
+
+  // chart color
+  --chart-data-color: var(--color-primary);
+
+  // area chart opacity
+  --chart-data-fill-opacity: 0.2;
+
+  // legend bullet point
+  --chart-legend-bullet-size: 10px; // height and width of legend dot indicator
+}
+
+.chart {
+}
+
+.chart__area {
+  position: relative;
+  height: var(--chart-height);
+}
+
+.chart__svg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  text {
+    fill: var(--color-contrast-high); // axis/axis label color
+  }
+}
+
+// tooltip
+.chart__tooltip {
+  position: absolute;
+  font-size: var(--text-xs);
+  background-color: var(--color-contrast-lower);
+  padding: var(--space-sm);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+// legend bullets
+.chart__bullet {
+  display: block;
+  width: var(--chart-legend-bullet-size);
+  height: var(--chart-legend-bullet-size);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+// --------------------------------
+
+// Line + Area + Column + Bar charts
+
+// --------------------------------
+
+// legend
+.chart__axis-legend {
+  font-size: var(--text-xs);
+  user-select: none;
+}
+
+// label
+.chart__axis-label {
+  font-size: var(--text-xs);
+  pointer-events: none;
+}
+
+// axis
+.chart__axis {
+  pointer-events: none;
+  stroke: var(--color-contrast-low);
+  stroke-width: var(--chart-axis-stroke-width);
+}
+
+.chart__tick {
+  // label indicators
+  stroke-width: var(--chart-axis-stroke-width);
+  stroke: var(--color-contrast-low);
+}
+
+// chart horizontal guides
+.chart__guides {
+  fill: transparent;
+  stroke-width: var(--chart-guides-stroke-width);
+  stroke: var(--color-contrast-lower);
+}
+
+// --------------------------------
+
+// Line + Area charts
+
+// --------------------------------
+
+// chart data
+.chart__dataset {
+  pointer-events: none;
+}
+
+.chart__data-line {
+  fill: none;
+  stroke-width: var(--chart-data-line-stroke-width);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--chart-data-color);
+}
+
+.chart__data-fill {
+  // by default chart area = not filled
+  pointer-events: none;
+  fill: none;
+}
+
+.chart--area .chart__data-fill {
+  fill: var(--chart-data-color);
+  opacity: var(--chart-data-fill-opacity);
+}
+
+// marker
+.chart__marker {
+  r: var(--chart-marker-size); // radius
+  opacity: 0;
+  fill: var(--chart-data-color);
+}
+
+.chart__marker--selected {
+  opacity: 1;
+}
+
+// interactivity
+.chart__y-indicator {
+  stroke-width: var(--chart-y-indicator-stroke-width);
+  stroke: var(--color-contrast-low);
+  stroke-dasharray: var(--chart-y-indicator-dash);
+  pointer-events: none;
+}
+
+// --------------------------------
+
+// Column + Bar charts
+
+// --------------------------------
+
+// chart data
+.chart__data-bar {
+  pointer-events: none;
+  fill: var(--chart-data-color);
+}
+
+// hide markers + y-indicator
+.chart--column {
+  .chart__marker {
+    visibility: hidden;
+  }
+
+  .chart__y-indicator {
+    display: none;
+  }
+}

@@ -1,0 +1,37 @@
+<div class="bg radius-md padding-md shadow-xs">
+  <p class="color-contrast-medium margin-bottom-md">Radial Chart</p>
+
+  <div class="radial-bar flex flex-column gap-md js-radial-bar" data-radial-bar-animation="on">
+    <div class="flex-shrink-0 flex justify-center">
+      <div class="radial-bar__area js-radial-bar__area" aria-hidden="true">
+        <!-- radial bars are created in JS  -->
+
+        <div class="radial-bar__tooltip is-hidden js-radial-bar__tooltip"></div>
+      </div>
+    </div>
+
+    <div>
+      <ul class="grid gap-xs">
+        <li class="flex items-center col-6">
+          <span class="radial-bar__bullet bg-primary margin-right-xxs" aria-hidden="true"></span>
+          <span class="text-sm">Label 1 (<i class="js-radial-bar__value" data-radial-bar-color="color-primary">75%</i>)</span>
+        </li>
+
+        <li class="flex items-center col-6">
+          <span class="radial-bar__bullet bg-primary-darker margin-right-xxs" aria-hidden="true"></span>
+          <span class="text-sm">Label 2 (<i class="js-radial-bar__value" data-radial-bar-color="color-primary-darker">75%</i>)</span>
+        </li>
+
+        <li class="flex items-center col-6">
+          <span class="radial-bar__bullet bg-accent margin-right-xxs" aria-hidden="true"></span>
+          <span class="text-sm">Label 3 (<i class="js-radial-bar__value" data-radial-bar-color="color-accent">75%</i>)</span>
+        </li>
+
+        <li class="flex items-center col-6">
+          <span class="radial-bar__bullet bg-accent-darker margin-right-xxs" aria-hidden="true"></span>
+          <span class="text-sm">Label 4 (<i class="js-radial-bar__value" data-radial-bar-color="color-accent-darker">75%</i>)</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
