@@ -2,6 +2,13 @@
   background-size: cover;
   height: 100%;
   width: 100%;
+  min-height: 250px;
+  border-radius: var(--radius-md);
+  -webkit-border-radius: var(--radius-md);
+  -moz-border-radius: var(--radius-md);
+  -ms-border-radius: var(--radius-md);
+  -o-border-radius: var(--radius-md);
+  overflow: hidden;
 }
 
 @media (min-aspect-ratio: 16/9) {
