@@ -63,9 +63,9 @@ a.btn {
   &--accent {
     @include btn(var(--color-accent));
   }
-  &--kickstarter {
-    @include btn(#028858);
-  }
+  // &--kickstarter {
+  //   @include btn(#028858);
+  // }
   &--subtle {
     @include btn(var(--color-contrast-lower), var(--color-contrast-higher));
   }

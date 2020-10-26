@@ -1,0 +1,25 @@
+/* -------------------------------- 
+
+File#: _2_feature-v8
+Title: Feature v8
+Descr: A section containing a list of features
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+:root {
+  --feature-v8-gap: var(--space-xl); // gap between text and figure elements
+}
+
+.feature-v8 {
+  position: relative;
+  z-index: 1;
+}
+
+.feature-v8__main-content {
+  padding-bottom: calc(var(--feature-v8-gap) * 2);
+}
+
+.feature-v8__sub-content {
+  margin-top: calc(var(--feature-v8-gap) * -1);
+}
