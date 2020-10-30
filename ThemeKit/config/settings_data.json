@@ -1414,8 +1414,8 @@
             "settings": {
               "richtext_top": "",
               "image_top": "shopify:\/\/shop_images\/PowerBank__200w.png",
-              "image_caption_top": "PowerBank+",
-              "image_link_top": "shopify:\/\/products\/powerbank-plus",
+              "image_caption_top": "PowerBank 144",
+              "image_link_top": "shopify:\/\/products\/powerbank-144",
               "menu_1": "",
               "menu_1_link": "",
               "menu_2": "",
@@ -1659,6 +1659,7 @@
         "settings": {
           "promo_icon": "offline_bolt",
           "promo_text": "Brew: Coffee + Power | Now Live on Kickstarter ➞",
+          "promo_text_mobile": "",
           "promo_link": "https:\/\/www.kickstarter.com\/projects\/patricksherwin\/gosun-brew-travel-coffee-mug-and-portable-power",
           "promo_external": true,
           "tagline_text": "Free shipping & Returns | Free snack box on orders $400+",
