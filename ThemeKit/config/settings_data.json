@@ -452,34 +452,12 @@
               "image_link_bottom": "shopify:\/\/products\/go",
               "richtext_bottom": ""
             }
-          },
-          "mega-menu-1-4": {
-            "type": "column",
-            "settings": {
-              "richtext_top": "",
-              "image_top": "",
-              "image_caption_top": "",
-              "image_link_top": "",
-              "menu_1": "",
-              "menu_1_link": "",
-              "menu_2": "",
-              "menu_2_link": "",
-              "menu_3": "",
-              "menu_3_link": "",
-              "menu_4": "",
-              "menu_4_link": "",
-              "image_bottom": "shopify:\/\/shop_images\/Sport_ede98579-8a44-48e0-a022-439da06e1b35.jpg",
-              "image_caption_bottom": "Shop All",
-              "image_link_bottom": "shopify:\/\/collections\/all",
-              "richtext_bottom": ""
-            }
           }
         },
         "block_order": [
           "mega-menu-1-0",
           "mega-menu-1-1",
-          "mega-menu-1-2",
-          "mega-menu-1-4"
+          "mega-menu-1-2"
         ],
         "settings": {
           "parent": "Ovens"
@@ -1570,9 +1548,9 @@
             "type": "column",
             "settings": {
               "richtext_top": "",
-              "image_top": "shopify:\/\/shop_images\/SunKingPro_200w.png",
-              "image_caption_top": "Sun King Pro",
-              "image_link_top": "shopify:\/\/products\/sun-king-pro",
+              "image_top": "shopify:\/\/shop_images\/Cover.jpg",
+              "image_caption_top": "SolarLamp 600",
+              "image_link_top": "shopify:\/\/products\/solarlamp-600",
               "menu_1": "",
               "menu_1_link": "",
               "menu_2": "",
@@ -1603,7 +1581,7 @@
               "menu_4": "",
               "menu_4_link": "",
               "image_bottom": "shopify:\/\/shop_images\/SolarLight_200w.png",
-              "image_caption_bottom": "SolarLight",
+              "image_caption_bottom": "SolarFlash",
               "image_link_bottom": "shopify:\/\/products\/solarlight",
               "richtext_bottom": ""
             }

@@ -15385,6 +15385,10 @@ td {
 .shg-c {
   height: 100%; }
 
+#sms-opt-in button {
+  background-color: var(--color-contrast-lower) !important;
+  color: var(--color-contrast-medium) !important; }
+
 /*
 .homepage-video, .testimonial-block, .banner {
     img {
