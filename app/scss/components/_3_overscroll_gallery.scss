@@ -1,0 +1,34 @@
+/* -------------------------------- 
+
+File#: _3_overscroll-gallery
+Title: Overscroll Gallery
+Descr: A sticky section with an image gallery scrolling over
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.overscroll-gallery {
+  &.masonry {
+    --masonry-grid-gap: 0px;
+    --masonry-col-auto-size: 480px; // col min-width value -> used in JS to auto-update the masonry cols width
+  }
+}
+
+.overscroll-gallery__link {
+  display: block;
+
+  &:hover {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle opacity='0.9' cx='24' cy='24' r='24'/%3E%3Cline x1='15' y1='33' x2='33' y2='15' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpolyline points='23 15 33 15 33 25' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E")
+        24 24,
+      pointer;
+
+    cursor: -webkit-image-set(
+          url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsSAAALEgHS3X78AAACmUlEQVRogeWaTWrbQBiG329ol4Fgb0qJ9wWfIFl4F5ID1OQCOYAhBwg5QKAH8NJgh3TvmOy8sE9g6NLgtivXm0AplPYr435yLVlSJI1mRk4fCCGxNXpezWg0PyJmhilEdAzgBID+3QBwlFDkZwALAFMAE2aeGp+7aACRvgBwDuCg4PmfADwAuCsaJncAEb+Sq10mOsBt3iCZAxCRbho3AM5KFo8yAnDNzItMXlkCEJFuJh8MmkpedNPqMPODcQAi0lf90pF4lC4zX6d9ITUAEemr3rYs+Rz3zNxJ+o5K+qAi8pq2uMQSG0CaTRXkA9ritMNOALlhfbX5NC7FLUToHpCu8tFhb5MX3Tudbnex0Rq4qbA8xC3UlDYB5Alr+yFVBmfiGg4gw4N94SoUQBKVOrbp9/uHzPw2y89yuXyTs/jjoBaCGrgoUz4v9Xo98XmUwtp53QsR0SeXN2+tVlPj8bjebDZfB/8joq85i3li5ndKqsKL/Gw2+2lQ1IF2VzKTckJUvtVqfTM874myMDGJJU5+tVr9Nix2XQMNS84bLMlrGiplAl4KFuU1R0W6r8xYll9jLYALedgK4Epe86rsAvPKDwaD7ybnIwBfTArYxuWVD1Cy3GeMD3ntrmSt0ghP8pqFkiW9wniU10x1gMmeymsmhYfTFZD/O5yWP55dg4zS6/UOPcojcA4C3OU9ej6f/xoOhz88ySNw3qwLEdFHV0PrEpgy83tEhhK3eyKPbddNANkZGXlTys5oexfnZS0tygeJa/EVoBPdetoZTsu2TreC8t24LafEHZoKbXAgbZcmcUIjB9xb1cpGsS0m/Avhszl10+TxErZZM82JpaBTR8+JkXSVmcZn/8+rBjsH7uvLHrGF+HrdBsAfXZHRMf5cb0QAAAAASUVORK5CYII=")
+            1x,
+          url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAABYlAAAWJQFJUiTwAAAFfklEQVR4nO2dT28bRRjGnzcCCaE64VhBekeFS06Q3CP1XuJ+gLbJNSGRckR8gEKviZMPEJvcK1XKMYFTTkTcbRBHYksIgdRB4767Wq+99nh3ZnZmZ37SKs2f7sw+j+f/7DskhICLENEmgC8BrALY5CxuKmb1JvO1Ly8hxM2C/1MLzhjAgm+xyKpCL8sNX9euGFKrASz6MwBPALQsJz8C8AbARZ1mWDeAiGSV8hJAG8C61cSLGQDoAugIIYY2E7ZmABE9AnAIYMdKguXpAXglhOjbSMy4AR4Jn8eKEUYNIKJDrm5s1++6GHG19MpUAkYM4Mb1tUN1fFVkG7FvorHWbgARfQ/ghdabusOZEOI7nbnRZgARfcGf+sdabugud1waftWRwxUdNyEi2Y+/DEB88DNe8jNXprIBRCQb2XOPG9oyyGc9J6J21RtVqoKI6LWH3Uvd9IQQ+2XvWboERPFTdliLUpQyIIo/RWkTljYgil9IKROWMoAb3Ch+MTvLNszKjTB3u861Zre5PBdCvFHSVcUAHmRdBtbVrIKcQ3qqMlhTNeBtIIMsndwJIbYX3W9hG8BzO1H85XnM2s1lbgngWc2fnHw8f/hm3izqIgN+adCUcl0MhBBfFaVdWAXxYkoUvzrrrOVMZpYAXkZ8G3s92pC9ou1Zy5tFJeAwiq+VFms6xVQJ4E//zz4/rcN8nS8Fs0pAYX0VqcyUthMG8KYpp+d6dnd3Px4Ohw+FEJ/qvO7v7x8eHx8/MJz9HdY4ZaIK4tb6W8OZqIQUv9VqaVlKzTMcDt+tra39afgRfshuc8k/SOUlNp9ZXV01YmyOCY3TBHnU63y//+joaDgajd45kJWyrLPWY9IqKJSFFtmGnJycfFL0eyL6w0I20nXkrAG/Nb3vv0h82DNgJIT4HEkVxEUiePEt0kqqoaQN2HIkY0YoEn9vb++vGrM11jwxwNQrQbUzT/zT09O/a8zfRAlopAEOi4/UgGyXqEk4Lv4Yqf0KvwraKHwQn3m0wu/hNgaPxEdiQGOqIM/El2zamPuwgofijyEAvzuQj0pUEV9ORWe/tzQSTvG+BPj6yU/w2gDfxYfPBjRBfPhqQFPEh48GNEl8+GZA08SHTwaYEj+7vFnHUqcXBpj85CdrzPKS/66U0RI4PxBrYrWTZSUT4M45mi6+1N7ZKigA8cc4WQJCET8pAVZio6kSkPiSvlMGBCa+pD/emEVEtfeEAhRfToV/ljTCtbYDIYqfaF67AYGKj7wB13XkIGDxkWhe2+bcwMWf3JzLKEX30EHg4iOrddaACxspt9vtjwIXH1mtUwM4nsHAdMobGxsf5n8WmPiDbOyI/FxQ13ZuAhMfeY0/yP2yY/otyaurq3/51X3c3t7+1+12/zGZnoN0slma9aZ8DMpnjqkYozFUgV0WhyrgP+g18/lrpTcrWkoMV2OH5cLV8B927OQtCDpFR6HEkGXmKReyjCkdFTyipuFcA3jEdha1LM3ZonNnYuBWc+gJ3MrsJ6PXiBIj1epbyQCOgRzbA3WUD/lR3pjF0cAPzOfdew5UI6dj2c25QohuHCXPpccaKbP01kSeTIomTFPqMJ9Se0OjCVOUPkmp9ObcaEJKpWOsKh9lyGem/FjpJv5ysGydn6fy9nTOwPPAxgkjPiem8hKulvcDuNv1lA+6bDp3fD6Mlm082l7QkAMPHno3ee5Izu1s6zpJFfFAZ2X8OdB54ubxSPOFxEP9i/H/UP+JhPwxworwCdYMSBN8Hz//JUcRd6WNGPCONVndWH1Z27oBE4m/b6yfAXhSQzsx4l3KFyYaV1VqNSALm7HFQQRNBRK84eu6TtGzOGNAHjZEthvySgxRNSYRV36VdXnfFcEnAPA/nk5jw1+YZE8AAAAASUVORK5CYII=")
+            2x
+        )
+        24 24,
+      pointer;
+  }
+}

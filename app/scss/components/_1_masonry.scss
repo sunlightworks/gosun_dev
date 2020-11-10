@@ -1,0 +1,74 @@
+/* -------------------------------- 
+
+File#: _1_masonry
+Title: Masonry
+Descr: Gallery with elements laid out in optimal position based on available vertical space
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+:root {
+  --masonry-grid-gap: var(--space-sm);
+  --masonry-col-auto-size: 280px; // col min-width value -> used in JS to auto-update the masonry cols width
+}
+
+.masonry {
+}
+
+.masonry__loader {
+  display: none;
+}
+
+.masonry__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--masonry-grid-gap));
+  margin-bottom: calc(-1 * var(--masonry-grid-gap));
+}
+
+.masonry__item {
+  display: inline-block; // flex fallback
+  width: var(--masonry-col-auto-size); // this will be updated using JS
+  margin-right: var(--masonry-grid-gap);
+  margin-bottom: var(--masonry-grid-gap);
+}
+
+.js {
+  .masonry {
+    position: relative;
+  }
+
+  .masonry__loader {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+
+  .masonry__list {
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+
+  .masonry--loaded {
+    // reveal gallery once it has been initialized using JS
+    .masonry__loader {
+      display: none;
+    }
+
+    .masonry__list {
+      opacity: 1;
+    }
+  }
+
+  @supports (flex-basis: 0px) {
+    .masonry__list {
+      flex-direction: column;
+    }
+
+    .masonry__item {
+      flex-basis: 0px;
+    }
+  }
+}
