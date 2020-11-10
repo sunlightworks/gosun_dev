@@ -1,0 +1,242 @@
+/* -------------------------------- 
+
+File#: _2_carousel
+Title: Carousel
+Descr: Display and cycle through a collection of items
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+:root {
+  --carousel-grid-gap: var(--space-xs);
+  --carousel-item-auto-size: 260px; // min-width value -> used in JS to auto update the carousel items width
+  --carousel-transition-duration: 0.5s;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel__list {
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+
+.carousel__item {
+  flex-shrink: 0;
+  width: var(--carousel-item-auto-size);
+  margin-right: var(--carousel-grid-gap);
+  margin-bottom: var(--carousel-grid-gap);
+}
+
+.js {
+  .carousel__list--animating {
+    transition-property: transform;
+    transition-duration: var(--carousel-transition-duration);
+    transition-timing-function: var(--ease-out);
+  }
+
+  .carousel__item {
+    // hide items while the carousel is initialized in JS
+    opacity: 0;
+    margin-bottom: 0;
+  }
+
+  .carousel--loaded .carousel__item {
+    // reveal items
+    opacity: 1;
+  }
+
+  .carousel:not(.carousel--is-dragging)
+    .carousel__list:not(.carousel__list--animating)
+    .carousel__item[tabindex="-1"]
+    > * {
+    visibility: hidden; // hide content of off-canvas items so that they are not focusable
+  }
+
+  .carousel[data-drag="on"] .carousel__item {
+    // if drag = enabled
+    user-select: none;
+
+    img {
+      pointer-events: none;
+    }
+  }
+}
+
+.carousel__control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-bg);
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+  z-index: 1;
+  transition: 0.2s;
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    background-color: var(--color-contrast-lower);
+    color: var(--color-contrast-low);
+    box-shadow: none;
+  }
+
+  .icon {
+    display: block;
+    font-size: 20px; // icon size
+  }
+}
+
+// carousel dots navigation
+.carousel__navigation {
+  // created in JS
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 10px); // = button size 👇
+  gap: var(--space-xs); // gap among dots
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--space-sm);
+}
+
+.carousel__nav-item {
+  display: inline-block; // grid fallback
+  margin: 0 var(--space-xxxs);
+
+  @supports (grid-area: auto) {
+    margin: 0;
+  }
+
+  button {
+    // dot
+    display: block;
+    position: relative;
+    font-size: 10px; // ⚠️ button size
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    background-color: var(--color-contrast-high);
+    opacity: 0.4;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &::before {
+      // focus circle
+      content: "";
+      position: absolute;
+      top: calc(50% - 0.5em);
+      left: calc(50% - 0.5em);
+      font-size: 16px; // focus circle size
+      height: 1em;
+      width: 1em;
+      border-radius: inherit;
+      border: 1px solid var(--color-contrast-high);
+      opacity: 0;
+      transform: scale(0);
+      transition: 0.3s;
+    }
+
+    &:focus {
+      outline: none;
+
+      &::before {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.carousel__nav-item--selected button {
+  opacity: 1;
+}
+
+// --pagination
+.carousel__navigation--pagination {
+  grid-template-columns: repeat(auto-fit, minmax(24px, auto));
+
+  .carousel__nav-item button {
+    width: 100%;
+    height: auto;
+    color: var(--color-bg);
+    font-size: var(--text-xs);
+    padding: var(--space-xxxs) var(--space-xxs);
+    border-radius: var(--radius-md);
+    text-align: center;
+
+    &:focus {
+      outline: 1px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+  }
+}
+
+html:not(.js) .carousel__list {
+  overflow: auto;
+}
+
+.carousel--hide-controls {
+  .carousel__navigation,
+  .carousel__control {
+    display: none;
+  }
+}
+
+/* -------------------------------- 
+
+File#: _3_carousel-v3
+Title: Carousel v3
+Descr: Display a collection of items and navigate through them
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.carousel-v3 {
+  // custom properties inherited from Carousel
+  --carousel-grid-gap: var(--space-xs); // distance among items
+  --carousel-item-auto-size: 260px; // item min-width
+  --carousel-transition-duration: 0.5s; // animation duration
+}
+
+// carousel arrow navigation
+.carousel-v3__control {
+  height: 3em;
+  width: 3em;
+  background-color: alpha(var(--color-contrast-higher), 0.7);
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+  cursor: pointer;
+  // align icon
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: alpha(var(--color-contrast-higher), 0.9);
+  }
+
+  &[disabled] {
+    display: none;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  .icon {
+    display: block;
+    color: var(--color-bg);
+  }
+}

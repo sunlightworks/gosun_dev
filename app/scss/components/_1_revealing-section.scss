@@ -1,0 +1,29 @@
+/* -------------------------------- 
+
+File#: _1_revealing-section
+Title: Revealing Section
+Descr: Section revealing its content on scroll
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.js {
+  .revealing-section {
+    position: sticky; // bottom value will be set using JS
+    min-height: 100vh;
+    --reavealing-section-overlay-opacity: 1; // overlay layer opacity - modified using JS
+
+    &::after {
+      // overlay layer
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      pointer-events: none;
+      background-color: var(--color-black);
+      opacity: var(--reavealing-section-overlay-opacity);
+    }
+  }
+}

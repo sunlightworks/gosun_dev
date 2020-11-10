@@ -2198,7 +2198,7 @@ html:not(.js) .no-js\:is-hidden {
   color: hsla(var(--color-error-lighter-h), var(--color-error-lighter-s), var(--color-error-lighter-l), var(--color-o, 1)); }
 
 .color-white {
-  color: hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), var(--color-o, 1)); }
+  color: hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), var(--color-o, 1)) !important; }
 
 .color-black {
   color: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), var(--color-o, 1)); }
@@ -7292,7 +7292,8 @@ html.supports-no-cookies .supports-cookies {
 
 html {
   background-color: var(--color-main-background);
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 *,
 *::before,
@@ -8400,7 +8401,7 @@ div.section.collection_description {
   padding-left: 1.5rem;
   width: 100%;
   height: 200px;
-  z-index: 10;
+  z-index: 1;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start; }
@@ -11133,6 +11134,28 @@ Descr: Cards stack effect on vertical scrolling
       .stack-cards__item > * {
         position: absolute; } }
 
+.bg-media {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  min-height: 250px;
+  border-radius: var(--radius-md);
+  -webkit-border-radius: var(--radius-md);
+  -moz-border-radius: var(--radius-md);
+  -ms-border-radius: var(--radius-md);
+  -o-border-radius: var(--radius-md);
+  overflow: hidden; }
+
+@media (min-aspect-ratio: 16 / 9) {
+  .bg-video {
+    width: 100%;
+    height: auto; } }
+
+@media (max-aspect-ratio: 16 / 9) {
+  .bg-video {
+    width: auto;
+    height: 100%; } }
+
 /* -------------------------------- 
 
 File#: _1_looping_tabs
@@ -11266,28 +11289,6 @@ Descr: A list of content sections (panels), accessible one at a time using contr
   color: var(--color-contrast-high);
   text-decoration: underline; }
 
-.bg-media {
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  min-height: 250px;
-  border-radius: var(--radius-md);
-  -webkit-border-radius: var(--radius-md);
-  -moz-border-radius: var(--radius-md);
-  -ms-border-radius: var(--radius-md);
-  -o-border-radius: var(--radius-md);
-  overflow: hidden; }
-
-@media (min-aspect-ratio: 16 / 9) {
-  .bg-video {
-    width: 100%;
-    height: auto; } }
-
-@media (max-aspect-ratio: 16 / 9) {
-  .bg-video {
-    width: auto;
-    height: 100%; } }
-
 /* --------------------------------
 
 File#: _1_sub-navigation
@@ -11355,7 +11356,6 @@ Usage: codyhouse.co/license
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.9);
     visibility: hidden;
     opacity: 0; }
@@ -11449,6 +11449,29 @@ Usage: codyhouse.co/license
 
 .hide-nav--has-bg {
   background-color: var(--color-bg); }
+
+/* -------------------------------- 
+
+File#: _1_revealing-section
+Title: Revealing Section
+Descr: Section revealing its content on scroll
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.js .revealing-section {
+  position: sticky;
+  min-height: 100vh;
+  --reavealing-section-overlay-opacity: 1; }
+  .js .revealing-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background-color: var(--color-black);
+    opacity: var(--reavealing-section-overlay-opacity); }
 
 /* -------------------------------- 
 
@@ -12274,6 +12297,183 @@ Usage: codyhouse.co/license
     width: 55%; }
   100% {
     width: 50%; } }
+
+/* -------------------------------- 
+
+File#: _2_carousel
+Title: Carousel
+Descr: Display and cycle through a collection of items
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --carousel-grid-gap: var(--space-xs);
+  --carousel-item-auto-size: 260px;
+  --carousel-transition-duration: 0.5s; }
+
+.carousel {
+  position: relative; }
+
+.carousel__list {
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform; }
+
+.carousel__item {
+  flex-shrink: 0;
+  width: var(--carousel-item-auto-size);
+  margin-right: var(--carousel-grid-gap);
+  margin-bottom: var(--carousel-grid-gap); }
+
+.js .carousel__list--animating {
+  transition-property: transform;
+  transition-duration: var(--carousel-transition-duration);
+  transition-timing-function: var(--ease-out); }
+
+.js .carousel__item {
+  opacity: 0;
+  margin-bottom: 0; }
+
+.js .carousel--loaded .carousel__item {
+  opacity: 1; }
+
+.js .carousel:not(.carousel--is-dragging)
+.carousel__list:not(.carousel__list--animating)
+.carousel__item[tabindex="-1"]
+> * {
+  visibility: hidden; }
+
+.js .carousel[data-drag="on"] .carousel__item {
+  user-select: none; }
+  .js .carousel[data-drag="on"] .carousel__item img {
+    pointer-events: none; }
+
+.carousel__control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-bg);
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+  z-index: 1;
+  transition: 0.2s; }
+  .carousel__control:active {
+    transform: translateY(1px); }
+  .carousel__control:hover {
+    box-shadow: var(--shadow-md); }
+  .carousel__control[disabled] {
+    pointer-events: none;
+    background-color: var(--color-contrast-lower);
+    color: var(--color-contrast-low);
+    box-shadow: none; }
+  .carousel__control .icon {
+    display: block;
+    font-size: 20px; }
+
+.carousel__navigation {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 10px);
+  gap: var(--space-xs);
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--space-sm); }
+
+.carousel__nav-item {
+  display: inline-block;
+  margin: 0 var(--space-xxxs); }
+  @supports (grid-area: auto) {
+    .carousel__nav-item {
+      margin: 0; } }
+  .carousel__nav-item button {
+    display: block;
+    position: relative;
+    font-size: 10px;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    background-color: var(--color-contrast-high);
+    opacity: 0.4;
+    cursor: pointer;
+    transition: background 0.3s; }
+    .carousel__nav-item button::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 0.5em);
+      left: calc(50% - 0.5em);
+      font-size: 16px;
+      height: 1em;
+      width: 1em;
+      border-radius: inherit;
+      border: 1px solid var(--color-contrast-high);
+      opacity: 0;
+      transform: scale(0);
+      transition: 0.3s; }
+    .carousel__nav-item button:focus {
+      outline: none; }
+      .carousel__nav-item button:focus::before {
+        opacity: 1;
+        transform: scale(1); }
+
+.carousel__nav-item--selected button {
+  opacity: 1; }
+
+.carousel__navigation--pagination {
+  grid-template-columns: repeat(auto-fit, minmax(24px, auto)); }
+  .carousel__navigation--pagination .carousel__nav-item button {
+    width: 100%;
+    height: auto;
+    color: var(--color-bg);
+    font-size: var(--text-xs);
+    padding: var(--space-xxxs) var(--space-xxs);
+    border-radius: var(--radius-md);
+    text-align: center; }
+    .carousel__navigation--pagination .carousel__nav-item button:focus {
+      outline: 1px solid var(--color-primary);
+      outline-offset: 2px; }
+
+html:not(.js) .carousel__list {
+  overflow: auto; }
+
+.carousel--hide-controls .carousel__navigation,
+.carousel--hide-controls .carousel__control {
+  display: none; }
+
+/* -------------------------------- 
+
+File#: _3_carousel-v3
+Title: Carousel v3
+Descr: Display a collection of items and navigate through them
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.carousel-v3 {
+  --carousel-grid-gap: var(--space-xs);
+  --carousel-item-auto-size: 260px;
+  --carousel-transition-duration: 0.5s; }
+
+.carousel-v3__control {
+  height: 3em;
+  width: 3em;
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.7);
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s; }
+  .carousel-v3__control:hover {
+    background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.9); }
+  .carousel-v3__control[disabled] {
+    display: none; }
+  .carousel-v3__control:active {
+    transform: translateY(2px); }
+  .carousel-v3__control .icon {
+    display: block;
+    color: var(--color-bg); }
 
 /* -------------------------------- 
 
@@ -14511,7 +14711,7 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
 
 /* Left */
 .ml0 {
-  margin-left: 0; }
+  margin-left: 0 !important; }
 
 .ml5 {
   margin-left: 5px; }
@@ -15511,9 +15711,6 @@ td {
 .shogun-accordion-title {
   /* color: rgba(33, 33, 33, 1); */
   color: var(--color-contrast-high) !important; }
-
-.shg-c {
-  height: 100%; }
 
 #sms-opt-in button {
   background-color: var(--color-contrast-lower) !important;
