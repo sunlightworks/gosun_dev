@@ -1,11 +1,12 @@
 :root {
   --btn-font-size: 2rem;
   --btn-font-size-sm: 0.8em;
-  --btn-font-size-md: 1.2em;
-  --btn-font-size-lg: 1.4em;
+  --btn-font-size-md: 1em;
+  --btn-font-size-lg: 1.2em;
   --btn-padding-x: var(--space-md);
   --btn-padding-y: var(--space-unit);
   --btn-radius: 0.25em;
+  --btn-height-sm: 36px;
   --btn-height-md: 40px;
   --btn-height-lg: 56px;
 }
@@ -77,7 +78,8 @@ a.btn {
 
 // size
 .btn--sm {
-  font-size: var(--btn-font-size-sm, 0.8em);
+  font-size: var(--btn-font-size-md, 1em);
+  height: 40px;
 }
 .btn--md {
   font-size: var(--btn-font-size-md, 1.2em);

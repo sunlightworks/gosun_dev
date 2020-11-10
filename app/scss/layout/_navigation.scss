@@ -518,50 +518,50 @@ div.dropdown.menu {
 
 /* #SubNav Bar - Base Styles 
 ================================================== */
-.subnav {
-  @include md-max() {
-    @include flexBox(null, null, null);
-    top: 60px !important;
-  }
-  box-shadow: var(--shadow-xs);
-  background-color: var(--color-max);
-  z-index: 99;
-  height: 65px;
-  overflow: hidden;
-  position: fixed;
-  width: 100vw !important;
-  /* Product nav - over cart */
-  &:before {
-    z-index: 99 !important;
-  }
-  .purchase-details__buttons {
-    margin-top: 0;
-  }
-  button {
-    height: 100%;
-    width: var(--space-lg);
-  }
-  &__link {
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 600;
-    margin: 0;
-    padding: 21px 12px;
-    @include md-max() {
-      white-space: break-spaces;
-      padding: 0;
-      max-width: 160px;
-    }
-  }
-}
+// .subnav {
+//   @include md-max() {
+//     @include flexBox(null, null, null);
+//     top: 60px !important;
+//   }
+//   box-shadow: var(--shadow-xs);
+//   background-color: var(--color-max);
+//   z-index: 99;
+//   height: 65px;
+//   overflow: hidden;
+//   position: fixed;
+//   width: 100vw !important;
+//   /* Product nav - over cart */
+//   &:before {
+//     z-index: 99 !important;
+//   }
+//   .purchase-details__buttons {
+//     margin-top: 0;
+//   }
+//   button {
+//     height: 100%;
+//     width: var(--space-lg);
+//   }
+//   &__link {
+//     text-decoration: none;
+//     display: inline-block;
+//     font-weight: 600;
+//     margin: 0;
+//     padding: 21px 12px;
+//     @include md-max() {
+//       white-space: break-spaces;
+//       padding: 0;
+//       max-width: 160px;
+//     }
+//   }
+// }
 
-.subnav__link:not(.base-BodyTitle),
-.shogun-tab-box {
-  &:hover {
-    background: var(--color-bg);
-    color: var(--color-contrast-higher);
-  }
-}
+// .subnav__link:not(.base-BodyTitle),
+// .shogun-tab-box {
+//   &:hover {
+//     background: var(--color-bg);
+//     color: var(--color-contrast-higher);
+//   }
+// }
 
 /* #Sticky - Custom buy button
   ================================================== */
