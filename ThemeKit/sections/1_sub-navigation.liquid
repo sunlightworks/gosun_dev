@@ -3,14 +3,14 @@
 {% assign btn_link = section.settings.btn_link %}
 
 
-<header class="bg-white shadow-sm position-fixed width-100% z-index-header">
-  <section class="width-100% flex justify-center align-center">
+
+  <!-- <section class="width-100% flex justify-center align-center">
     <a href="https://gosun.co" title="GoSun" class="display@md"> 
       {% include 'svg' with 'logo' %}
     </a>
-  </section>
+  </section> -->
 
-  <section class="container flex justify-between  align-center">
+  <div class="container flex justify-between  align-center">
     <h4 class="margin-right-auto display@md">GoSun Dream</h4>
     <div class="subnav subnav--expanded@sm js-subnav">
       <button class="reset btn btn--subtle margin-y-sm subnav__control js-subnav__control">
@@ -50,8 +50,8 @@
         Reserve yours
       </a>
     </div>
-  </section>
-</header>
+  </div>
+
 
 
 
@@ -66,6 +66,7 @@
 
 {
   "name": "Sub Navigation",
+  "class": "bg-white shadow-sm sub-nav z-index-header hide-nav js-hide-nav js-hide-nav--sub",
   "settings": [
     {
       "type": "header",
