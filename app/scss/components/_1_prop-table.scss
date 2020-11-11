@@ -1,0 +1,35 @@
+/* -------------------------------- 
+
+File#: _1_prop-table
+Title: Property Table
+Descr: A table used to display a list of properties and their values
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.prop-table {
+}
+
+.prop-table__cell {
+  // standard cell
+  padding: var(--space-sm) var(--space-sm) var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-contrast-low);
+  width: 50%;
+}
+
+.prop-table__cell--th {
+  // header cell
+  font-weight: bold;
+  text-align: left;
+}
+
+// --v2
+.prop-table--v2 {
+  background-color: alpha(var(--color-primary), 0.15);
+  border-left: 4px solid var(--color-primary);
+
+  .prop-table__cell {
+    padding: var(--space-sm);
+    border-width: 0;
+  }
+}

@@ -8640,6 +8640,9 @@ Usage: codyhouse.co/license
     border-radius: var(--radius-md);
     padding: var(--space-sm); } }
 
+.snize-sticky-searchbox {
+  display: none !important; }
+
 .snize-ac-results-content {
   background: var(--color-max) !important;
   padding-top: var(--space-lg) !important; }
@@ -8938,6 +8941,9 @@ Usage: codyhouse.co/license
   height: 1em;
   border-radius: var(--ske-radius);
   clip-path: inset(0% 0% 0% 0% round var(--ske-radius)); }
+
+.snize-sticky-searchbox {
+  display: none !important; }
 
 .snize-ac-results-content {
   background: var(--color-max) !important;
@@ -10894,6 +10900,30 @@ Usage: codyhouse.co/license
   box-shadow: var(--shadow-md);
   transform: translateX(-50%) translateY(-50%);
   pointer-events: none; }
+
+/* -------------------------------- 
+
+File#: _1_prop-table
+Title: Property Table
+Descr: A table used to display a list of properties and their values
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.prop-table__cell {
+  padding: var(--space-sm) var(--space-sm) var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-contrast-low);
+  width: 50%; }
+
+.prop-table__cell--th {
+  font-weight: bold;
+  text-align: left; }
+
+.prop-table--v2 {
+  background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.15);
+  border-left: 4px solid var(--color-primary); }
+  .prop-table--v2 .prop-table__cell {
+    padding: var(--space-sm);
+    border-width: 0; }
 
 /* -------------------------------- 
 
