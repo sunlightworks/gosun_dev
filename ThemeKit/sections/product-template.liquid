@@ -184,9 +184,11 @@
               {% endif %}
             </p>
 
-            <div class="pill color-contrast-medium margin-bottom-xxs">
-              <p class="affirm-as-low-as" data-page-type="product" data-amount="{{ variant.price }}" data-affirm-type="text" data-learnmore-show="true"></p>
-            </div>
+            {% unless product.title == 'Dream' %}
+              <div class="pill color-contrast-medium margin-bottom-xxs">
+                <p class="affirm-as-low-as" data-page-type="product" data-amount="{{ variant.price }}" data-affirm-type="text" data-learnmore-show="true"></p>
+              </div>
+              {% endunless %}
           {% endif %}
 
                   

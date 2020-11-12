@@ -53,13 +53,44 @@
   }
 }
 
+.overlay-cover {
+  background: rgba(27, 53, 80, 0.1);
+  mix-blend-mode: multiply;
+}
+
 .overlay-bottom {
   background: linear-gradient(
     180deg,
-    rgba(123, 123, 123, 0) 56.9%,
-    #212121 97.58%
+    rgba(27, 53, 80, 0.5) 13.21%,
+    rgba(27, 53, 80, 0) 46.54%
   );
   background-blend-mode: multiply;
+
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  width: 100%;
+  height: 200px;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  p {
+    margin-top: 2rem;
+  }
+}
+
+.overlay-top {
+  background: linear-gradient(
+    0deg,
+    rgba(27, 53, 80, 0.6) 13.21%,
+    rgba(27, 53, 80, 0) 46.54%
+  );
+  background-blend-mode: multiply;
+
   position: absolute;
   right: 0px;
   bottom: 0px;

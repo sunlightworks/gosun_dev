@@ -7,9 +7,9 @@
   }
 }
 
-.icon {
-  @include flexBox(null, center, center);
-}
+// .icon {
+//   @include flexBox(null, center, center);
+// }
 
 @include md {
   .sidebar-wrap > div {
