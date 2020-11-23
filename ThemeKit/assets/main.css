@@ -2296,7 +2296,7 @@ html:not(.js) .no-js\:is-hidden {
   width: 90%; }
 
 .width-100\% {
-  width: 100%; }
+  width: 100% !important; }
 
 .width-100vw {
   width: 100vw; }
@@ -5938,7 +5938,6 @@ td {
 .article_content,
 .article_content p,
 .page p {
-  margin-top: 2em;
   letter-spacing: -0.03em; }
   .article_content h2,
   .article_content h2 a,
@@ -6171,6 +6170,11 @@ h2.product_type {
   .svg:hover {
     fill: var(--color-contrast-medium);
     transition: all 0.1s ease-out; }
+
+.icon {
+  display: flex !important;
+  justify-content: center;
+  align-items: center; }
 
 @media (min-width: 768px) {
   .sidebar-wrap > div {
@@ -8385,12 +8389,16 @@ div.section.collection_description {
   .product_gallery_nav .gallery-cell.is-nav-selected img {
     box-shadow: 0 0 0 2px var(--color-contrast-medium); }
 
-.overlay-cover {
-  background: rgba(27, 53, 80, 0.1);
-  mix-blend-mode: multiply; }
+.overlay-cover::before {
+  content: "";
+  background-color: rgba(27, 53, 80, 0.3);
+  mix-blend-mode: multiply;
+  position: absolute;
+  height: 100%;
+  width: 100%; }
 
 .overlay-bottom {
-  background: linear-gradient(180deg, rgba(27, 53, 80, 0.5) 13.21%, rgba(27, 53, 80, 0) 46.54%);
+  background: linear-gradient(180deg, rgba(27, 53, 80, 0.65) 13.21%, rgba(27, 53, 80, 0) 46.54%);
   background-blend-mode: multiply;
   position: absolute;
   right: 0px;
@@ -8408,7 +8416,7 @@ div.section.collection_description {
     margin-top: 2rem; }
 
 .overlay-top {
-  background: linear-gradient(0deg, rgba(27, 53, 80, 0.6) 13.21%, rgba(27, 53, 80, 0) 46.54%);
+  background: linear-gradient(0deg, rgba(27, 53, 80, 0.9) 13.21%, rgba(27, 53, 80, 0) 46.54%);
   background-blend-mode: multiply;
   position: absolute;
   right: 0px;
@@ -11245,6 +11253,9 @@ Descr: Cards stack effect on vertical scrolling
   -ms-border-radius: var(--radius-md);
   -o-border-radius: var(--radius-md);
   overflow: hidden; }
+  @media (min-width: 1180px) {
+    .bg-media {
+      min-height: 350px; } }
 
 @media (min-aspect-ratio: 16 / 9) {
   .bg-video {
@@ -15987,6 +15998,9 @@ p.modal_price {
 .ui-accordion {
   display: none !important; }
 
+.default-background {
+  background-color: var(--color-max) !important; }
+
 /*
 img.logo__image.logo__image--small {
     display: block;
@@ -16001,9 +16015,6 @@ img.logo__image.logo__image--small {
         -webkit-filter: unset !important;
 }
 }
-
-
-
 
 // #Checkout / Mimic Shopify's native styles
 

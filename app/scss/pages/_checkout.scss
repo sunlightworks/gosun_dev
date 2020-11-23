@@ -1,3 +1,7 @@
+.default-background {
+  background-color: var(--color-max) !important;
+}
+
 /*
 img.logo__image.logo__image--small {
     display: block;
@@ -12,9 +16,6 @@ img.logo__image.logo__image--small {
         -webkit-filter: unset !important;
 }
 }
-
-
-
 
 // #Checkout / Mimic Shopify's native styles
 

@@ -3,6 +3,9 @@
   height: 100%;
   width: 100%;
   min-height: 250px;
+  @include breakpoint(lg) {
+    min-height: 350px;
+  }
   border-radius: var(--radius-md);
   -webkit-border-radius: var(--radius-md);
   -moz-border-radius: var(--radius-md);
