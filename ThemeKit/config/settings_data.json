@@ -1636,10 +1636,10 @@
         "type": "header",
         "settings": {
           "promo_icon": "offline_bolt",
-          "promo_text": "Brew: Coffee + Power | Now Live on Kickstarter ➞",
+          "promo_text": "Up to 20% off | Shop early Black Friday deals ➞",
           "promo_text_mobile": "",
-          "promo_link": "https:\/\/www.kickstarter.com\/projects\/patricksherwin\/gosun-brew-travel-coffee-mug-and-portable-power",
-          "promo_external": true,
+          "promo_link": "shopify:\/\/collections\/todays-deals",
+          "promo_external": false,
           "tagline_text": "Free shipping & Returns",
           "social_icons_header": false,
           "phone_number": "+1 888.868.6154",
@@ -1740,9 +1740,9 @@
         "settings": {
           "image": "shopify:\/\/shop_images\/20201003-Brew--022-3.jpg",
           "overline": "COOK. COOL. LIGHT. CHARGE. PURIFY.",
-          "title": "Power when you need it most.",
-          "description": "Solar powered clean tech products for every day use.",
-          "button1": "Shop Deals",
+          "title": "Black Friday Sale",
+          "description": "Light up the Holidays with deals up to 60% off",
+          "button1": "Shop Sale",
           "button1_url": "shopify:\/\/collections\/todays-deals",
           "button2": "",
           "button2_url": "",
@@ -1932,7 +1932,7 @@
       "1602523575506": {
         "type": "cta-banner",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Exterior_v2.jpg",
+          "image": "shopify:\/\/shop_images\/Exterior--05_copy_2.jpg",
           "overline": "Coming 2021",
           "title": "Living off-grid has never been easier.",
           "description": "Meet the GoSun Dream: A solar powered, off-grid, smart tiny home.",
