@@ -1226,18 +1226,6 @@
           "toggle": false
         }
       },
-      "1562619980179": {
-        "type": "newsletter",
-        "settings": {
-          "wide_display": true,
-          "display_first_name": false,
-          "display_last_name": false,
-          "newsletter_title": "Take the lead.",
-          "newsletter_text": "<p>Subscribe for tips, tricks, recipes, and special deals.<\/p>",
-          "newsletter_section_text_align": "center",
-          "image": ""
-        }
-      },
       "page-ourstory-template": {
         "type": "page-ourstory-template",
         "blocks": {
@@ -1636,7 +1624,7 @@
         "type": "header",
         "settings": {
           "promo_icon": "offline_bolt",
-          "promo_text": "Up to 20% off | Shop early Black Friday deals ➞",
+          "promo_text": "Up to 60% off | Free Flatware on orders $100+",
           "promo_text_mobile": "",
           "promo_link": "shopify:\/\/collections\/todays-deals",
           "promo_external": false,
@@ -1739,9 +1727,9 @@
         "type": "feature-1",
         "settings": {
           "image": "shopify:\/\/shop_images\/20201003-Brew--022-3.jpg",
-          "overline": "COOK. COOL. LIGHT. CHARGE. PURIFY.",
-          "title": "Black Friday Sale",
-          "description": "Light up the Holidays with deals up to 60% off",
+          "overline": "Cyber Monday Sale",
+          "title": "Shop 60% off.",
+          "description": "Stock up on solar gear, this is our biggest sale of the year.",
           "button1": "Shop Sale",
           "button1_url": "shopify:\/\/collections\/todays-deals",
           "button2": "",
@@ -1955,7 +1943,6 @@
       "1602523575506",
       "1601324457687",
       "1596824502217",
-      "1562619980179",
       "1596230707797",
       "1594926564453",
       "1574447604302",

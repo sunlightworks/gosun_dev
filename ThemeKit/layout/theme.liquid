@@ -287,10 +287,11 @@
         {{ content_for_layout }}
         </div>
 
-        {% unless template contains 'index' or 'customer' or settings.secondary_newsletter_banner == false %}
+        {% unless template contains 'customer' %}
           {% section 'newsletter' %}
         {% endunless %}
 
+   
         {% section 'footer' %}
 
         {% if settings.size_chart != blank %}

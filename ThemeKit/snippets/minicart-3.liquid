@@ -34,7 +34,7 @@
           <i class="icon--sm material-icons-outlined margin-right-xxs">card_giftcard</i>
           <span class="money js-cart_gift text-sm">
             {% if gift_value_left > 0 %}
-            Free Flatware set on orders $400+ <br><a href='/collections/todays-deals' class='color-success-dark'>Add {{ gift_value_left | money }}  to unlock your free gift ➞</a>
+            Free Flatware set on orders $100+ <br><a href='/collections/todays-deals' class='color-success-dark'>Add {{ gift_value_left | money }}  to unlock your free gift ➞</a>
             {% else %}
               You've unlocked a free Flatware set! 
               {% if found_title == false %}
@@ -44,14 +44,13 @@
           </span>
         </div>
       </div>
-      <div id="launchtip_upsell_wrapper"></div>
+
 
 
 
       {% assign product = all_products['flatware'] %}
 
       {% unless cart.item_count == 0 or product.empty? or product.variants.first.available == false %}
-      
         {% assign variant_id = product.variants.first.id %}
         {% if gift_value_left < 0 and found_title == false %}
           <script>
@@ -66,8 +65,8 @@
                   window.location.reload(false);
                 }, 1000);
               });
-            </script>
-      {% endif %} 
+          </script>
+        {% endif %} 
       {% endunless %}
       
 
