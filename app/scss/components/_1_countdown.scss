@@ -1,5 +1,3 @@
-
-
 /* -------------------------------- 
 
 File#: _1_countdown
@@ -10,85 +8,88 @@ Usage: codyhouse.co/license
 -------------------------------- */
 
 .countdown {
-    display: flex;
-    align-items: baseline;
-  }
-  
-  .countdown__timer {
-    display: inline-block;
-  }
-  
-  .countdown__item { // time value + label - dynamically created using JS
-    display: inline-block;
-  
-    &:nth-of-type(2)::after, &:nth-of-type(3)::after { // ':' separator -> H:M:S 
-      content: ':';
-    }
-  }
-  
-  .countdown__value {
+  display: flex;
+  align-items: baseline;
+}
 
-    font-variant-numeric: tabular-nums;
-    font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on !important;
+.countdown__timer {
+  display: inline-block;
+}
+
+.countdown__item {
+  // time value + label - dynamically created using JS
+  display: inline-block;
+
+  &:nth-of-type(2)::after,
+  &:nth-of-type(3)::after {
+    // ':' separator -> H:M:S
+    content: ":";
   }
-  
-  // --has-labels
-  .countdown--has-labels {
-    .countdown__item {
-      margin-right: var(--space-xs);
-  
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  
-    .countdown__item::after {
-      content: '';
-    }
-  
-    .countdown__label { // time label
-      font-size: 0.45em;
-    }
-  }
-  
-  // --grid
-  .countdown--grid {
-    .countdown__timer {
-      display: grid;
-      grid-template-columns: repeat(4, 1.6em);
-      grid-gap: var(--space-xxxs);
-    }
-  
-    .countdown__item {
-      text-align: center;
-      padding: var(--space-xxxxs) 0;
-      background-color: var(--color-bg);
-    }
-  
-    .countdown__item::after {
-      content: '';
-    }
-  
-    .countdown__label {
-      display: block;
-      text-transform: uppercase;
-      font-size: 0.2em;
-      letter-spacing: 0.1em;
-      color: var(--color-contrast-medium);
+}
+
+.countdown__value {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "pnum" on, "lnum" on, "ss01" on !important;
+}
+
+// --has-labels
+.countdown--has-labels {
+  .countdown__item {
+    margin-right: var(--space-xs);
+
+    &:last-child {
+      margin-right: 0;
     }
   }
-  
-  .js {
-    .countdown__fallback { // if JS = enabled -> show description only to assistive technologies
-      position: absolute;
-      clip: rect(1px, 1px, 1px, 1px);
-      clip-path: inset(50%);
-    }
+
+  .countdown__item::after {
+    content: "";
   }
-  
-  // if JS = disabled
-  html:not(.js) .countdown__info {
-    display: none;
+
+  .countdown__label {
+    // time label
+    font-size: 0.45em;
+    margin-left: var(--space-xs);
   }
-  
-  
+}
+
+// --grid
+.countdown--grid {
+  .countdown__timer {
+    display: grid;
+    grid-template-columns: repeat(4, 1.6em);
+    grid-gap: var(--space-xxxs);
+  }
+
+  .countdown__item {
+    text-align: center;
+    padding: var(--space-xxxxs) 0;
+    background-color: var(--color-bg);
+  }
+
+  .countdown__item::after {
+    content: "";
+  }
+
+  .countdown__label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.2em;
+    letter-spacing: 0.1em;
+    color: var(--color-contrast-medium);
+  }
+}
+
+.js {
+  .countdown__fallback {
+    // if JS = enabled -> show description only to assistive technologies
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+  }
+}
+
+// if JS = disabled
+html:not(.js) .countdown__info {
+  display: none;
+}

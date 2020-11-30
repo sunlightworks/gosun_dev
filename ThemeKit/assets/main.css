@@ -9345,11 +9345,11 @@ Usage: codyhouse.co/license
 .countdown__item {
   display: inline-block; }
   .countdown__item:nth-of-type(2)::after, .countdown__item:nth-of-type(3)::after {
-    content: ':'; }
+    content: ":"; }
 
 .countdown__value {
   font-variant-numeric: tabular-nums;
-  font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on !important; }
+  font-feature-settings: "pnum" on, "lnum" on, "ss01" on !important; }
 
 .countdown--has-labels .countdown__item {
   margin-right: var(--space-xs); }
@@ -9357,10 +9357,11 @@ Usage: codyhouse.co/license
     margin-right: 0; }
 
 .countdown--has-labels .countdown__item::after {
-  content: ''; }
+  content: ""; }
 
 .countdown--has-labels .countdown__label {
-  font-size: 0.45em; }
+  font-size: 0.45em;
+  margin-left: var(--space-xs); }
 
 .countdown--grid .countdown__timer {
   display: grid;
@@ -9373,7 +9374,7 @@ Usage: codyhouse.co/license
   background-color: var(--color-bg); }
 
 .countdown--grid .countdown__item::after {
-  content: ''; }
+  content: ""; }
 
 .countdown--grid .countdown__label {
   display: block;
@@ -9689,6 +9690,43 @@ Descr: List of links to help the user move within website structure
   display: inline-block;
   display: inline-flex;
   align-items: center; }
+
+/* -------------------------------- 
+
+File#: _1_pre-header
+Title: Pre-header 
+Descr: Pre-header (top) banner
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.pre-header {
+  display: block;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.pre-header--is-hidden {
+  display: none; }
+
+.pre-header__close-btn {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 0.5em);
+  opacity: 0.85;
+  transition: 0.2s; }
+  .pre-header__close-btn:hover {
+    opacity: 1;
+    transform: scale(1.1); }
+  .pre-header__close-btn .icon {
+    display: block; }
+
+a.pre-header {
+  text-decoration: none;
+  transition: background-color 0.2s; }
+  a.pre-header:hover {
+    text-decoration: underline;
+    background-color: var(--color-contrast-high); }
 
 /* -------------------------------- 
 
