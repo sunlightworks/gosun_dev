@@ -365,6 +365,16 @@
 
 <!-- Styling -->
 <style>
+{% if section.settings.promo_text %}
+
+@media (min-width: 768px) {
+  --header-height: calc(
+      var(--mega-nav-height) + var(--promo-banner-height) +
+        var(--promo-banner-height)
+    );
+} 
+{% endif %}
+
   .main_nav div.logo a {
     padding-top: {{ section.settings.logo_top_padding }}px;
     padding-bottom: {{ section.settings.logo_top_padding }}px;
@@ -426,6 +436,28 @@
   "name": "Header",
   "class": "header-section",
   "settings": [
+  {
+    "type": "header",
+    "content": "Minicart"
+  },
+  {
+    "type": "checkbox",
+    "id": "show_sale",
+    "label": "Show sale",
+    "default": false
+  },
+  {
+    "type": "product",
+    "id": "featured_product",
+    "label": "Product"
+  },
+  {
+    "type": "text",
+    "id": "gift_value",
+    "label": "Minimum Value",
+    "info" : "Amount required to trigger event"
+  },
+
     {
       "type": "header",
       "content": "Announcement bar"
@@ -464,7 +496,7 @@
       "type": "text",
       "id": "promo_text",
       "label": "Promo text",
-      "info": "Maximum character limit is 170"
+      "info": "Leave blank to hide announcement bar"
     },
     {
       "type": "text",

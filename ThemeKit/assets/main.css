@@ -15329,12 +15329,6 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
   --header-height: calc(var(--mega-nav-height) + var(--promo-banner-height)); }
   @media (min-width: 768px) {
     :root {
-      --header-height: calc(
-      var(--mega-nav-height) + var(--promo-banner-height) +
-        var(--promo-banner-height)
-    ); } }
-  @media (min-width: 768px) {
-    :root {
       --mega-nav-height: 70px; } }
 
 .menu.right {

@@ -5,20 +5,20 @@
 
 :root {
   --mega-nav-height: 50px;
+  @include md() {
+    --mega-nav-height: 70px;
+  }
   --mega-nav-content-max-width: var(
     --max-width-lg
   ); // set max-width for navigation content
   --promo-banner-height: 40px;
   --header-height: calc(var(--mega-nav-height) + var(--promo-banner-height));
-  @include md() {
-    --header-height: calc(
-      var(--mega-nav-height) + var(--promo-banner-height) +
-        var(--promo-banner-height)
-    );
-  }
-  @include md() {
-    --mega-nav-height: 70px;
-  }
+  // @include md() {
+  //   --header-height: calc(
+  //     var(--mega-nav-height) + var(--promo-banner-height) +
+  //       var(--promo-banner-height)
+  //   );
+  // }
 }
 
 .menu.right {

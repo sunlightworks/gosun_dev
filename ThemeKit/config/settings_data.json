@@ -428,7 +428,7 @@
               "menu_4_link": "",
               "image_bottom": "shopify:\/\/shop_images\/Sport_200w.png",
               "image_caption_bottom": "Sport",
-              "image_link_bottom": "shopify:\/\/products\/sport-pro-pack",
+              "image_link_bottom": "shopify:\/\/products\/sport",
               "richtext_bottom": ""
             }
           },
@@ -1623,9 +1623,14 @@
       "header": {
         "type": "header",
         "settings": {
-          "promo_icon": "offline_bolt",
-          "promo_text": "Up to 60% off | Free Flatware on orders $100+",
+          "show_sale": false,
+          "featured_product": "flatware",
+          "gift_value": "100",
+          "promo_icon": "card_giftcard",
+          "promo_text": "",
           "promo_text_mobile": "",
+          "countdown_date": "2020-12-01",
+          "countdown_time": "",
           "promo_link": "shopify:\/\/collections\/todays-deals",
           "promo_external": false,
           "tagline_text": "Free shipping & Returns",
@@ -1726,11 +1731,11 @@
       "1596226695144": {
         "type": "feature-1",
         "settings": {
-          "image": "shopify:\/\/shop_images\/20201003-Brew--022-3.jpg",
-          "overline": "Cyber Monday Sale",
-          "title": "Shop 60% off.",
-          "description": "Stock up on solar gear, this is our biggest sale of the year.",
-          "button1": "Shop Sale",
+          "image": "shopify:\/\/shop_images\/Christmas_Go_Precrop_acace061-d3a2-4d59-8fb7-6a52f144f15b.jpg",
+          "overline": "Tis' the solar season",
+          "title": "Give nature's greatest gift.",
+          "description": "Shop solar gifts before they're gone.",
+          "button1": "Shop Holiday Deals",
           "button1_url": "shopify:\/\/collections\/todays-deals",
           "button2": "",
           "button2_url": "",
