@@ -1627,10 +1627,10 @@
           "featured_product": "flatware",
           "gift_value": "100",
           "promo_icon": "card_giftcard",
-          "promo_text": "",
+          "promo_text": "Buy one, get one |  Flatware, Go, & Thermo",
           "promo_text_mobile": "",
-          "countdown_date": "2020-12-01",
-          "countdown_time": "",
+          "countdown_date": "2020-12-16",
+          "countdown_time": "11:59",
           "promo_link": "shopify:\/\/collections\/todays-deals",
           "promo_external": false,
           "tagline_text": "Free shipping & Returns",
@@ -1645,8 +1645,8 @@
           "logo_mobile": "shopify:\/\/shop_images\/GoSun_Logo--min_5283e9f9-a223-448f-9428-5bef049b2153.png",
           "sale_link": true,
           "sale_icon": "card_giftcard",
-          "sale_text": "<p>Sale ➞<\/p>",
-          "sale_url": "shopify:\/\/collections\/todays-deals",
+          "sale_text": "<p>Gifts ➞<\/p>",
+          "sale_url": "shopify:\/\/pages\/gifts",
           "sale_external": false,
           "main_linklist": "main-menu",
           "main_linklist2": "",
@@ -1875,6 +1875,18 @@
               "activity": "BBQ"
             }
           },
+          "1607117291127": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/darcy.jpg",
+              "featured_product": "solar-kitchen",
+              "rating": 5,
+              "title": "My emergency prep kit is complete.",
+              "description": "I stole the show when my friends saw my set up at our beach party.",
+              "handle": "Darcy",
+              "activity": "beach parties"
+            }
+          },
           "1602281874842-1": {
             "type": "product",
             "settings": {
@@ -1910,13 +1922,27 @@
               "handle": "thomas",
               "activity": "emergencies"
             }
+          },
+          "1607117811837": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Brew_Coffee--03.jpg",
+              "featured_product": "brew",
+              "rating": 1,
+              "title": "My morning hero.",
+              "description": "It's satisfying to enjoy hot, fresh coffee in even the most remote places.",
+              "handle": "Peter",
+              "activity": "off-grid living"
+            }
           }
         },
         "block_order": [
           "1602281874842-0",
+          "1607117291127",
           "1602281874842-1",
           "1602281874842-2",
-          "1602281874842-3"
+          "1602281874842-3",
+          "1607117811837"
         ],
         "settings": {
           "title": "Share your adventures with"
@@ -1937,6 +1963,105 @@
           "background_color": "bg-primary-lighter",
           "btn_type": "btn--primary"
         }
+      },
+      "1607033991340": {
+        "type": "cta-banner",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Website.jpg",
+          "overline": "Gifts of Gratitude",
+          "title": "$10k Product Giveaway",
+          "description": "To give props to those making an impact, GoSun is donating to organizations that you nominate for bringing more sunshine to the world.",
+          "button1": "Learn more",
+          "button1_url": "shopify:\/\/pages\/gratitude",
+          "hero_external": false,
+          "invert": false,
+          "dark_theme": true,
+          "background_color": "bg-primary-lighter",
+          "btn_type": "btn--accent"
+        }
+      },
+      "social-gallery--v2": {
+        "type": "social-gallery--v2",
+        "blocks": {
+          "1607636458462": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/20201003-Brew--023.jpg",
+              "featured_product": "fusion-bag",
+              "rating": 1,
+              "title": "Fast, fun, & delicious.",
+              "description": "I cooked a hearty stew of mixed vegetables & diced chicken.",
+              "handle": "Sarah",
+              "activity": "BBQ"
+            }
+          },
+          "1607637028457": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Flatware_AerialWoman.jpg",
+              "featured_product": "flatware",
+              "rating": 5,
+              "title": "I bring it everywhere.",
+              "description": "Instead of wasting plastic, I now use Flatware.",
+              "handle": "Joy",
+              "activity": "lunch at work"
+            }
+          },
+          "1607636658212": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Go_Pour.jpg",
+              "featured_product": "go",
+              "rating": 5,
+              "title": "Small and simple.",
+              "description": "I can boil just about anything. Super convenient.",
+              "handle": "Rob",
+              "activity": "living off-grid"
+            }
+          },
+          "1607636533000": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/20190330-IMG_9302.jpg",
+              "featured_product": "chill",
+              "rating": 1,
+              "title": "Changed the way we boat.",
+              "description": "I liked my first Chill so much, I got a second one to use as a freezer.",
+              "handle": "Mckenna",
+              "activity": "boating"
+            }
+          }
+        },
+        "block_order": [
+          "1607636458462",
+          "1607637028457",
+          "1607636658212",
+          "1607636533000"
+        ],
+        "settings": {
+          "title": "See why customers love GoSun."
+        }
+      },
+      "feature-1": {
+        "type": "feature-1",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Christmas_Go_Precrop_acace061-d3a2-4d59-8fb7-6a52f144f15b.jpg",
+          "overline": "",
+          "title": "Holiday Gifts",
+          "description": "Whether they like to travel off-grid or relax in the backyard, we've got the perfect gifts for everyone on your list.",
+          "button1": "",
+          "button1_url": "",
+          "button2": "",
+          "button2_url": "",
+          "hero_external": false,
+          "display_text": true,
+          "full_width": true,
+          "invert": false,
+          "dark_theme": false,
+          "background_color": "bg-primary-lighter",
+          "btn_type": "btn--primary",
+          "show_pattern": true
+        }
       }
     },
     "content_for_index": [
@@ -1946,6 +2071,7 @@
       "1576887130693",
       "1602281874842",
       "1602523575506",
+      "1607033991340",
       "1601324457687",
       "1596824502217",
       "1596230707797",

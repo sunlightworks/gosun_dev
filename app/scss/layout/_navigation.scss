@@ -11,14 +11,15 @@
   --mega-nav-content-max-width: var(
     --max-width-lg
   ); // set max-width for navigation content
-  --promo-banner-height: 40px;
-  --header-height: calc(var(--mega-nav-height) + var(--promo-banner-height));
-  // @include md() {
-  //   --header-height: calc(
-  //     var(--mega-nav-height) + var(--promo-banner-height) +
-  //       var(--promo-banner-height)
-  //   );
-  // }
+  --promo-banner-height: 60px;
+  --top-bar-height: 40px;
+  --header-height: calc(var(--mega-nav-height) + + var(--top-bar-height));
+  @include md() {
+    --header-height: calc(
+      var(--mega-nav-height) + var(--top-bar-height) +
+        var(--promo-banner-height)
+    );
+  }
 }
 
 .menu.right {

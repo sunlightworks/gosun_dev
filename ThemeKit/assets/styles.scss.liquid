@@ -54,6 +54,20 @@ Description: Shopify Theme (https://www.shopify.com/?ref=out-of-the-sandbox)
 #Font-Face
 #Custom Styles */
 
+
+
+{% if section.settings.promo_text %}
+--header-height: calc(var(--mega-nav-height) + var(--promo-banner-height));
+@media (min-width: 768px) {
+  --header-height: calc(
+      var(--mega-nav-height) + var(--promo-banner-height) +
+        var(--promo-banner-height)
+    );
+} 
+{% endif %}
+
+
+
 /* #Variables
 ================================================== */
 

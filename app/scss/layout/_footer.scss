@@ -19,7 +19,7 @@
   background: var(--bg-footer);
   border-top: none !important;
   a {
-    color: var(--color-contrast-medium) !important;
+    color: var(--color-contrast-low) !important;
   }
   @include md-max() {
     .footer-menu-wrap h6 {

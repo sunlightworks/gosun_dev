@@ -18,63 +18,51 @@
     <div class="drawer__body padding-x-md padding-y-sm js-drawer__body  position-relative">
 
 
-    {% if section.settings.show_sale %}
-      {%- assign product = all_products[section.settings.featured_product] -%}
-      {% assign found_title = false %}
-      {% assign gift_value = section.settings.gift_value %}
-      {% assign cart_total = cart.total_price %}
-      {% assign gift_value_left = gift_value | minus: cart_total %}
-      {% assign variant_id = product.variants.first.id %}
+    <!-- {% if section.settings.show_sale %}
+     {% include '_promo-scripts' %}
+    {% endif %} -->
+<!-- 
+  <script>
 
-      {% for item in cart.items %}
-      {% if item.product.id == variant_id  %}
-        {% assign found_title = true %}
-      {% endif %}
-    {% endfor %}
+(function(){
 
+// when I click on the add to cart button
+$('.add_to_cart').on('click', function(e){
+  var variantId = 31989958508638;
+  console.log('Success')
+  jQuery.getJSON('/cart.js', function(data){
+   var items = data.items;
+   console.log(items);
+   var currentVarId;
+   var quantity;
+   var isProduct = false;
+   items.forEach(function(e,i,a){
+     console.log(e);
+     currentVarId = e.variant_id;
      
-      <div class="alert alert--success alert--is-visible js-alert margin-y-xs" role="alert">
-        <div class="flex items-center">
-          <i class="icon--sm material-icons-outlined margin-right-xxs">card_giftcard</i>
-          <span class="money js-cart_gift text-sm">
-            {% if gift_value_left > 0 %}
-            Free {{ product.title }} set on orders ${{ section.settings.minimum_value }}+ <br><a href='/collections/todays-deals' class='color-success-dark'>Add {{ gift_value_left | money }}  to unlock your free gift ➞</a>
-            {% else %}
-              You've unlocked a free {{ product.title }}! 
-              {% if found_title == false %}
-              <br>(Refresh the page if it doesn't appear in your cart)
-              {% endif %}
-            {% endif %}
-          </span>
-        </div>
-      </div>
-
-      <script>
-        console.log("{{ variant.id }} before");
-      </script>
-      {% unless cart.item_count == 0 or product.empty? or product.variants.first.available == false %}
-      
-        {% if gift_value_left < 0 and found_title == false %}
-          <script>
-            console.log("{{ variant.id }} success");
-
-            $( document ).ready(function() {
-              var variantId = {{ variant.id }};
-              jQuery.post('/cart/add.js', {
-                quantity: 1,
-                id: variantId
-              });
-              setTimeout( 
-                function() {
-                  window.location.reload(false);
-                }, 1000);
-              });
-          </script>
-        {% endif %} 
-      {% endunless %}
-    {% endif %}
-
-  
+     if(currentVarId === variantId) {
+       isProduct = true;
+       quantity = e.quantity;
+     }
+   });
+   
+    if(!isProduct) {
+      jQuery.post('/cart/add.js', {
+        quantity: 1,
+        id: variantId
+      });
+    } else {
+      if(quantity > 1) {
+        jQuery.post('/cart/change.js', {
+          quantity: 1,
+          id: variantId
+    });
+   }
+  }
+ });
+});
+})();
+  </script> -->
 
       <!-- empty content -->
       <div class="js-empty-cart__message {% if cart.item_count > 0 %}hidden{% endif %}">
@@ -172,4 +160,3 @@
 </div>
 
 {% endunless %}
-

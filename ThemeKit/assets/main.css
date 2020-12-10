@@ -15301,7 +15301,7 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
   background: var(--bg-footer);
   border-top: none !important; }
   .footer a {
-    color: var(--color-contrast-medium) !important; }
+    color: var(--color-contrast-low) !important; }
   @media (max-width: 768px) {
     .footer .footer-menu-wrap h6 {
       border-top: 1px solid var(--color-contrast-high); } }
@@ -15325,11 +15325,18 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
   --mega-nav-content-max-width: var(
     --max-width-lg
   );
-  --promo-banner-height: 40px;
-  --header-height: calc(var(--mega-nav-height) + var(--promo-banner-height)); }
+  --promo-banner-height: 60px;
+  --top-bar-height: 40px;
+  --header-height: calc(var(--mega-nav-height) + + var(--top-bar-height)); }
   @media (min-width: 768px) {
     :root {
       --mega-nav-height: 70px; } }
+  @media (min-width: 768px) {
+    :root {
+      --header-height: calc(
+      var(--mega-nav-height) + var(--top-bar-height) +
+        var(--promo-banner-height)
+    ); } }
 
 .menu.right {
   display: flex; }
