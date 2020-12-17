@@ -1,5 +1,4 @@
 (function(){
-
   // when I click on the add to cart button
   $('.add_to_cart').on('click', function(e){
     var variantId = 31989958508638;
@@ -38,20 +37,19 @@
   })();
 
 
-
 $(window).resize(function(){
   if ($(window).width() <= 768){	
     $('.width-small-1-1').removeClass('width-1-2');
   }	
 });
  
+
+// Tone Styling
 console.log('🎨  Adding styles to Tone SMS iframe');
 document.addEventListener("DOMContentLoaded", function(event) {
 $('#sms-opt-in').contents().find('button').addClass('btn','btn--subtle');
 console.log('✅  Added styles to Tone SMS iframe')
 });
-
-
 
 $(function() {
   $('.purchase-details').html($('.purchase-details').html().replace("undefined", "")); // Hide text near buy button
@@ -66,53 +64,7 @@ $(function() {
   $('.purchase-details').html($('.purchase-details').html().replace("undefined", ""));
 });
 
-// ============================================================================
-// Navigation / Product
-// ============================================================================
-/*
-function sticktothetop() {
-var window_top = $(window).scrollTop();
-var top = $('#stick-here').offset().top;
-  // Show/hide menu on scroll
-if (window_top > top) {
-    $('#stickThis').addClass('stick');
-    $('#stick-here').height($('#stickThis').outerHeight());
-    $('.sticky-fade').fadeIn("fast");
 
-} else {
-    $('#stickThis').removeClass('stick');
-    $('#stick-here').height(0);
-    $('.sticky-fade').fadeOut("fast");
-
-}
-}
-$(function(){
-  $(window).scroll(sticktothetop);
-  sticktothetop();
-  console.log('Sticking to the top');
-});
-
-$(document).ready(function(){
-$( "a.scrollLink" ).click(function( event ) {
-    event.preventDefault();
-    $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 0);
-   
-});
-});
-
-$(window).scroll(function() {
-var scrollDistance = $(window).scrollTop();
-// Assign active class to nav links while scolling
-$('section--page').each(function(i) {
-    if ($(this).position().top <= scrollDistance) {
-        $('.subnav__menu a.active-tab').removeClass('active-tab');
-        $('.subnav__menu a').eq(i).addClass('active-tab');
-    }
-    console.log('Counting sections');
-});
-}).scroll();
-
-*/
 // ============================================================================
 // Navigation / Promo Banner
 // ============================================================================
@@ -178,11 +130,21 @@ if ($(window).width() > 768 ) {
 // ============================================================================
 // Media / Video
 // ============================================================================
-$('#play').on('click', function(e) {
+// $('#play').on('click', function(e) {
+//   e.preventDefault();
+//   $("#player")[0].src += "?autoplay=1;rel=0;modestbranding=1&amp;title=";
+//   $('#player').show();
+//   $('#video-cover').hide();
+//   $('.overlay-bottom').hide();
+//   $('.btn-wrap').hide();
+// });
+
+
+$('[id=play]').on('click', function(e) {
   e.preventDefault();
-  $("#player")[0].src += "?autoplay=1;rel=0;modestbranding=1&amp;title=";
-  $('#player').show();
-  $('#video-cover').hide();
+  $("[id=player]")[0].src += "?autoplay=1;rel=0;modestbranding=1&amp;title=";
+  $('[id=player]').show();
+  $('[id=video-cover]').hide();
   $('.overlay-bottom').hide();
   $('.btn-wrap').hide();
 });
