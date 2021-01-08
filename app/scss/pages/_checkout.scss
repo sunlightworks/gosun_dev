@@ -2,6 +2,15 @@
   background-color: var(--color-max) !important;
 }
 
+.field__input {
+  padding: 0.9285714286em 0.7857142857em;
+}
+
+.section__title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
 /*
 img.logo__image.logo__image--small {
     display: block;

@@ -15291,23 +15291,19 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
   margin: 0 auto; }
 
 .footer {
-  margin-bottom: -30px; }
-
-.footer a {
-  text-decoration: none !important; }
-  .footer a:hover {
-    opacity: 0.72 !important; }
-
-.footer p {
-  font-size: var(--text-sm);
-  line-height: 1em !important;
-  margin-top: 0; }
-
-.footer {
   background: var(--bg-footer);
-  border-top: none !important; }
+  border-top: none !important;
+  margin-bottom: -30px; }
+  .footer p {
+    font-size: var(--text-sm);
+    line-height: 1em !important;
+    margin-top: 0; }
   .footer a {
-    color: var(--color-contrast-low) !important; }
+    color: var(--color-white) !important;
+    text-decoration: none !important;
+    font-size: var(--text-md); }
+    .footer a:hover {
+      color: var(--color-primary) !important; }
   @media (max-width: 768px) {
     .footer .footer-menu-wrap h6 {
       border-top: 1px solid var(--color-contrast-high); } }
@@ -15316,11 +15312,8 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
   color: var(--color-contrast-medium); }
 
 .footer_credits {
-  border-top: 1px solid var(--color-contrast-medium);
-  margin-top: 70px; }
-  .footer_credits a {
-    font-size: var(--text-sm);
-    color: var(--color-contrast-medium) !important; }
+  border-top: none;
+  margin-top: var(--space-xl); }
 
 .payment_methods,
 .footer-logo {
@@ -15698,33 +15691,6 @@ div.dropdown.menu {
 .mobile_nav-fixed--false #pagecontent {
   padding-bottom: 0px !important; }
 
-/* Pages / Support */
-.shogun-tab-box {
-  color: var(--color-contrast-higher) !important;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 600;
-  margin-left: -4px;
-  padding: 21px 12px; }
-  @media (min-width: 576px) {
-    .shogun-tab-box {
-      padding: 21px 18px; } }
-
-.shogun-heading-component h1 {
-  color: var(--color-contrast-higher) !important; }
-
-/* Active */
-.shogun-tabs > li.shogun-tab-active > .shogun-tab-box {
-  background-color: var(--color-contrast-lower) !important; }
-  .shogun-tabs > li.shogun-tab-active > .shogun-tab-box .shogun-tab-title {
-    color: var(--color-contrast-higher) !important;
-    caret-color: transparent; }
-  .shogun-tabs > li.shogun-tab-active > .shogun-tab-box:hover {
-    background-color: var(--color-contrast-lower) !important; }
-    .shogun-tabs > li.shogun-tab-active > .shogun-tab-box:hover .shogun-tab-title {
-      color: var(--color-contrast-higher) !important;
-      caret-color: transparent; }
-
 /* #SubNav Bar - Base Styles 
 ================================================== */
 /* #Sticky - Custom buy button
@@ -15957,6 +15923,43 @@ td {
   /* color: rgba(33, 33, 33, 1); */
   color: var(--color-contrast-high) !important; }
 
+/* Pages / Support */
+.shogun-tab-box {
+  color: var(--color-contrast-higher) !important;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  margin-left: -4px;
+  padding: 21px 12px; }
+  @media (min-width: 576px) {
+    .shogun-tab-box {
+      padding: 21px 18px; } }
+
+.shogun-heading-component h1 {
+  color: var(--color-contrast-higher, #1c1c21) !important;
+  line-height: var(--heading-line-height, 1.2) !important;
+  letter-spacing: var(--letter-spacing-tight) !important;
+  font-size: var(--text-xxl, 2.074em) !important;
+  font-weight: 900 !important; }
+
+/* Active */
+.shogun-tabs > li.shogun-tab-active > .shogun-tab-box {
+  background-color: var(--color-primary-lighter) !important; }
+  .shogun-tabs > li.shogun-tab-active > .shogun-tab-box .shogun-tab-title {
+    color: var(--color-contrast-higher) !important;
+    caret-color: transparent; }
+  .shogun-tabs > li.shogun-tab-active > .shogun-tab-box:hover {
+    background-color: var(--color-contrast-lower) !important; }
+    .shogun-tabs > li.shogun-tab-active > .shogun-tab-box:hover .shogun-tab-title {
+      color: var(--color-contrast-higher) !important;
+      caret-color: transparent; }
+
+.shogun-tab-title {
+  color: var(--color-contrast-higher) !important; }
+
+.shogun-tabs li {
+  flex-grow: 0 !important; }
+
 #sms-opt-in button {
   background-color: var(--color-contrast-lower) !important;
   color: var(--color-contrast-medium) !important; }
@@ -16045,6 +16048,13 @@ p.modal_price {
 
 .default-background {
   background-color: var(--color-max) !important; }
+
+.field__input {
+  padding: 0.9285714286em 0.7857142857em; }
+
+.section__title {
+  font-size: var(--text-lg);
+  font-weight: 700; }
 
 /*
 img.logo__image.logo__image--small {

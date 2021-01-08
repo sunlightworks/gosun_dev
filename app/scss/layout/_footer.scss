@@ -1,25 +1,19 @@
 .footer {
-  margin-bottom: -30px;
-}
-
-.footer a {
-  text-decoration: none !important;
-  &:hover {
-    opacity: 0.72 !important;
-  }
-}
-
-.footer p {
-  font-size: var(--text-sm);
-  line-height: 1em !important;
-  margin-top: 0;
-}
-
-.footer {
   background: var(--bg-footer);
   border-top: none !important;
+  margin-bottom: -30px;
+  p {
+    font-size: var(--text-sm);
+    line-height: 1em !important;
+    margin-top: 0;
+  }
   a {
-    color: var(--color-contrast-low) !important;
+    color: var(--color-white) !important;
+    text-decoration: none !important;
+    font-size: var(--text-md);
+    &:hover {
+      color: var(--color-primary) !important;
+    }
   }
   @include md-max() {
     .footer-menu-wrap h6 {
@@ -33,12 +27,8 @@
 }
 
 .footer_credits {
-  border-top: 1px solid var(--color-contrast-medium);
-  margin-top: 70px;
-  a {
-    font-size: var(--text-sm);
-    color: var(--color-contrast-medium) !important;
-  }
+  border-top: none;
+  margin-top: var(--space-xl);
 }
 
 .payment_methods,
