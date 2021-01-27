@@ -14,16 +14,15 @@ Descr: Container of information used as teaser for further content exploration
   background-color: var(--color-white);
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: var(--shadow-sm);
   transition: 0.3s;
   width: 100%;
   height: var(--space-xxxxl);
   transition: 0.3s;
+  @include cardShadow();
   @include lg() {
     height: 300px;
   }
   &:hover {
-    box-shadow: var(--shadow-md);
     .hide-content {
       opacity: 0;
     }
