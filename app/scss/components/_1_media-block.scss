@@ -3,6 +3,7 @@
   height: 100%;
   width: 100%;
   min-height: 250px;
+  position: relative;
   @include breakpoint(lg) {
     min-height: 350px;
   }
