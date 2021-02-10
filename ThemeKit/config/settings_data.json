@@ -1783,9 +1783,9 @@
       "header": {
         "type": "header",
         "settings": {
-          "show_sale": false,
-          "cart_promo": "Free accessory discounts applied at checkout.",
+          "show_message": true,
           "featured_product": "thermo",
+          "cart_promo_text": "Free accessory discounts applied at checkout.",
           "gift_value": "100",
           "promo_icon": "local_shipping",
           "promo_text": "Free shipping | Free returns",

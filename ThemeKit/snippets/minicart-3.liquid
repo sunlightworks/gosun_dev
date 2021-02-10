@@ -2,8 +2,6 @@
 {% assign cart_total = cart.total_price %}
 {% assign shipping_value_left = shipping_value | minus: cart_total %}
 
-
-
 {% unless settings.cart_action == 'ajax' and template contains 'cart' %}
 <div class="drawer drawer--modal dr-cart js-drawer js-drawer--modal" id="drawer-cart-id">
   <div class="drawer__content flex flex-column cart_content" role="alertdialog" aria-labelledby="drawer-cart-title">
@@ -16,53 +14,8 @@
     </header>
 
     <div class="drawer__body padding-x-md padding-y-sm js-drawer__body  position-relative">
-
-
-    <!-- {% if section.settings.show_sale %}
-     {% include '_promo-scripts' %}
-    {% endif %} -->
-<!-- 
-  <script>
-
-(function(){
-
-// when I click on the add to cart button
-$('.add_to_cart').on('click', function(e){
-  var variantId = 31989958508638;
-  console.log('Success')
-  jQuery.getJSON('/cart.js', function(data){
-   var items = data.items;
-   console.log(items);
-   var currentVarId;
-   var quantity;
-   var isProduct = false;
-   items.forEach(function(e,i,a){
-     console.log(e);
-     currentVarId = e.variant_id;
      
-     if(currentVarId === variantId) {
-       isProduct = true;
-       quantity = e.quantity;
-     }
-   });
-   
-    if(!isProduct) {
-      jQuery.post('/cart/add.js', {
-        quantity: 1,
-        id: variantId
-      });
-    } else {
-      if(quantity > 1) {
-        jQuery.post('/cart/change.js', {
-          quantity: 1,
-          id: variantId
-    });
-   }
-  }
- });
-});
-})();
-  </script> -->
+    {% include '_promo-scripts' %}
 
       <!-- empty content -->
       <div class="js-empty-cart__message {% if cart.item_count > 0 %}hidden{% endif %}">
@@ -131,7 +84,6 @@ $('.add_to_cart').on('click', function(e){
       </summary>
     </div>
 
-
     <footer class="padding-x-md padding-y-sm border-top border-contrast-lower flex-shrink-0">
       <p class="flex justify-between js-cart_subtotal text-lg font-medium"><span>Your total</span> <span>{{ cart.total_price | money }}</span></p>
 
@@ -143,8 +95,7 @@ $('.add_to_cart').on('click', function(e){
           </div>
         </div>
       {% endif %}
-      
-
+     
       {% if settings.go_to_checkout %}
         <button type="submit" class="add_to_cart action_button btn btn--accent btn--md width-100%" id="checkout">{% if settings.show_lock_icon %}<span class="material-icons-outlined icon-lock"></span>{% endif %}{{ 'layout.general.checkout' | t }}</button>
       {% else %}

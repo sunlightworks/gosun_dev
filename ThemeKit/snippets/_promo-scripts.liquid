@@ -4,6 +4,7 @@
 {% assign cart_total = cart.total_price %}
 {% assign gift_value_left = gift_value | minus: cart_total %}
 {% assign variant_id = product.variants.first.id %}
+{% assign cart_promo_text = section.settings.cart_promo_text %}
 
 {% for item in cart.items %}
 <script>
@@ -15,6 +16,23 @@
 {% endfor %}
 
 
+{% comment %} START / Promo text {% endcomment %} 
+{% if cart_promo_text != blank %}
+  <div class="alert alert--success alert--is-visible js-alert margin-y-xs" role="alert">
+    <div class="flex items-center">
+      <i class="icon--sm material-icons-outlined margin-right-xxs">card_giftcard</i>
+      <span class="money text-sm">{{ cart_promo_text }}</span>
+    </div>
+  </div>
+{% endif %}
+
+<script>
+  console.log("Text: {{ cart_promo_text }}");
+</script>
+{% comment %} END / Promo text {% endcomment %} 
+
+
+{% if section.settings.active_sale %}
 <div class="alert alert--success alert--is-visible js-alert margin-y-xs" role="alert">
   <div class="flex items-center">
     <i class="icon--sm material-icons-outlined margin-right-xxs">card_giftcard</i>
@@ -31,25 +49,26 @@
   </div>
 </div>
 
-<script>
-  console.log("{{ variant_id }} before {{ item.variant.id }} {{ product.title }}");
-</script>
-{% unless cart.item_count == 0 or product.empty? or product.variants.first.available == false %}
+  <script>
+    console.log("{{ variant_id }} before {{ item.variant.id }} {{ product.title }}");
+  </script>
+  {% unless cart.item_count == 0 or product.empty? or product.variants.first.available == false %}
 
-  {% if gift_value_left < 0 and found_title == false %}
-    <script>
-      console.log("{{ variant_id }} success");
-      $( document ).ready(function() {
-        var variantId = {{ product.id }};
-        jQuery.post('/cart/add.js', {
-          quantity: 1,
-          id: variantId
-        });
-        setTimeout( 
-          function() {
-            window.location.reload(false);
-          }, 1000);
-        });
-    </script>
-  {% endif %} 
-{% endunless %}
+    {% if gift_value_left < 0 and found_title == false %}
+      <script>
+        console.log("{{ variant_id }} success");
+        $( document ).ready(function() {
+          var variantId = {{ product.id }};
+          jQuery.post('/cart/add.js', {
+            quantity: 1,
+            id: variantId
+          });
+          setTimeout( 
+            function() {
+              window.location.reload(false);
+            }, 1000);
+          });
+      </script>
+    {% endif %} 
+  {% endunless %}
+{% endif %}
