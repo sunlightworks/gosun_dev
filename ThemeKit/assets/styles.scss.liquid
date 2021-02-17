@@ -5269,6 +5269,41 @@ div.container.gallery-content {
   }
 }
 
+/* Special styles for Gallery Slideshow */
+.gallery-slideshow-slide {
+  text-align: center;
+  background-color: white !important;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.gallery-cell-heading-div h1 {
+  color: #1b3550 !important;
+}
+.gallery-cell-image-two-per-row-mobile, 
+.gallery-cell-image-three-per-row-mobile {
+  display: inline-block;
+  width: 20%;
+  > span {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  img {
+    padding: 0.5em;
+  }
+}
+.gallery-cell-image-two-per-row-mobile {
+  @include respond-to('medium-down') {
+    width: 34%;
+  }
+}
+.gallery-cell-image-three-per-row-mobile {
+  @include respond-to('medium-down') {
+    width: 33.333%;
+  }
+}
+
+
 /* #Recently Viewed
 ================================================== */
 
