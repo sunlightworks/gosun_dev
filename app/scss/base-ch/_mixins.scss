@@ -6,6 +6,12 @@
   }
 }
 
+@mixin gradient-text() {
+  background: -webkit-linear-gradient(#59d5f9, var(--color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 // edit font rendering -> tip: use for light text on dark backgrounds
 @mixin fontSmooth {
   -webkit-font-smoothing: antialiased;

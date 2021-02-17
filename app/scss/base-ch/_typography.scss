@@ -110,11 +110,12 @@ a,
 a:visited {
   color: var(--color-contrast-higher);
 }
-a:hover {
-  color: var(--color-contrast-medium);
-}
-.nav a:hover {
-  color: var(--color-link-hover);
+
+.nav a,
+a {
+  &:hover {
+    color: var(--color-link-hover);
+  }
 }
 
 .svg_logo {
