@@ -257,71 +257,85 @@
       </style>
   </noscript>
 
-  <body class="{% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %}"
-    data-money-format="{{ shop.money_format }}" data-shop-url="{{ shop.url }}" data-theme="default" > 
-      
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGR467V"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
-      
-      <!----------- SHOPIFY ----------->
-      {% unless condition %}
-        
-      {% endunless %}
-        {% section 'header' %}
-
-        <div class="mega-menu-container">
-          {% if settings.mega_menu_1 %}
-            {% section 'mega-menu-1' %}
-          {% endif %}
-          {% if settings.mega_menu_2 %}
-            {% section 'mega-menu-2' %}
-          {% endif %}
-          {% if settings.mega_menu_3 %}
-            {% section 'mega-menu-3' %}
-          {% endif %}
-          {% if settings.mega_menu_4 %}
-            {% section 'mega-menu-4' %}
-          {% endif %}
-          {% if settings.mega_menu_5 %}
-            {% section 'mega-menu-5' %}
-          {% endif %}
-        </div>
-
-        {% unless feature_image %}
-        <div class="container main content">
-        {% endunless %}
-
-        {{ content_for_layout }}
-        </div>
-
-        {% unless template contains 'customer' %}
-          {% section 'newsletter' %}
-        {% endunless %}
-
-   
-        {% section 'footer' %}
-
-        {% if settings.size_chart != blank %}
-          {% include 'popup-size-chart' %}
-        {% endif %}
-        {% if settings.newsletter_popup %}
-          {% include 'popup-newsletter' %}
-        {% endif %}
-        {% if settings.quick_shop_enabled %}
-          {% include 'popup-quick-shop' %}
-        {% endif %}
-        {% if settings.disqus_enabled %}
-          {% if template contains "blog" or template contains "article" or template contains "index" %}
-            <script id="dsq-count-scr" src="//{{ settings.disqus_shortname }}.disqus.com/count.js" async></script>
-          {% endif %}
-        {% endif %}
-      <!----------- End SHOPIFY ----------->
-      
-
+  <body 
+    class="{% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %}"
+    data-money-format="{{ shop.money_format }}" data-shop-url="{{ shop.url }}" data-theme="default"  data-barba="wrapper" > 
     
-      <!----------- APPS 2 ----------->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGR467V"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    {% section 'header' %}
+
+    <div class="mega-menu-container">
+      {% if settings.mega_menu_1 %}
+        {% section 'mega-menu-1' %}
+      {% endif %}
+      {% if settings.mega_menu_2 %}
+        {% section 'mega-menu-2' %}
+      {% endif %}
+      {% if settings.mega_menu_3 %}
+        {% section 'mega-menu-3' %}
+      {% endif %}
+      {% if settings.mega_menu_4 %}
+        {% section 'mega-menu-4' %}
+      {% endif %}
+      {% if settings.mega_menu_5 %}
+        {% section 'mega-menu-5' %}
+      {% endif %}
+    </div>
+      
+    <main data-barba="container" data-barba-namespace="{{ handle }}" {% unless feature_image %}class="container main content"{% endunless %}>
+      {{ content_for_layout }}
+    </main>
+
+    {% unless template contains 'customer' %}
+      {% section 'newsletter' %}
+    {% endunless %}
+
+    {% section 'footer' %}
+
+    {% if settings.size_chart != blank %}
+      {% include 'popup-size-chart' %}
+    {% endif %}
+    {% if settings.newsletter_popup %}
+      {% include 'popup-newsletter' %}
+    {% endif %}
+    {% if settings.quick_shop_enabled %}
+      {% include 'popup-quick-shop' %}
+    {% endif %}
+    {% if settings.disqus_enabled %}
+      {% if template contains "blog" or template contains "article" or template contains "index" %}
+        <script id="dsq-count-scr" src="//{{ settings.disqus_shortname }}.disqus.com/count.js" async></script>
+      {% endif %}
+    {% endif %}      
+    
+    <!-- START / Third-party scripts / Added by Latimer Design -->
+      <!-- Barba.js / Page transitions -->
+      <script src="https://unpkg.com/@barba/core"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+      <!-- GSAP / Animations -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+      <script>
+        barba.init({
+          sync: true,
+          transitions: [{
+            name: 'opacity-transition',
+            leave(data) {
+              return gsap.to(data.current.container, {
+                opacity: 0
+              });
+            },
+            enter(data) {
+              return gsap.from(data.next.container, {
+                opacity: 0
+              });
+            }
+          }]
+        });
+      </script>
+
       {% if template contains 'product' or 'collection'%}
         <!-- Currency Switcher / Accounts -->{% include 'mlveda-currencies-switcher' %}{% include 'mlveda-currencies' %}{% include 'mlveda-flag' %}
       {% endif %}
@@ -329,11 +343,9 @@
         <!-- AfterShip / Shipping --><div id="as-root"></div><script>(function(e,t,n){var r,i=e.getElementsByTagName(t)[0];if(e.getElementById(n))return;r=e.createElement(t);r.id=n;r.src="https://button.aftership.com/all.js";i.parentNode.insertBefore(r,i)})(document,"script","aftership-jssdk")</script>
         <script>
           window.stamped_disable_font=true
-        </script>
-        <!----------- End APPS 2 ----------->
-
+        </script> 
       
-    
+    <!-- END / Third-party scripts / Added by Latimer Design -->
 
       {% if settings.show_shipping_calculator and template contains "cart" %}
         {% include 'cart-shipping-scripts' %}
