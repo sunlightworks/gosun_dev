@@ -485,16 +485,9 @@ $(function() {
 
       });
 
-      cart_action_html += '<span>{{ 'layout.general.subtotal' | t }}</span><span class="money">' + Shopify.formatMoney(cart.total_price, $('body').data('money-format')) + '</span>';
-
       
-      if(total_savings > 0 ) {
-        cart_savings_html = "{{ 'layout.general.savings' | t }} &nbsp;" + Shopify.formatMoney(total_savings - discounted_price_total, $('body').data('money-format'));
-      } else {
-        cart_savings_html = "";
-      }
-
       let gift_value = 10000;
+      let free_shipping = 5000;
       let cart_total = cart.total_price;
       let gift_value_left = gift_value - cart_total;
 
@@ -503,6 +496,20 @@ $(function() {
       } else {
         cart_gift_html = "You've unlocked a free Flatware set! <br>(Refresh the page if it doesn't appear in your cart)";
       }
+
+      if(cart_total >= free_shipping ) {
+        cart_action_html += '<p class="flex justify-between"><span>{{ 'layout.general.subtotal' | t }}</span><span class="money">' + Shopify.formatMoney(cart.total_price, $('body').data('money-format')) + '</span></p>' + '<p class="flex justify-between"><span>Shipping</span> <span>Free</span></p>';
+      } else {
+        cart_action_html += '<p class="flex justify-between"><span>{{ 'layout.general.subtotal' | t }}</span><span class="money">' + Shopify.formatMoney(cart.total_price, $('body').data('money-format')) + '</span></p>' + '<p class="flex justify-between"><span>Shipping</span> <span>Calculated at checkout</span></p>';
+      }
+      
+      if(total_savings > 0 ) {
+        cart_savings_html = "{{ 'layout.general.savings' | t }} &nbsp;" + Shopify.formatMoney(total_savings - discounted_price_total, $('body').data('money-format'));
+      } else {
+        cart_savings_html = "";
+      }
+
+
     }
 
 
