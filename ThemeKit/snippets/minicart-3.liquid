@@ -78,9 +78,9 @@
           {% endfor %}
         </ol>
       
-      <summary class="padding-y-sm border-top border-contrast-lower flex-shrink-0  js-cart_subtotal">
-        <p class="flex justify-between"><span>{{ 'layout.general.subtotal' | t }}</span> <span>{{ cart.total_price | money }}</span></p>
-        <p class="flex justify-between"><span>Shipping</span> <span>{% if cart.total_price >= 5000 %}
+      <summary class="padding-y-sm border-top border-contrast-lower flex-shrink-0  ">
+        <p class="flex justify-between js-cart_subtotal"><span>{{ 'layout.general.subtotal' | t }}</span> <span>{{ cart.total_price | money }}</span></p>
+        <p class="flex justify-between js-cart_shipping"><span>Shipping</span> <span>{% if cart.total_price >= 5000 %}
           Free
           {% else %}
           Calculated at checkout
