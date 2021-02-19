@@ -15326,7 +15326,7 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
   );
   --promo-banner-height: 60px;
   --top-bar-height: 40px;
-  --header-height: calc(var(--mega-nav-height) + + var(--top-bar-height)); }
+  --header-height: calc(var(--mega-nav-height) + var(--top-bar-height)); }
   @media (min-width: 768px) {
     :root {
       --mega-nav-height: 70px; } }
