@@ -1161,6 +1161,11 @@
         "type": "checkbox",
         "id": "mega_menu_5",
         "label": "Enable mega menu 5"
+      },
+      {
+        "type": "checkbox",
+        "id": "mega_menu_6",
+        "label": "Enable mega menu 6"
       }
     ]
   },
@@ -1529,7 +1534,7 @@
       {
         "type": "text",
         "id": "cart_promo_text",
-        "label": "Cart banner",
+        "label": "Cart message",
         "info": "Show information at the top of the cart. Only visible when Spend X Get Y Free is disabled."
       },
       {
@@ -1622,11 +1627,6 @@
         "id": "display_savings",
         "label": "Show total savings",
         "default": false
-      },
-      {
-        "type": "richtext",
-        "id": "cart_message",
-        "label": "Cart message"
       },
       {
         "type": "header",
