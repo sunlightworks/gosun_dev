@@ -294,6 +294,9 @@
     </main>
 
     {% unless template contains 'customer' %}
+      {% unless template contains 'index' %}
+        {% section 'validator-bar' %}
+      {% endunless %}
       {% section 'newsletter' %}
     {% endunless %}
 
