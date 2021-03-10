@@ -33,6 +33,7 @@
         /cdn1.affirm.com/,
         /mlveda-shopifyapps.s3.amazonaws.com/,
         /app.123formbuilder.com/,
+        /cdn.intelliticks.com/
         ]
     </script>
 
@@ -55,67 +56,61 @@
   <!----------- End META -----------> 
   
 
-    <!----------- STYLE ----------->
-      {{ 'styles.scss.css' | asset_url | stylesheet_tag }}
-      {{ 'main.css' | asset_url | stylesheet_tag }}
-      {{ 'fonts.scss.css' | asset_url | stylesheet_tag }}
-      
-
-      {% if template contains 'product' %}
-        <!-- Fancybox / Gallery Lightbox -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.css">
-      {% endif %}
-
-
-      <!-- Icons -->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" as="font" type="text/css" >
-    <!----------- End STYLE ----------->
-
+  <!----------- STYLE ----------->
+    {{ 'styles.scss.css' | asset_url | stylesheet_tag }}
+    {{ 'main.css' | asset_url | stylesheet_tag }}
+    {{ 'fonts.scss.css' | asset_url | stylesheet_tag }}
     
-    <!----------- GOOGLE ----------->
-      <meta charset="utf-8">
-      <meta http-equiv="cleartype" content="on">
-      <meta name="robots" content="index,follow">
-      <meta name="p:domain_verify" content="374cefa258eaa52fdf33dff92fc7e19f"/>
-      <!-- Google Verification -->    
-      <meta name="google-site-verification" content="MqNDOMEsgaRJnIU89KQtsl77mryAlUCmuojDsUoA0sk" />
-      <meta name="google-site-verification" content="N7DY-MskUyNlFN88gHeuceAF4zSbRO3mos9qzhCdhA8" />  
-      <meta name="google-site-verification" content="ScjGgurM8TGo-6bf1C0wj8Zm1YbDMiMrOhQ64B6ZpTE" />  
-      <!-- Google Merchant Verification 8.20.19 -->
-      <meta name="google-site-verification" content="c-5yt-9GO0k92MBhOsolW8ylHUVkNMvVG_N0rqNQlUY" />  
-      
-      <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-958591666"></script>Global site tag (gtag.js) - Google Ads: 958591666 -->
-      <!--<script src="https://www.googleoptimize.com/optimize.js?id=GTM-TQBQQR4"></script> Google Optimize (gtag.js) - Google Ads: 958591666 -->
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-958591666');// AdWords ?
-        gtag('config', 'UA-43402130-1');// Analytics
-        gtag('config', 'GTM-MGR467V'); // Google Tag Manager
-      </script>
-      <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-MGR467V');</script>
-      <!-- End Google Tag Manager -->    
+
+    {% if template contains 'product' %}
+      <!-- Fancybox / Gallery Lightbox -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.css">
+    {% endif %}
+
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" as="font" type="text/css" >
+  <!----------- End STYLE ----------->
+
+  
+  <!----------- GOOGLE ----------->
+    <meta charset="utf-8">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="robots" content="index,follow">
+    <meta name="p:domain_verify" content="374cefa258eaa52fdf33dff92fc7e19f"/>
+    <!-- Google Verification -->    
+    <meta name="google-site-verification" content="MqNDOMEsgaRJnIU89KQtsl77mryAlUCmuojDsUoA0sk" />
+    <meta name="google-site-verification" content="N7DY-MskUyNlFN88gHeuceAF4zSbRO3mos9qzhCdhA8" />  
+    <meta name="google-site-verification" content="ScjGgurM8TGo-6bf1C0wj8Zm1YbDMiMrOhQ64B6ZpTE" />  
+    <!-- Google Merchant Verification 8.20.19 -->
+    <meta name="google-site-verification" content="c-5yt-9GO0k92MBhOsolW8ylHUVkNMvVG_N0rqNQlUY" />  
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-958591666');// AdWords ?
+      gtag('config', 'UA-43402130-1');// Analytics
+      gtag('config', 'GTM-MGR467V'); // Google Tag Manager
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MGR467V');</script>
+    <!-- End Google Tag Manager -->    
 
 
   <!-- Bing Verification -->	
   <meta name="msvalidate.01" content="C9498BD5F84A663C4AFCC7D08EDF5C4B" />    
   <!----------- End GOOGLE ----------->
 
-
-
-  <script src="{{ 'jquery.min.js' | asset_url }}"></script>
         
 <!----------- APPS 1 ----------->
-<!-- Start of gosun Zendesk Widget script -->
-<script type="text/javascript" id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=cd4d1957-8f5a-4206-9d19-61ccd84c0dd6"> </script>
-<!-- End of gosun Zendesk Widget script -->
-
+  <!-- Start of gosun Zendesk Widget script -->
+  <script type="text/javascript" id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=cd4d1957-8f5a-4206-9d19-61ccd84c0dd6"> </script>
+  <!-- End of gosun Zendesk Widget script -->
 
   <!-- Bugsnag -->
   <!-- <script defer src="//d2wy8f7a9ursnm.cloudfront.net/v7/bugsnag.min.js"></script>
@@ -157,15 +152,8 @@
 
       <script defer src="{{ '_1_stamped.js' | asset_url }}"></script>
     {% endif %}
-  {%  endunless %}
-
-
-
-
-
-
-
-<!----------- End APPS 1 ----------->
+  {% endunless %}
+  <!----------- End APPS 1 ----------->
     
   <script>
     window.lazySizesConfig = window.lazySizesConfig || {};
@@ -369,6 +357,7 @@
     </script>
 
     <!----------- SCRIPTS ----------->
+      <script src="{{ 'jquery.min.js' | asset_url }}"></script> 
       <script src="{{ 'vendors.js' | asset_url }}"></script>
       <script src="{{ 'sections.js' | asset_url }}"></script>
       <script src="{{ 'utilities.js' | asset_url }}"></script>
