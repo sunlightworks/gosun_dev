@@ -59,18 +59,10 @@
   {% endif %}
 
   <section class="purchase-details">
-
-    
-  
     <div class="width-1-1 flex">
-      
       {% capture add_to_cart_label %}{% if collection_handles contains 'pre-order' %}{{ 'collections.general.pre_order' | t }}{% elsif collection_handles contains 'back-order' %}Add to cart{% elsif collection_handles contains 'retired' %}Sold out{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}{% endcapture %}
-      {% unless product.available %}
-        <button class="btn btn--subtle btn--disabled btn--md" >
-          <span class="text"> Sold Out</span>
-        </button>
-      {% else %}
-
+      
+      {% if product.available %}
         <div aria-controls="drawer-cart-id" class="purchase-details__buttons purchase-details__spb--{{ show_payment_button }} width-1-1">
           {% if settings.cart_action == 'reload_page' %}
             <input type="hidden" name="return_to" value="back" />
@@ -84,8 +76,7 @@
               </svg>
             </button>
         </div>
-      
-      {% endunless %}
+      {% endif %}
     </div>
   </section>
 {% endform %} 
