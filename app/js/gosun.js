@@ -1,11 +1,13 @@
 
 
+
+
   $(window).resize(function(){
     if ($(window).width() <= 768){	
       $('.width-small-1-1').removeClass('width-1-2');
     }	
   });
-
+ 
 
   $( document ).ready(function() {
     $('.spr-summary-actions-newreview').addClass('button')
@@ -19,12 +21,6 @@
     $('.overlay-bottom').hide();
     $('#play').hide();
   });
-
-
-
-
-
-
 
 
 $(document).ready(function() {

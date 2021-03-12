@@ -29,7 +29,7 @@
           {% if block_image_url contains '/assets/no-image' %}
             {% assign block_image_url = block.settings.asset_image | asset_img_url: 'x256' %}
           {% endif %}
-          <img style="max-height: {{ section.settings.image_max_height }}px;" src="{{ block_image_url }}" alt="{{ block.settings.image_alt | strip_html }}" title="{{ block.settings.image_alt | strip_html }}" />
+          <img style="max-height: {{ section.settings.image_max_height }}px;" class="lozad" data-src="{{ block_image_url }}" alt="{{ block.settings.image_alt | strip_html }}" title="{{ block.settings.image_alt | strip_html }}" />
           {% if block.settings.image_link != blank %}</a>{% endif %}
           {% if block.settings.image_caption != blank %}<p class="gallery-cell-image-img-caption">{{ block.settings.image_caption | strip_html }}</p>{% endif %}
           </span>

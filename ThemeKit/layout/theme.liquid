@@ -40,8 +40,6 @@
     <script src="//cdn.shopify.com/s/files/1/0062/5318/3045/t/2/assets/yett.js" type="text/javascript"></script>
     {% endif %}
 
-
-
     <title>
       {% if template contains "index" %}{{ page_title }}{% else %}{{ page_title }}{% if current_tags %} {{ 'general.meta.tagged_html' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} {{ 'general.meta.page' | t: page_number: current_page }}{% endif %}{% unless page_title contains shop.name %} - {{ shop.name }}{% endunless %}{% endif %}
     </title>
@@ -113,7 +111,7 @@
   <!-- End of gosun Zendesk Widget script -->
 
   <!-- Lozad / Lazy load videos -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+  <script type="text/javascript" onerror="alert('lozad failed')"  src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 
   <!-- Klaviyo -->
   <script type="text/javascript" async 
@@ -356,6 +354,13 @@
     </script>
 
     <!----------- SCRIPTS ----------->
+<!-- IntersectionObserver polyfill -->
+<script src="https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js"></script>
+
+<!-- Lozad.js from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/lozad"></script>
+
+
       <script src="{{ 'jquery.min.js' | asset_url }}"></script> 
       <script src="{{ 'vendors.js' | asset_url }}"></script>
       <script src="{{ 'sections.js' | asset_url }}"></script>

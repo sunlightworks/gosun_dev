@@ -18,6 +18,7 @@ var gm = require("gulp-gm");
 var newer = require("gulp-newer");
 var imgmin = require("gulp-imagemin");
 var base64 = require("gulp-base64");
+var lozad = require('lozad')
 
 
 gulp.task("sass", function() {
