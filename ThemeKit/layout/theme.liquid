@@ -33,8 +33,14 @@
         /cdn1.affirm.com/,
         /mlveda-shopifyapps.s3.amazonaws.com/,
         /app.123formbuilder.com/,
-        /cdn.intelliticks.com/
-        ]
+        /cdn.intelliticks.com/,
+        /static.klaviyo.com/,
+        /cdn1.stamped.io/,
+        /button.aftership.com/,
+        /fonts.shopifycdn.com/,
+        /affirm.com/,
+        /stamped.io/
+        ] 
     </script>
 
     <script src="//cdn.shopify.com/s/files/1/0062/5318/3045/t/2/assets/yett.js" type="text/javascript"></script>
@@ -118,7 +124,7 @@
   src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=hhNY44&shop=patricksherwin.myshopify.com"></script>
       
   <!-- Hotjar Tracking Code for gosun.co -->
-  <script>
+  <!-- <script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:1783414,hjsv:6};
@@ -127,7 +133,7 @@
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
+  </script> -->
     
   {% unless template contains 'index' %}
     {% if template contains 'product' or 'cart' or 'collection' %}
@@ -141,11 +147,13 @@
         // Use your live public API Key and https://cdn1.affirm.com/js/v2/affirm.js script to point to Affirm production environment.
     </script>
     <!-- Currency Switcher -->
+    {% unless template contains 'index' %}
       <script defer >
         window.mlvedaShopCurrency = "{{ shop.currency }}";
         window.shopCurrency = "{{ shop.currency }}";
         window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
       </script>
+    {% endunless %}
 
       <script defer src="{{ '_1_stamped.js' | asset_url }}"></script>
     {% endif %}
@@ -354,27 +362,22 @@
     </script>
 
     <!----------- SCRIPTS ----------->
-<!-- IntersectionObserver polyfill -->
-<script src="https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js"></script>
-
-<!-- Lozad.js from CDN -->
-<script src="https://cdn.jsdelivr.net/npm/lozad"></script>
-
-
+      <script src="https://cdn.jsdelivr.net/npm/lozad"></script>
       <script src="{{ 'jquery.min.js' | asset_url }}"></script> 
       <script src="{{ 'vendors.js' | asset_url }}"></script>
       <script src="{{ 'sections.js' | asset_url }}"></script>
       <script src="{{ 'utilities.js' | asset_url }}"></script>
       <script src="{{ 'app.js' | asset_url }}"></script>
       <script defer src="{{ 'gosun.js' | asset_url }}"></script>
+      <script src="https://cdn.attn.tv/gosun/dtag.js"></script>
       <!-- <script defer src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script> -->
-      <script defer src="https://kit.fontawesome.com/40a53939d2.js" crossorigin="anonymous"></script> 
+      <!-- <script defer src="https://kit.fontawesome.com/40a53939d2.js" crossorigin="anonymous"></script>  -->
       <script src="{{ 'vendor-widgets.js' | asset_url }}"></script>
       {% if settings.theme_switch %}
       <script defer src="{{ 'theme_switch.js' | asset_url }}"></script>
       {% endif %}
       {% if template contains "product" %} 
-      <script src="{{ 'product-page.js' | asset_url }}"></script>
+        <script src="{{ 'product-page.js' | asset_url }}"></script>
       {% endif %}
     <!----------- End SCRIPTS ----------->
 
