@@ -2389,6 +2389,9 @@ html:not(.js) .no-js\:is-hidden {
 
 .height-100vh {
   height: 100vh; }
+  @media (max-width: 768px) {
+    .height-100vh {
+      height: 110vh; } }
 
 .height-auto {
   height: auto; }
@@ -11793,7 +11796,6 @@ Usage: codyhouse.co/license
 
 -------------------------------- */
 .js .revealing-section {
-  position: sticky;
   min-height: 100vh;
   --reavealing-section-overlay-opacity: 1; }
   .js .revealing-section::after {

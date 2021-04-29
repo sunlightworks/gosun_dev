@@ -942,7 +942,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-
 .color-bg {
   color: alpha(var(--color-bg), var(--color-o, 1));
 }
@@ -1254,6 +1253,9 @@
 }
 .height-100vh {
   height: 100vh;
+  @media (max-width: #{768px;}) {
+    height: 110vh;
+  }
 }
 .height-auto {
   height: auto;
