@@ -1252,9 +1252,9 @@
   height: 100%;
 }
 .height-100vh {
-  height: 100vh;
+  height: 100vh !important ;
   @media (max-width: #{768px;}) {
-    height: 110vh;
+    height: 110vh !important;
   }
 }
 .height-auto {
