@@ -25,6 +25,11 @@ Descr: A slide-in panel used to display critical content
   &:focus {
     outline: none;
   }
+  footer {
+    @include md-max() {
+      box-shadow: 0px -4px 50px -10px rgba(27, 53, 80, 0.2);
+    }
+  }
 }
 
 .drawer--is-visible {

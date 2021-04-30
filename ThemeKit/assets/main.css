@@ -10818,6 +10818,9 @@ Descr: A slide-in panel used to display critical content
   transition: visibility 0s 0.3s; }
   .drawer:focus {
     outline: none; }
+  @media (max-width: 768px) {
+    .drawer footer {
+      box-shadow: 0px -4px 50px -10px rgba(27, 53, 80, 0.2); } }
 
 .drawer--is-visible {
   visibility: visible;
