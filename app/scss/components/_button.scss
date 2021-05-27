@@ -29,10 +29,11 @@ a.highlight-true:hover {
     height: 44px;
   }
 }
-.-indiegogo {
-  background: $palette-indiegogo-primary !important;
+.-indiegogo,
+a.btn--indiegogo {
+  background-color: $palette-indiegogo-primary !important;
   &:hover {
-    background: $palette-indiegogo-dark !important;
+    background-color: $palette-indiegogo-dark !important;
   }
 }
 

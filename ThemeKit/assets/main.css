@@ -7752,10 +7752,12 @@ a.highlight-true:hover {
   .-indiegogo img {
     height: 44px; }
 
-.-indiegogo {
-  background: #e51075 !important; }
-  .-indiegogo:hover {
-    background: #d50f6d !important; }
+.-indiegogo,
+a.btn--indiegogo {
+  background-color: #e51075 !important; }
+  .-indiegogo:hover,
+  a.btn--indiegogo:hover {
+    background-color: #d50f6d !important; }
 
 /* #Button - Flits / Social login
 ================================================== */
@@ -8258,17 +8260,6 @@ div.section.collection_description .klaviyo-section {
   float: right;
   width: 30%;
   height: 50px; }
-  .klaviyo-form-action button {
-    background-color: var(--color-contrast-high) !important;
-    color: var(--color-bg) !important;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.35);
-    font-size: 15px;
-    font-weight: 700; }
-    .klaviyo-form-action button:hover, .klaviyo-form-action button:focus, .klaviyo-form-action button:active {
-      background-color: hsl(var(--color-contrast-high-h), var(--color-contrast-high-s), calc(var(--color-contrast-high-l) * 1.15)) !important; }
-    .klaviyo-form-action button:hover {
-      background: rgba(0, 0, 0, 0.5); }
 
 /* #Email - Copy
 ================================================== */
@@ -8409,15 +8400,18 @@ div.section.collection_description {
   .product_gallery_nav .gallery-cell.is-nav-selected img {
     box-shadow: 0 0 0 2px var(--color-contrast-medium); }
 
-.overlay-cover::before {
-  content: "";
-  background-color: rgba(27, 53, 80, 0.3);
-  mix-blend-mode: multiply;
-  position: absolute;
-  height: 100%;
-  width: 100%; }
+.overlay-cover {
+  pointer-events: none; }
+  .overlay-cover::before {
+    content: "";
+    background-color: rgba(27, 53, 80, 0.3);
+    mix-blend-mode: multiply;
+    position: absolute;
+    height: 100%;
+    width: 100%; }
 
 .overlay-bottom {
+  pointer-events: none;
   background: linear-gradient(0deg, rgba(27, 53, 80, 0.65) 13.21%, rgba(27, 53, 80, 0) 46.54%);
   background-blend-mode: multiply;
   position: absolute;
@@ -8436,6 +8430,7 @@ div.section.collection_description {
     margin-top: 2rem; }
 
 .overlay-top {
+  pointer-events: none;
   background: linear-gradient(0deg, rgba(27, 53, 80, 0.9) 13.21%, rgba(27, 53, 80, 0) 46.54%);
   background-blend-mode: multiply;
   position: absolute;

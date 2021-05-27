@@ -78,16 +78,16 @@ div.section.collection_description .klaviyo-section {
   float: right;
   width: 30%;
   height: 50px;
-  button {
-    @include btn();
-    height: 100%;
-    background: rgba(0, 0, 0, 0.35);
-    &:hover {
-      background: rgba(0, 0, 0, 0.5);
-    }
-    font-size: 15px;
-    font-weight: 700;
-  }
+  // button {
+  //   @include btn();
+  //   height: 100%;
+  //   // background: rgba(0, 0, 0, 0.35);
+  //   &:hover {
+  //     // background: rgba(0, 0, 0, 0.5);
+  //   }
+  //   font-size: 15px;
+  //   font-weight: 700;
+  // }
 }
 
 /* #Email - Copy
