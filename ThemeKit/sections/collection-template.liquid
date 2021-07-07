@@ -188,7 +188,7 @@ allowfullscreen></iframe>
 
 
 
-  <div class="section clearfix width-1-1 mobile--true">
+  <!-- <div class="section clearfix width-1-1 mobile--true">
     {% if section.settings.collection_sort %}
       <select class="sort_by"  data-default-sort="{{ collection.sort_by | default: collection.default_sort_by  }}">
         <option value="manual">{{ 'collections.sorting.featured' | t }}</option>
@@ -201,9 +201,9 @@ allowfullscreen></iframe>
         <option value="created-ascending">{{ 'collections.sorting.date_ascending' | t }}</option>
       </select>
     {% endif %}
-  </div>
+  </div> -->
 
-  <div class="section clearfix width-1-3 mobile--false float-right">
+  <!-- <div class="section clearfix width-1-3 mobile--false float-right">
     
     {% if section.settings.collection_sort %}
       <select class="sort_by" id="sort-by" data-default-sort="{{ collection.sort_by | default: collection.default_sort_by  }}">
@@ -217,7 +217,7 @@ allowfullscreen></iframe>
         <option value="created-ascending">{{ 'collections.sorting.date_ascending' | t }}</option>
       </select>
     {% endif %}
-  </div>
+  </div> -->
     {% comment %} Remove collection-matrix class to prevent conflict infinite loading between app & theme {% endcomment %}
     <div id="bc-sf-filter-products" itemtype="http://schema.org/ItemList" class="product-list clearfix equal-columns--clear equal-columns--outside-trim" data-bc-sort="{{ collection.default_sort_by }}">
       {% assign products_per_row = section.settings.products_per_row %}

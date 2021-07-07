@@ -9911,6 +9911,185 @@ a.pre-header {
 
 /* -------------------------------- 
 
+File#: _1_badge
+Title: Badge
+Descr: A small label containing a text string
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.badge {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  line-height: inherit;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-contrast-low);
+  padding: var(--space-xxxxs) var(--space-xxs);
+  border-radius: var(--radius-md);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.badge--outline {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.25); }
+
+.badge--contrast-higher {
+  background-color: var(--color-contrast-higher);
+  color: var(--color-bg); }
+
+.badge--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white); }
+
+.badge--primary-light {
+  background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2);
+  color: var(--color-contrast-higher); }
+
+.badge--accent {
+  background-color: var(--color-accent);
+  color: var(--color-white); }
+
+.badge--accent-light {
+  background-color: hsla(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l), 0.2);
+  color: var(--color-contrast-higher); }
+
+.badge--error {
+  background-color: var(--color-error);
+  color: var(--color-white); }
+
+.badge--error-light {
+  background-color: hsla(var(--color-error-h), var(--color-error-s), var(--color-error-l), 0.2);
+  color: var(--color-contrast-higher); }
+
+.badge--success {
+  background-color: var(--color-success);
+  color: var(--color-white); }
+
+.badge--success-light {
+  background-color: hsla(var(--color-success-h), var(--color-success-s), var(--color-success-l), 0.2);
+  color: var(--color-contrast-higher); }
+
+.badge--warning {
+  background-color: var(--color-warning);
+  color: var(--color-white); }
+
+.badge--warning-light {
+  background-color: hsla(var(--color-warning-h), var(--color-warning-s), var(--color-warning-l), 0.2);
+  color: var(--color-contrast-higher); }
+
+/* -------------------------------- 
+
+File#: _1_ticker
+Title: Ticker
+Descr: News-like Horizontal Scrolling List
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --ticker-animation-duration: 10s;
+  --ticker-gap-x: var(--space-md);
+  --ticker-img-width: 280px; }
+  @media (min-width: 48rem) {
+    :root {
+      --ticker-img-width: 400px; } }
+  @media (min-width: 64rem) {
+    :root {
+      --ticker-img-width: 550px; } }
+
+.ticker {
+  overflow: hidden; }
+
+.ticker__list {
+  display: flex;
+  overflow: auto;
+  will-change: transform;
+  transform: translateZ(0px);
+  backface-visibility: hidden; }
+
+/* class added in JS to trigger the scrolling animation */
+.ticker--animate .ticker__list {
+  animation: ticker-animation var(--ticker-animation-duration) infinite;
+  animation-timing-function: linear; }
+
+/* pause animation on hover or using an external control button */
+.ticker[data-ticker-pause-hover="on"] .ticker__list:hover,
+.ticker--paused .ticker__list {
+  animation-play-state: paused; }
+
+.ticker__item {
+  flex-shrink: 0;
+  margin-right: calc(var(--ticker-gap-x) / 2);
+  margin-left: calc(var(--ticker-gap-x) / 2); }
+
+.ticker__img {
+  display: block;
+  width: var(--ticker-img-width); }
+
+.ticker-control {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.75);
+  border-radius: 50%;
+  transition: 0.2s; }
+  .ticker-control i {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    color: var(--color-bg); }
+    .ticker-control i::before, .ticker-control i::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: currentColor;
+      transition: clip-path 0.2s var(--ease-out); }
+    .ticker-control i::before {
+      clip-path: polygon(1px 1px, 5px 1px, 5px calc(100% - 1px), 1px calc(100% - 1px)); }
+    .ticker-control i::after {
+      clip-path: polygon(calc(100% - 5px) 1px, calc(100% - 1px) 1px, calc(100% - 1px) calc(100% - 1px), calc(100% - 5px) calc(100% - 1px)); }
+  .ticker-control:hover {
+    cursor: pointer;
+    background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.95); }
+  .ticker-control[aria-pressed="true"] i::before {
+    clip-path: polygon(2px 0%, 100% 50%, 100% 50%, 2px 100%); }
+  .ticker-control[aria-pressed="true"] i::after {
+    clip-path: polygon(calc(100% - 5px) calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 5px) calc(100% - 1px)); }
+
+/* js enabled style */
+.js {
+  /* ticker--anim-off class turns off translate animation - added in JS if reduced-motion option is on */ }
+  .js .ticker:not(.ticker--anim-off) .ticker__list {
+    overflow: visible; }
+  .js .ticker--reverse:not(.ticker--anim-off) .ticker__list {
+    flex-direction: row-reverse; }
+  .js .ticker--reverse.ticker--animate:not(.ticker--anim-off) .ticker__list {
+    transform: translateX(calc(100vw - 100%));
+    animation-name: ticker-animation-reverse; }
+
+/* intermediate steps are added to fix a bug on Safari */
+@keyframes ticker-animation {
+  0% {
+    transform: translateX(0%); }
+  100% {
+    transform: translateX(-50%); } }
+
+@keyframes ticker-animation-reverse {
+  0% {
+    transform: translateX(calc(100vw - 100%)); }
+  100% {
+    transform: translateX(calc(100vw - 50%)); } }
+
+/* -------------------------------- 
+
 File#: _1_hero
 Title: Hero
 Descr: A full-width callout section
