@@ -14,8 +14,6 @@
 <div id="launchtip_upsell_wrapper"></div>
 <!-- END / SellUps -->
 
-{% render 'crowdfunder', product: product %}
-
 
 <div class="clearfix product_form init smart-payment-button--{{ show_payment_button }} {% if product.variants.size > 1 or product.options.size > 1 %}product_form_options{% endif %} product_form--{{ settings.product_form_style }}"
   id="product-form-{{ product.id }}"
@@ -30,6 +28,7 @@
   {% endif %}
   data-product-id="{{ product.id }}"
   >
+  {% render 'crowdfunder', product: product %}
   {% form 'product', product %}
 
   {% if product.options.size > 1 %}
