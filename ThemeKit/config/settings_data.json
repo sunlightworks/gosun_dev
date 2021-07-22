@@ -1494,10 +1494,10 @@
         "settings": {
           "image": "shopify:\/\/shop_images\/chillest-cover_28839dad-1ec7-42fe-bc40-e920b4bd92c3.jpg",
           "overline": "Pre-order Now",
-          "title": "The ultimate portable refrigeration system",
-          "description": "Meet the GoSun Chillest: is the ultimate outdoor cooler because instead of using ice, it cools food and drinks using the power of the sun.",
+          "title": "Ultimate Portable Refrigeration System",
+          "description": "Meet the GoSun Chillest solar cooler: instead of using ice, it cools food and drinks using the power of the Sun.",
           "button1": "Learn more",
-          "button1_url": "http:\/\/97.kickto.link\/jV6JLV0\/",
+          "button1_url": "shopify:\/\/products\/chillest-pro-pack",
           "hero_external": true,
           "invert": false,
           "dark_theme": false,
@@ -1535,7 +1535,7 @@
             "type": "video_by_coll",
             "settings": {
               "coll_video_collectionhandle": "solar-ovens",
-              "coll_video_url": "https:\/\/youtu.be\/UCymoEVKUFY"
+              "coll_video_url": ""
             }
           }
         },
@@ -1986,7 +1986,7 @@
               "menu_4_link": "",
               "image_bottom": "shopify:\/\/shop_images\/Cover--min.png",
               "image_caption_bottom": "Fusion | Pro Pack",
-              "image_link_bottom": "shopify:\/\/products\/ultimate-fusio-bundle-with-powerbank-266",
+              "image_link_bottom": "shopify:\/\/products\/fusion-ultimate",
               "richtext_bottom": ""
             }
           },
@@ -2125,7 +2125,7 @@
           "product_description_words": 20,
           "product_reviews": false,
           "product_add_to_cart": false,
-          "products_per": 5,
+          "products_per": 4,
           "products_limit": 9
         }
       },

@@ -122,7 +122,7 @@ Markup Section - Customize the widget by tweaking the code below.
   {% if product.id == product.metafields.crowdfunder.product_id %}
 
     <section class="crowdfunder-widget">
-      <p><span class='cf-bignumber cf-backertotal'>{{total_stock}}</span>{{supportedText}}</p>
+      <p><h2 class='cf-bignumber cf-backertotal'>{{total_stock}}</h2>{{supportedText}}</p>
 
       {% if product.metafields.crowdfunder.goal_mode == 'currency' %}
         <p><span class='cf-bignumber cf-moneytotal'>{{total_currency | money}}</span>{{raisedText}}</p>
@@ -134,10 +134,10 @@ Markup Section - Customize the widget by tweaking the code below.
 
       <div class='cf-meter-label'><span class='cf-percent-text'>{{percentPreSold}}</span>% {{fundedText}}</div>
 
-      <p class='cf-info-text'>{{infoText}}</p>
+      <!-- <p class='cf-info-text'>{{infoText}}</p> -->
 
       <p>
-        <span class='cf-bignumber cf-time-left'
+        <h2 class='cf-bignumber cf-time-left'
               data-end-time="{{product.metafields.crowdfunder.end_time}}"
               data-expired-text="{{expiredText}}"
               data-singular-year-text="{{product.metafields.crowdfunder.singular_year_text}}"
@@ -159,7 +159,7 @@ Markup Section - Customize the widget by tweaking the code below.
               data-percent-pre-sold="{{percentPreSold}}"
               >
           {{timeLeft}}
-        </span>
+        </h2>
         {{remainingText}}
       </p>
     </section>

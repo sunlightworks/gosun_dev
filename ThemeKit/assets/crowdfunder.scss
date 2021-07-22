@@ -1,25 +1,20 @@
 .crowdfunder-widget {
-  padding: 4%;
-  background-color: #f7f7f9;
-  color: #333;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-md);
   clear: both;
 
   span.cf-bignumber {
     font-size: 2.6rem;
     line-height: 0.9em;
     display: block;
-    color: #353442;
   }
 
   .cf-meter {
-    height: 24px;
+    height: var(--space-sm);
     width: 100%;
     position: relative;
-    background-color: #fff;
+    background-color: var(--color-contrast-lower);
     overflow: hidden;
-    border: 1px solid #e5e5e7;
-    border-radius: 4px;
+    margin: var(--space-sm) 0;
   }
 
   .cf-meter span {
@@ -46,13 +41,11 @@
   .cf-meter-label p:first-of-type {
     display: inline-block;
     width: 70%;
-    color: #000;
     text-align: left;
   }
   .cf-meter-label p:nth-of-type(2) {
     display: inline-block;
     width: 27.5%;
-    color: #000;
     text-align: right;
   }
 }
