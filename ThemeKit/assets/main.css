@@ -10219,6 +10219,17 @@ Usage: codyhouse.co/license
 .v-timeline--icons {
   --v-timeline-marker-size: 3em; }
 
+.bundle-option {
+  border: var(--color-primary-lighter) 2px solid; }
+  .bundle-option:hover {
+    background-color: var(--color-primary-lighter);
+    border-color: var(--color-primary-darker); }
+  .bundle-option img {
+    margin-left: 0;
+    margin-right: var(--space-sm);
+    filter: brightness(0.94) !important;
+    -webkit-filter: brightness(0.94) !important; }
+
 /* -------------------------------- 
 
 File#: _1_hero

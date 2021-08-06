@@ -1,0 +1,12 @@
+.bundle-option {
+  border: var(--color-primary-lighter) 2px solid;
+  &:hover {
+    background-color: var(--color-primary-lighter);
+    border-color: var(--color-primary-darker);
+  }
+  img {
+    margin-left: 0;
+    margin-right: var(--space-sm);
+    @include filter-egg();
+  }
+}
