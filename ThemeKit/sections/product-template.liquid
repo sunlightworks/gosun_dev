@@ -184,12 +184,17 @@
               {% endif %}
             </p>
 
-            {% unless product.title == 'Dream' %}
+            {% unless product.title == 'Dream' or product.available %}
               <div class="pill color-contrast-medium margin-bottom-xxs">
                 <p class="affirm-as-low-as" data-page-type="product" data-amount="{{ variant.price }}" data-affirm-type="text" data-learnmore-show="true"></p>
               </div>
               {% endunless %}
           {% endif %}
+
+          {% unless product.available %}
+          {% include 'product-notify-me' %}
+        {% endunless %}
+
                   
           <div class="divider"></div>
           
@@ -205,7 +210,6 @@
           {% if product.price <= 5000 %}
             {% include 'product-notify-me' %}
           {% endif %}
-          
 
           {{ product.description }}
 
@@ -213,8 +217,6 @@
       </div>
     </section>
     {% comment %}END / Overview {% endcomment %}
-
-
 
     {% comment %}START / Details{% endcomment %}
     <section id="features reveal-fx">
