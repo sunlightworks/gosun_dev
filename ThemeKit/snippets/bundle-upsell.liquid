@@ -7,9 +7,9 @@
       {% for product_handle in product_refs %}
         <li>
           {% assign product_ref = all_products[product_handle] %}
-          <div class="cursor-pointer bundle-option margin-y-sm" onclick="window.open('{{ product_ref.url }}', '_blank')">
+          <div class="cursor-pointer bundle-option margin-y-sm position-relative" onclick="window.open('{{ product_ref.url }}', '_blank')">
             {% if settings.sale_banner_enabled and product.compare_at_price_max > product.price %}
-              <div class="article-violator article-violator--top"> 
+              <div class="article-violator article-violator--top position-absolute"> 
                 <span class="right thumbnail_banner violator violator--discount">Save ${{ product.compare_at_price_min | minus: product.price_min | money_without_currency }}</span>
               </div>
             {% endif %}

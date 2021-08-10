@@ -194,7 +194,9 @@
           {% unless product.available %}
             {% include 'product-notify-me' %}
           {% endunless %}
+          <div class="divider"></div>
 
+          {{ product.description }}
                   
           <div class="divider"></div>
           
@@ -212,7 +214,7 @@
             {% include 'product-notify-me' %}
           {% endif %}
 
-          {{ product.description }}
+          
 
         </div>
       </div>
