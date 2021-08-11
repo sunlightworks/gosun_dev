@@ -200,7 +200,7 @@
                   
           <div class="divider"></div>
           
-          {% include 'bundle-upsell' %}
+          
 
           {% if collection_handles contains 'coming-soon' %}
             {% elsif product.metafields.custom_fields["partners_platform"] != blank %}
@@ -208,6 +208,10 @@
             {% else %}
               {% include 'product-form' with 'product' %}
           {% endif %}
+
+          <div class="divider"></div>
+
+          {% include 'bundle-upsell' %}
 
           
           {% if product.price <= 5000 %}
