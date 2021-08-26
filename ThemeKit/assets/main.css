@@ -15795,13 +15795,12 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
   border-top: none !important;
   margin-bottom: -30px; }
   .footer p {
-    font-size: var(--text-sm);
+    font-size: var(--text-md);
     line-height: 1em !important;
     margin-top: 0; }
   .footer a {
     color: var(--color-white) !important;
-    text-decoration: none !important;
-    font-size: var(--text-md); }
+    text-decoration: none !important; }
     .footer a:hover {
       color: var(--color-primary) !important; }
   @media (max-width: 768px) {

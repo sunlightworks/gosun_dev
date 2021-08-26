@@ -3,14 +3,14 @@
   border-top: none !important;
   margin-bottom: -30px;
   p {
-    font-size: var(--text-sm);
+    font-size: var(--text-md);
     line-height: 1em !important;
     margin-top: 0;
   }
   a {
     color: var(--color-white) !important;
     text-decoration: none !important;
-    font-size: var(--text-md);
+
     &:hover {
       color: var(--color-primary) !important;
     }
