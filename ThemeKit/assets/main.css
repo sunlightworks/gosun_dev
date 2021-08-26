@@ -15853,9 +15853,6 @@ a#customer_login_link,
 
 /* #Menu [Open] - Hide images
   ================================================== */
-.mobile-mega-menu_block img {
-  display: none !important; }
-
 /* #Menu [Open] - List style
   ================================================== */
 #mobile_menu ul {

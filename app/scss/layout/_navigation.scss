@@ -45,7 +45,11 @@ a#customer_login_link,
 /* #Menu [Open] - Hide images
   ================================================== */
 .mobile-mega-menu_block img {
-  display: none !important;
+  // display: none !important;
+  // width: 100px !important;
+  // height: 100px !important;
+  // object-fit: contain;
+  // filter: brightness(0.96);
 }
 
 /* #Menu [Open] - List style
@@ -60,6 +64,11 @@ li.mobile-mega-menu_block,
   background: var(--color-bg);
   margin-bottom: 2px;
 }
+
+// .mobile-mega-menu.hidden {
+//   display: flex !important;
+//   flex-wrap: wrap;
+// }
 
 .mobile-mega-menu.hidden,
 #mobile_menu li {
