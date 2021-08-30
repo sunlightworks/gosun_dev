@@ -46,10 +46,10 @@ a#customer_login_link,
   ================================================== */
 .mobile-mega-menu_block img {
   // display: none !important;
-  // width: 100px !important;
-  // height: 100px !important;
-  // object-fit: contain;
-  // filter: brightness(0.96);
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: contain;
+  filter: brightness(0.96);
 }
 
 /* #Menu [Open] - List style
@@ -65,10 +65,8 @@ li.mobile-mega-menu_block,
   margin-bottom: 2px;
 }
 
-// .mobile-mega-menu.hidden {
-//   display: flex !important;
-//   flex-wrap: wrap;
-// }
+.mobile-mega-menu.hidden {
+}
 
 .mobile-mega-menu.hidden,
 #mobile_menu li {
@@ -76,8 +74,8 @@ li.mobile-mega-menu_block,
 }
 
 /* Sub-menu border */
-li.mobile-mega-menu_block a,
-#mobile_menu li a {
+li.mobile-mega-menu_block a.parent-link--true,
+#mobile_menu li a.parent-link--true {
   border-top: 1px solid var(--color-contrast-low);
 }
 

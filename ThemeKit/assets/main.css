@@ -15852,6 +15852,12 @@ a#customer_login_link,
 
 /* #Menu [Open] - Hide images
   ================================================== */
+.mobile-mega-menu_block img {
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: contain;
+  filter: brightness(0.96); }
+
 /* #Menu [Open] - List style
   ================================================== */
 #mobile_menu ul {
@@ -15868,8 +15874,8 @@ li.mobile-mega-menu_block,
   padding-left: 0 !important; }
 
 /* Sub-menu border */
-li.mobile-mega-menu_block a,
-#mobile_menu li a {
+li.mobile-mega-menu_block a.parent-link--true,
+#mobile_menu li a.parent-link--true {
   border-top: 1px solid var(--color-contrast-low); }
 
 /* Main Menu

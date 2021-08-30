@@ -39,6 +39,7 @@
   </div>
 
   <ul class="mobile-mega-menu hidden" data-mobile-dropdown="{{ section.settings.parent | handleize }}">
+    <div class="flex flex-wrap">
     {% for block in section.blocks %}
       <div>
       {% if block.type == 'column' %}
@@ -47,7 +48,7 @@
         {% if block.settings.product != nil %}
           <li class="mobile-mega-menu_block"  >
             <a href="{{ block.settings.product.url }}" >
-              <!-- <img src="{{block.settings.product.featured_image | img_url: '100x100'}}">  -->
+              <img src="{{block.settings.product.featured_image | img_url: '100x100'}}"> 
               <p>{{ block.settings.product.title }}</p>
             </a>
           </li>
@@ -56,6 +57,7 @@
       {% endif %}
       </div>
     {% endfor %}
+  </div>
   </ul>
 {% endif %}
 
