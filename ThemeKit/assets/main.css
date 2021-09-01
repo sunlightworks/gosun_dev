@@ -11216,15 +11216,17 @@ Descr: A slide-in panel used to display critical content
 File#: _1_custom-select
 Title: Custom Select
 Descr: Custom Select Control
+Usage: codyhouse.co/license
 
 -------------------------------- */
 :root {
-  --select-icon-size: 1em;
+  --select-icon-size: 16px;
   --select-icon-right-margin: var(--space-sm);
   --select-text-icon-gap: var(--space-xxxs); }
 
 .select {
-  position: relative; }
+  position: relative;
+  display: inline-block !important; }
 
 .select__input {
   width: 100%;
@@ -11305,7 +11307,7 @@ Descr: Custom Select Control
   padding-top: var(--space-xxs); }
 
 .select__list:not(:last-of-type) {
-  border-bottom: 1px solid var(--color-contrast-low);
+  border-bottom: 1px solid hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1);
   padding-bottom: var(--space-xxs); }
 
 .select__item {
@@ -11325,7 +11327,7 @@ Descr: Custom Select Control
 .select__item--option {
   cursor: pointer; }
   .select__item--option:hover {
-    background-color: var(--color-contrast-lower); }
+    background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.05); }
   .select__item--option:focus {
     outline: none;
     background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.1); }
@@ -11337,16 +11339,16 @@ Descr: Custom Select Control
     -moz-osx-font-smoothing: grayscale; }
     .select__item--option[aria-selected="true"]::after {
       content: "";
+      display: block;
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 16px;
-      width: 16px;
       right: var(--space-sm);
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpolyline stroke-width='1.5' stroke='%23ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round' points='1,9 5,13 15,3 '/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center; }
+      top: calc(50% - 0.5em);
+      height: 1em;
+      width: 1em;
+      background-color: currentColor;
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpolyline stroke-width='2' stroke='%23ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round' points='1,9 5,13 15,3 '/%3E%3C/svg%3E"); }
+    .select__item--option[aria-selected="true"]:focus {
+      box-shadow: inset 0 0 0 2px var(--color-primary-dark); }
 
 html:not(.js) .select .icon {
   display: none; }
@@ -12127,6 +12129,38 @@ Usage: codyhouse.co/license
     pointer-events: none;
     background-color: var(--color-black);
     opacity: var(--reavealing-section-overlay-opacity); }
+
+/* -------------------------------- 
+
+File#: _2_full-screen-select
+Title: Full Screen Select
+Descr: A full-screen window w/ a list of options
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.modal--select {
+  background-color: hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95); }
+  .modal--select .modal__close-btn--outer {
+    background-color: var(--color-contrast-lower); }
+    .modal--select .modal__close-btn--outer .icon {
+      color: var(--color-contrast-high); }
+    .modal--select .modal__close-btn--outer:hover {
+      background-color: var(--color-contrast-low); }
+
+.full-screen-select__option {
+  display: block;
+  font-size: var(--text-lg);
+  color: var(--color-contrast-high);
+  padding: var(--space-xxxs) var(--space-sm);
+  border-radius: var(--radius-md);
+  transition: 0.2s; }
+  .full-screen-select__option:hover:not(.full-screen-select__option--selected) {
+    background-color: var(--color-contrast-lower); }
+
+.full-screen-select__option--selected {
+  text-decoration: underline;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 /* -------------------------------- 
 
@@ -16051,7 +16085,6 @@ div.dropdown.menu {
   @media (max-width: 768px) {
     .dropdown {
       width: 100% !important;
-      height: calc(100% - var(--header-height));
       overflow: hidden; } }
   @media (min-width: 768px) {
     .dropdown {

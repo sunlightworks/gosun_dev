@@ -1825,19 +1825,18 @@
       },
       "1574447604302": {
         "type": "components-banner",
-        "disabled": true,
         "settings": {
-          "image": "shopify:\/\/shop_images\/WashHands_Studio.jpg",
+          "image": "shopify:\/\/shop_images\/Solar_Kitchen_Web.jpg",
           "overline": "",
-          "title": "Meet Flow, our portable solar water purifier.",
-          "subtitle": "<p>Stay clean on your adventures without the burden of carrying around tons of extra weight.<\/p>",
-          "button1": "Learn more",
-          "button1_link": "shopify:\/\/products\/flow",
-          "hero_external": false,
+          "title": "Join Over 1,000 Investors",
+          "subtitle": "<p>GoSun is growing and needs capital to become the World's Best Clean Tech brand.  Become part of our journey through our Equity Crowdfunding on StartEngine now. <\/p>",
+          "button1": "Learn more ➞",
+          "button1_link": "https:\/\/www.startengine.com\/gosun",
+          "hero_external": true,
           "show_pattern": true,
-          "dark_theme": true,
-          "background_color": "tundra",
-          "text_color": "light",
+          "dark_theme": false,
+          "background_color": "bg-white",
+          "text_color": "dark",
           "banner_columns": "2"
         }
       },
@@ -1883,8 +1882,8 @@
       "header": {
         "type": "header",
         "settings": {
-          "promo_icon": "local_shipping",
-          "promo_text": "Free shipping over $50",
+          "promo_icon": "local_atm",
+          "promo_text": "Up to 45% OFF for Labor Day",
           "promo_text_mobile": "",
           "countdown_date": "",
           "countdown_time": "",
@@ -1987,11 +1986,11 @@
       "1596226695144": {
         "type": "feature-1",
         "settings": {
-          "image": "shopify:\/\/shop_images\/chillest-hero.jpg",
+          "image": "shopify:\/\/shop_images\/Chill_Fishing_02_73a80aba-c2e1-4c3a-bdd0-6cb247a6992c.jpg",
           "overline": "Cook. Cool. Light. Charge. Purify.",
           "title": "Power when you need it most.",
           "description": "Ditch the fuel and ice, stock up on solar gear to enjoy the comforts of home anywhere.",
-          "button1": "Shop Today's Deals",
+          "button1": "Shop Labor Day Deals",
           "button1_url": "shopify:\/\/collections\/todays-deals",
           "button2": "",
           "button2_url": "",

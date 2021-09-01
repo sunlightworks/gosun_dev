@@ -1,0 +1,48 @@
+/* -------------------------------- 
+
+File#: _2_full-screen-select
+Title: Full Screen Select
+Descr: A full-screen window w/ a list of options
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.modal--select {
+  background-color: alpha(var(--color-bg), 0.95);
+
+  .modal__close-btn--outer {
+    background-color: var(--color-contrast-lower);
+
+    .icon {
+      color: var(--color-contrast-high);
+    }
+
+    &:hover {
+      background-color: var(--color-contrast-low);
+    }
+  }
+}
+
+.full-screen__select {
+}
+
+.full-screen-select__option {
+  display: block;
+
+  font-size: var(--text-lg);
+
+  color: var(--color-contrast-high);
+  padding: var(--space-xxxs) var(--space-sm);
+  border-radius: var(--radius-md);
+
+  transition: 0.2s;
+
+  &:hover:not(.full-screen-select__option--selected) {
+    background-color: var(--color-contrast-lower);
+  }
+}
+
+.full-screen-select__option--selected {
+  text-decoration: underline;
+  @include fontSmooth;
+}

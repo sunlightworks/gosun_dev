@@ -284,7 +284,7 @@ div.dropdown.menu {
 .dropdown {
   @include md-max() {
     width: 100% !important;
-    height: calc(100% - var(--header-height));
+    // height: calc(100% - var(--header-height));
     overflow: hidden;
   }
   overflow-x: hidden;
