@@ -1,0 +1,22 @@
+.fancybox-navigation {
+  display: none !important;
+}
+
+.js-newsletter-popup {
+  position: fixed;
+  z-index: var(--zindex-overlay);
+  width: 100vw !important;
+  height: 100vw !important;
+  left: 0;
+  top: 0;
+  background-color: hsla(
+    var(--color-contrast-higher-h),
+    var(--color-contrast-higher-s),
+    var(--color-contrast-higher-l),
+    0.6
+  );
+}
+
+.css-3n8yg7 {
+  background: black !important;
+}

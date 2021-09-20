@@ -86,6 +86,7 @@
         {% endif %}
         <div id="product-images" class="ten columns medium-down--one-whole {% if section.settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}">
           {% include 'product-images' %}
+          {% include '_1_scroll-indicator' %}
         </div>
         <div id="product-details"class="reveal-fx reveal-fx--translate-left six columns medium-down--one-whole product--overview  {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
           {% assign collection_handles = product.collections | map: 'handle' %}
