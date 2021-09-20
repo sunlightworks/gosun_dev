@@ -6434,10 +6434,10 @@ a.mobile_nav {
   --color-accent-light-h: 19;
   --color-accent-light-s: 69%;
   --color-accent-light-l: 56%;
-  --color-accent-lighter: hsl(19, 69%, 66%);
-  --color-accent-lighter-h: 19;
-  --color-accent-lighter-s: 69%;
-  --color-accent-lighter-l: 66%;
+  --color-accent-lighter: hsl(8, 16%, 93%);
+  --color-accent-lighter-h: 8;
+  --color-accent-lighter-s: 16%;
+  --color-accent-lighter-l: 93%;
   --color-secondary-darker: hsl(27, 31%, 55%);
   --color-secondary-darker-h: 27;
   --color-secondary-darker-s: 31%;
@@ -8075,6 +8075,9 @@ img {
       filter: none !important; }
     .video-wrapper:hover .material-icons {
       opacity: 0.8; }
+
+.img--short {
+  max-height: 450px; }
 
 .gallery-cell .video-wrapper,
 .gallery-cell video {
