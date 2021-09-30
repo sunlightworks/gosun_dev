@@ -76,10 +76,10 @@ Usage: codyhouse.co/license
     color: var(--color-contrast-high);
   }
 
-  &[aria-current="page"] {
-    border-bottom-color: var(--color-primary); // border color
-    color: var(--color-contrast-high);
-  }
+  // &[aria-current="page"] {
+  //   border-bottom-color: var(--color-primary); // border color
+  //   color: var(--color-contrast-high);
+  // }
 }
 
 // --collapsed
@@ -92,9 +92,10 @@ Usage: codyhouse.co/license
 
 .subnav--collapsed {
   display: inline-block;
+  position: absolute;
 
   .subnav__wrapper {
-    position: fixed;
+    // position: relative;
     display: block;
     z-index: var(--zindex-overlay);
     top: 0;

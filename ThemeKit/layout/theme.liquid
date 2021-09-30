@@ -283,6 +283,8 @@
     
     {% section 'header' %}
 
+
+    
     <div class="mega-menu-container">
       {% if settings.mega_menu_1 %}
         {% section 'mega-menu-1' %}
@@ -303,6 +305,8 @@
         {% section 'mega-menu-6' %}
       {% endif %}
     </div>
+
+
       
     <main data-barba="container" data-barba-namespace="{{ handle }}" {% unless feature_image %}class="container main content"{% endunless %}>
       {{ content_for_layout }}

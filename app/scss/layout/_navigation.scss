@@ -13,11 +13,11 @@
   ); // set max-width for navigation content
   --promo-banner-height: 60px;
   --top-bar-height: 40px;
-  --header-height: calc(var(--mega-nav-height) + var(--top-bar-height));
+  --header-height: calc(var(--mega-nav-height) + var(--top-bar-height) + 65px);
   @include md() {
     --header-height: calc(
       var(--mega-nav-height) + var(--top-bar-height) +
-        var(--promo-banner-height)
+        var(--promo-banner-height) + 65px
     );
   }
 }

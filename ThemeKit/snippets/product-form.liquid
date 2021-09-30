@@ -60,7 +60,7 @@
     </div>
   {% endif %}
 
-  <section class="purchase-details">
+  <section class="purchase-details margin-bottom-md">
     <div class="width-1-1 flex">
       {% capture add_to_cart_label %}{% if collection_handles contains 'pre-order' %}{{ 'collections.general.pre_order' | t }}{% elsif collection_handles contains 'back-order' %}Add to cart{% elsif collection_handles contains 'retired' %}Sold out{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}{% endcapture %}
       
