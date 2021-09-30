@@ -387,6 +387,37 @@
       {{ settings.custom_scripts }}
     </script>
 
+{% if template contains 'product' %}
+<script>
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 40) {
+    $('.pre-header').addClass('hide');
+    $('.header').addClass('hide');
+    $('.top_bar').addClass('hide');
+  } else {
+    $('.pre-header').removeClass('hide');
+    $('.header').removeClass('hide');
+    $('.top_bar').removeClass('hide');
+  }
+  } 
+</script>
+{% else %}
+<script>
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 40) {
+    $('.pre-header').addClass('hide');
+  } else {
+    $('.pre-header').removeClass('hide');
+  }
+  } 
+</script>
+{% endif %}
+
+
     <!----------- SCRIPTS ----------->
       <script src="https://cdn.jsdelivr.net/npm/lozad"></script>
       <script src="{{ 'jquery.min.js' | asset_url }}"></script> 
