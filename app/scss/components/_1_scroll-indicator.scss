@@ -1,7 +1,7 @@
 .aniWrap {
   margin: 40px auto;
   display: block;
-  width: 28px;
+  width: 72px;
   @include md-max() {
     position: absolute;
     top: 420px;
@@ -43,4 +43,77 @@
     opacity: 1;
     height: 4px;
   }
+}
+
+
+
+
+
+
+/* Arrow */
+.arrows {
+  // display: none;
+  cursor: pointer;
+  // margin-bottom: 50px;
+  width: 72px;
+  height: 72px;
+  // position: absolute;
+  left: 50%;
+  // margin-left: -30px;
+  bottom: 130px;
+  z-index: 15;
+  path {
+    stroke: var(--color-contrast-medium);
+    fill: transparent;
+    stroke-width: 3px;
+    animation: arrow 4s infinite;
+    -webkit-animation: arrow 3s infinite;
+    z-index: 15;
+  }
+}
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.arrows path.a1 {
+  animation-delay: -0.4s;
+  -webkit-animation-delay: -0.4s; /* Safari 和 Chrome */
+}
+.arrows path.a2 {
+  animation-delay: -0.2s;
+  -webkit-animation-delay: -0.2s; /* Safari 和 Chrome */
+}
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s; /* Safari 和 Chrome */
 }

@@ -10253,7 +10253,7 @@ Usage: codyhouse.co/license
 .aniWrap {
   margin: 40px auto;
   display: block;
-  width: 28px; }
+  width: 72px; }
   @media (max-width: 768px) {
     .aniWrap {
       position: absolute;
@@ -10290,6 +10290,61 @@ Usage: codyhouse.co/license
     top: 18px;
     opacity: 1;
     height: 4px; } }
+
+/* Arrow */
+.arrows {
+  cursor: pointer;
+  width: 72px;
+  height: 72px;
+  left: 50%;
+  bottom: 130px;
+  z-index: 15; }
+  .arrows path {
+    stroke: var(--color-contrast-medium);
+    fill: transparent;
+    stroke-width: 3px;
+    animation: arrow 4s infinite;
+    -webkit-animation: arrow 3s infinite;
+    z-index: 15; }
+
+@keyframes arrow {
+  0% {
+    opacity: 0; }
+  10% {
+    opacity: 1; }
+  30% {
+    opacity: 0.7; }
+  70% {
+    opacity: 0; }
+  90% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+  0% {
+    opacity: 0; }
+  40% {
+    opacity: 1; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+.arrows path.a1 {
+  animation-delay: -0.4s;
+  -webkit-animation-delay: -0.4s;
+  /* Safari 和 Chrome */ }
+
+.arrows path.a2 {
+  animation-delay: -0.2s;
+  -webkit-animation-delay: -0.2s;
+  /* Safari 和 Chrome */ }
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  /* Safari 和 Chrome */ }
 
 /* -------------------------------- 
 
@@ -11602,7 +11657,7 @@ Descr: A bar indicator displaying the current reading progress
   display: none; }
   @media (min-width: 768px) {
     .reading-progressbar {
-      top: calc(var(--header-height) - var(--promo-banner-height)); } }
+      top: 65px; } }
 
 .reading-progressbar--is-active {
   display: block; }
@@ -12049,7 +12104,7 @@ Usage: codyhouse.co/license
 
 .subnav__link {
   display: block;
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   padding: var(--space-md);
   text-decoration: none;
   color: hsla(var(--color-contrast-high-h), var(--color-contrast-high-s), var(--color-contrast-high-l), 0.65);
@@ -16269,7 +16324,7 @@ div.dropdown.menu {
   min-height: 50vh; }
   @media (min-width: 768px) {
     .container.main.content {
-      padding-top: var(--space-xl);
+      padding-top: var(--space-xxl);
       margin-top: var(--header-height); } }
 
 @media (max-width: 768px) {

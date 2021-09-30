@@ -471,7 +471,7 @@ div.dropdown.menu {
 .container.main.content {
   min-height: 50vh; // no whitespace below footer
   @include md() {
-    padding-top: var(--space-xl);
+    padding-top: var(--space-xxl);
     margin-top: var(--header-height);
   }
 }

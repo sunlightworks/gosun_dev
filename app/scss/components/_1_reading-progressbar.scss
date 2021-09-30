@@ -11,7 +11,7 @@ Descr: A bar indicator displaying the current reading progress
   z-index: var(--zindex-fixed-element);
   top: var(--header-height);
   @include md() {
-    top: calc(var(--header-height) - var(--promo-banner-height));
+    top: 65px;
   }
   left: 0;
   width: 100%;

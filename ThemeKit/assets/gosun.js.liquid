@@ -40,10 +40,13 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
 if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 40) {
   $('.pre-header').addClass('hide');
+  $('.header').addClass('hide');
 } else {
   $('.pre-header').removeClass('hide');
+  $('.header').removeClass('hide');
 }
 } 
+
 
 
 // ============================================================================
