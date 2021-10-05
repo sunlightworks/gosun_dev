@@ -10299,6 +10299,9 @@ Usage: codyhouse.co/license
   left: 50%;
   bottom: 130px;
   z-index: 15; }
+  @media (max-width: 768px) {
+    .arrows {
+      scale: 50%; } }
   .arrows path {
     stroke: var(--color-contrast-medium);
     fill: transparent;
@@ -15975,7 +15978,7 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
   );
   --promo-banner-height: 60px;
   --top-bar-height: 40px;
-  --header-height: calc(var(--mega-nav-height) + var(--top-bar-height) + 65px); }
+  --header-height: calc(var(--mega-nav-height) + var(--top-bar-height)); }
   @media (min-width: 768px) {
     :root {
       --mega-nav-height: 70px; } }
@@ -15983,7 +15986,7 @@ div.stamped-reviews-search-text input.stamped-reviews-search-input {
     :root {
       --header-height: calc(
       var(--mega-nav-height) + var(--top-bar-height) +
-        var(--promo-banner-height) + 65px
+        var(--promo-banner-height)
     ); } }
 
 .menu.right {
@@ -16316,11 +16319,21 @@ div.dropdown.menu {
   z-index: 999 !important; }
   @media (min-width: 768px) {
     #header {
-      margin-top: calc(var(--header-height) * -1); } }
+      margin-top: calc(calc(var(--header-height) - 65px) * -1); } }
+
+@media (min-width: 768px) {
+  .product [data-barba="container"] {
+    padding-top: var(--space-lg);
+    margin-top: calc(calc(var(--header-height) - 65px)); } }
+
+@media (min-width: 768px) {
+  .container.main.content {
+    padding-top: var(--space-xxl);
+    margin-top: var(--header-height); } }
 
 .collection-template-section,
 .index-sections {
-  margin-top: var(--header-height); }
+  margin-top: calc(var(--header-height) - 65px); }
 
 @media (max-width: 768px) {
   #shopify-section-product-template .content {
@@ -16331,7 +16344,7 @@ div.dropdown.menu {
   @media (min-width: 768px) {
     .container.main.content {
       padding-top: var(--space-xxl);
-      margin-top: var(--header-height); } }
+      margin-top: calc(var(--header-height) - 65px); } }
 
 @media (max-width: 768px) {
   .customers-login,

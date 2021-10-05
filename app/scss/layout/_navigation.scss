@@ -13,11 +13,11 @@
   ); // set max-width for navigation content
   --promo-banner-height: 60px;
   --top-bar-height: 40px;
-  --header-height: calc(var(--mega-nav-height) + var(--top-bar-height) + 65px);
+  --header-height: calc(var(--mega-nav-height) + var(--top-bar-height));
   @include md() {
     --header-height: calc(
       var(--mega-nav-height) + var(--top-bar-height) +
-        var(--promo-banner-height) + 65px
+        var(--promo-banner-height)
     );
   }
 }
@@ -453,13 +453,35 @@ div.dropdown.menu {
   display: block;
   z-index: 999 !important;
   @include md() {
-    margin-top: calc(var(--header-height) * -1);
+    margin-top: calc(calc(var(--header-height) - 65px) * -1);
   }
+}
+
+.product {
+  #header {
+    @include md() {
+      // margin-top: calc(calc(var(--header-height)) * -1);
+    }
+
+  }
+  [data-barba="container"] {
+    @include md() {
+      padding-top: var(--space-lg);
+      margin-top: calc(calc(var(--header-height) - 65px) );
+  }
+}
+}
+
+.container.main.content {
+  @include md() {
+    padding-top: var(--space-xxl);
+    margin-top: var(--header-height);
+}
 }
 
 .collection-template-section,
 .index-sections {
-  margin-top: var(--header-height);
+  margin-top: calc(var(--header-height) - 65px);
 }
 
 #shopify-section-product-template .content {
@@ -472,7 +494,7 @@ div.dropdown.menu {
   min-height: 50vh; // no whitespace below footer
   @include md() {
     padding-top: var(--space-xxl);
-    margin-top: var(--header-height);
+    margin-top: calc(var(--header-height) - 65px)
   }
 }
 
