@@ -207,7 +207,12 @@
             {% elsif product.metafields.custom_fields["partners_platform"] != blank %}
               {% include 'components_buttons_partners' with 'product' %}
             {% else %}
-              {% include 'product-form' with 'product' %}
+            <div class="display@lg"> {% include 'product-form' with 'product' %}</div>
+          {% endif %}
+
+          {% if product.available %}
+          <div class="padding-bottom-md width-100%">{% include 'components_pill_stock' %}</div>
+          </div>
           {% endif %}
 
           <div class="divider"></div>

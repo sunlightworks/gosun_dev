@@ -7,6 +7,15 @@ Usage: codyhouse.co/license
 
 -------------------------------- */
 
+@include md-max() {
+  .sub-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+  }
+}
+
+
 .flexi-subnav__social {
   display: block; // fallback
   display: flex;
@@ -113,7 +122,7 @@ Usage: codyhouse.co/license
     transition: opacity 0.3s;
 
     .subnav__nav {
-      transform: translateY(0);
+      transform: translateY(-300px);
       transition: transform 0.3s;
     }
   }

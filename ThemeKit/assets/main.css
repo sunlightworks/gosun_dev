@@ -12071,6 +12071,12 @@ Descr: Secondary navigation template
 Usage: codyhouse.co/license
 
 -------------------------------- */
+@media (max-width: 768px) {
+  .sub-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100vw; } }
+
 .flexi-subnav__social {
   display: block;
   display: flex;
@@ -12135,7 +12141,7 @@ Usage: codyhouse.co/license
     opacity: 1;
     transition: opacity 0.3s; }
     .subnav--collapsed .subnav__wrapper--is-visible .subnav__nav {
-      transform: translateY(0);
+      transform: translateY(-300px);
       transition: transform 0.3s; }
   .subnav--collapsed .subnav__nav {
     display: block;
