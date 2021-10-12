@@ -3,6 +3,7 @@
   display: block;
   width: 72px;
   @include md-max() {
+    display: none;
     position: absolute;
     top: 420px;
     right: 0;

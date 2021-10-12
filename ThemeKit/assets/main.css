@@ -5773,6 +5773,9 @@ body {
 div.hide {
   display: none !important; }
 
+.header.hide {
+  top: -60px; }
+
 @media (max-width: 465px) {
   .mobile-hide {
     display: none !important; } }
@@ -10256,6 +10259,7 @@ Usage: codyhouse.co/license
   width: 72px; }
   @media (max-width: 768px) {
     .aniWrap {
+      display: none;
       position: absolute;
       top: 420px;
       right: 0; } }
@@ -11749,6 +11753,9 @@ Descr: Selectable images that behave like radio/checkbox buttons
 Usage: codyhouse.co/license
 
 -------------------------------- */
+.custom-field__bundle-options {
+  display: none; }
+
 :root {
   --choice-img-input-size: 100px;
   --choice-img-input-icon-size: 26px; }
@@ -11778,6 +11785,14 @@ Usage: codyhouse.co/license
     height: 50px;
     width: 50px;
     */ }
+
+.launchtip_upsell_design {
+  background-color: white !important;
+  color: var(--color-contrast-higher) !important;
+  letter-spacing: 0 !important;
+  font-size: var(--text-sm) !important;
+  padding: var(--space-md) !important;
+  float: right; }
 
 .choice-img, .productbox {
   position: relative;
@@ -16344,7 +16359,7 @@ div.dropdown.menu {
   @media (min-width: 768px) {
     .container.main.content {
       padding-top: var(--space-xxl);
-      margin-top: calc(var(--header-height) - 65px); } }
+      margin-top: calc(var(--header-height) - 120px); } }
 
 @media (max-width: 768px) {
   .customers-login,

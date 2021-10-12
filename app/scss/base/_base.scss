@@ -25,6 +25,10 @@ div.hide {
   display: none !important;
 }
 
+.header.hide {
+  top: -60px;
+}
+
 @include sm-max() {
   .mobile-hide {
     display: none !important;

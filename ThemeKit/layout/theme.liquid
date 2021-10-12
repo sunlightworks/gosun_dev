@@ -13,7 +13,7 @@
     <meta http-equiv="cleartype" content="on">
     <meta name="robots" content="index,follow">
     <!-- Mobile Specific Metas -->
-    <meta name="HandheldFriendly" content="True">
+    <meta name="HandheldFriendly" content="True"> 
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#0b225a">
@@ -47,7 +47,7 @@
     {% if template contains 'collection' or 'product' %}   
       <script>
           YETT_BLACKLIST = [
-          /sellup.herokuapp.com/,
+          
           /static.zdassets.com/,
           /zdassets.com/,
           /button.aftership.com/,
@@ -388,6 +388,62 @@
     </script>
 
 {% if template contains 'product' %}
+
+<script>
+// (function(){
+
+// var doc = document.documentElement;
+// var w = window;
+
+// var prevScroll = w.scrollY || doc.scrollTop;
+// var curScroll;
+// var direction = 0;
+// var prevDirection = 0;
+
+// var header = document.getElementsByClassName('header');
+
+// var checkScroll = function() {
+
+//   /*
+//   ** Find the direction of scroll
+//   ** 0 - initial, 1 - up, 2 - down
+//   */
+
+//   curScroll = w.scrollY || doc.scrollTop;
+//   if (curScroll > prevScroll) { 
+//     //scrolled up
+//     direction = 2;
+//   }
+//   else if (curScroll < prevScroll) { 
+//     //scrolled down
+//     direction = 1;
+//   }
+
+//   if (direction !== prevDirection) {
+//     toggleHeader(direction, curScroll);
+//   }
+
+//   prevScroll = curScroll;
+// };
+
+// var toggleHeader = function(direction, curScroll) {
+//   if (direction === 2 && curScroll > 52) { 
+
+//     //replace 52 with the height of your header in px
+
+//     header.classList.add('hide');
+//     prevDirection = direction;
+//   }
+//   else if (direction === 1) {
+//     header.classList.remove('hide');
+//     prevDirection = direction;
+//   }
+// };
+
+// window.addEventListener('scroll', checkScroll);
+
+// })();
+</script>
 <script>
   window.onscroll = function() {scrollFunction()};
 

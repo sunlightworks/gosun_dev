@@ -15,7 +15,7 @@
 
 
 {% comment %}START / Breadcrumbs {% endcomment %}
-<nav class="breadcrumbs sixteen columns text-sm" aria-label="Breadcrumbs">
+<!-- <nav class="breadcrumbs sixteen columns text-sm" aria-label="Breadcrumbs">
   {% if collection.previous_product or collection.next_product or section.settings.product_breadcrumb %}
     <div class="clearfix breadcrumb-collection">
       {% if collection.previous_product or collection.next_product %}
@@ -70,7 +70,7 @@
       {% endif %}
     </div>
   {% endif %}
-</nav>
+</nav> -->
 {% comment %}END / Breadcrumbs {% endcomment %}
 
 
@@ -207,7 +207,7 @@
             {% elsif product.metafields.custom_fields["partners_platform"] != blank %}
               {% include 'components_buttons_partners' with 'product' %}
             {% else %}
-            <div class="display@lg"> {% include 'product-form' with 'product' %}</div>
+             {% include 'product-form' with 'product' %}
           {% endif %}
 
           {% if product.available %}

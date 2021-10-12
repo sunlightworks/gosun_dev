@@ -9,6 +9,12 @@ Usage: codyhouse.co/license
 
 -------------------------------- */
 
+
+.custom-field__bundle-options {
+  display: none;
+}
+
+
 :root {
     // custom input
     --choice-img-input-size: 100px; // custom input background size
@@ -46,6 +52,15 @@ Usage: codyhouse.co/license
     */
     
   }
+
+  .launchtip_upsell_design {
+    background-color: white !important;
+    color: var(--color-contrast-higher) !important;
+    letter-spacing: 0 !important;
+    font-size: var(--text-sm) !important;
+    padding: var(--space-md) !important;
+    float: right;
+}
 
   
   .choice-img, .productbox {
