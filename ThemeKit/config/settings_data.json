@@ -652,7 +652,7 @@
           "1570818284730": {
             "type": "column",
             "settings": {
-              "product": "solar-kitchen-with-powerbank-266"
+              "product": "solar-kitchen-2022-pro"
             }
           },
           "323d2e82-f2f7-4e9c-b3bd-d1eff41d6d2b": {
@@ -1061,6 +1061,88 @@
           "enable_reviews_in_description": false
         }
       },
+      "1_sub-navigation": {
+        "type": "1_sub-navigation",
+        "blocks": {
+          "1_sub-navigation-4": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "<p>Add up to five columns<\/p>",
+              "image_caption_top": "",
+              "menu_1": "",
+              "menu_2": "",
+              "menu_3": "",
+              "menu_4": "",
+              "image_caption_bottom": "",
+              "richtext_bottom": ""
+            }
+          },
+          "1_sub-navigation-3": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "<p>Link to your collections, sales and even external links<\/p>",
+              "image_caption_top": "",
+              "menu_1": "",
+              "menu_2": "",
+              "menu_3": "",
+              "menu_4": "",
+              "image_caption_bottom": "",
+              "richtext_bottom": ""
+            }
+          },
+          "1_sub-navigation-2": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "",
+              "image_caption_top": "",
+              "menu_1": "",
+              "menu_2": "",
+              "menu_3": "",
+              "menu_4": "",
+              "image_caption_bottom": "",
+              "richtext_bottom": ""
+            }
+          },
+          "1_sub-navigation-1": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "<p>A column with no settings can be used as a spacer<\/p>",
+              "image_caption_top": "",
+              "menu_1": "",
+              "menu_2": "",
+              "menu_3": "",
+              "menu_4": "",
+              "image_caption_bottom": "",
+              "richtext_bottom": ""
+            }
+          },
+          "1_sub-navigation-0": {
+            "type": "column",
+            "settings": {
+              "richtext_top": "<p>Add description, images, menus and links to your mega menu<\/p>",
+              "image_caption_top": "",
+              "menu_1": "",
+              "menu_2": "",
+              "menu_3": "",
+              "menu_4": "",
+              "image_caption_bottom": "",
+              "richtext_bottom": ""
+            }
+          }
+        },
+        "block_order": [
+          "1_sub-navigation-0",
+          "1_sub-navigation-1",
+          "1_sub-navigation-2",
+          "1_sub-navigation-3",
+          "1_sub-navigation-4"
+        ],
+        "settings": {
+          "parent": "",
+          "btn_label": "",
+          "btn_link": ""
+        }
+      },
       "cart-template": {
         "type": "cart-template",
         "blocks": {
@@ -1375,12 +1457,12 @@
       "1602523575506": {
         "type": "cta-banner",
         "settings": {
-          "image": "shopify:\/\/shop_images\/chillest-cover_28839dad-1ec7-42fe-bc40-e920b4bd92c3.jpg",
+          "image": "shopify:\/\/shop_images\/Screen_Shot_2021-09-14_at_7.36.58_AM.png",
           "overline": "Pre-order Now",
-          "title": "The ultimate portable refrigeration system",
-          "description": "Meet the GoSun Chillest: is the ultimate outdoor cooler because instead of using ice, it cools food and drinks using the power of the sun.",
+          "title": "Back-up Power with Purpose",
+          "description": "Meet Power 550 and 1100, portable solar generators that deliver power where and when it's needed",
           "button1": "Learn more",
-          "button1_url": "http:\/\/97.kickto.link\/jV6JLV0\/",
+          "button1_url": "shopify:\/\/products\/power-550",
           "hero_external": true,
           "invert": false,
           "dark_theme": false,
@@ -1391,6 +1473,14 @@
       "collection-template": {
         "type": "collection-template",
         "blocks": {
+          "91370cec-d97e-4777-aae9-7caf5656e1ee": {
+            "type": "video_by_coll",
+            "disabled": true,
+            "settings": {
+              "coll_video_collectionhandle": "solar-ovens",
+              "coll_video_url": "https:\/\/youtu.be\/UCymoEVKUFY"
+            }
+          },
           "1564501734189": {
             "type": "text",
             "settings": {
@@ -1412,13 +1502,6 @@
               "filter_name": "Additional filters",
               "filter_tags": "Bundles, Accessories,",
               "enable_filter_swatches": false
-            }
-          },
-          "91370cec-d97e-4777-aae9-7caf5656e1ee": {
-            "type": "video_by_coll",
-            "settings": {
-              "coll_video_collectionhandle": "solar-ovens",
-              "coll_video_url": "https:\/\/youtu.be\/UCymoEVKUFY"
             }
           }
         },
@@ -1573,7 +1656,7 @@
           "mega-menu-3-0": {
             "type": "column",
             "settings": {
-              "product": "power-144"
+              "product": "solarenergy-1100"
             }
           },
           "mega-menu-3-1": {
@@ -1585,7 +1668,7 @@
           "1596834547287": {
             "type": "column",
             "settings": {
-              "product": "solarpanel-30"
+              "product": "power-550"
             }
           },
           "1596834618121": {
@@ -1698,6 +1781,7 @@
           },
           "e07f51da-ac7c-4d90-9db1-68638971b723": {
             "type": "column",
+            "disabled": true,
             "settings": {
               "product": "tsunami-500"
             }
@@ -1835,7 +1919,7 @@
           "hero_external": true,
           "show_pattern": true,
           "dark_theme": false,
-          "background_color": "bg-white",
+          "background_color": "stripe--dark",
           "text_color": "dark",
           "banner_columns": "2"
         }
@@ -1882,12 +1966,12 @@
       "header": {
         "type": "header",
         "settings": {
-          "promo_icon": "local_atm",
-          "promo_text": "Up to 45% OFF for Labor Day",
+          "promo_icon": "card_giftcard",
+          "promo_text": "New Solar Power Station | Shop now ➞",
           "promo_text_mobile": "",
           "countdown_date": "",
           "countdown_time": "",
-          "promo_link": "shopify:\/\/collections\/todays-deals",
+          "promo_link": "shopify:\/\/products\/power-550",
           "promo_external": true,
           "tagline_text": "Portable power to the people",
           "social_icons_header": false,
@@ -1990,7 +2074,7 @@
           "overline": "Cook. Cool. Light. Charge. Purify.",
           "title": "Power when you need it most.",
           "description": "Ditch the fuel and ice, stock up on solar gear to enjoy the comforts of home anywhere.",
-          "button1": "Shop Labor Day Deals",
+          "button1": "Shop Today's Deals",
           "button1_url": "shopify:\/\/collections\/todays-deals",
           "button2": "",
           "button2_url": "",
@@ -2007,6 +2091,18 @@
       "social-gallery--v2": {
         "type": "social-gallery--v2",
         "blocks": {
+          "1607636533000": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/20190330-IMG_9302.jpg",
+              "featured_product": "chill",
+              "rating": 1,
+              "title": "Changed the way we boat.",
+              "description": "I liked my first Chill so much, I got a second one to use as a freezer.",
+              "handle": "Mckenna",
+              "activity": "boating"
+            }
+          },
           "1607636458462": {
             "type": "product",
             "settings": {
@@ -2042,18 +2138,6 @@
               "handle": "Rob",
               "activity": "living off-grid"
             }
-          },
-          "1607636533000": {
-            "type": "product",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/20190330-IMG_9302.jpg",
-              "featured_product": "chill",
-              "rating": 1,
-              "title": "Changed the way we boat.",
-              "description": "I liked my first Chill so much, I got a second one to use as a freezer.",
-              "handle": "Mckenna",
-              "activity": "boating"
-            }
           }
         },
         "block_order": [
@@ -2066,86 +2150,20 @@
           "title": "See why customers love GoSun."
         }
       },
-      "1_sub-navigation": {
-        "type": "1_sub-navigation",
+      "custom-fields-pages": {
+        "type": "custom-fields-pages",
         "blocks": {
-          "1_sub-navigation-0": {
-            "type": "column",
+          "65ad52e7-5e1b-499b-97fc-0a5c688af3dc": {
+            "type": "cf_f_fc",
             "settings": {
-              "richtext_top": "<p>Add description, images, menus and links to your mega menu<\/p>",
-              "image_caption_top": "",
-              "menu_1": "",
-              "menu_2": "",
-              "menu_3": "",
-              "menu_4": "",
-              "image_caption_bottom": "",
-              "richtext_bottom": ""
-            }
-          },
-          "1_sub-navigation-1": {
-            "type": "column",
-            "settings": {
-              "richtext_top": "<p>A column with no settings can be used as a spacer<\/p>",
-              "image_caption_top": "",
-              "menu_1": "",
-              "menu_2": "",
-              "menu_3": "",
-              "menu_4": "",
-              "image_caption_bottom": "",
-              "richtext_bottom": ""
-            }
-          },
-          "1_sub-navigation-2": {
-            "type": "column",
-            "settings": {
-              "richtext_top": "",
-              "image_caption_top": "",
-              "menu_1": "",
-              "menu_2": "",
-              "menu_3": "",
-              "menu_4": "",
-              "image_caption_bottom": "",
-              "richtext_bottom": ""
-            }
-          },
-          "1_sub-navigation-3": {
-            "type": "column",
-            "settings": {
-              "richtext_top": "<p>Link to your collections, sales and even external links<\/p>",
-              "image_caption_top": "",
-              "menu_1": "",
-              "menu_2": "",
-              "menu_3": "",
-              "menu_4": "",
-              "image_caption_bottom": "",
-              "richtext_bottom": ""
-            }
-          },
-          "1_sub-navigation-4": {
-            "type": "column",
-            "settings": {
-              "richtext_top": "<p>Add up to five columns<\/p>",
-              "image_caption_top": "",
-              "menu_1": "",
-              "menu_2": "",
-              "menu_3": "",
-              "menu_4": "",
-              "image_caption_bottom": "",
-              "richtext_bottom": ""
+              "key": "staff"
             }
           }
         },
         "block_order": [
-          "1_sub-navigation-0",
-          "1_sub-navigation-1",
-          "1_sub-navigation-2",
-          "1_sub-navigation-3",
-          "1_sub-navigation-4"
+          "65ad52e7-5e1b-499b-97fc-0a5c688af3dc"
         ],
         "settings": {
-          "parent": "",
-          "btn_label": "",
-          "btn_link": ""
         }
       }
     },

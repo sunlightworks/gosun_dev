@@ -8084,9 +8084,10 @@ img {
 .img--short {
   max-height: 450px; }
 
-.gallery-cell .video-wrapper,
-.gallery-cell video {
-  margin-top: 90px; }
+@media (max-width: 768px) {
+  .gallery-cell .video-wrapper,
+  .gallery-cell video {
+    margin-top: 120px; } }
 
 .video-wrapper img {
   height: auto;
@@ -10254,7 +10255,7 @@ Usage: codyhouse.co/license
     -webkit-filter: brightness(0.94) !important; }
 
 .aniWrap {
-  margin: 40px auto;
+  margin: 0px auto;
   display: block;
   width: 72px; }
   @media (max-width: 768px) {

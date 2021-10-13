@@ -97,7 +97,9 @@
 .gallery-cell {
   .video-wrapper,
   video {
-    margin-top: 90px;
+    @include md-max() {
+      margin-top: 120px;
+    }
   }
 }
 
