@@ -12,3 +12,10 @@ Watch local directory for changes and upload them to Shopify.
 
     $theme deploy --env=production
 Deploy to production environment (live site)
+
+Environment control: 
+[ThemeKit](https://shopify.github.io/themekit/)
+
+Build:
+gulp
+sass
