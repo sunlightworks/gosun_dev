@@ -12,7 +12,38 @@
 }
 .filter-bottom:before {
   @include filter-bottom();
+} 
+ 
+
+
+/* styles.scss.css | https://cdn.shopify.com/s/files/1/0789/1333/t/184/assets/styles.scss.css?v=11468049965419844593 */
+
+.flickity-slider,  .flickity-enabled.is-draggable .flickity-viewport,   .product_gallery .gallery-cell, .video-wrapper {
+  height: 450px;
+  @include md() {
+    height: 600px;
+  }
 }
+
+.video-wrapper {
+  @include md-max() {
+    height: 0;
+  }
+}
+.product_gallery .gallery-cell {
+  @include md-max() {
+    margin-top: 60px;
+  }
+ }
+ 
+
+ @include md-max() {
+  .product_gallery {
+    margin-bottom: 0px !important;
+  }
+}
+
+
 
 .index-sections {
   .no-filter img {
@@ -66,9 +97,9 @@
 ================================================== */
 .video-wrapper {
   position: relative;
-  margin-top: 25px;
+  // margin-top: 25px;
   padding-bottom: 56.25%;
-  height: 0;
+  // height: 0;
   overflow: hidden !important;
   @include border-radius(large);
   @include animateSlow();
@@ -103,6 +134,15 @@
   }
 }
 
+
+
+
+.product_gallery .gallery-cell {
+  height: 100%;
+  }
+
+
+
 .video-wrapper img {
   height: auto;
   width: 100%;
@@ -110,10 +150,13 @@
   @include filter-alabaster();
   object-fit: cover;
   z-index: 2;
+  @include md() {
+    min-height: 600px
+  }
 }
 
 #video-cover {
-  z-index: 2 !important;
+  z-index: 1 !important;
   position: absolute;
   top: 0;
   left: 0;
