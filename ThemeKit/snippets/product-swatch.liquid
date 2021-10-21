@@ -21,7 +21,7 @@
 {% endfor %}
 
 <div class="swatch clearfix" data-option-index="{{ option_index }}">
-  <div class="option_title">{{ swatch }}</div>
+  <!-- <div class="option_title">{{ swatch }}</div> -->
   {% assign values = '' %}
   {% for variant in product.variants %}
     {% assign value = variant.options[option_index] %}
