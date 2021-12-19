@@ -15,7 +15,6 @@ Usage: codyhouse.co/license
   }
 }
 
-
 .flexi-subnav__social {
   display: block; // fallback
   display: flex;
@@ -181,15 +180,15 @@ Usage: codyhouse.co/license
 }
 
 // used in JS - detect when the subnav needs to switch from an expanded layout to a collapsed one
-[class*="subnav--expanded"]::before {
-  display: none;
-  content: "collapsed";
-}
+// [class*="subnav--expanded"]::before {
+//   display: none;
+//   content: "collapsed";
+// }
 
-@each $breakpoint, $value in $breakpoints {
-  @include breakpoint(#{$breakpoint}) {
-    .subnav--expanded\@#{$breakpoint}::before {
-      content: "expanded";
-    }
-  }
-}
+// @each $breakpoint, $value in $breakpoints {
+//   @include breakpoint(#{$breakpoint}) {
+//     .subnav--expanded\@#{$breakpoint}::before {
+//       content: "expanded";
+//     }
+//   }
+// }

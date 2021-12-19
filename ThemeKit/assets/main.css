@@ -1191,6 +1191,15 @@ a.btn {
   .lightbox-text-link:hover, .lightbox-text-link:focus, .lightbox-text-link:active {
     background-color: hsl(var(--color-contrast-higher-h), var(--color-contrast-higher-s), calc(var(--color-contrast-higher-l) * 1.15)) !important; }
 
+.btn--accentaction_button {
+  margin-bottom: 0;
+  min-height: 50px;
+  background: var(--color-accent) !important;
+  color: var(--color-bg) !important; }
+
+.btn--accentaction_button:hover {
+  background-color: hsl(var(--color-accent-h), var(--color-accent-s), calc(var(--color-accent-l) * 1.15)) !important; }
+
 /* #Buttons
 ================================================== */
 a.button,
@@ -12223,30 +12232,6 @@ Usage: codyhouse.co/license
     display: block;
     color: var(--color-contrast-high); }
 
-[class*="subnav--expanded"]::before {
-  display: none;
-  content: "collapsed"; }
-
-@media (min-width: 32rem) {
-  .subnav--expanded\@xs::before {
-    content: "expanded"; } }
-
-@media (min-width: 48rem) {
-  .subnav--expanded\@sm::before {
-    content: "expanded"; } }
-
-@media (min-width: 64rem) {
-  .subnav--expanded\@md::before {
-    content: "expanded"; } }
-
-@media (min-width: 1180px) {
-  .subnav--expanded\@lg::before {
-    content: "expanded"; } }
-
-@media (min-width: 90em) {
-  .subnav--expanded\@xl::before {
-    content: "expanded"; } }
-
 /* -------------------------------- 
 
 File#: _3_hiding-nav
@@ -17120,17 +17105,3 @@ Usage: codyhouse.co/license
 .pumpkin-0 .toggle:hover {
   color: #c75724;
   background-color: #f1eceb; }
-
-
-
-    
-.btn--accentaction_button {
-  margin-bottom: 0;
-  min-height: 50px;
-  background: var(--color-accent)!important;
-  color: var(--color-bg)!important;
-      
-}
-.btn--accentaction_button:hover{
-	background-color: hsl(var(--color-accent-h),var(--color-accent-s),calc(var(--color-accent-l) * 1.15))!important;
-}
