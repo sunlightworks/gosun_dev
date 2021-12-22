@@ -462,23 +462,14 @@ div.dropdown.menu {
     @include md() {
       // margin-top: calc(calc(var(--header-height)) * -1);
     }
-
   }
   [data-barba="container"] {
     @include md() {
       padding-top: var(--space-lg);
-      margin-top: calc(calc(var(--header-height) - 65px) );
+      margin-top: calc(calc(var(--header-height) - 65px));
+    }
   }
 }
-}
-
-.container.main.content {
-  @include md() {
-    padding-top: var(--space-xxl);
-    margin-top: var(--header-height);
-}
-}
-
 .collection-template-section,
 .index-sections {
   margin-top: calc(var(--header-height) - 65px);
@@ -494,7 +485,7 @@ div.dropdown.menu {
   min-height: 50vh; // no whitespace below footer
   @include md() {
     padding-top: var(--space-xxl);
-    margin-top: calc(var(--header-height) - 120px)
+    margin-top: calc(var(--header-height) - 65px);
   }
 }
 

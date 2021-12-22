@@ -16350,11 +16350,6 @@ div.dropdown.menu {
     padding-top: var(--space-lg);
     margin-top: calc(calc(var(--header-height) - 65px)); } }
 
-@media (min-width: 768px) {
-  .container.main.content {
-    padding-top: var(--space-xxl);
-    margin-top: var(--header-height); } }
-
 .collection-template-section,
 .index-sections {
   margin-top: calc(var(--header-height) - 65px); }
@@ -16368,7 +16363,7 @@ div.dropdown.menu {
   @media (min-width: 768px) {
     .container.main.content {
       padding-top: var(--space-xxl);
-      margin-top: calc(var(--header-height) - 120px); } }
+      margin-top: calc(var(--header-height) - 65px); } }
 
 @media (max-width: 768px) {
   .customers-login,
