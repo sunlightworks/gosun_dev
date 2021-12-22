@@ -8739,6 +8739,9 @@ Usage: codyhouse.co/license
 .snize-sticky-searchbox {
   display: none !important; }
 
+.snize-ac-results {
+  z-index: 9999999 !important; }
+
 .snize-ac-results-content {
   background: var(--color-max) !important;
   padding-top: var(--space-lg) !important; }
@@ -9040,6 +9043,9 @@ Usage: codyhouse.co/license
 
 .snize-sticky-searchbox {
   display: none !important; }
+
+.snize-ac-results {
+  z-index: 9999999 !important; }
 
 .snize-ac-results-content {
   background: var(--color-max) !important;
