@@ -10392,6 +10392,64 @@ Usage: codyhouse.co/license
   -webkit-animation-delay: 0s;
   /* Safari 和 Chrome */ }
 
+@use '../base' as *;
+/* -------------------------------- 
+
+File#: _1_swipe-content
+Title: Swipe Content
+Descr: A Vanilla JavaScript plugin to detect touch interactions
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.swipe-content {
+  height: 280px;
+  width: 280px;
+  background-color: var(--color-contrast-low);
+  border-radius: var(--radius-md);
+  cursor: default;
+  transition: background 0.2s; }
+  .swipe-content:active {
+    background-color: var(--color-contrast-medium); }
+
+@use '../base' as *;
+/* -------------------------------- 
+
+File#: _1_custom-cursor
+Title: Custom Cursor
+Descr: A JavaScript plugin to create animated custom cursors
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.c-cursor {
+  position: fixed;
+  z-index: 9999;
+  /* use highest z-index value */
+  top: 0;
+  left: 0;
+  pointer-events: none; }
+
+.c-cursor__img {
+  display: block;
+  position: relative;
+  margin: -50% 0 0 -50%;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+  opacity: 0;
+  --translate: 0;
+  --rotate: 0;
+  --skew: 0;
+  --scale: 0;
+  transform: translate3d(var(--translate-x, var(--translate)), var(--translate-y, var(--translate)), var(--translate-z, 0)) rotateX(var(--rotate-x, 0)) rotateY(var(--rotate-y, 0)) rotateZ(var(--rotate-z, var(--rotate))) skewX(var(--skew-x, var(--skew))) skewY(var(--skew-y, 0)) scaleX(var(--scale-x, var(--scale))) scaleY(var(--scale-y, var(--scale)));
+  transition: opacity 0.2s, transform 0.2s var(--ease-out); }
+  .c-cursor--in .c-cursor__img {
+    /* enter animation */
+    --scale: 1;
+    opacity: 1; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-custom-cursor],
+  .js [data-custom-cursor] * {
+    cursor: none; } }
+
 /* -------------------------------- 
 
 File#: _1_hero
@@ -14229,6 +14287,87 @@ html:not(.js) .mega-nav--mobile .mega-nav__search {
   height: auto;
   box-shadow: none;
   border-top: 1px solid var(--color-contrast-lower); }
+
+@use '../base' as *;
+@use '_2_slideshow.scss' as *;
+@use '_1_custom-cursor.scss' as *;
+/* -------------------------------- 
+
+File#: _3_looping-slideshow
+Title: Looping Slideshow
+Descr: Slideshow automatically looping among items with a progress indicator for each item
+Usage: codyhouse.co/license
+
+-------------------------------- */
+/* optional -> overwrite slideshow height at different breakpoints */
+.js .loop-slideshow {
+  --slideshow-slide-transition-duration: 0.3s;
+  /* slide effect transition duration */ }
+
+/* slideshow navigation - created in JS */
+.loop-slideshow__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: transparent; }
+
+.loop-slideshow__nav-item {
+  margin: var(--space-sm) calc(var(--space-sm) / 2) 0;
+  --loop-slideshow-filling: 0;
+  /* used in JS to create the filling effect */ }
+  .loop-slideshow__nav-item button {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 4px;
+    width: 60px;
+    border-radius: 50em;
+    background-color: var(--color-contrast-lower);
+    cursor: pointer;
+    transition: 0.2s; }
+    .loop-slideshow__nav-item button::before {
+      /* filling effect */
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transform: scaleX(var(--loop-slideshow-filling));
+      transform-origin: left center;
+      background-color: var(--color-primary); }
+    .loop-slideshow__nav-item button:hover {
+      background-color: hsla(var(--color-contrast-lower-h), var(--color-contrast-lower-s), var(--color-contrast-lower-l), 0.7); }
+    @media (min-width: 64rem) {
+      .loop-slideshow__nav-item button {
+        height: 5px;
+        width: 90px; } }
+
+/* slideshow custom cursor */
+.loop-slideshow-cursor.c-cursor--right .c-cursor__img {
+  --rotate: 180deg; }
+
+/* pause/play button */
+.loop-slideshow__pause-btn {
+  position: absolute;
+  z-index: 3;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.85);
+  cursor: pointer;
+  color: var(--color-white);
+  /* icon color */
+  transition: background 0.3s, transform 0.3s var(--ease-out-back); }
+  .loop-slideshow__pause-btn:hover {
+    background-color: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.95);
+    transform: scale(1.1); }
 
 /* Button spacing */
 @media (min-width: 768px) {

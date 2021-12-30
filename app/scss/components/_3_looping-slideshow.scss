@@ -1,0 +1,104 @@
+@use '../base' as *;
+@use '_2_slideshow.scss' as *;
+@use '_1_custom-cursor.scss' as *;
+
+/* -------------------------------- 
+
+File#: _3_looping-slideshow
+Title: Looping Slideshow
+Descr: Slideshow automatically looping among items with a progress indicator for each item
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+/* optional -> overwrite slideshow height at different breakpoints */
+.loop-slideshow {
+  .js & {
+    --slideshow-slide-transition-duration: 0.3s; /* slide effect transition duration */
+  }
+
+  .slideshow__content {
+    // clip-path: inset(0 round var(--radius-lg));
+  }
+}
+
+/* slideshow navigation - created in JS */
+.loop-slideshow__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.loop-slideshow__nav-item {
+  margin: var(--space-sm) calc(var(--space-sm) / 2) 0;
+  --loop-slideshow-filling: 0; /* used in JS to create the filling effect */
+
+  button {
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    height: 4px;
+    width: 60px;
+    border-radius: 50em;
+    background-color: var(--color-contrast-lower);
+
+    cursor: pointer;
+    transition: 0.2s;
+
+    &::before {
+      /* filling effect */
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transform: scaleX(var(--loop-slideshow-filling));
+      transform-origin: left center;
+      background-color: var(--color-primary);
+    }
+
+    &:hover {
+      background-color: alpha(var(--color-contrast-lower), 0.7);
+    }
+
+    @include breakpoint(md) {
+      height: 5px;
+      width: 90px;
+    }
+  }
+}
+
+/* slideshow custom cursor */
+.loop-slideshow-cursor.c-cursor--right .c-cursor__img {
+  --rotate: 180deg;
+}
+
+/* pause/play button */
+.loop-slideshow__pause-btn {
+  position: absolute;
+  z-index: 3;
+  top: var(--space-sm);
+  right: var(--space-sm);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: alpha(var(--color-black), 0.85);
+
+  cursor: pointer;
+  color: var(--color-white); /* icon color */
+
+  transition: background 0.3s, transform 0.3s var(--ease-out-back);
+
+  &:hover {
+    background-color: alpha(var(--color-black), 0.95);
+    transform: scale(1.1);
+  }
+}
