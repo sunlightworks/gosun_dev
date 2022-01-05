@@ -63,6 +63,17 @@ Usage: codyhouse.co/license
 .subnav__list {
   display: flex;
   overflow: auto;
+  @include md-max() {
+    display: none;
+  }
+}
+.sub-nav .flex.margin-auto {
+  @include md-max() {
+    width: 100%;
+    .purchase-details {
+      width: 100%;
+    }
+  }
 }
 
 .subnav__item {

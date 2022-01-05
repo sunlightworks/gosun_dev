@@ -12218,6 +12218,15 @@ Usage: codyhouse.co/license
 .subnav__list {
   display: flex;
   overflow: auto; }
+  @media (max-width: 768px) {
+    .subnav__list {
+      display: none; } }
+
+@media (max-width: 768px) {
+  .sub-nav .flex.margin-auto {
+    width: 100%; }
+    .sub-nav .flex.margin-auto .purchase-details {
+      width: 100%; } }
 
 .subnav__item {
   display: inline-block;
