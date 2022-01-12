@@ -23,4 +23,10 @@ production:
     - "settings_data.json"
 
   
-
+bundles:
+  password: ${SHOPIFY_API_PASSWORD}
+  theme_id: 120632016990
+  store: patricksherwin.myshopify.com
+  ignore_files:
+    - "*.gif"
+    - "settings_data.json"

@@ -1,0 +1,39 @@
+<script id="bold-platform-data" type="application/json">
+  {
+    "shop": {
+      "domain": "{{ shop.domain }}",
+      "permanent_domain": "{{ shop.permanent_domain }}",
+      "url": "{{ shop.url }}",
+      "secure_url": "{{ shop.secure_url }}",
+      "money_format": {{ shop.money_format | json }},
+      "currency": {{ shop.currency | json }}
+    },
+    "customer": {
+      "id": {{ customer.id | json }},
+      "tags": {{ customer.tags | json }}
+    },
+    "cart": {{ cart | json }},
+    "line_item_products": {{ cart | map: "items"  | map: "product" | json }},
+    "template": "{{ template | split: "." | first }}",
+    "product": {{ product | json }},
+    "collection": {{ collection.products | json }}
+  }
+  </script>
+  {{ 'https://static.boldcommerce.com/bold-platform/sf/pr.js' | script_tag }}
+  <style>
+    .money[data-product-id], .money[data-product-handle], .money[data-variant-id], .money[data-line-index], .money[data-cart-total] {
+      animation: moneyAnimation 0s 2s forwards; visibility: hidden;
+    }
+    @keyframes moneyAnimation { to { visibility: visible; } }
+    .shappify_qb_grid {
+      width: auto;
+      background: #fff;
+      margin: 8px 0;
+    }
+    .shappify_qb_grid, .shappify_qb_grid td, .shappify_qb_grid th {
+      text-align: left;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+    }
+  </style>
