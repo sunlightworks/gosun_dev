@@ -12110,7 +12110,7 @@ Usage: codyhouse.co/license
   color: var(--color-contrast-medium);
   --loop-tabs-filling: 0; }
   .js .loop-tabs__control::before, .js .loop-tabs__control::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -12140,12 +12140,16 @@ Usage: codyhouse.co/license
 @media (min-width: 768px) {
   .js .loop-tabs__control::before,
   .js .loop-tabs__control::after {
-    width: var(--loop-tabs-fill-size);
-    height: 100%; }
+    height: var(--loop-tabs-fill-size);
+    width: 100%; }
   .js .loop-tabs__control::after {
     transform: scaleY(0); }
   .js .loop-tabs__control--selected::after {
-    transform: scaleY(var(--loop-tabs-filling)); }
+    transform: scaleX(var(--loop-tabs-filling));
+    -webkit-transform: scaleX(var(--loop-tabs-filling));
+    -moz-transform: scaleX(var(--loop-tabs-filling));
+    -ms-transform: scaleX(var(--loop-tabs-filling));
+    -o-transform: scaleX(var(--loop-tabs-filling)); }
   .js .loop-tabs__control:focus::after,
   .js .loop-tabs--autoplay-off .loop-tabs__control::after {
     transform: scaleY(1); } }

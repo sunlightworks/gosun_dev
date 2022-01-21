@@ -1,6 +1,6 @@
 development:
   password: ${SHOPIFY_API_PASSWORD}
-  theme_id: 120498683998
+  theme_id: 120646598750
   store: patricksherwin.myshopify.com
   ignore_files:
     - "*.gif"
@@ -30,3 +30,12 @@ bundles:
   ignore_files:
     - "*.gif"
     - "settings_data.json"
+
+pdp:
+  password: ${SHOPIFY_API_PASSWORD}
+  theme_id: 120646598750
+  store: patricksherwin.myshopify.com
+  ignore_files:
+    - "*.gif"
+    - "settings_data.json"
+

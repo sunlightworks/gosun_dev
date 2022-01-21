@@ -1,5 +1,3 @@
-
-
 /* -------------------------------- 
 
 File#: _1_looping_tabs
@@ -10,151 +8,165 @@ Usage: codyhouse.co/license
 -------------------------------- */
 
 :root {
-    --loop-tabs-fill-size: 1px; // control border width
-    --loop-tabs-animation-duration: 0.5s; // transition duration among tabs (to hide/reveal new content)
-  }
+  --loop-tabs-fill-size: 1px; // control border width
+  --loop-tabs-animation-duration: 0.5s; // transition duration among tabs (to hide/reveal new content)
+}
 
 @include md() {
-  .loop-tabs__asset > * { // make asset fixed height
+  .loop-tabs__asset > * {
+    // make asset fixed height
     object-fit: cover;
     object-position: center;
     width: 100%;
     height: 350px;
   }
 }
-  
-  .loop-tabs {
+
+.loop-tabs {
+  position: relative;
+  z-index: 1;
+}
+
+.loop-tabs__media {
+  // hide media section if js is disabled
+  display: none;
+}
+
+.js {
+  .loop-tabs__assets, // tab images list
+    .loop-tabs__panels {
+    // tab descriptions list
     position: relative;
-    z-index: 1;
   }
-  
-  .loop-tabs__media { // hide media section if js is disabled
+
+  .loop-tabs__asset, // tab image
+    .loop-tabs__panel {
+    // tab description
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    // hide asset/description when not selected
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--loop-tabs-animation-duration),
+      visibility var(--loop-tabs-animation-duration),
+      transform var(--loop-tabs-animation-duration);
+  }
+
+  .loop-tabs__asset {
+    transform: scale(0.9);
+    overflow: hidden;
+  }
+
+  .loop-tabs__asset--selected,
+  .loop-tabs__panel--selected {
+    position: relative;
+    opacity: 1;
+    z-index: 2;
+    visibility: visible;
+  }
+
+  .loop-tabs__asset--selected {
+    transform: scale(1);
+  }
+
+  .loop-tabs__asset--exit {
+    // create asset exit-animation when a new tab is selected
+    transform: scale(1.1);
+  }
+
+  .loop-tabs__control {
+    // tabs style
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: var(--color-contrast-medium);
+    --loop-tabs-filling: 0; // this css variable is updated using JS - craete the line fill effect
+
+    &::before,
+    &::after {
+      // tab line
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: var(--loop-tabs-fill-size);
+      width: 100%;
+    }
+
+    &::before {
+      // background line - always filled
+      background-color: var(--color-contrast-low);
+    }
+
+    &::after {
+      // filling line
+      transform: scaleX(0);
+      transform-origin: left top;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus::after,
+    .loop-tabs--autoplay-off &::after {
+      transform: scaleX(1);
+    }
+  }
+
+  .loop-tabs__control--selected {
+    color: var(--color-contrast-high);
+
+    &::after {
+      transform: scaleX(var(--loop-tabs-filling));
+      background-color: currentColor;
+    }
+  }
+
+  .loop-tabs__media {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include md() {
+    .loop-tabs__control::before,
+    .loop-tabs__control::after {
+      height: var(--loop-tabs-fill-size);
+      width: 100%;
+    }
+
+    .loop-tabs__control::after {
+      transform: scaleY(0);
+    }
+
+    .loop-tabs__control--selected::after {
+      transform: scaleX(var(--loop-tabs-filling));
+      -webkit-transform: scaleX(var(--loop-tabs-filling));
+      -moz-transform: scaleX(var(--loop-tabs-filling));
+      -ms-transform: scaleX(var(--loop-tabs-filling));
+      -o-transform: scaleX(var(--loop-tabs-filling));
+    }
+
+    .loop-tabs__control:focus::after,
+    .loop-tabs--autoplay-off .loop-tabs__control::after {
+      transform: scaleY(1);
+    }
+  }
+}
+
+// style for no-js support
+html:not(.js) {
+  .loop-tabs__content {
+    width: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .loop-tabs__controls {
     display: none;
   }
-  
-  .js {
-    .loop-tabs__assets, // tab images list
-    .loop-tabs__panels { // tab descriptions list
-      position: relative;
-    }
-  
-    .loop-tabs__asset, // tab image
-    .loop-tabs__panel { // tab description
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-      // hide asset/description when not selected
-      opacity: 0; 
-      visibility: hidden;
-      transition: opacity var(--loop-tabs-animation-duration), visibility var(--loop-tabs-animation-duration), transform var(--loop-tabs-animation-duration);
-    }
-  
-    .loop-tabs__asset {
-      transform: scale(0.9);      
-      overflow: hidden;
-    }
-  
-    .loop-tabs__asset--selected,
-    .loop-tabs__panel--selected {
-      position: relative;
-      opacity: 1;
-      z-index: 2;
-      visibility: visible;
-    }
-  
-    .loop-tabs__asset--selected {
-      transform: scale(1);
-    }
-  
-    .loop-tabs__asset--exit { // create asset exit-animation when a new tab is selected 
-      transform: scale(1.1);
-    }
-  
-    .loop-tabs__control { // tabs style
-      display: block;
-      position: relative;
-      text-decoration: none;
-      color: var(--color-contrast-medium);
-      --loop-tabs-filling: 0; // this css variable is updated using JS - craete the line fill effect
-  
-      &::before, &::after { // tab line
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: var(--loop-tabs-fill-size);
-        width: 100%;
-      }
-  
-      &::before { // background line - always filled
-        background-color: var(--color-contrast-low);
-      }
-  
-      &::after { // filling line
-        transform: scaleX(0);
-        transform-origin: left top;
-      }
-      
-      &:focus {
-        outline: none;
-      }
-  
-      &:focus::after,
-      .loop-tabs--autoplay-off &::after {
-        transform: scaleX(1);
-      }
-    }
-  
-    .loop-tabs__control--selected {
-      color: var(--color-contrast-high);
-  
-      &::after {
-        transform: scaleX(var(--loop-tabs-filling));
-        background-color: currentColor;
-      }
-    }
-  
-    .loop-tabs__media {
-      display: flex;
-      justify-content: center;
-    }
-  
-    @include md() {
-      .loop-tabs__control::before, 
-      .loop-tabs__control::after {
-        width: var(--loop-tabs-fill-size);
-        height: 100%;
-      }
-  
-      .loop-tabs__control::after {
-        transform: scaleY(0);
-      }
-  
-      .loop-tabs__control--selected::after {
-        transform: scaleY(var(--loop-tabs-filling));
-      }
-  
-      .loop-tabs__control:focus::after,
-      .loop-tabs--autoplay-off .loop-tabs__control::after {
-        transform: scaleY(1);
-      }
-    }
-  }
-  
-  // style for no-js support
-  html:not(.js) {
-    .loop-tabs__content {
-      width: 100%;
-      flex-basis: 100%;
-      max-width: 100%;
-      margin: 0;
-    }
-  
-    .loop-tabs__controls {
-      display: none;
-    }
-  }
-  
-  
+}
