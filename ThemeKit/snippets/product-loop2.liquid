@@ -10,6 +10,7 @@
 
 <div itemtype="http://schema.org/ItemList" class="product-list collection-matrix clearfix">
   {% for product in products limit: limit %}
+  <script type="application/json" class="bold-product-json">{{ product | json }}</script>
     {% if product.id == skip_product.id or skip == true %}
       {% assign product_found = true %}
     {% else %}

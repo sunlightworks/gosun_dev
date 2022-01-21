@@ -25,7 +25,7 @@
       <span class="money price {% unless product.compare_at_price == product.price %}{% if product.compare_at_price_max > product.price %}sale{% endif %}{% endunless %}">
           {% if product.available %}
               {% if product.price_min > 0 %}
-              <span class="money money--discount">{{ product.price_min | money }}</span>
+              <span class="money money--discount" data-product-id="{{ product.id }}">{{ product.price_min | money }}</span>
               {% else %}
               <span class="money--discount">
                   {{ settings.free_price_text }}

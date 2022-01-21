@@ -91,7 +91,7 @@
 
               <p class="modal_price">
                 {% if item.price > 0 %}
-                  <span class="money">{{ item.price | money }}</span>
+                  <span class="money" data-line-index="{{ forloop.index0 }}">{{ item.price | money }}</span>
                 {% else %}
                   {{ settings.free_price_text }}
                 {% endif %}

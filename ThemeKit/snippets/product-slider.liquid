@@ -35,7 +35,7 @@
       data-products-limit="{{ limit }}"
       data-products-available="{{ products_length }}">
   {% for product in products limit: loop_limit %}
-
+  <script type="application/json" class="bold-product-json">{{ product | json }}</script>
     {% if product.id != skip_product.id %}
       {% assign feature_image = product.featured_image %}
       <div class="gallery-cell thumbnail visible-{{ visible_products }}">

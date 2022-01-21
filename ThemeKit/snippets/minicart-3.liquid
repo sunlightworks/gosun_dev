@@ -67,7 +67,7 @@
                   <i class="icon--sm material-icons-outlined color-contrast-low">delete</i>
                 </div>
                 <summary class="flex flex-column text-right">
-                  <span class="color-contrast-higher {% if item.price < item.variant.compare_at_price %}sale{% endif %}">{{ item.price | money }}</span>
+                  <span class="color-contrast-higher {% if item.price < item.variant.compare_at_price %}sale{% endif %} money" data-line-index="{{ forloop.index0 }}">{{ item.price | money }}</span>
                   {% if item.price < item.variant.compare_at_price %}
                     <span class="money was_price mtn5">{{ item.variant.compare_at_price | money }}</span>
                   {% endif %}
@@ -79,7 +79,7 @@
         </ol>
       
       <summary class="padding-y-sm border-top border-contrast-lower flex-shrink-0  ">
-        <p class="flex justify-between js-cart_subtotal"><span>{{ 'layout.general.subtotal' | t }}</span> <span>{{ cart.total_price | money }}</span></p>
+        <p class="flex justify-between js-cart_subtotal"><span>{{ 'layout.general.subtotal' | t }}</span> <span class="money" data-cart-total>{{ cart.total_price | money }}</span></p>
         <p class="flex justify-between js-cart_shipping"><span>Shipping</span> <span>{% if cart.total_price >= 5000 %}
           Free
           {% else %}

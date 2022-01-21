@@ -1,4 +1,5 @@
 {% for product in products %}
+<script type="application/json" class="bold-product-json">{{ product | json }}</script>
   {% assign collection_handles = product.collections | map: 'handle' %}
   {% assign variant = product.selected_or_first_available_variant %}
 

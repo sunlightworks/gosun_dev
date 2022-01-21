@@ -4,7 +4,7 @@
 
             <h4 class="subnav__link scrollLink base-BodyTitle text-dark pr20">{{ product.title }}</h4>
 
-            <h2 class="subnav__link scrollLink product_type hide" href="#">{{ product.price | money }}</h2>
+            <h2 class="subnav__link scrollLink product_type hide" href="#"  data-product-id="{{ product.id }}">{{ product.price | money }}</h2>
 
             <aside class="subnav__menu float-left mobile--false">
                 <a class="subnav__link scrollLink active-tab clr-sub" href="#overview">Overview</a>
