@@ -281,7 +281,7 @@ window.flitsApp.wishlist_products = function () {
         ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         var data = that.serialize(
           {
-            token: token,
+            customer_hash:window.flitsApp.customer_hash,token:token,
             customer_id: customer_id,
             customer_email: customer_email,
             product_id: product_id,
@@ -385,7 +385,7 @@ window.flitsApp.wishlist_products = function () {
         ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         var data = that.serialize(
           {
-            token: token,
+            customer_hash:window.flitsApp.customer_hash,token:token,
             customer_id: customer_id,
             customer_email: customer_email,
             product_id: product_id,
@@ -578,7 +578,7 @@ if(location.pathname == "/account"){
       url: url,
       data: {
         customer_id: customer_id,
-        token: token
+        customer_hash:window.flitsApp.customer_hash,token:token
       },
       success: function (data) {
         var count = data.count;

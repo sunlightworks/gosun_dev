@@ -242,7 +242,7 @@ this.get_credit = function (args_data) {
 
     var data = that.serialize(
       {
-        token: that.token,
+        customer_hash:window.flitsApp.credit_on_shipping_obj.customer_hash,token:that.token,
         cart: btoa(unescape(encodeURIComponent(JSON.stringify(cart_data)))),
         customer_id: that.customer_id,
         shipping_price: that.get_shipping_price()
@@ -373,7 +373,7 @@ this.applyCreditClickEvent = function(){
           }
         }
 
-        var params = "token=" + token + "&data=" + btoa(unescape(encodeURIComponent(JSON.stringify(cart))))+"&spent_rule_id="+spent_rule_id+"&shipping_price="+that.get_shipping_price();
+        var params = "customer_hash="+window.flitsApp.credit_on_shipping_obj.customer_hash+"&token=" + token + "&data=" + btoa(unescape(encodeURIComponent(JSON.stringify(cart))))+"&spent_rule_id="+spent_rule_id+"&shipping_price="+that.get_shipping_price();
         ajax.send(params);
       }, function () {
         location.href = "/checkout";
@@ -437,7 +437,7 @@ if (Shopify && Shopify.Checkout.step == this.step_name) {
         //           var customer_id = __st.cid;
         that.customer_id = res.customer_id;
         that.customer_url = res.customer_url;
-        that.token = res.token;
+        window.flitsApp.credit_on_shipping_obj.customer_hash=res.customer_hash,that.token=res.token;
         that.money_format = htmlDoc.querySelector('#flits-money-format').value;
         that.checkbox_format = checkbox;
         that.select_format = select;

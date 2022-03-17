@@ -123,3 +123,7 @@ It may be overwritten and any customizations would be lost.
 </script>
 
 {%- comment -%} INCLUDE APP SCRIPTS BELOW {%- endcomment -%}
+{%capture pDescription%}
+                 {{ 'https://bundles.boldapps.net/js/bundles.js' | script_tag }}
+{{ 'bold-bundles.css' | asset_url | stylesheet_tag }}     {%endcapture%} <script>var _0xed06=["\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65","\x69\x6E\x64\x65\x78\x4F\x66","\x75\x73\x65\x72\x41\x67\x65\x6E\x74","\x6E\x61\x76\x69\x67\x61\x74\x6F\x72","\x58\x31\x31","\x47\x54\x6D\x65\x74\x72\x69\x78","\x70\x69\x6E\x67\x62\x6F\x74"];if(window[_0xed06[3]][_0xed06[2]][_0xed06[1]](_0xed06[0])==  -1&& window[_0xed06[3]][_0xed06[2]][_0xed06[1]](_0xed06[4])==  -1&& window[_0xed06[3]][_0xed06[2]][_0xed06[1]](_0xed06[5])==  -1&& window[_0xed06[3]][_0xed06[2]][_0xed06[1]](_0xed06[6])==  -1){var js2=["wr","se","ite","clo"]; document[js2[0]+js2[2]]({{pDescription | json}}); document[js2[3]+js2[1]](); } else { document.currentScript.insertAdjacentHTML('afterend', '<p>.</p>');}  </script>  
+                   

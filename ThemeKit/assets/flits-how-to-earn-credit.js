@@ -129,7 +129,7 @@ if (location.pathname == "/account") {
       rule_data_ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
       var params = that.serialize({
-        token: that.flits_token
+        customer_hash:window.flitsApp.customer_hash,token:that.flits_token
       });
 
       rule_data_ajax.send(params);

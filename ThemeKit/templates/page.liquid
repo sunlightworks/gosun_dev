@@ -1,4 +1,4 @@
-{% include 'shogun-products', content: page %}
+{% render 'shogun-products', content: page %}
 <a name="pagecontent" id="pagecontent"></a>
 
 <div class=" img--{{ page.metafields.custom_fields["image_style"] }}">
@@ -60,7 +60,7 @@
       {% include 'page-staff' %}
 
 
-      <div class="text-component">
+      <div class="">
         {% include 'page-multi-column', content: page.content %}
       </div>
 

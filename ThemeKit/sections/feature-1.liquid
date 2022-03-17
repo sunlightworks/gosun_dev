@@ -78,13 +78,17 @@
           <p class='sr-only'>Slideshow item 1 description</p>
         </li>
         
+        {% if image_2 != blank %}
         <li class="slideshow__item js-slideshow__item" style="background-image: url('{{ image_2 |  img_url: '800x' }}');">
           <p class='sr-only'>Slideshow item 2 description</p>
         </li>
+        {% endif %}
         
+        {% if image_3 != blank %}
         <li class="slideshow__item js-slideshow__item" style="background-image: url('{{ image_3 |  img_url: '800x' }}');">
           <p class='sr-only'>Slideshow item 3 description</p>
         </li>
+        {% endif %}
       </ul>
     
       <!-- <button class="reset loop-slideshow__pause-btn btn-states no-js:is-hidden js-loop-slideshow__pause-btn hide" aria-controls="loop-slideshow-1" aria-pressed="false" aria-label="pause slideshow">
@@ -99,6 +103,7 @@
 
     </div>
     
+    {% if image_2 != blank %}
     <!-- custom cursors -->
     <div id="loop-slideshow-cursor-arrow" class="c-cursor loop-slideshow-cursor js-c-cursor" aria-hidden="true">
       <svg class="c-cursor__img" width="86" height="86" viewBox="0 0 86 86">
@@ -107,6 +112,7 @@
         <polyline points="35 30 22 43 35 56" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </svg>
     </div>
+    {% endif %}
 
 
 

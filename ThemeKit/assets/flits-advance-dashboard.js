@@ -16,7 +16,7 @@ window.flitsApp.top_products = function(){
       timeout :0,
       method:"GET",
       data:{
-        token:flitsAppJquery("#flits-token").val()
+        customer_hash: window.flitsApp.customer_hash, token:flitsAppJquery("#flits-token").val()
       },
       success:that.view_products,
       error:function(jqXHR, textStatus, errorThrown){

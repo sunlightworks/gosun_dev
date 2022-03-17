@@ -166,7 +166,7 @@ window.flitsApp.updateCredits = function () {
         url: url,
         method: "get",
         data: {
-            token: flitsAppJquery("#flits-token").val()
+            customer_hash: window.flitsApp.customer_hash, token:flitsAppJquery("#flits-token").val()
         },
         success: function (res) {
             if (res.status) {
@@ -380,7 +380,7 @@ window.flitsApp.addSubmitEvents = function () {
         var data = $form.serializeArray();
         var url = flitsAppJquery('#flits-customer-url').val() + "/" + $form.attr('data-action');
         var method = $form.attr('method');
-        data.push({name: "token", value: flitsAppJquery("#flits-token").val()});
+        data.push({name: "customer_hash", value: window.flitsApp.customer_hash},{name: "token", value: flitsAppJquery("#flits-token").val()});
         flitsApp.showLoading(window.flitsApp.multilang.save_details, flitsAppJquery("#flits-page-profile"));
         flitsAppJquery.ajax({
             url: url,
@@ -417,7 +417,7 @@ window.flitsApp.addSubmitEvents = function () {
         var data = $form.serializeArray();
         var url = flitsAppJquery('#flits-customer-url').val() + "/" + $form.attr('data-action');
         var method = $form.attr('method');
-        data.push({name: "token", value: flitsAppJquery("#flits-token").val()});
+        data.push({name: "customer_hash", value: window.flitsApp.customer_hash},{name: "token", value: flitsAppJquery("#flits-token").val()});
         flitsApp.showLoading(window.flitsApp.multilang.updating_password, flitsAppJquery('#flits-page-security'));
         flitsAppJquery.ajax({
             url: url,
@@ -480,7 +480,7 @@ window.flitsApp.addSubmitEvents = function () {
         var url = $form.attr('action');
         url = flitsAppJquery('#flits-customer-url').val() + url;
         var method = $form.attr('method');
-        data.push({name: "token", value: flitsAppJquery("#flits-token").val()});
+        data.push({name: "customer_hash", value: window.flitsApp.customer_hash},{name: "token", value: flitsAppJquery("#flits-token").val()});
         if (form_type == "edit") {
             method = "PUT";
             data.push({name: "_method", value: "PUT"});
@@ -685,7 +685,7 @@ window.flitsApp.addClickEvents = function () {
                 url: url,
                 method: "DELETE",
                 data: {
-                    token: flitsAppJquery("#flits-token").val(),
+                    customer_hash: window.flitsApp.customer_hash, token:flitsAppJquery("#flits-token").val(),
                     _mehtod: "DELETE"
                 },
                 success: function (res) {

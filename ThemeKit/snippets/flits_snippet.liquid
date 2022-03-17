@@ -1,4 +1,12 @@
 
+{% if customer %}
+    {% assign flitsSecretKey = shop.metafields.Flits.SHOP_ID | append: shop.metafields.Flits.SHOP_TOKEN | append: shop.metafields.Flits.APP_PROXY | append: customer.id %}
+    {% assign flitsSecureCustomerHash = customer.id | plus: shop.metafields.Flits.SHOP_ID | hmac_sha256: flitsSecretKey %}
+{% endif %}
+<script>
+window.flitsApp&&void 0!==window.flitsApp||(window.flitsApp={});
+window.flitsApp.customer_hash = "{{ flitsSecureCustomerHash }}";
+</script>
 {% case flits_snippet %}
     {% when 'cart_use_credit_select' %}
     <div style="display:none;">

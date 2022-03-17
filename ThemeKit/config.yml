@@ -17,7 +17,7 @@ staging:
   
 production:
   password: ${SHOPIFY_API_PASSWORD}
-  theme_id: 80319053918
+  theme_id: 120702042206
   store: patricksherwin.myshopify.com
   ignore_files:
     - "settings_data.json"
@@ -38,4 +38,13 @@ pdp:
   ignore_files:
     - "*.gif"
     - "settings_data.json"
+
+hero:
+  password: ${SHOPIFY_API_PASSWORD}
+  theme_id: 120755781726
+  store: patricksherwin.myshopify.com
+  ignore_files:
+    - "*.gif"
+    - "settings_data.json"
+
 

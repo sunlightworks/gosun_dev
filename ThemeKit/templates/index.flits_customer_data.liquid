@@ -1,8 +1,13 @@
 
 {% layout none %}
+{% if customer %}
+    {% assign flitsSecretKey = shop.metafields.Flits.SHOP_ID | append: shop.metafields.Flits.SHOP_TOKEN | append: shop.metafields.Flits.APP_PROXY | append: customer.id %}
+    {% assign flitsSecureCustomerHash = customer.id | plus: shop.metafields.Flits.SHOP_ID | hmac_sha256: flitsSecretKey %}
+{% endif %}
 <div class="flits-checkout-data-div" style="display:none;">
     <div class="flits-checkout-data">
         {
+        "customer_hash": "{{ flitsSecureCustomerHash }}",
         "token": "{{ shop.metafields.Flits.SHOP_TOKEN }}",
         "shop_id" : "{{ shop.metafields.Flits.SHOP_ID }}", 
         "customer_url" : "/apps/{{ shop.metafields.Flits.APP_PROXY }}/api/{{ shop.metafields.Flits.APP_ID }}/{{ shop.metafields.Flits.SHOP_ID }}/{{ customer.id }}",

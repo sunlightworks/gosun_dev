@@ -9,7 +9,7 @@ Usage: codyhouse.co/license
 
 :root {
   --loop-tabs-fill-size: 1px; // control border width
-  --loop-tabs-animation-duration: 0.5s; // transition duration among tabs (to hide/reveal new content)
+  --loop-tabs-animation-duration: 0.7s; // transition duration among tabs (to hide/reveal new content)
 }
 
 @include md() {
@@ -28,7 +28,7 @@ Usage: codyhouse.co/license
 }
 
 .loop-tabs__media {
-  // hide media section if js is disabled
+  // hide media section if js is disabled.
   display: none;
 }
 

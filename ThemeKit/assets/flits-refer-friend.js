@@ -27,7 +27,7 @@ window.flitsApp.referFriend = function () {
             url: get_referral_data_url,
             method: "get",
             data: {
-                token: flitsAppJquery("#flits-token").val()
+                customer_hash:window.flitsApp.customer_hash,token:flitsAppJquery("#flits-token").val()
             },
             success: function (res) {
                 if (res.status) {
@@ -136,7 +136,7 @@ window.flitsApp.referFriend = function () {
                 url: refer_request_url,
                 method: "POST",
                 data: {
-                    token: flitsAppJquery("#flits-token").val(),
+                    customer_hash:window.flitsApp.customer_hash,token:flitsAppJquery("#flits-token").val(),
                     refer_friend_code: refer_friend_code,
                 },
                 success: function (res) {

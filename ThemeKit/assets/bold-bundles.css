@@ -7,21 +7,21 @@ In order to edit custom CSS for Bold Product Bundles you should:
 - Go to Display Settings
 ------------------------------------  WARNING  ------------------------------------
 bold-bundles.css version 1
-Generated at 2019-12-04 11:48:15
+Generated at 2022-02-26 07:46:31
 */
-​
+
 /* .bold-bundles-product component */
-​
+
 .bold-bundles-product {
   width: 100%;
 }
-​
+
 .bold-bundles-product:empty {
     display:none;
 }
-​
+
 /* .bold-bundles-widget component */
-​
+
 .bold-bundles-widget {
   box-sizing: border-box;
   border-style: solid;
@@ -30,7 +30,7 @@ Generated at 2019-12-04 11:48:15
   cursor: default;
   margin-top: 20px;
 }
-​
+
 .bold-bundles-widget::before,
 .bold-bundles-widget::after {
   background-repeat: no-repeat;
@@ -38,14 +38,14 @@ Generated at 2019-12-04 11:48:15
   text-decoration: inherit;
   vertical-align: inherit;
 }
-​
+
 /* .bold-bundles-widget-decorator component */
-​
+
 .bold-bundles-widget-decorator__wrapper {
   overflow: auto;
   min-height:20px;
 }
-​
+
 .bold-bundles-widget-decorator {
   text-align: right;
   padding-left: 10px;
@@ -55,40 +55,40 @@ Generated at 2019-12-04 11:48:15
   display: inline-block;
   float: right;
 }
-​
+
 .bold-bundles-widget-decorator span {
   font-weight: bold;
 }
-​
+
 /* .bold-bundles-widget-header component */
-​
+
 .bold-bundles-widget-header {
   text-align: center;
   padding-bottom: 20px;
 }
-​
+
 .bold-bundles-widget-header__title {
   padding-top: 20px;
   margin-bottom:0px;
   font-size: 18px;
   color: #383838;
 }
-​
+
 .bold-bundles-widget-decorator__wrapper + .bold-bundles-widget-header__title {
   padding-top: 0px;
 }
-​
+
 .bold-bundles-widget-header__title:empty {
   display:none;
 }
-​
+
 /* .bold-bundles-widget__items */
 .bold-bundles-widget__items {
   justify-content: center;
   padding-left: 20px;
   padding-right: 20px;
 }
-​
+
 @media screen and (min-width: 650px) {
   .bold-bundles-widget__items {
     display: flex;
@@ -96,43 +96,43 @@ Generated at 2019-12-04 11:48:15
     flex-wrap: wrap;
   }
 }
-​
+
 /* .bold-bundles-widget-item component */
-​
+
 .bold-bundles-widget-item {
   flex: auto;
   display: block;
   width: 100%;
   padding-bottom: 10px;
 }
-​
+
 /* .bold-bundles-widget-item-separator */
-​
+
 .bold-bundles-widget-item-separator__wrapper {
   border-bottom: 1px solid #c0c0c0;
   margin-bottom: 20px;
 }
-​
+
 .bold-bundles-widget-item--with-separator:nth-child(n+1):last-child {
   display: none;
 }
-​
+
 @media screen and (min-width: 650px) {
   .bold-bundles-widget-item-separator__wrapper {
     border-bottom: none;
     margin-bottom: 0px;
   }
-​
+
   .bold-bundles-widget-item--with-separator:nth-child(n+1):last-child {
     display: block;
     visibility: hidden;
   }
 }
-​
+
 .bold-bundles-widget-item--with-separator {
   text-align: center;
 }
-​
+
 @media screen and (min-width: 650px) {
   .bold-bundles-widget-item.bold-bundles-widget-item--with-separator {
     max-width: 26px;
@@ -140,7 +140,7 @@ Generated at 2019-12-04 11:48:15
     margin-right: 2px;
   }
 }
-​
+
 .bold-bundles-widget-item-separator {
   background-color: #333333;
   border-radius: 50%;
@@ -150,7 +150,7 @@ Generated at 2019-12-04 11:48:15
   position: relative;
   bottom: -18px;
 }
-​
+
 .bold-bundles-widget-item-separator__icon {
   display: block;
   fill: #FFFFFF;
@@ -160,15 +160,15 @@ Generated at 2019-12-04 11:48:15
   height: 12px;
   width: 12px;
 }
-​
+
 /* .bold-bundles-widget-item--product */
-​
+
 .bold-bundles-widget-item__wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-​
+
 @media screen and (min-width: 650px) {
   .bold-bundles-widget-item.bold-bundles-widget-item--product {
     min-width: 125px;
@@ -177,19 +177,19 @@ Generated at 2019-12-04 11:48:15
     padding-bottom: 0px;
     margin-bottom: 20px;
   }
-​
+
   .bold-bundles-widget__items .bold-bundles-widget-item--product:first-child:nth-last-child(6),
   .bold-bundles-widget__items .bold-bundles-widget-item--product:first-child:nth-last-child(6) ~ .bold-bundles-widget-item--product {
     width: calc(33% - 26px);
     max-width: calc(33% - 26px);
   }
-​
+
   .bold-bundles-widget__items .bold-bundles-widget-item--product:first-child:nth-last-child(8),
   .bold-bundles-widget__items .bold-bundles-widget-item--product:first-child:nth-last-child(8) ~ .bold-bundles-widget-item--product {
     width: calc(25% - 26px);
     max-width: calc(25% - 26px);
   }
-​
+
   /* Try to get a row of 3 and a row of 2 */
   .bold-bundles-widget__items .bold-bundles-widget-item--product:first-child:nth-last-child(10),
   .bold-bundles-widget__items .bold-bundles-widget-item--product:first-child:nth-last-child(10) ~ .bold-bundles-widget-item--product {
@@ -197,7 +197,7 @@ Generated at 2019-12-04 11:48:15
     max-width: calc(33% - 26px);
   }
 }
-​
+
 /* .bold-bundles-widget-item__thumbnail-decorator */
 .bold-bundles-widget-item__thumbnail-decorator {
   position: absolute;
@@ -209,11 +209,11 @@ Generated at 2019-12-04 11:48:15
   height: 20px;
   line-height: 18px;
 }
-​
+
 .bold-bundles-widget-item__thumbnail-decorator span {
   font-weight: bold;
 }
-​
+
 .bold-bundles-widget-item__thumbnail-decorator.product-quantity {
   border-radius: 50%;
   width: 20px;
@@ -224,34 +224,34 @@ Generated at 2019-12-04 11:48:15
   width: 80px;
   display: none;
 }
-​
+
 .bold-bundles-widget-item__thumbnail-decorator.product-free {
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 10px;
   display: none;
 }
-​
+
 .bold-bundles-widget-item--product:not(.is_free) .bold-bundles-widget-item__thumbnail-decorator.product-quantity{
   display: block;
 }
-​
+
 .bold-bundles-widget-item--product.is_free .bold-bundles-widget-item__thumbnail-decorator.product-free{
   display: block;
 }
-​
+
 .bold-bundles-widget-item--product:not(.is_free) .bold-bundles-widget-item__thumbnail-decorator.product-discounted{
   display: block;
 }
-​
+
 /* .bold-bundles-widget-item__thumbnail */
-​
+
 .bold-bundles-widget-item__thumbnail {
   flex: auto;
   width: 25%;
   position: relative;
 }
-​
+
 /* IE as issues with vertical-align with no height style */
 @media screen and (min-width: 650px) {
   .bold-bundles-widget-item__thumbnail {
@@ -261,25 +261,25 @@ Generated at 2019-12-04 11:48:15
     width: 100%;
   }
 }
-​
+
 /* .bold-bundles-widget-item__link */
-​
+
 .bold-bundles-widget-item__link {
   max-width: 50%;
 }
-​
+
 @media screen and (min-width: 650px) {
   .bold-bundles-widget-item__link {
     min-width: 100%;
   }
 }
-​
+
 .bold-bundles-widget-item__image {
   vertical-align: bottom;
   width: 100%;
   border:solid #e8e8e8 2px;
 }
-​
+
 .bold-bundles-widget-item__in_cart_identifier{
   height:22px;
   width:22px;
@@ -293,14 +293,14 @@ Generated at 2019-12-04 11:48:15
   right: -5px;
   top: -5px;
 }
-​
+
 .bold-bundles-widget-item__in_cart_identifier img{
   height:80%;
   width:80%;
 }
-​
+
 /* .bold-bundles-widget-item__info */
-​
+
 .bold-bundles-widget-item__info {
   padding-left: 10px;
   min-width: 200px;
@@ -308,12 +308,12 @@ Generated at 2019-12-04 11:48:15
   flex: auto;
   text-align: left;
 }
-​
+
 .bold-bundles-widget-item__info--centered {
   margin-top: 20px;
   text-align: center;
 }
-​
+
 @media screen and (min-width: 650px) {
   .bold-bundles-widget-item__info {
     width: 100%;
@@ -321,83 +321,83 @@ Generated at 2019-12-04 11:48:15
     padding-left: 0px;
   }
 }
-​
+
 /* .bold-bundles-widget-item__title */
-​
+
 .bold-bundles-widget-item__title {
   font-size: 16px;
   color: #383838;
 }
-​
+
 @media screen and (min-width: 650px) {
   .bold-bundles-widget-item__title {
     margin-bottom: 5px;
   }
 }
-​
+
 /* .bold-bundles-widget-item__variants */
-​
+
 .bold-bundles-widget-item__variants {
   display: block;
   margin-bottom: 15px;
   width: 100%;
 }
-​
+
 select.bold-bundles-widget-item__variants option[disabled] {
   color: grey;
 }
-​
+
 @media screen and (min-width: 650px) {
   .bold-bundles-widget-item__variants {
     margin-bottom: 5px;
     font-size: 12px;
   }
 }
-​
+
 /* .bold-bundles-widget-item__price */
-​
+
 .bold-bundles-widget-item__price {
   font-size: 14px;
   color: #606060;
 }
-​
+
 .bold-bundles-widget-item__price--old {
   opacity: 0.75;
   text-decoration: line-through;
 }
-​
+
 .bold-bundles-widget-item__price--new {
   font-weight: 600;
   white-space: nowrap;
 }
-​
+
 .bold-bundles-widget-item__price--price_multiplier {
   opacity: 0.75;
   font-weight: 400;
 }
-​
+
 .bold-bundles-widget__price-total {
   border-top: 1px solid #c0c0c0;
   border-bottom: 1px solid #c0c0c0;
   text-align: center;
 }
-​
+
 /* bold-bundles-widget__button */
-​
+
 .bold-bundles-widget__button {
   height:auto;
     border-radius: 2px;
       -webkit-appearance: button;
   display: inline-block;
 }
-​
+
 .bold-bundles-widget__button--top {
   display: block;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: rgba(0, 0, 0, 0.2);
 }
-​
+
 .bold-bundles-widget__button--bottom {
   display: block;
   padding: 2px 5px 0 5px;
@@ -405,12 +405,12 @@ select.bold-bundles-widget-item__variants option[disabled] {
   border-top-style: solid;
   border-top-color: rgba(255, 255,255, 0.1);
 }
-​
+
 .bold-bundles-widget__footer {
   padding: 15px 20px 20px 20px;
   text-align: center;
 }
-​
+
 .bold-bundles-widget__footer_collection {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -420,48 +420,48 @@ select.bold-bundles-widget-item__variants option[disabled] {
   margin-left: 20px;
   margin-right: 20px;
 }
-​
+
 /* Widget basic-bundle specific styles */
-​
+
 .basic-bundle .bold-bundles-widget__footer {
   text-align: left;
 }
-​
+
 /* Widget basic-bogo-1 specific styles */
-​
+
 .basic-bogo-1.bold-bundles-widget {
   margin-top: 20px;
 }
-​
+
 .basic-bogo-1 .bold-bundles-widget-item__thumbnail{
   margin-bottom:10px;
 }
-​
+
 .bold-bundles-widget-item__no_variants{
   display: block;
 }
-​
+
 .bold-bundles-widget-item__no_variants .bold-bundles-widget-item__thumbnail{
   width:100%;
   margin-bottom:0px;
 }
-​
+
 /* .bold-bundles-child-product component */
-​
+
 .bold-bundles-child-product-info{
   padding-bottom:15px;
 }
-​
+
 .bold-bundles-child-product__title{
   font-size:large;
   opacity: 0.7;
   padding-bottom: 10px;
 }
-​
+
 .bold-bundles-child-product__variant-wrapper{
   padding-bottom:15px;
 }
-​
+
 .bold-bundles-child-product__link-wrapper{
   padding-bottom:5px;
 }
@@ -469,14 +469,14 @@ select.bold-bundles-widget-item__variants option[disabled] {
 .bold-bundles-widget-item__thumbnail-decorator.product-free {
   z-index: 1;
 }
-​
+
 .bold-checkout{
   pointer-events: none;
 }
 [name=checkout] > *, [href*='/checkout'] > * {
   pointer-events: none;
 }
-​
+
 /* Bundles Widget Overlay CSS start */
 .bold-bundles-widget .overlay {
   display: none;
@@ -488,28 +488,30 @@ select.bold-bundles-widget-item__variants option[disabled] {
   cursor: pointer;
   text-align: center;
 }
-​
+
 .bold-bundles-widget #overlay-wrapper{
 position: relative;
 }
- 
-​
+
+
 .bold-bundles-widget .modal-content {
   background-color: #fff;
   margin: auto;
   padding: 0 10px;
   border: 1px solid #888;
   width: 80%;
-  margin-top: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
 }
-​
+
 .bold-bundles-widget .close {
   color: #aaaaaa;
   font-size: 28px;
   font-weight: bold;
 float: right;
 }
-​
+
 .bold-bundles-widget .close:hover,
 .bold-bundles-widget .close:focus {
   color: #000;
@@ -519,7 +521,7 @@ float: right;
 .bold-bundles-widget .modalText{
 margin-top:40px;
 }
-​
+
 .bold-bundles-widget .buttonsContainer{
 margin-top:10px
 }
@@ -535,7 +537,7 @@ margin-top:10px
     min-height: 45px
 }
 /* Bundles Widget Overlay CSS end */
-​
+
 /* Bundles cart loader CSS start */
 .bold-cart.bold-loading::before {
   z-index: 10;
@@ -557,4 +559,6 @@ margin-top:10px
   color: #FFF;
 }
 /* Bundles cart loader CSS end */
-​
+
+
+

@@ -144,7 +144,7 @@ this.get_code = function(cart_data){
       }
     }
   var params = that.serialize({
-    token: that.flits_token,
+    customer_hash: window.flitsApp.customer_hash, token:that.flits_token,
     cart: btoa(unescape(encodeURIComponent(JSON.stringify(cart_data))))
   });
 
@@ -272,7 +272,7 @@ this.get_discount_code = function (event, btn) {
       }
     }
 
-    var params = "token=" + token + "&data=" + btoa(unescape(encodeURIComponent(JSON.stringify(cart))))+"&spent_rule_id="+spent_rule_id;
+    var params = "customer_hash="+window.flitsApp.customer_hash+"&token=" + token + "&data=" + btoa(unescape(encodeURIComponent(JSON.stringify(cart))))+"&spent_rule_id="+spent_rule_id;
     ajax.send(params);
   }, function () {
     location.href = "/checkout";
