@@ -39,9 +39,9 @@ pdp:
     - "*.gif"
     - "settings_data.json"
 
-hero:
+videowise:
   password: ${SHOPIFY_API_PASSWORD}
-  theme_id: 120755781726
+  theme_id: 120769478750
   store: patricksherwin.myshopify.com
   ignore_files:
     - "*.gif"
